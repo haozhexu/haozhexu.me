@@ -1,7 +1,7 @@
 ---
 title: "About"
 date: 2017-11-04T08:30:16+11:00
-draft: true
+draft: false
 ---
 
 ![Photo of me holding a piece of tissue covering my face][about_cover]

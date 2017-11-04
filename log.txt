@@ -1,0 +1,2367 @@
+WARN 2017/11/04 08:30:31 No translation bundle found for default language "en"
+WARN 2017/11/04 08:30:31 Translation func for language en not found, use default.
+WARN 2017/11/04 08:30:31 i18n not initialized, check that you have language file (in i18n) that matches the site language or the default language.
+LOG:   2017/11/04 08:30:31 Started building sites ...
+WARN 2017/11/04 08:30:31 [en] Unable to locate layout for "taxonomyTerm": [taxonomy/tag.terms.en.html.html taxonomy/tag.terms.html.html taxonomy/tag.terms.en.html taxonomy/tag.terms.html _default/terms.en.html.html _default/terms.html.html _default/terms.en.html _default/terms.html indexes/indexes.en.html.html indexes/indexes.html.html indexes/indexes.en.html indexes/indexes.html theme/taxonomy/tag.terms.en.html.html theme/taxonomy/tag.terms.html.html theme/taxonomy/tag.terms.en.html theme/taxonomy/tag.terms.html theme/_default/terms.en.html.html theme/_default/terms.html.html theme/_default/terms.en.html theme/_default/terms.html theme/indexes/indexes.en.html.html theme/indexes/indexes.html.html theme/indexes/indexes.en.html theme/indexes/indexes.html]
+WARN 2017/11/04 08:30:31 [en] Unable to locate layout for "taxonomyTerm": [taxonomy/category.terms.en.html.html taxonomy/category.terms.html.html taxonomy/category.terms.en.html taxonomy/category.terms.html _default/terms.en.html.html _default/terms.html.html _default/terms.en.html _default/terms.html indexes/indexes.en.html.html indexes/indexes.html.html indexes/indexes.en.html indexes/indexes.html theme/taxonomy/category.terms.en.html.html theme/taxonomy/category.terms.html.html theme/taxonomy/category.terms.en.html theme/taxonomy/category.terms.html theme/_default/terms.en.html.html theme/_default/terms.html.html theme/_default/terms.en.html theme/_default/terms.html theme/indexes/indexes.en.html.html theme/indexes/indexes.html.html theme/indexes/indexes.en.html theme/indexes/indexes.html]
+LOG:   2017/11/04 08:30:31 
+Built site for language en:
+LOG:   2017/11/04 08:30:31 1 of 1 draft rendered
+LOG:   2017/11/04 08:30:31 0 future content
+LOG:   2017/11/04 08:30:31 0 expired content
+LOG:   2017/11/04 08:30:31 0 regular pages created
+LOG:   2017/11/04 08:30:31 8 other pages created
+LOG:   2017/11/04 08:30:31 0 non-page files copied
+LOG:   2017/11/04 08:30:31 0 paginator pages created
+LOG:   2017/11/04 08:30:31 0 categories created
+LOG:   2017/11/04 08:30:31 0 tags created
+LOG:   2017/11/04 08:30:31 total in 11 ms
+WARN 2017/11/04 08:30:31 Skip i18nDir: lstat /Users/hzxu/Projects/Hugo/Huiimy/i18n: no such file or directory
+WARN 2017/11/04 08:30:31 Skip i18nDir: lstat /Users/hzxu/Projects/Hugo/Huiimy/i18n: no such file or directory
+WARN 2017/11/04 08:44:56 No translation bundle found for default language "en"
+WARN 2017/11/04 08:44:57 Translation func for language en not found, use default.
+WARN 2017/11/04 08:44:57 i18n not initialized, check that you have language file (in i18n) that matches the site language or the default language.
+LOG:   2017/11/04 08:44:57 Started building sites ...
+LOG:   2017/11/04 08:44:57 
+Built site for language en:
+LOG:   2017/11/04 08:44:57 1 of 1 draft rendered
+LOG:   2017/11/04 08:44:57 0 future content
+LOG:   2017/11/04 08:44:57 0 expired content
+LOG:   2017/11/04 08:44:57 0 regular pages created
+LOG:   2017/11/04 08:44:57 8 other pages created
+LOG:   2017/11/04 08:44:57 0 non-page files copied
+LOG:   2017/11/04 08:44:57 0 paginator pages created
+LOG:   2017/11/04 08:44:57 0 tags created
+LOG:   2017/11/04 08:44:57 0 categories created
+LOG:   2017/11/04 08:44:57 total in 20 ms
+WARN 2017/11/04 08:44:57 Skip i18nDir: lstat /Users/hzxu/Projects/Hugo/Huiimy/i18n: no such file or directory
+WARN 2017/11/04 08:44:57 Skip i18nDir: lstat /Users/hzxu/Projects/Hugo/Huiimy/i18n: no such file or directory
+LOG:   2017/11/04 08:46:08 Config file changed: /Users/hzxu/Projects/Hugo/Huiimy/config.toml
+LOG:   2017/11/04 08:46:08 Started building sites ...
+WARN 2017/11/04 08:46:08 No translation bundle found for default language "en"
+LOG:   2017/11/04 08:46:53 Config file changed: /Users/hzxu/Projects/Hugo/Huiimy/config.toml
+LOG:   2017/11/04 08:46:53 Started building sites ...
+WARN 2017/11/04 08:46:53 No translation bundle found for default language "en"
+WARN 2017/11/04 08:47:39 No translation bundle found for default language "en"
+WARN 2017/11/04 08:47:39 Translation func for language en not found, use default.
+WARN 2017/11/04 08:47:39 i18n not initialized, check that you have language file (in i18n) that matches the site language or the default language.
+LOG:   2017/11/04 08:47:39 Started building sites ...
+LOG:   2017/11/04 08:47:39 
+Built site for language en:
+LOG:   2017/11/04 08:47:39 2 of 2 drafts rendered
+LOG:   2017/11/04 08:47:39 0 future content
+LOG:   2017/11/04 08:47:39 0 expired content
+LOG:   2017/11/04 08:47:39 0 regular pages created
+LOG:   2017/11/04 08:47:39 10 other pages created
+LOG:   2017/11/04 08:47:39 0 non-page files copied
+LOG:   2017/11/04 08:47:39 0 paginator pages created
+LOG:   2017/11/04 08:47:39 0 tags created
+LOG:   2017/11/04 08:47:39 0 categories created
+LOG:   2017/11/04 08:47:39 total in 12 ms
+WARN 2017/11/04 08:47:39 Skip i18nDir: lstat /Users/hzxu/Projects/Hugo/Huiimy/i18n: no such file or directory
+WARN 2017/11/04 08:47:39 Skip i18nDir: lstat /Users/hzxu/Projects/Hugo/Huiimy/i18n: no such file or directory
+LOG:   2017/11/04 08:48:16 
+Change detected, rebuilding site
+LOG:   2017/11/04 08:48:16 2017-11-04 08:48 +1100
+LOG:   2017/11/04 08:48:16 
+Built site for language en:
+LOG:   2017/11/04 08:48:16 2 of 2 drafts rendered
+LOG:   2017/11/04 08:48:16 0 future content
+LOG:   2017/11/04 08:48:16 0 expired content
+LOG:   2017/11/04 08:48:16 0 regular pages created
+LOG:   2017/11/04 08:48:16 10 other pages created
+LOG:   2017/11/04 08:48:16 0 non-page files copied
+LOG:   2017/11/04 08:48:16 0 paginator pages created
+LOG:   2017/11/04 08:48:16 0 categories created
+LOG:   2017/11/04 08:48:16 0 tags created
+LOG:   2017/11/04 08:48:16 total in 9 ms
+LOG:   2017/11/04 08:48:31 
+Change detected, rebuilding site
+LOG:   2017/11/04 08:48:31 2017-11-04 08:48 +1100
+LOG:   2017/11/04 08:48:31 
+Built site for language en:
+LOG:   2017/11/04 08:48:31 2 of 2 drafts rendered
+LOG:   2017/11/04 08:48:31 0 future content
+LOG:   2017/11/04 08:48:31 0 expired content
+LOG:   2017/11/04 08:48:31 0 regular pages created
+LOG:   2017/11/04 08:48:31 10 other pages created
+LOG:   2017/11/04 08:48:31 0 non-page files copied
+LOG:   2017/11/04 08:48:31 0 paginator pages created
+LOG:   2017/11/04 08:48:31 0 tags created
+LOG:   2017/11/04 08:48:31 0 categories created
+LOG:   2017/11/04 08:48:31 total in 13 ms
+LOG:   2017/11/04 08:51:11 
+Change detected, rebuilding site
+LOG:   2017/11/04 08:51:11 2017-11-04 08:51 +1100
+LOG:   2017/11/04 08:51:11 
+Built site for language en:
+LOG:   2017/11/04 08:51:11 2 of 2 drafts rendered
+LOG:   2017/11/04 08:51:11 0 future content
+LOG:   2017/11/04 08:51:11 0 expired content
+LOG:   2017/11/04 08:51:11 0 regular pages created
+LOG:   2017/11/04 08:51:11 10 other pages created
+LOG:   2017/11/04 08:51:11 0 non-page files copied
+LOG:   2017/11/04 08:51:11 0 paginator pages created
+LOG:   2017/11/04 08:51:11 0 categories created
+LOG:   2017/11/04 08:51:11 0 tags created
+LOG:   2017/11/04 08:51:11 total in 8 ms
+LOG:   2017/11/04 08:51:56 
+Change detected, rebuilding site
+LOG:   2017/11/04 08:51:56 2017-11-04 08:51 +1100
+LOG:   2017/11/04 08:51:56 
+Built site for language en:
+LOG:   2017/11/04 08:51:56 2 of 2 drafts rendered
+LOG:   2017/11/04 08:51:56 0 future content
+LOG:   2017/11/04 08:51:56 0 expired content
+LOG:   2017/11/04 08:51:56 0 regular pages created
+LOG:   2017/11/04 08:51:56 10 other pages created
+LOG:   2017/11/04 08:51:56 0 non-page files copied
+LOG:   2017/11/04 08:51:56 0 paginator pages created
+LOG:   2017/11/04 08:51:56 0 tags created
+LOG:   2017/11/04 08:51:56 0 categories created
+LOG:   2017/11/04 08:51:56 total in 13 ms
+LOG:   2017/11/04 08:52:04 
+Change detected, rebuilding site
+LOG:   2017/11/04 08:52:04 2017-11-04 08:52 +1100
+LOG:   2017/11/04 08:52:04 
+Built site for language en:
+LOG:   2017/11/04 08:52:04 2 of 2 drafts rendered
+LOG:   2017/11/04 08:52:04 0 future content
+LOG:   2017/11/04 08:52:04 0 expired content
+LOG:   2017/11/04 08:52:04 0 regular pages created
+LOG:   2017/11/04 08:52:04 10 other pages created
+LOG:   2017/11/04 08:52:04 0 non-page files copied
+LOG:   2017/11/04 08:52:04 0 paginator pages created
+LOG:   2017/11/04 08:52:04 0 tags created
+LOG:   2017/11/04 08:52:04 0 categories created
+LOG:   2017/11/04 08:52:04 total in 7 ms
+LOG:   2017/11/04 08:52:09 
+Change detected, rebuilding site
+LOG:   2017/11/04 08:52:09 2017-11-04 08:52 +1100
+LOG:   2017/11/04 08:52:09 
+Built site for language en:
+LOG:   2017/11/04 08:52:09 2 of 2 drafts rendered
+LOG:   2017/11/04 08:52:09 0 future content
+LOG:   2017/11/04 08:52:09 0 expired content
+LOG:   2017/11/04 08:52:09 0 regular pages created
+LOG:   2017/11/04 08:52:09 10 other pages created
+LOG:   2017/11/04 08:52:09 0 non-page files copied
+LOG:   2017/11/04 08:52:09 0 paginator pages created
+LOG:   2017/11/04 08:52:09 0 tags created
+LOG:   2017/11/04 08:52:09 0 categories created
+LOG:   2017/11/04 08:52:09 total in 12 ms
+LOG:   2017/11/04 08:52:28 
+Change detected, rebuilding site
+LOG:   2017/11/04 08:52:28 2017-11-04 08:52 +1100
+LOG:   2017/11/04 08:52:28 
+Built site for language en:
+LOG:   2017/11/04 08:52:28 2 of 2 drafts rendered
+LOG:   2017/11/04 08:52:28 0 future content
+LOG:   2017/11/04 08:52:28 0 expired content
+LOG:   2017/11/04 08:52:28 0 regular pages created
+LOG:   2017/11/04 08:52:28 10 other pages created
+LOG:   2017/11/04 08:52:28 0 non-page files copied
+LOG:   2017/11/04 08:52:28 0 paginator pages created
+LOG:   2017/11/04 08:52:28 0 tags created
+LOG:   2017/11/04 08:52:28 0 categories created
+LOG:   2017/11/04 08:52:28 total in 10 ms
+LOG:   2017/11/04 08:52:35 
+Change detected, rebuilding site
+LOG:   2017/11/04 08:52:35 2017-11-04 08:52 +1100
+LOG:   2017/11/04 08:52:35 
+Built site for language en:
+LOG:   2017/11/04 08:52:35 2 of 2 drafts rendered
+LOG:   2017/11/04 08:52:35 0 future content
+LOG:   2017/11/04 08:52:35 0 expired content
+LOG:   2017/11/04 08:52:35 0 regular pages created
+LOG:   2017/11/04 08:52:35 10 other pages created
+LOG:   2017/11/04 08:52:35 0 non-page files copied
+LOG:   2017/11/04 08:52:35 0 paginator pages created
+LOG:   2017/11/04 08:52:35 0 categories created
+LOG:   2017/11/04 08:52:35 0 tags created
+LOG:   2017/11/04 08:52:35 total in 10 ms
+LOG:   2017/11/04 08:54:01 
+Change detected, rebuilding site
+LOG:   2017/11/04 08:54:01 2017-11-04 08:54 +1100
+LOG:   2017/11/04 08:54:01 
+Built site for language en:
+LOG:   2017/11/04 08:54:01 2 of 2 drafts rendered
+LOG:   2017/11/04 08:54:01 0 future content
+LOG:   2017/11/04 08:54:01 0 expired content
+LOG:   2017/11/04 08:54:01 0 regular pages created
+LOG:   2017/11/04 08:54:01 10 other pages created
+LOG:   2017/11/04 08:54:01 0 non-page files copied
+LOG:   2017/11/04 08:54:01 0 paginator pages created
+LOG:   2017/11/04 08:54:01 0 categories created
+LOG:   2017/11/04 08:54:01 0 tags created
+LOG:   2017/11/04 08:54:01 total in 11 ms
+LOG:   2017/11/04 08:54:26 
+Change detected, rebuilding site
+LOG:   2017/11/04 08:54:26 2017-11-04 08:54 +1100
+LOG:   2017/11/04 08:54:26 
+Built site for language en:
+LOG:   2017/11/04 08:54:26 2 of 2 drafts rendered
+LOG:   2017/11/04 08:54:26 0 future content
+LOG:   2017/11/04 08:54:26 0 expired content
+LOG:   2017/11/04 08:54:26 0 regular pages created
+LOG:   2017/11/04 08:54:26 10 other pages created
+LOG:   2017/11/04 08:54:26 0 non-page files copied
+LOG:   2017/11/04 08:54:26 0 paginator pages created
+LOG:   2017/11/04 08:54:26 0 tags created
+LOG:   2017/11/04 08:54:26 0 categories created
+LOG:   2017/11/04 08:54:26 total in 8 ms
+LOG:   2017/11/04 08:54:33 
+Change detected, rebuilding site
+LOG:   2017/11/04 08:54:33 2017-11-04 08:54 +1100
+LOG:   2017/11/04 08:54:33 
+Built site for language en:
+LOG:   2017/11/04 08:54:33 2 of 2 drafts rendered
+LOG:   2017/11/04 08:54:33 0 future content
+LOG:   2017/11/04 08:54:33 0 expired content
+LOG:   2017/11/04 08:54:33 0 regular pages created
+LOG:   2017/11/04 08:54:33 10 other pages created
+LOG:   2017/11/04 08:54:33 0 non-page files copied
+LOG:   2017/11/04 08:54:33 0 paginator pages created
+LOG:   2017/11/04 08:54:33 0 tags created
+LOG:   2017/11/04 08:54:33 0 categories created
+LOG:   2017/11/04 08:54:33 total in 12 ms
+LOG:   2017/11/05 07:44:55 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:44:55 2017-11-05 07:44 +1100
+LOG:   2017/11/05 07:44:55 
+Built site for language en:
+LOG:   2017/11/05 07:44:55 2 of 2 drafts rendered
+LOG:   2017/11/05 07:44:55 0 future content
+LOG:   2017/11/05 07:44:55 0 expired content
+LOG:   2017/11/05 07:44:55 0 regular pages created
+LOG:   2017/11/05 07:44:55 10 other pages created
+LOG:   2017/11/05 07:44:55 0 non-page files copied
+LOG:   2017/11/05 07:44:55 0 paginator pages created
+LOG:   2017/11/05 07:44:55 0 tags created
+LOG:   2017/11/05 07:44:55 0 categories created
+LOG:   2017/11/05 07:44:55 total in 11 ms
+LOG:   2017/11/05 07:45:00 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:45:00 2017-11-05 07:45 +1100
+LOG:   2017/11/05 07:45:00 
+Built site for language en:
+LOG:   2017/11/05 07:45:00 2 of 2 drafts rendered
+LOG:   2017/11/05 07:45:00 0 future content
+LOG:   2017/11/05 07:45:00 0 expired content
+LOG:   2017/11/05 07:45:00 0 regular pages created
+LOG:   2017/11/05 07:45:00 10 other pages created
+LOG:   2017/11/05 07:45:00 0 non-page files copied
+LOG:   2017/11/05 07:45:00 0 paginator pages created
+LOG:   2017/11/05 07:45:00 0 categories created
+LOG:   2017/11/05 07:45:00 0 tags created
+LOG:   2017/11/05 07:45:00 total in 13 ms
+LOG:   2017/11/05 07:45:04 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:45:04 2017-11-05 07:45 +1100
+LOG:   2017/11/05 07:45:04 
+Built site for language en:
+LOG:   2017/11/05 07:45:04 2 of 2 drafts rendered
+LOG:   2017/11/05 07:45:04 0 future content
+LOG:   2017/11/05 07:45:04 0 expired content
+LOG:   2017/11/05 07:45:04 0 regular pages created
+LOG:   2017/11/05 07:45:04 10 other pages created
+LOG:   2017/11/05 07:45:04 0 non-page files copied
+LOG:   2017/11/05 07:45:04 0 paginator pages created
+LOG:   2017/11/05 07:45:04 0 tags created
+LOG:   2017/11/05 07:45:04 0 categories created
+LOG:   2017/11/05 07:45:04 total in 9 ms
+LOG:   2017/11/05 07:49:53 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:49:53 2017-11-05 07:49 +1100
+LOG:   2017/11/05 07:49:53 
+Built site for language en:
+LOG:   2017/11/05 07:49:53 2 of 2 drafts rendered
+LOG:   2017/11/05 07:49:53 0 future content
+LOG:   2017/11/05 07:49:53 0 expired content
+LOG:   2017/11/05 07:49:53 0 regular pages created
+LOG:   2017/11/05 07:49:53 10 other pages created
+LOG:   2017/11/05 07:49:53 0 non-page files copied
+LOG:   2017/11/05 07:49:53 0 paginator pages created
+LOG:   2017/11/05 07:49:53 0 tags created
+LOG:   2017/11/05 07:49:53 0 categories created
+LOG:   2017/11/05 07:49:53 total in 8 ms
+LOG:   2017/11/05 07:50:07 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:50:07 2017-11-05 07:50 +1100
+LOG:   2017/11/05 07:50:07 
+Built site for language en:
+LOG:   2017/11/05 07:50:07 2 of 2 drafts rendered
+LOG:   2017/11/05 07:50:07 0 future content
+LOG:   2017/11/05 07:50:07 0 expired content
+LOG:   2017/11/05 07:50:07 0 regular pages created
+LOG:   2017/11/05 07:50:07 10 other pages created
+LOG:   2017/11/05 07:50:07 0 non-page files copied
+LOG:   2017/11/05 07:50:07 0 paginator pages created
+LOG:   2017/11/05 07:50:07 0 tags created
+LOG:   2017/11/05 07:50:07 0 categories created
+LOG:   2017/11/05 07:50:07 total in 18 ms
+LOG:   2017/11/05 07:50:40 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:50:40 2017-11-05 07:50 +1100
+LOG:   2017/11/05 07:50:40 
+Built site for language en:
+LOG:   2017/11/05 07:50:40 2 of 2 drafts rendered
+LOG:   2017/11/05 07:50:40 0 future content
+LOG:   2017/11/05 07:50:40 0 expired content
+LOG:   2017/11/05 07:50:40 0 regular pages created
+LOG:   2017/11/05 07:50:40 10 other pages created
+LOG:   2017/11/05 07:50:40 0 non-page files copied
+LOG:   2017/11/05 07:50:40 0 paginator pages created
+LOG:   2017/11/05 07:50:40 0 tags created
+LOG:   2017/11/05 07:50:40 0 categories created
+LOG:   2017/11/05 07:50:40 total in 9 ms
+LOG:   2017/11/05 07:51:31 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:51:31 2017-11-05 07:51 +1100
+LOG:   2017/11/05 07:51:31 
+Built site for language en:
+LOG:   2017/11/05 07:51:31 2 of 2 drafts rendered
+LOG:   2017/11/05 07:51:31 0 future content
+LOG:   2017/11/05 07:51:31 0 expired content
+LOG:   2017/11/05 07:51:31 0 regular pages created
+LOG:   2017/11/05 07:51:31 10 other pages created
+LOG:   2017/11/05 07:51:31 0 non-page files copied
+LOG:   2017/11/05 07:51:31 0 paginator pages created
+LOG:   2017/11/05 07:51:31 0 tags created
+LOG:   2017/11/05 07:51:31 0 categories created
+LOG:   2017/11/05 07:51:31 total in 11 ms
+LOG:   2017/11/05 07:51:37 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:51:37 2017-11-05 07:51 +1100
+LOG:   2017/11/05 07:51:37 
+Built site for language en:
+LOG:   2017/11/05 07:51:37 2 of 2 drafts rendered
+LOG:   2017/11/05 07:51:37 0 future content
+LOG:   2017/11/05 07:51:37 0 expired content
+LOG:   2017/11/05 07:51:37 0 regular pages created
+LOG:   2017/11/05 07:51:37 10 other pages created
+LOG:   2017/11/05 07:51:37 0 non-page files copied
+LOG:   2017/11/05 07:51:37 0 paginator pages created
+LOG:   2017/11/05 07:51:37 0 tags created
+LOG:   2017/11/05 07:51:37 0 categories created
+LOG:   2017/11/05 07:51:37 total in 10 ms
+LOG:   2017/11/05 07:51:47 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:51:47 2017-11-05 07:51 +1100
+LOG:   2017/11/05 07:51:47 
+Built site for language en:
+LOG:   2017/11/05 07:51:47 2 of 2 drafts rendered
+LOG:   2017/11/05 07:51:47 0 future content
+LOG:   2017/11/05 07:51:47 0 expired content
+LOG:   2017/11/05 07:51:47 0 regular pages created
+LOG:   2017/11/05 07:51:47 10 other pages created
+LOG:   2017/11/05 07:51:47 0 non-page files copied
+LOG:   2017/11/05 07:51:47 0 paginator pages created
+LOG:   2017/11/05 07:51:47 0 tags created
+LOG:   2017/11/05 07:51:47 0 categories created
+LOG:   2017/11/05 07:51:47 total in 12 ms
+LOG:   2017/11/05 07:52:00 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:52:00 2017-11-05 07:52 +1100
+LOG:   2017/11/05 07:52:00 
+Built site for language en:
+LOG:   2017/11/05 07:52:00 2 of 2 drafts rendered
+LOG:   2017/11/05 07:52:00 0 future content
+LOG:   2017/11/05 07:52:00 0 expired content
+LOG:   2017/11/05 07:52:00 0 regular pages created
+LOG:   2017/11/05 07:52:00 10 other pages created
+LOG:   2017/11/05 07:52:00 0 non-page files copied
+LOG:   2017/11/05 07:52:00 0 paginator pages created
+LOG:   2017/11/05 07:52:00 0 tags created
+LOG:   2017/11/05 07:52:00 0 categories created
+LOG:   2017/11/05 07:52:00 total in 9 ms
+LOG:   2017/11/05 07:52:09 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:52:09 2017-11-05 07:52 +1100
+LOG:   2017/11/05 07:52:09 
+Built site for language en:
+LOG:   2017/11/05 07:52:09 2 of 2 drafts rendered
+LOG:   2017/11/05 07:52:09 0 future content
+LOG:   2017/11/05 07:52:09 0 expired content
+LOG:   2017/11/05 07:52:09 0 regular pages created
+LOG:   2017/11/05 07:52:09 10 other pages created
+LOG:   2017/11/05 07:52:09 0 non-page files copied
+LOG:   2017/11/05 07:52:09 0 paginator pages created
+LOG:   2017/11/05 07:52:09 0 tags created
+LOG:   2017/11/05 07:52:09 0 categories created
+LOG:   2017/11/05 07:52:09 total in 36 ms
+LOG:   2017/11/05 07:52:12 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:52:12 2017-11-05 07:52 +1100
+LOG:   2017/11/05 07:52:12 
+Built site for language en:
+LOG:   2017/11/05 07:52:12 2 of 2 drafts rendered
+LOG:   2017/11/05 07:52:12 0 future content
+LOG:   2017/11/05 07:52:12 0 expired content
+LOG:   2017/11/05 07:52:12 0 regular pages created
+LOG:   2017/11/05 07:52:12 10 other pages created
+LOG:   2017/11/05 07:52:12 0 non-page files copied
+LOG:   2017/11/05 07:52:12 0 paginator pages created
+LOG:   2017/11/05 07:52:12 0 tags created
+LOG:   2017/11/05 07:52:12 0 categories created
+LOG:   2017/11/05 07:52:12 total in 9 ms
+LOG:   2017/11/05 07:52:20 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:52:20 2017-11-05 07:52 +1100
+LOG:   2017/11/05 07:52:20 
+Built site for language en:
+LOG:   2017/11/05 07:52:20 2 of 2 drafts rendered
+LOG:   2017/11/05 07:52:20 0 future content
+LOG:   2017/11/05 07:52:20 0 expired content
+LOG:   2017/11/05 07:52:20 0 regular pages created
+LOG:   2017/11/05 07:52:20 10 other pages created
+LOG:   2017/11/05 07:52:20 0 non-page files copied
+LOG:   2017/11/05 07:52:20 0 paginator pages created
+LOG:   2017/11/05 07:52:20 0 tags created
+LOG:   2017/11/05 07:52:20 0 categories created
+LOG:   2017/11/05 07:52:20 total in 8 ms
+LOG:   2017/11/05 07:52:40 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:52:40 2017-11-05 07:52 +1100
+LOG:   2017/11/05 07:52:40 
+Built site for language en:
+LOG:   2017/11/05 07:52:40 2 of 2 drafts rendered
+LOG:   2017/11/05 07:52:40 0 future content
+LOG:   2017/11/05 07:52:40 0 expired content
+LOG:   2017/11/05 07:52:40 0 regular pages created
+LOG:   2017/11/05 07:52:40 10 other pages created
+LOG:   2017/11/05 07:52:40 0 non-page files copied
+LOG:   2017/11/05 07:52:40 0 paginator pages created
+LOG:   2017/11/05 07:52:40 0 tags created
+LOG:   2017/11/05 07:52:40 0 categories created
+LOG:   2017/11/05 07:52:40 total in 10 ms
+LOG:   2017/11/05 07:52:44 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:52:44 2017-11-05 07:52 +1100
+LOG:   2017/11/05 07:52:44 
+Built site for language en:
+LOG:   2017/11/05 07:52:44 2 of 2 drafts rendered
+LOG:   2017/11/05 07:52:44 0 future content
+LOG:   2017/11/05 07:52:44 0 expired content
+LOG:   2017/11/05 07:52:44 0 regular pages created
+LOG:   2017/11/05 07:52:44 10 other pages created
+LOG:   2017/11/05 07:52:44 0 non-page files copied
+LOG:   2017/11/05 07:52:44 0 paginator pages created
+LOG:   2017/11/05 07:52:44 0 tags created
+LOG:   2017/11/05 07:52:44 0 categories created
+LOG:   2017/11/05 07:52:44 total in 8 ms
+LOG:   2017/11/05 07:53:52 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:53:52 2017-11-05 07:53 +1100
+LOG:   2017/11/05 07:53:52 
+Built site for language en:
+LOG:   2017/11/05 07:53:52 2 of 2 drafts rendered
+LOG:   2017/11/05 07:53:52 0 future content
+LOG:   2017/11/05 07:53:52 0 expired content
+LOG:   2017/11/05 07:53:52 0 regular pages created
+LOG:   2017/11/05 07:53:52 10 other pages created
+LOG:   2017/11/05 07:53:52 0 non-page files copied
+LOG:   2017/11/05 07:53:52 0 paginator pages created
+LOG:   2017/11/05 07:53:52 0 categories created
+LOG:   2017/11/05 07:53:52 0 tags created
+LOG:   2017/11/05 07:53:52 total in 13 ms
+LOG:   2017/11/05 07:54:00 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:54:00 2017-11-05 07:54 +1100
+LOG:   2017/11/05 07:54:00 
+Built site for language en:
+LOG:   2017/11/05 07:54:00 2 of 2 drafts rendered
+LOG:   2017/11/05 07:54:00 0 future content
+LOG:   2017/11/05 07:54:00 0 expired content
+LOG:   2017/11/05 07:54:00 0 regular pages created
+LOG:   2017/11/05 07:54:00 10 other pages created
+LOG:   2017/11/05 07:54:00 0 non-page files copied
+LOG:   2017/11/05 07:54:00 0 paginator pages created
+LOG:   2017/11/05 07:54:00 0 categories created
+LOG:   2017/11/05 07:54:00 0 tags created
+LOG:   2017/11/05 07:54:00 total in 8 ms
+LOG:   2017/11/05 07:54:13 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:54:13 2017-11-05 07:54 +1100
+LOG:   2017/11/05 07:54:13 
+Built site for language en:
+LOG:   2017/11/05 07:54:13 2 of 2 drafts rendered
+LOG:   2017/11/05 07:54:13 0 future content
+LOG:   2017/11/05 07:54:13 0 expired content
+LOG:   2017/11/05 07:54:13 0 regular pages created
+LOG:   2017/11/05 07:54:13 10 other pages created
+LOG:   2017/11/05 07:54:13 0 non-page files copied
+LOG:   2017/11/05 07:54:13 0 paginator pages created
+LOG:   2017/11/05 07:54:13 0 tags created
+LOG:   2017/11/05 07:54:13 0 categories created
+LOG:   2017/11/05 07:54:13 total in 13 ms
+LOG:   2017/11/05 07:54:23 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:54:23 2017-11-05 07:54 +1100
+LOG:   2017/11/05 07:54:23 
+Built site for language en:
+LOG:   2017/11/05 07:54:23 2 of 2 drafts rendered
+LOG:   2017/11/05 07:54:23 0 future content
+LOG:   2017/11/05 07:54:23 0 expired content
+LOG:   2017/11/05 07:54:23 0 regular pages created
+LOG:   2017/11/05 07:54:23 10 other pages created
+LOG:   2017/11/05 07:54:23 0 non-page files copied
+LOG:   2017/11/05 07:54:23 0 paginator pages created
+LOG:   2017/11/05 07:54:23 0 tags created
+LOG:   2017/11/05 07:54:23 0 categories created
+LOG:   2017/11/05 07:54:23 total in 8 ms
+LOG:   2017/11/05 07:54:31 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:54:31 2017-11-05 07:54 +1100
+LOG:   2017/11/05 07:54:31 
+Built site for language en:
+LOG:   2017/11/05 07:54:31 2 of 2 drafts rendered
+LOG:   2017/11/05 07:54:31 0 future content
+LOG:   2017/11/05 07:54:31 0 expired content
+LOG:   2017/11/05 07:54:31 0 regular pages created
+LOG:   2017/11/05 07:54:31 10 other pages created
+LOG:   2017/11/05 07:54:31 0 non-page files copied
+LOG:   2017/11/05 07:54:31 0 paginator pages created
+LOG:   2017/11/05 07:54:31 0 tags created
+LOG:   2017/11/05 07:54:31 0 categories created
+LOG:   2017/11/05 07:54:31 total in 11 ms
+LOG:   2017/11/05 07:55:09 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:55:09 2017-11-05 07:55 +1100
+LOG:   2017/11/05 07:55:09 
+Built site for language en:
+LOG:   2017/11/05 07:55:09 2 of 2 drafts rendered
+LOG:   2017/11/05 07:55:09 0 future content
+LOG:   2017/11/05 07:55:09 0 expired content
+LOG:   2017/11/05 07:55:09 0 regular pages created
+LOG:   2017/11/05 07:55:09 10 other pages created
+LOG:   2017/11/05 07:55:09 0 non-page files copied
+LOG:   2017/11/05 07:55:09 0 paginator pages created
+LOG:   2017/11/05 07:55:09 0 tags created
+LOG:   2017/11/05 07:55:09 0 categories created
+LOG:   2017/11/05 07:55:09 total in 9 ms
+LOG:   2017/11/05 07:55:15 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:55:15 2017-11-05 07:55 +1100
+LOG:   2017/11/05 07:55:15 
+Built site for language en:
+LOG:   2017/11/05 07:55:15 2 of 2 drafts rendered
+LOG:   2017/11/05 07:55:15 0 future content
+LOG:   2017/11/05 07:55:15 0 expired content
+LOG:   2017/11/05 07:55:15 0 regular pages created
+LOG:   2017/11/05 07:55:15 10 other pages created
+LOG:   2017/11/05 07:55:15 0 non-page files copied
+LOG:   2017/11/05 07:55:15 0 paginator pages created
+LOG:   2017/11/05 07:55:15 0 tags created
+LOG:   2017/11/05 07:55:15 0 categories created
+LOG:   2017/11/05 07:55:15 total in 11 ms
+LOG:   2017/11/05 07:56:46 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:56:46 2017-11-05 07:56 +1100
+LOG:   2017/11/05 07:56:46 
+Built site for language en:
+LOG:   2017/11/05 07:56:46 2 of 2 drafts rendered
+LOG:   2017/11/05 07:56:46 0 future content
+LOG:   2017/11/05 07:56:46 0 expired content
+LOG:   2017/11/05 07:56:46 0 regular pages created
+LOG:   2017/11/05 07:56:46 10 other pages created
+LOG:   2017/11/05 07:56:46 0 non-page files copied
+LOG:   2017/11/05 07:56:46 0 paginator pages created
+LOG:   2017/11/05 07:56:46 0 tags created
+LOG:   2017/11/05 07:56:46 0 categories created
+LOG:   2017/11/05 07:56:46 total in 9 ms
+LOG:   2017/11/05 07:56:50 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:56:50 2017-11-05 07:56 +1100
+LOG:   2017/11/05 07:56:50 
+Built site for language en:
+LOG:   2017/11/05 07:56:50 2 of 2 drafts rendered
+LOG:   2017/11/05 07:56:50 0 future content
+LOG:   2017/11/05 07:56:50 0 expired content
+LOG:   2017/11/05 07:56:50 0 regular pages created
+LOG:   2017/11/05 07:56:50 10 other pages created
+LOG:   2017/11/05 07:56:50 0 non-page files copied
+LOG:   2017/11/05 07:56:50 0 paginator pages created
+LOG:   2017/11/05 07:56:50 0 tags created
+LOG:   2017/11/05 07:56:50 0 categories created
+LOG:   2017/11/05 07:56:50 total in 13 ms
+LOG:   2017/11/05 07:57:07 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:57:07 2017-11-05 07:57 +1100
+LOG:   2017/11/05 07:57:07 
+Built site for language en:
+LOG:   2017/11/05 07:57:07 2 of 2 drafts rendered
+LOG:   2017/11/05 07:57:07 0 future content
+LOG:   2017/11/05 07:57:07 0 expired content
+LOG:   2017/11/05 07:57:07 0 regular pages created
+LOG:   2017/11/05 07:57:07 10 other pages created
+LOG:   2017/11/05 07:57:07 0 non-page files copied
+LOG:   2017/11/05 07:57:07 0 paginator pages created
+LOG:   2017/11/05 07:57:07 0 tags created
+LOG:   2017/11/05 07:57:07 0 categories created
+LOG:   2017/11/05 07:57:07 total in 8 ms
+LOG:   2017/11/05 07:57:13 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:57:13 2017-11-05 07:57 +1100
+LOG:   2017/11/05 07:57:13 
+Built site for language en:
+LOG:   2017/11/05 07:57:13 2 of 2 drafts rendered
+LOG:   2017/11/05 07:57:13 0 future content
+LOG:   2017/11/05 07:57:13 0 expired content
+LOG:   2017/11/05 07:57:13 0 regular pages created
+LOG:   2017/11/05 07:57:13 10 other pages created
+LOG:   2017/11/05 07:57:13 0 non-page files copied
+LOG:   2017/11/05 07:57:13 0 paginator pages created
+LOG:   2017/11/05 07:57:13 0 categories created
+LOG:   2017/11/05 07:57:13 0 tags created
+LOG:   2017/11/05 07:57:13 total in 8 ms
+LOG:   2017/11/05 07:57:15 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:57:15 2017-11-05 07:57 +1100
+LOG:   2017/11/05 07:57:15 
+Built site for language en:
+LOG:   2017/11/05 07:57:15 2 of 2 drafts rendered
+LOG:   2017/11/05 07:57:15 0 future content
+LOG:   2017/11/05 07:57:15 0 expired content
+LOG:   2017/11/05 07:57:15 0 regular pages created
+LOG:   2017/11/05 07:57:15 10 other pages created
+LOG:   2017/11/05 07:57:15 0 non-page files copied
+LOG:   2017/11/05 07:57:15 0 paginator pages created
+LOG:   2017/11/05 07:57:15 0 tags created
+LOG:   2017/11/05 07:57:15 0 categories created
+LOG:   2017/11/05 07:57:15 total in 12 ms
+LOG:   2017/11/05 07:57:21 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:57:21 2017-11-05 07:57 +1100
+LOG:   2017/11/05 07:57:21 
+Built site for language en:
+LOG:   2017/11/05 07:57:21 2 of 2 drafts rendered
+LOG:   2017/11/05 07:57:21 0 future content
+LOG:   2017/11/05 07:57:21 0 expired content
+LOG:   2017/11/05 07:57:21 0 regular pages created
+LOG:   2017/11/05 07:57:21 10 other pages created
+LOG:   2017/11/05 07:57:21 0 non-page files copied
+LOG:   2017/11/05 07:57:21 0 paginator pages created
+LOG:   2017/11/05 07:57:21 0 tags created
+LOG:   2017/11/05 07:57:21 0 categories created
+LOG:   2017/11/05 07:57:21 total in 8 ms
+LOG:   2017/11/05 07:57:24 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:57:24 2017-11-05 07:57 +1100
+LOG:   2017/11/05 07:57:24 
+Built site for language en:
+LOG:   2017/11/05 07:57:24 2 of 2 drafts rendered
+LOG:   2017/11/05 07:57:24 0 future content
+LOG:   2017/11/05 07:57:24 0 expired content
+LOG:   2017/11/05 07:57:24 0 regular pages created
+LOG:   2017/11/05 07:57:24 10 other pages created
+LOG:   2017/11/05 07:57:24 0 non-page files copied
+LOG:   2017/11/05 07:57:24 0 paginator pages created
+LOG:   2017/11/05 07:57:24 0 tags created
+LOG:   2017/11/05 07:57:24 0 categories created
+LOG:   2017/11/05 07:57:24 total in 12 ms
+LOG:   2017/11/05 07:57:29 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:57:29 2017-11-05 07:57 +1100
+LOG:   2017/11/05 07:57:29 
+Built site for language en:
+LOG:   2017/11/05 07:57:29 2 of 2 drafts rendered
+LOG:   2017/11/05 07:57:29 0 future content
+LOG:   2017/11/05 07:57:29 0 expired content
+LOG:   2017/11/05 07:57:29 0 regular pages created
+LOG:   2017/11/05 07:57:29 10 other pages created
+LOG:   2017/11/05 07:57:29 0 non-page files copied
+LOG:   2017/11/05 07:57:29 0 paginator pages created
+LOG:   2017/11/05 07:57:29 0 tags created
+LOG:   2017/11/05 07:57:29 0 categories created
+LOG:   2017/11/05 07:57:29 total in 9 ms
+LOG:   2017/11/05 07:57:40 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:57:40 2017-11-05 07:57 +1100
+LOG:   2017/11/05 07:57:40 
+Built site for language en:
+LOG:   2017/11/05 07:57:40 2 of 2 drafts rendered
+LOG:   2017/11/05 07:57:40 0 future content
+LOG:   2017/11/05 07:57:40 0 expired content
+LOG:   2017/11/05 07:57:40 0 regular pages created
+LOG:   2017/11/05 07:57:40 10 other pages created
+LOG:   2017/11/05 07:57:40 0 non-page files copied
+LOG:   2017/11/05 07:57:40 0 paginator pages created
+LOG:   2017/11/05 07:57:40 0 tags created
+LOG:   2017/11/05 07:57:40 0 categories created
+LOG:   2017/11/05 07:57:40 total in 13 ms
+LOG:   2017/11/05 07:58:01 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:58:01 2017-11-05 07:58 +1100
+LOG:   2017/11/05 07:58:01 
+Built site for language en:
+LOG:   2017/11/05 07:58:01 2 of 2 drafts rendered
+LOG:   2017/11/05 07:58:01 0 future content
+LOG:   2017/11/05 07:58:01 0 expired content
+LOG:   2017/11/05 07:58:01 0 regular pages created
+LOG:   2017/11/05 07:58:01 10 other pages created
+LOG:   2017/11/05 07:58:01 0 non-page files copied
+LOG:   2017/11/05 07:58:01 0 paginator pages created
+LOG:   2017/11/05 07:58:01 0 tags created
+LOG:   2017/11/05 07:58:01 0 categories created
+LOG:   2017/11/05 07:58:01 total in 11 ms
+LOG:   2017/11/05 07:58:11 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:58:11 2017-11-05 07:58 +1100
+LOG:   2017/11/05 07:58:11 
+Built site for language en:
+LOG:   2017/11/05 07:58:11 2 of 2 drafts rendered
+LOG:   2017/11/05 07:58:11 0 future content
+LOG:   2017/11/05 07:58:11 0 expired content
+LOG:   2017/11/05 07:58:11 0 regular pages created
+LOG:   2017/11/05 07:58:11 10 other pages created
+LOG:   2017/11/05 07:58:11 0 non-page files copied
+LOG:   2017/11/05 07:58:11 0 paginator pages created
+LOG:   2017/11/05 07:58:11 0 tags created
+LOG:   2017/11/05 07:58:11 0 categories created
+LOG:   2017/11/05 07:58:11 total in 11 ms
+LOG:   2017/11/05 07:58:15 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:58:15 2017-11-05 07:58 +1100
+LOG:   2017/11/05 07:58:15 
+Built site for language en:
+LOG:   2017/11/05 07:58:15 2 of 2 drafts rendered
+LOG:   2017/11/05 07:58:15 0 future content
+LOG:   2017/11/05 07:58:15 0 expired content
+LOG:   2017/11/05 07:58:15 0 regular pages created
+LOG:   2017/11/05 07:58:15 10 other pages created
+LOG:   2017/11/05 07:58:15 0 non-page files copied
+LOG:   2017/11/05 07:58:15 0 paginator pages created
+LOG:   2017/11/05 07:58:15 0 categories created
+LOG:   2017/11/05 07:58:15 0 tags created
+LOG:   2017/11/05 07:58:15 total in 10 ms
+LOG:   2017/11/05 07:58:34 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:58:34 2017-11-05 07:58 +1100
+LOG:   2017/11/05 07:58:34 
+Built site for language en:
+LOG:   2017/11/05 07:58:34 2 of 2 drafts rendered
+LOG:   2017/11/05 07:58:34 0 future content
+LOG:   2017/11/05 07:58:34 0 expired content
+LOG:   2017/11/05 07:58:34 0 regular pages created
+LOG:   2017/11/05 07:58:34 10 other pages created
+LOG:   2017/11/05 07:58:34 0 non-page files copied
+LOG:   2017/11/05 07:58:34 0 paginator pages created
+LOG:   2017/11/05 07:58:34 0 tags created
+LOG:   2017/11/05 07:58:34 0 categories created
+LOG:   2017/11/05 07:58:34 total in 9 ms
+LOG:   2017/11/05 07:59:40 
+Change detected, rebuilding site
+LOG:   2017/11/05 07:59:40 2017-11-05 07:59 +1100
+LOG:   2017/11/05 07:59:40 
+Built site for language en:
+LOG:   2017/11/05 07:59:40 2 of 2 drafts rendered
+LOG:   2017/11/05 07:59:40 0 future content
+LOG:   2017/11/05 07:59:40 0 expired content
+LOG:   2017/11/05 07:59:40 0 regular pages created
+LOG:   2017/11/05 07:59:40 10 other pages created
+LOG:   2017/11/05 07:59:40 0 non-page files copied
+LOG:   2017/11/05 07:59:40 0 paginator pages created
+LOG:   2017/11/05 07:59:40 0 categories created
+LOG:   2017/11/05 07:59:40 0 tags created
+LOG:   2017/11/05 07:59:40 total in 11 ms
+LOG:   2017/11/05 08:00:01 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:00:01 2017-11-05 08:00 +1100
+LOG:   2017/11/05 08:00:01 
+Built site for language en:
+LOG:   2017/11/05 08:00:01 2 of 2 drafts rendered
+LOG:   2017/11/05 08:00:01 0 future content
+LOG:   2017/11/05 08:00:01 0 expired content
+LOG:   2017/11/05 08:00:01 0 regular pages created
+LOG:   2017/11/05 08:00:01 10 other pages created
+LOG:   2017/11/05 08:00:01 0 non-page files copied
+LOG:   2017/11/05 08:00:01 0 paginator pages created
+LOG:   2017/11/05 08:00:01 0 tags created
+LOG:   2017/11/05 08:00:01 0 categories created
+LOG:   2017/11/05 08:00:01 total in 8 ms
+LOG:   2017/11/05 08:00:21 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:00:21 2017-11-05 08:00 +1100
+LOG:   2017/11/05 08:00:21 
+Built site for language en:
+LOG:   2017/11/05 08:00:21 2 of 2 drafts rendered
+LOG:   2017/11/05 08:00:21 0 future content
+LOG:   2017/11/05 08:00:21 0 expired content
+LOG:   2017/11/05 08:00:21 0 regular pages created
+LOG:   2017/11/05 08:00:21 10 other pages created
+LOG:   2017/11/05 08:00:21 0 non-page files copied
+LOG:   2017/11/05 08:00:21 0 paginator pages created
+LOG:   2017/11/05 08:00:21 0 tags created
+LOG:   2017/11/05 08:00:21 0 categories created
+LOG:   2017/11/05 08:00:21 total in 11 ms
+LOG:   2017/11/05 08:00:25 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:00:25 2017-11-05 08:00 +1100
+LOG:   2017/11/05 08:00:25 
+Built site for language en:
+LOG:   2017/11/05 08:00:25 2 of 2 drafts rendered
+LOG:   2017/11/05 08:00:25 0 future content
+LOG:   2017/11/05 08:00:25 0 expired content
+LOG:   2017/11/05 08:00:25 0 regular pages created
+LOG:   2017/11/05 08:00:25 10 other pages created
+LOG:   2017/11/05 08:00:25 0 non-page files copied
+LOG:   2017/11/05 08:00:25 0 paginator pages created
+LOG:   2017/11/05 08:00:25 0 tags created
+LOG:   2017/11/05 08:00:25 0 categories created
+LOG:   2017/11/05 08:00:25 total in 7 ms
+LOG:   2017/11/05 08:00:45 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:00:45 2017-11-05 08:00 +1100
+LOG:   2017/11/05 08:00:45 
+Built site for language en:
+LOG:   2017/11/05 08:00:45 2 of 2 drafts rendered
+LOG:   2017/11/05 08:00:45 0 future content
+LOG:   2017/11/05 08:00:45 0 expired content
+LOG:   2017/11/05 08:00:45 0 regular pages created
+LOG:   2017/11/05 08:00:45 10 other pages created
+LOG:   2017/11/05 08:00:45 0 non-page files copied
+LOG:   2017/11/05 08:00:45 0 paginator pages created
+LOG:   2017/11/05 08:00:45 0 tags created
+LOG:   2017/11/05 08:00:45 0 categories created
+LOG:   2017/11/05 08:00:45 total in 12 ms
+LOG:   2017/11/05 08:00:54 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:00:54 2017-11-05 08:00 +1100
+LOG:   2017/11/05 08:00:54 
+Built site for language en:
+LOG:   2017/11/05 08:00:54 2 of 2 drafts rendered
+LOG:   2017/11/05 08:00:54 0 future content
+LOG:   2017/11/05 08:00:54 0 expired content
+LOG:   2017/11/05 08:00:54 0 regular pages created
+LOG:   2017/11/05 08:00:54 10 other pages created
+LOG:   2017/11/05 08:00:54 0 non-page files copied
+LOG:   2017/11/05 08:00:54 0 paginator pages created
+LOG:   2017/11/05 08:00:54 0 tags created
+LOG:   2017/11/05 08:00:54 0 categories created
+LOG:   2017/11/05 08:00:54 total in 8 ms
+LOG:   2017/11/05 08:01:23 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:01:23 2017-11-05 08:01 +1100
+LOG:   2017/11/05 08:01:23 
+Built site for language en:
+LOG:   2017/11/05 08:01:23 2 of 2 drafts rendered
+LOG:   2017/11/05 08:01:23 0 future content
+LOG:   2017/11/05 08:01:23 0 expired content
+LOG:   2017/11/05 08:01:23 0 regular pages created
+LOG:   2017/11/05 08:01:23 10 other pages created
+LOG:   2017/11/05 08:01:23 0 non-page files copied
+LOG:   2017/11/05 08:01:23 0 paginator pages created
+LOG:   2017/11/05 08:01:23 0 tags created
+LOG:   2017/11/05 08:01:23 0 categories created
+LOG:   2017/11/05 08:01:23 total in 13 ms
+LOG:   2017/11/05 08:01:27 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:01:27 2017-11-05 08:01 +1100
+LOG:   2017/11/05 08:01:27 
+Built site for language en:
+LOG:   2017/11/05 08:01:27 2 of 2 drafts rendered
+LOG:   2017/11/05 08:01:27 0 future content
+LOG:   2017/11/05 08:01:27 0 expired content
+LOG:   2017/11/05 08:01:27 0 regular pages created
+LOG:   2017/11/05 08:01:27 10 other pages created
+LOG:   2017/11/05 08:01:27 0 non-page files copied
+LOG:   2017/11/05 08:01:27 0 paginator pages created
+LOG:   2017/11/05 08:01:27 0 tags created
+LOG:   2017/11/05 08:01:27 0 categories created
+LOG:   2017/11/05 08:01:27 total in 9 ms
+LOG:   2017/11/05 08:02:11 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:02:11 2017-11-05 08:02 +1100
+LOG:   2017/11/05 08:02:11 
+Built site for language en:
+LOG:   2017/11/05 08:02:11 2 of 2 drafts rendered
+LOG:   2017/11/05 08:02:11 0 future content
+LOG:   2017/11/05 08:02:11 0 expired content
+LOG:   2017/11/05 08:02:11 0 regular pages created
+LOG:   2017/11/05 08:02:11 10 other pages created
+LOG:   2017/11/05 08:02:11 0 non-page files copied
+LOG:   2017/11/05 08:02:11 0 paginator pages created
+LOG:   2017/11/05 08:02:11 0 tags created
+LOG:   2017/11/05 08:02:11 0 categories created
+LOG:   2017/11/05 08:02:11 total in 14 ms
+LOG:   2017/11/05 08:02:32 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:02:32 2017-11-05 08:02 +1100
+LOG:   2017/11/05 08:02:32 
+Built site for language en:
+LOG:   2017/11/05 08:02:32 2 of 2 drafts rendered
+LOG:   2017/11/05 08:02:32 0 future content
+LOG:   2017/11/05 08:02:32 0 expired content
+LOG:   2017/11/05 08:02:32 0 regular pages created
+LOG:   2017/11/05 08:02:32 10 other pages created
+LOG:   2017/11/05 08:02:32 0 non-page files copied
+LOG:   2017/11/05 08:02:32 0 paginator pages created
+LOG:   2017/11/05 08:02:32 0 tags created
+LOG:   2017/11/05 08:02:32 0 categories created
+LOG:   2017/11/05 08:02:32 total in 9 ms
+LOG:   2017/11/05 08:02:35 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:02:35 2017-11-05 08:02 +1100
+LOG:   2017/11/05 08:02:35 
+Built site for language en:
+LOG:   2017/11/05 08:02:35 2 of 2 drafts rendered
+LOG:   2017/11/05 08:02:35 0 future content
+LOG:   2017/11/05 08:02:35 0 expired content
+LOG:   2017/11/05 08:02:35 0 regular pages created
+LOG:   2017/11/05 08:02:35 10 other pages created
+LOG:   2017/11/05 08:02:35 0 non-page files copied
+LOG:   2017/11/05 08:02:35 0 paginator pages created
+LOG:   2017/11/05 08:02:35 0 tags created
+LOG:   2017/11/05 08:02:35 0 categories created
+LOG:   2017/11/05 08:02:35 total in 11 ms
+LOG:   2017/11/05 08:02:53 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:02:53 2017-11-05 08:02 +1100
+LOG:   2017/11/05 08:02:53 
+Built site for language en:
+LOG:   2017/11/05 08:02:53 2 of 2 drafts rendered
+LOG:   2017/11/05 08:02:53 0 future content
+LOG:   2017/11/05 08:02:53 0 expired content
+LOG:   2017/11/05 08:02:53 0 regular pages created
+LOG:   2017/11/05 08:02:53 10 other pages created
+LOG:   2017/11/05 08:02:53 0 non-page files copied
+LOG:   2017/11/05 08:02:53 0 paginator pages created
+LOG:   2017/11/05 08:02:53 0 tags created
+LOG:   2017/11/05 08:02:53 0 categories created
+LOG:   2017/11/05 08:02:53 total in 11 ms
+LOG:   2017/11/05 08:02:56 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:02:56 2017-11-05 08:02 +1100
+LOG:   2017/11/05 08:02:56 
+Built site for language en:
+LOG:   2017/11/05 08:02:56 2 of 2 drafts rendered
+LOG:   2017/11/05 08:02:56 0 future content
+LOG:   2017/11/05 08:02:56 0 expired content
+LOG:   2017/11/05 08:02:56 0 regular pages created
+LOG:   2017/11/05 08:02:56 10 other pages created
+LOG:   2017/11/05 08:02:56 0 non-page files copied
+LOG:   2017/11/05 08:02:56 0 paginator pages created
+LOG:   2017/11/05 08:02:56 0 tags created
+LOG:   2017/11/05 08:02:56 0 categories created
+LOG:   2017/11/05 08:02:56 total in 10 ms
+LOG:   2017/11/05 08:03:05 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:03:05 2017-11-05 08:03 +1100
+LOG:   2017/11/05 08:03:05 
+Built site for language en:
+LOG:   2017/11/05 08:03:05 2 of 2 drafts rendered
+LOG:   2017/11/05 08:03:05 0 future content
+LOG:   2017/11/05 08:03:05 0 expired content
+LOG:   2017/11/05 08:03:05 0 regular pages created
+LOG:   2017/11/05 08:03:05 10 other pages created
+LOG:   2017/11/05 08:03:05 0 non-page files copied
+LOG:   2017/11/05 08:03:05 0 paginator pages created
+LOG:   2017/11/05 08:03:05 0 tags created
+LOG:   2017/11/05 08:03:05 0 categories created
+LOG:   2017/11/05 08:03:05 total in 12 ms
+LOG:   2017/11/05 08:03:38 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:03:38 2017-11-05 08:03 +1100
+LOG:   2017/11/05 08:03:38 
+Built site for language en:
+LOG:   2017/11/05 08:03:38 2 of 2 drafts rendered
+LOG:   2017/11/05 08:03:38 0 future content
+LOG:   2017/11/05 08:03:38 0 expired content
+LOG:   2017/11/05 08:03:38 0 regular pages created
+LOG:   2017/11/05 08:03:38 10 other pages created
+LOG:   2017/11/05 08:03:38 0 non-page files copied
+LOG:   2017/11/05 08:03:38 0 paginator pages created
+LOG:   2017/11/05 08:03:38 0 tags created
+LOG:   2017/11/05 08:03:38 0 categories created
+LOG:   2017/11/05 08:03:38 total in 9 ms
+LOG:   2017/11/05 08:03:43 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:03:43 2017-11-05 08:03 +1100
+LOG:   2017/11/05 08:03:43 
+Built site for language en:
+LOG:   2017/11/05 08:03:43 2 of 2 drafts rendered
+LOG:   2017/11/05 08:03:43 0 future content
+LOG:   2017/11/05 08:03:43 0 expired content
+LOG:   2017/11/05 08:03:43 0 regular pages created
+LOG:   2017/11/05 08:03:43 10 other pages created
+LOG:   2017/11/05 08:03:43 0 non-page files copied
+LOG:   2017/11/05 08:03:43 0 paginator pages created
+LOG:   2017/11/05 08:03:43 0 tags created
+LOG:   2017/11/05 08:03:43 0 categories created
+LOG:   2017/11/05 08:03:43 total in 10 ms
+LOG:   2017/11/05 08:04:13 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:04:13 2017-11-05 08:04 +1100
+LOG:   2017/11/05 08:04:13 
+Built site for language en:
+LOG:   2017/11/05 08:04:13 2 of 2 drafts rendered
+LOG:   2017/11/05 08:04:13 0 future content
+LOG:   2017/11/05 08:04:13 0 expired content
+LOG:   2017/11/05 08:04:13 0 regular pages created
+LOG:   2017/11/05 08:04:13 10 other pages created
+LOG:   2017/11/05 08:04:13 0 non-page files copied
+LOG:   2017/11/05 08:04:13 0 paginator pages created
+LOG:   2017/11/05 08:04:13 0 tags created
+LOG:   2017/11/05 08:04:13 0 categories created
+LOG:   2017/11/05 08:04:13 total in 8 ms
+LOG:   2017/11/05 08:04:23 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:04:23 2017-11-05 08:04 +1100
+LOG:   2017/11/05 08:04:23 
+Built site for language en:
+LOG:   2017/11/05 08:04:23 2 of 2 drafts rendered
+LOG:   2017/11/05 08:04:23 0 future content
+LOG:   2017/11/05 08:04:23 0 expired content
+LOG:   2017/11/05 08:04:23 0 regular pages created
+LOG:   2017/11/05 08:04:23 10 other pages created
+LOG:   2017/11/05 08:04:23 0 non-page files copied
+LOG:   2017/11/05 08:04:23 0 paginator pages created
+LOG:   2017/11/05 08:04:23 0 tags created
+LOG:   2017/11/05 08:04:23 0 categories created
+LOG:   2017/11/05 08:04:23 total in 12 ms
+LOG:   2017/11/05 08:04:25 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:04:25 2017-11-05 08:04 +1100
+LOG:   2017/11/05 08:04:25 
+Built site for language en:
+LOG:   2017/11/05 08:04:25 2 of 2 drafts rendered
+LOG:   2017/11/05 08:04:25 0 future content
+LOG:   2017/11/05 08:04:25 0 expired content
+LOG:   2017/11/05 08:04:25 0 regular pages created
+LOG:   2017/11/05 08:04:25 10 other pages created
+LOG:   2017/11/05 08:04:25 0 non-page files copied
+LOG:   2017/11/05 08:04:25 0 paginator pages created
+LOG:   2017/11/05 08:04:25 0 tags created
+LOG:   2017/11/05 08:04:25 0 categories created
+LOG:   2017/11/05 08:04:25 total in 8 ms
+LOG:   2017/11/05 08:04:51 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:04:51 2017-11-05 08:04 +1100
+LOG:   2017/11/05 08:04:51 
+Built site for language en:
+LOG:   2017/11/05 08:04:51 2 of 2 drafts rendered
+LOG:   2017/11/05 08:04:51 0 future content
+LOG:   2017/11/05 08:04:51 0 expired content
+LOG:   2017/11/05 08:04:51 0 regular pages created
+LOG:   2017/11/05 08:04:51 10 other pages created
+LOG:   2017/11/05 08:04:51 0 non-page files copied
+LOG:   2017/11/05 08:04:51 0 paginator pages created
+LOG:   2017/11/05 08:04:51 0 tags created
+LOG:   2017/11/05 08:04:51 0 categories created
+LOG:   2017/11/05 08:04:51 total in 10 ms
+LOG:   2017/11/05 08:05:14 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:05:14 2017-11-05 08:05 +1100
+LOG:   2017/11/05 08:05:14 
+Built site for language en:
+LOG:   2017/11/05 08:05:14 2 of 2 drafts rendered
+LOG:   2017/11/05 08:05:14 0 future content
+LOG:   2017/11/05 08:05:14 0 expired content
+LOG:   2017/11/05 08:05:14 0 regular pages created
+LOG:   2017/11/05 08:05:14 10 other pages created
+LOG:   2017/11/05 08:05:14 0 non-page files copied
+LOG:   2017/11/05 08:05:14 0 paginator pages created
+LOG:   2017/11/05 08:05:14 0 tags created
+LOG:   2017/11/05 08:05:14 0 categories created
+LOG:   2017/11/05 08:05:14 total in 8 ms
+LOG:   2017/11/05 08:05:19 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:05:19 2017-11-05 08:05 +1100
+LOG:   2017/11/05 08:05:19 
+Built site for language en:
+LOG:   2017/11/05 08:05:19 2 of 2 drafts rendered
+LOG:   2017/11/05 08:05:19 0 future content
+LOG:   2017/11/05 08:05:19 0 expired content
+LOG:   2017/11/05 08:05:19 0 regular pages created
+LOG:   2017/11/05 08:05:19 10 other pages created
+LOG:   2017/11/05 08:05:19 0 non-page files copied
+LOG:   2017/11/05 08:05:19 0 paginator pages created
+LOG:   2017/11/05 08:05:19 0 tags created
+LOG:   2017/11/05 08:05:19 0 categories created
+LOG:   2017/11/05 08:05:19 total in 12 ms
+LOG:   2017/11/05 08:05:57 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:05:57 2017-11-05 08:05 +1100
+LOG:   2017/11/05 08:05:57 
+Built site for language en:
+LOG:   2017/11/05 08:05:57 2 of 2 drafts rendered
+LOG:   2017/11/05 08:05:57 0 future content
+LOG:   2017/11/05 08:05:57 0 expired content
+LOG:   2017/11/05 08:05:57 0 regular pages created
+LOG:   2017/11/05 08:05:57 10 other pages created
+LOG:   2017/11/05 08:05:57 0 non-page files copied
+LOG:   2017/11/05 08:05:57 0 paginator pages created
+LOG:   2017/11/05 08:05:57 0 categories created
+LOG:   2017/11/05 08:05:57 0 tags created
+LOG:   2017/11/05 08:05:57 total in 8 ms
+LOG:   2017/11/05 08:06:01 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:06:01 2017-11-05 08:06 +1100
+LOG:   2017/11/05 08:06:01 
+Built site for language en:
+LOG:   2017/11/05 08:06:01 2 of 2 drafts rendered
+LOG:   2017/11/05 08:06:01 0 future content
+LOG:   2017/11/05 08:06:01 0 expired content
+LOG:   2017/11/05 08:06:01 0 regular pages created
+LOG:   2017/11/05 08:06:01 10 other pages created
+LOG:   2017/11/05 08:06:01 0 non-page files copied
+LOG:   2017/11/05 08:06:01 0 paginator pages created
+LOG:   2017/11/05 08:06:01 0 tags created
+LOG:   2017/11/05 08:06:01 0 categories created
+LOG:   2017/11/05 08:06:01 total in 12 ms
+LOG:   2017/11/05 08:06:02 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:06:02 2017-11-05 08:06 +1100
+LOG:   2017/11/05 08:06:02 
+Built site for language en:
+LOG:   2017/11/05 08:06:02 2 of 2 drafts rendered
+LOG:   2017/11/05 08:06:02 0 future content
+LOG:   2017/11/05 08:06:02 0 expired content
+LOG:   2017/11/05 08:06:02 0 regular pages created
+LOG:   2017/11/05 08:06:02 10 other pages created
+LOG:   2017/11/05 08:06:02 0 non-page files copied
+LOG:   2017/11/05 08:06:02 0 paginator pages created
+LOG:   2017/11/05 08:06:02 0 tags created
+LOG:   2017/11/05 08:06:02 0 categories created
+LOG:   2017/11/05 08:06:02 total in 11 ms
+LOG:   2017/11/05 08:06:38 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:06:38 2017-11-05 08:06 +1100
+LOG:   2017/11/05 08:06:38 
+Built site for language en:
+LOG:   2017/11/05 08:06:38 2 of 2 drafts rendered
+LOG:   2017/11/05 08:06:38 0 future content
+LOG:   2017/11/05 08:06:38 0 expired content
+LOG:   2017/11/05 08:06:38 0 regular pages created
+LOG:   2017/11/05 08:06:38 10 other pages created
+LOG:   2017/11/05 08:06:38 0 non-page files copied
+LOG:   2017/11/05 08:06:38 0 paginator pages created
+LOG:   2017/11/05 08:06:38 0 tags created
+LOG:   2017/11/05 08:06:38 0 categories created
+LOG:   2017/11/05 08:06:38 total in 9 ms
+LOG:   2017/11/05 08:06:39 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:06:39 2017-11-05 08:06 +1100
+LOG:   2017/11/05 08:06:39 
+Built site for language en:
+LOG:   2017/11/05 08:06:39 2 of 2 drafts rendered
+LOG:   2017/11/05 08:06:39 0 future content
+LOG:   2017/11/05 08:06:39 0 expired content
+LOG:   2017/11/05 08:06:39 0 regular pages created
+LOG:   2017/11/05 08:06:39 10 other pages created
+LOG:   2017/11/05 08:06:39 0 non-page files copied
+LOG:   2017/11/05 08:06:39 0 paginator pages created
+LOG:   2017/11/05 08:06:39 0 tags created
+LOG:   2017/11/05 08:06:39 0 categories created
+LOG:   2017/11/05 08:06:39 total in 12 ms
+LOG:   2017/11/05 08:06:45 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:06:45 2017-11-05 08:06 +1100
+LOG:   2017/11/05 08:06:45 
+Built site for language en:
+LOG:   2017/11/05 08:06:45 2 of 2 drafts rendered
+LOG:   2017/11/05 08:06:45 0 future content
+LOG:   2017/11/05 08:06:45 0 expired content
+LOG:   2017/11/05 08:06:45 0 regular pages created
+LOG:   2017/11/05 08:06:45 10 other pages created
+LOG:   2017/11/05 08:06:45 0 non-page files copied
+LOG:   2017/11/05 08:06:45 0 paginator pages created
+LOG:   2017/11/05 08:06:45 0 tags created
+LOG:   2017/11/05 08:06:45 0 categories created
+LOG:   2017/11/05 08:06:45 total in 8 ms
+LOG:   2017/11/05 08:06:46 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:06:46 2017-11-05 08:06 +1100
+LOG:   2017/11/05 08:06:46 
+Built site for language en:
+LOG:   2017/11/05 08:06:46 2 of 2 drafts rendered
+LOG:   2017/11/05 08:06:46 0 future content
+LOG:   2017/11/05 08:06:46 0 expired content
+LOG:   2017/11/05 08:06:46 0 regular pages created
+LOG:   2017/11/05 08:06:46 10 other pages created
+LOG:   2017/11/05 08:06:46 0 non-page files copied
+LOG:   2017/11/05 08:06:46 0 paginator pages created
+LOG:   2017/11/05 08:06:46 0 tags created
+LOG:   2017/11/05 08:06:46 0 categories created
+LOG:   2017/11/05 08:06:46 total in 11 ms
+LOG:   2017/11/05 08:06:50 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:06:50 2017-11-05 08:06 +1100
+LOG:   2017/11/05 08:06:50 
+Built site for language en:
+LOG:   2017/11/05 08:06:50 2 of 2 drafts rendered
+LOG:   2017/11/05 08:06:50 0 future content
+LOG:   2017/11/05 08:06:50 0 expired content
+LOG:   2017/11/05 08:06:50 0 regular pages created
+LOG:   2017/11/05 08:06:50 10 other pages created
+LOG:   2017/11/05 08:06:50 0 non-page files copied
+LOG:   2017/11/05 08:06:50 0 paginator pages created
+LOG:   2017/11/05 08:06:50 0 tags created
+LOG:   2017/11/05 08:06:50 0 categories created
+LOG:   2017/11/05 08:06:50 total in 9 ms
+LOG:   2017/11/05 08:07:12 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:07:12 2017-11-05 08:07 +1100
+LOG:   2017/11/05 08:07:12 
+Built site for language en:
+LOG:   2017/11/05 08:07:12 2 of 2 drafts rendered
+LOG:   2017/11/05 08:07:12 0 future content
+LOG:   2017/11/05 08:07:12 0 expired content
+LOG:   2017/11/05 08:07:12 0 regular pages created
+LOG:   2017/11/05 08:07:12 10 other pages created
+LOG:   2017/11/05 08:07:12 0 non-page files copied
+LOG:   2017/11/05 08:07:12 0 paginator pages created
+LOG:   2017/11/05 08:07:12 0 categories created
+LOG:   2017/11/05 08:07:12 0 tags created
+LOG:   2017/11/05 08:07:12 total in 13 ms
+LOG:   2017/11/05 08:07:40 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:07:40 2017-11-05 08:07 +1100
+LOG:   2017/11/05 08:07:40 
+Built site for language en:
+LOG:   2017/11/05 08:07:40 2 of 2 drafts rendered
+LOG:   2017/11/05 08:07:40 0 future content
+LOG:   2017/11/05 08:07:40 0 expired content
+LOG:   2017/11/05 08:07:40 0 regular pages created
+LOG:   2017/11/05 08:07:40 10 other pages created
+LOG:   2017/11/05 08:07:40 0 non-page files copied
+LOG:   2017/11/05 08:07:40 0 paginator pages created
+LOG:   2017/11/05 08:07:40 0 categories created
+LOG:   2017/11/05 08:07:40 0 tags created
+LOG:   2017/11/05 08:07:40 total in 8 ms
+LOG:   2017/11/05 08:07:45 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:07:45 2017-11-05 08:07 +1100
+LOG:   2017/11/05 08:07:45 
+Built site for language en:
+LOG:   2017/11/05 08:07:45 2 of 2 drafts rendered
+LOG:   2017/11/05 08:07:45 0 future content
+LOG:   2017/11/05 08:07:45 0 expired content
+LOG:   2017/11/05 08:07:45 0 regular pages created
+LOG:   2017/11/05 08:07:45 10 other pages created
+LOG:   2017/11/05 08:07:45 0 non-page files copied
+LOG:   2017/11/05 08:07:45 0 paginator pages created
+LOG:   2017/11/05 08:07:45 0 tags created
+LOG:   2017/11/05 08:07:45 0 categories created
+LOG:   2017/11/05 08:07:45 total in 12 ms
+LOG:   2017/11/05 08:07:48 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:07:48 2017-11-05 08:07 +1100
+LOG:   2017/11/05 08:07:48 
+Built site for language en:
+LOG:   2017/11/05 08:07:48 2 of 2 drafts rendered
+LOG:   2017/11/05 08:07:48 0 future content
+LOG:   2017/11/05 08:07:48 0 expired content
+LOG:   2017/11/05 08:07:48 0 regular pages created
+LOG:   2017/11/05 08:07:48 10 other pages created
+LOG:   2017/11/05 08:07:48 0 non-page files copied
+LOG:   2017/11/05 08:07:48 0 paginator pages created
+LOG:   2017/11/05 08:07:48 0 tags created
+LOG:   2017/11/05 08:07:48 0 categories created
+LOG:   2017/11/05 08:07:48 total in 9 ms
+LOG:   2017/11/05 08:08:27 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:08:27 2017-11-05 08:08 +1100
+LOG:   2017/11/05 08:08:27 
+Built site for language en:
+LOG:   2017/11/05 08:08:27 2 of 2 drafts rendered
+LOG:   2017/11/05 08:08:27 0 future content
+LOG:   2017/11/05 08:08:27 0 expired content
+LOG:   2017/11/05 08:08:27 0 regular pages created
+LOG:   2017/11/05 08:08:27 10 other pages created
+LOG:   2017/11/05 08:08:27 0 non-page files copied
+LOG:   2017/11/05 08:08:27 0 paginator pages created
+LOG:   2017/11/05 08:08:27 0 categories created
+LOG:   2017/11/05 08:08:27 0 tags created
+LOG:   2017/11/05 08:08:27 total in 12 ms
+LOG:   2017/11/05 08:08:31 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:08:31 2017-11-05 08:08 +1100
+LOG:   2017/11/05 08:08:31 
+Built site for language en:
+LOG:   2017/11/05 08:08:31 2 of 2 drafts rendered
+LOG:   2017/11/05 08:08:31 0 future content
+LOG:   2017/11/05 08:08:31 0 expired content
+LOG:   2017/11/05 08:08:31 0 regular pages created
+LOG:   2017/11/05 08:08:31 10 other pages created
+LOG:   2017/11/05 08:08:31 0 non-page files copied
+LOG:   2017/11/05 08:08:31 0 paginator pages created
+LOG:   2017/11/05 08:08:31 0 tags created
+LOG:   2017/11/05 08:08:31 0 categories created
+LOG:   2017/11/05 08:08:31 total in 9 ms
+LOG:   2017/11/05 08:08:34 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:08:34 2017-11-05 08:08 +1100
+LOG:   2017/11/05 08:08:34 
+Built site for language en:
+LOG:   2017/11/05 08:08:34 2 of 2 drafts rendered
+LOG:   2017/11/05 08:08:34 0 future content
+LOG:   2017/11/05 08:08:34 0 expired content
+LOG:   2017/11/05 08:08:34 0 regular pages created
+LOG:   2017/11/05 08:08:34 10 other pages created
+LOG:   2017/11/05 08:08:34 0 non-page files copied
+LOG:   2017/11/05 08:08:34 0 paginator pages created
+LOG:   2017/11/05 08:08:34 0 tags created
+LOG:   2017/11/05 08:08:34 0 categories created
+LOG:   2017/11/05 08:08:34 total in 11 ms
+LOG:   2017/11/05 08:09:06 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:09:06 2017-11-05 08:09 +1100
+LOG:   2017/11/05 08:09:06 
+Built site for language en:
+LOG:   2017/11/05 08:09:06 2 of 2 drafts rendered
+LOG:   2017/11/05 08:09:06 0 future content
+LOG:   2017/11/05 08:09:06 0 expired content
+LOG:   2017/11/05 08:09:06 0 regular pages created
+LOG:   2017/11/05 08:09:06 10 other pages created
+LOG:   2017/11/05 08:09:06 0 non-page files copied
+LOG:   2017/11/05 08:09:06 0 paginator pages created
+LOG:   2017/11/05 08:09:06 0 tags created
+LOG:   2017/11/05 08:09:06 0 categories created
+LOG:   2017/11/05 08:09:06 total in 8 ms
+LOG:   2017/11/05 08:10:02 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:10:02 2017-11-05 08:10 +1100
+LOG:   2017/11/05 08:10:02 
+Built site for language en:
+LOG:   2017/11/05 08:10:02 2 of 2 drafts rendered
+LOG:   2017/11/05 08:10:02 0 future content
+LOG:   2017/11/05 08:10:02 0 expired content
+LOG:   2017/11/05 08:10:02 0 regular pages created
+LOG:   2017/11/05 08:10:02 10 other pages created
+LOG:   2017/11/05 08:10:02 0 non-page files copied
+LOG:   2017/11/05 08:10:02 0 paginator pages created
+LOG:   2017/11/05 08:10:02 0 tags created
+LOG:   2017/11/05 08:10:02 0 categories created
+LOG:   2017/11/05 08:10:02 total in 15 ms
+LOG:   2017/11/05 08:10:05 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:10:05 2017-11-05 08:10 +1100
+LOG:   2017/11/05 08:10:05 
+Built site for language en:
+LOG:   2017/11/05 08:10:05 2 of 2 drafts rendered
+LOG:   2017/11/05 08:10:05 0 future content
+LOG:   2017/11/05 08:10:05 0 expired content
+LOG:   2017/11/05 08:10:05 0 regular pages created
+LOG:   2017/11/05 08:10:05 10 other pages created
+LOG:   2017/11/05 08:10:05 0 non-page files copied
+LOG:   2017/11/05 08:10:05 0 paginator pages created
+LOG:   2017/11/05 08:10:05 0 tags created
+LOG:   2017/11/05 08:10:05 0 categories created
+LOG:   2017/11/05 08:10:05 total in 9 ms
+LOG:   2017/11/05 08:10:08 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:10:08 2017-11-05 08:10 +1100
+LOG:   2017/11/05 08:10:08 
+Built site for language en:
+LOG:   2017/11/05 08:10:08 2 of 2 drafts rendered
+LOG:   2017/11/05 08:10:08 0 future content
+LOG:   2017/11/05 08:10:08 0 expired content
+LOG:   2017/11/05 08:10:08 0 regular pages created
+LOG:   2017/11/05 08:10:08 10 other pages created
+LOG:   2017/11/05 08:10:08 0 non-page files copied
+LOG:   2017/11/05 08:10:08 0 paginator pages created
+LOG:   2017/11/05 08:10:08 0 tags created
+LOG:   2017/11/05 08:10:08 0 categories created
+LOG:   2017/11/05 08:10:08 total in 10 ms
+LOG:   2017/11/05 08:10:22 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:10:22 2017-11-05 08:10 +1100
+LOG:   2017/11/05 08:10:22 
+Built site for language en:
+LOG:   2017/11/05 08:10:22 2 of 2 drafts rendered
+LOG:   2017/11/05 08:10:22 0 future content
+LOG:   2017/11/05 08:10:22 0 expired content
+LOG:   2017/11/05 08:10:22 0 regular pages created
+LOG:   2017/11/05 08:10:22 10 other pages created
+LOG:   2017/11/05 08:10:22 0 non-page files copied
+LOG:   2017/11/05 08:10:22 0 paginator pages created
+LOG:   2017/11/05 08:10:22 0 tags created
+LOG:   2017/11/05 08:10:22 0 categories created
+LOG:   2017/11/05 08:10:22 total in 10 ms
+LOG:   2017/11/05 08:10:24 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:10:24 2017-11-05 08:10 +1100
+LOG:   2017/11/05 08:10:24 
+Built site for language en:
+LOG:   2017/11/05 08:10:24 2 of 2 drafts rendered
+LOG:   2017/11/05 08:10:24 0 future content
+LOG:   2017/11/05 08:10:24 0 expired content
+LOG:   2017/11/05 08:10:24 0 regular pages created
+LOG:   2017/11/05 08:10:24 10 other pages created
+LOG:   2017/11/05 08:10:24 0 non-page files copied
+LOG:   2017/11/05 08:10:24 0 paginator pages created
+LOG:   2017/11/05 08:10:24 0 categories created
+LOG:   2017/11/05 08:10:24 0 tags created
+LOG:   2017/11/05 08:10:24 total in 8 ms
+LOG:   2017/11/05 08:10:38 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:10:38 2017-11-05 08:10 +1100
+LOG:   2017/11/05 08:10:38 
+Built site for language en:
+LOG:   2017/11/05 08:10:38 2 of 2 drafts rendered
+LOG:   2017/11/05 08:10:38 0 future content
+LOG:   2017/11/05 08:10:38 0 expired content
+LOG:   2017/11/05 08:10:38 0 regular pages created
+LOG:   2017/11/05 08:10:38 10 other pages created
+LOG:   2017/11/05 08:10:38 0 non-page files copied
+LOG:   2017/11/05 08:10:38 0 paginator pages created
+LOG:   2017/11/05 08:10:38 0 tags created
+LOG:   2017/11/05 08:10:38 0 categories created
+LOG:   2017/11/05 08:10:38 total in 13 ms
+LOG:   2017/11/05 08:10:42 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:10:42 2017-11-05 08:10 +1100
+LOG:   2017/11/05 08:10:42 
+Built site for language en:
+LOG:   2017/11/05 08:10:42 2 of 2 drafts rendered
+LOG:   2017/11/05 08:10:42 0 future content
+LOG:   2017/11/05 08:10:42 0 expired content
+LOG:   2017/11/05 08:10:42 0 regular pages created
+LOG:   2017/11/05 08:10:42 10 other pages created
+LOG:   2017/11/05 08:10:42 0 non-page files copied
+LOG:   2017/11/05 08:10:42 0 paginator pages created
+LOG:   2017/11/05 08:10:42 0 tags created
+LOG:   2017/11/05 08:10:42 0 categories created
+LOG:   2017/11/05 08:10:42 total in 10 ms
+LOG:   2017/11/05 08:11:14 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:11:14 2017-11-05 08:11 +1100
+LOG:   2017/11/05 08:11:14 
+Built site for language en:
+LOG:   2017/11/05 08:11:14 2 of 2 drafts rendered
+LOG:   2017/11/05 08:11:14 0 future content
+LOG:   2017/11/05 08:11:14 0 expired content
+LOG:   2017/11/05 08:11:14 0 regular pages created
+LOG:   2017/11/05 08:11:14 10 other pages created
+LOG:   2017/11/05 08:11:14 0 non-page files copied
+LOG:   2017/11/05 08:11:14 0 paginator pages created
+LOG:   2017/11/05 08:11:14 0 tags created
+LOG:   2017/11/05 08:11:14 0 categories created
+LOG:   2017/11/05 08:11:14 total in 11 ms
+LOG:   2017/11/05 08:11:20 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:11:20 2017-11-05 08:11 +1100
+LOG:   2017/11/05 08:11:20 
+Built site for language en:
+LOG:   2017/11/05 08:11:20 2 of 2 drafts rendered
+LOG:   2017/11/05 08:11:20 0 future content
+LOG:   2017/11/05 08:11:20 0 expired content
+LOG:   2017/11/05 08:11:20 0 regular pages created
+LOG:   2017/11/05 08:11:20 10 other pages created
+LOG:   2017/11/05 08:11:20 0 non-page files copied
+LOG:   2017/11/05 08:11:20 0 paginator pages created
+LOG:   2017/11/05 08:11:20 0 tags created
+LOG:   2017/11/05 08:11:20 0 categories created
+LOG:   2017/11/05 08:11:20 total in 8 ms
+LOG:   2017/11/05 08:11:34 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:11:34 2017-11-05 08:11 +1100
+LOG:   2017/11/05 08:11:34 
+Built site for language en:
+LOG:   2017/11/05 08:11:34 2 of 2 drafts rendered
+LOG:   2017/11/05 08:11:34 0 future content
+LOG:   2017/11/05 08:11:34 0 expired content
+LOG:   2017/11/05 08:11:34 0 regular pages created
+LOG:   2017/11/05 08:11:34 10 other pages created
+LOG:   2017/11/05 08:11:34 0 non-page files copied
+LOG:   2017/11/05 08:11:34 0 paginator pages created
+LOG:   2017/11/05 08:11:34 0 tags created
+LOG:   2017/11/05 08:11:34 0 categories created
+LOG:   2017/11/05 08:11:34 total in 8 ms
+LOG:   2017/11/05 08:11:37 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:11:37 2017-11-05 08:11 +1100
+LOG:   2017/11/05 08:11:37 
+Built site for language en:
+LOG:   2017/11/05 08:11:37 2 of 2 drafts rendered
+LOG:   2017/11/05 08:11:37 0 future content
+LOG:   2017/11/05 08:11:37 0 expired content
+LOG:   2017/11/05 08:11:37 0 regular pages created
+LOG:   2017/11/05 08:11:37 10 other pages created
+LOG:   2017/11/05 08:11:37 0 non-page files copied
+LOG:   2017/11/05 08:11:37 0 paginator pages created
+LOG:   2017/11/05 08:11:37 0 categories created
+LOG:   2017/11/05 08:11:37 0 tags created
+LOG:   2017/11/05 08:11:37 total in 11 ms
+LOG:   2017/11/05 08:11:47 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:11:47 2017-11-05 08:11 +1100
+LOG:   2017/11/05 08:11:47 
+Built site for language en:
+LOG:   2017/11/05 08:11:47 2 of 2 drafts rendered
+LOG:   2017/11/05 08:11:47 0 future content
+LOG:   2017/11/05 08:11:47 0 expired content
+LOG:   2017/11/05 08:11:47 0 regular pages created
+LOG:   2017/11/05 08:11:47 10 other pages created
+LOG:   2017/11/05 08:11:47 0 non-page files copied
+LOG:   2017/11/05 08:11:47 0 paginator pages created
+LOG:   2017/11/05 08:11:47 0 tags created
+LOG:   2017/11/05 08:11:47 0 categories created
+LOG:   2017/11/05 08:11:47 total in 9 ms
+LOG:   2017/11/05 08:12:01 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:12:01 2017-11-05 08:12 +1100
+LOG:   2017/11/05 08:12:01 
+Built site for language en:
+LOG:   2017/11/05 08:12:01 2 of 2 drafts rendered
+LOG:   2017/11/05 08:12:01 0 future content
+LOG:   2017/11/05 08:12:01 0 expired content
+LOG:   2017/11/05 08:12:01 0 regular pages created
+LOG:   2017/11/05 08:12:01 10 other pages created
+LOG:   2017/11/05 08:12:01 0 non-page files copied
+LOG:   2017/11/05 08:12:01 0 paginator pages created
+LOG:   2017/11/05 08:12:01 0 tags created
+LOG:   2017/11/05 08:12:01 0 categories created
+LOG:   2017/11/05 08:12:01 total in 10 ms
+LOG:   2017/11/05 08:12:04 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:12:04 2017-11-05 08:12 +1100
+LOG:   2017/11/05 08:12:04 
+Built site for language en:
+LOG:   2017/11/05 08:12:04 2 of 2 drafts rendered
+LOG:   2017/11/05 08:12:04 0 future content
+LOG:   2017/11/05 08:12:04 0 expired content
+LOG:   2017/11/05 08:12:04 0 regular pages created
+LOG:   2017/11/05 08:12:04 10 other pages created
+LOG:   2017/11/05 08:12:04 0 non-page files copied
+LOG:   2017/11/05 08:12:04 0 paginator pages created
+LOG:   2017/11/05 08:12:04 0 tags created
+LOG:   2017/11/05 08:12:04 0 categories created
+LOG:   2017/11/05 08:12:04 total in 10 ms
+LOG:   2017/11/05 08:12:13 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:12:13 2017-11-05 08:12 +1100
+LOG:   2017/11/05 08:12:13 
+Built site for language en:
+LOG:   2017/11/05 08:12:13 2 of 2 drafts rendered
+LOG:   2017/11/05 08:12:13 0 future content
+LOG:   2017/11/05 08:12:13 0 expired content
+LOG:   2017/11/05 08:12:13 0 regular pages created
+LOG:   2017/11/05 08:12:13 10 other pages created
+LOG:   2017/11/05 08:12:13 0 non-page files copied
+LOG:   2017/11/05 08:12:13 0 paginator pages created
+LOG:   2017/11/05 08:12:13 0 categories created
+LOG:   2017/11/05 08:12:13 0 tags created
+LOG:   2017/11/05 08:12:13 total in 10 ms
+LOG:   2017/11/05 08:12:25 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:12:25 2017-11-05 08:12 +1100
+LOG:   2017/11/05 08:12:25 
+Built site for language en:
+LOG:   2017/11/05 08:12:25 2 of 2 drafts rendered
+LOG:   2017/11/05 08:12:25 0 future content
+LOG:   2017/11/05 08:12:25 0 expired content
+LOG:   2017/11/05 08:12:25 0 regular pages created
+LOG:   2017/11/05 08:12:25 10 other pages created
+LOG:   2017/11/05 08:12:25 0 non-page files copied
+LOG:   2017/11/05 08:12:25 0 paginator pages created
+LOG:   2017/11/05 08:12:25 0 tags created
+LOG:   2017/11/05 08:12:25 0 categories created
+LOG:   2017/11/05 08:12:25 total in 11 ms
+LOG:   2017/11/05 08:12:34 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:12:34 2017-11-05 08:12 +1100
+LOG:   2017/11/05 08:12:34 
+Built site for language en:
+LOG:   2017/11/05 08:12:34 2 of 2 drafts rendered
+LOG:   2017/11/05 08:12:34 0 future content
+LOG:   2017/11/05 08:12:34 0 expired content
+LOG:   2017/11/05 08:12:34 0 regular pages created
+LOG:   2017/11/05 08:12:34 10 other pages created
+LOG:   2017/11/05 08:12:34 0 non-page files copied
+LOG:   2017/11/05 08:12:34 0 paginator pages created
+LOG:   2017/11/05 08:12:34 0 tags created
+LOG:   2017/11/05 08:12:34 0 categories created
+LOG:   2017/11/05 08:12:34 total in 8 ms
+LOG:   2017/11/05 08:13:21 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:13:21 2017-11-05 08:13 +1100
+LOG:   2017/11/05 08:13:21 
+Built site for language en:
+LOG:   2017/11/05 08:13:21 2 of 2 drafts rendered
+LOG:   2017/11/05 08:13:21 0 future content
+LOG:   2017/11/05 08:13:21 0 expired content
+LOG:   2017/11/05 08:13:21 0 regular pages created
+LOG:   2017/11/05 08:13:21 10 other pages created
+LOG:   2017/11/05 08:13:21 0 non-page files copied
+LOG:   2017/11/05 08:13:21 0 paginator pages created
+LOG:   2017/11/05 08:13:21 0 categories created
+LOG:   2017/11/05 08:13:21 0 tags created
+LOG:   2017/11/05 08:13:21 total in 18 ms
+LOG:   2017/11/05 08:13:47 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:13:47 2017-11-05 08:13 +1100
+LOG:   2017/11/05 08:13:47 
+Built site for language en:
+LOG:   2017/11/05 08:13:47 2 of 2 drafts rendered
+LOG:   2017/11/05 08:13:47 0 future content
+LOG:   2017/11/05 08:13:47 0 expired content
+LOG:   2017/11/05 08:13:47 0 regular pages created
+LOG:   2017/11/05 08:13:47 10 other pages created
+LOG:   2017/11/05 08:13:47 0 non-page files copied
+LOG:   2017/11/05 08:13:47 0 paginator pages created
+LOG:   2017/11/05 08:13:47 0 tags created
+LOG:   2017/11/05 08:13:47 0 categories created
+LOG:   2017/11/05 08:13:47 total in 9 ms
+LOG:   2017/11/05 08:14:11 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:14:11 2017-11-05 08:14 +1100
+LOG:   2017/11/05 08:14:11 
+Built site for language en:
+LOG:   2017/11/05 08:14:11 2 of 2 drafts rendered
+LOG:   2017/11/05 08:14:11 0 future content
+LOG:   2017/11/05 08:14:11 0 expired content
+LOG:   2017/11/05 08:14:11 0 regular pages created
+LOG:   2017/11/05 08:14:11 10 other pages created
+LOG:   2017/11/05 08:14:11 0 non-page files copied
+LOG:   2017/11/05 08:14:11 0 paginator pages created
+LOG:   2017/11/05 08:14:11 0 tags created
+LOG:   2017/11/05 08:14:11 0 categories created
+LOG:   2017/11/05 08:14:11 total in 12 ms
+LOG:   2017/11/05 08:14:16 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:14:16 2017-11-05 08:14 +1100
+LOG:   2017/11/05 08:14:16 
+Built site for language en:
+LOG:   2017/11/05 08:14:16 2 of 2 drafts rendered
+LOG:   2017/11/05 08:14:16 0 future content
+LOG:   2017/11/05 08:14:16 0 expired content
+LOG:   2017/11/05 08:14:16 0 regular pages created
+LOG:   2017/11/05 08:14:16 10 other pages created
+LOG:   2017/11/05 08:14:16 0 non-page files copied
+LOG:   2017/11/05 08:14:16 0 paginator pages created
+LOG:   2017/11/05 08:14:16 0 tags created
+LOG:   2017/11/05 08:14:16 0 categories created
+LOG:   2017/11/05 08:14:16 total in 12 ms
+LOG:   2017/11/05 08:14:43 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:14:43 2017-11-05 08:14 +1100
+LOG:   2017/11/05 08:14:43 
+Built site for language en:
+LOG:   2017/11/05 08:14:43 2 of 2 drafts rendered
+LOG:   2017/11/05 08:14:43 0 future content
+LOG:   2017/11/05 08:14:43 0 expired content
+LOG:   2017/11/05 08:14:43 0 regular pages created
+LOG:   2017/11/05 08:14:43 10 other pages created
+LOG:   2017/11/05 08:14:43 0 non-page files copied
+LOG:   2017/11/05 08:14:43 0 paginator pages created
+LOG:   2017/11/05 08:14:43 0 tags created
+LOG:   2017/11/05 08:14:43 0 categories created
+LOG:   2017/11/05 08:14:43 total in 9 ms
+LOG:   2017/11/05 08:15:01 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:15:01 2017-11-05 08:15 +1100
+LOG:   2017/11/05 08:15:01 
+Built site for language en:
+LOG:   2017/11/05 08:15:01 2 of 2 drafts rendered
+LOG:   2017/11/05 08:15:01 0 future content
+LOG:   2017/11/05 08:15:01 0 expired content
+LOG:   2017/11/05 08:15:01 0 regular pages created
+LOG:   2017/11/05 08:15:01 10 other pages created
+LOG:   2017/11/05 08:15:01 0 non-page files copied
+LOG:   2017/11/05 08:15:01 0 paginator pages created
+LOG:   2017/11/05 08:15:01 0 tags created
+LOG:   2017/11/05 08:15:01 0 categories created
+LOG:   2017/11/05 08:15:01 total in 12 ms
+LOG:   2017/11/05 08:15:05 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:15:05 2017-11-05 08:15 +1100
+LOG:   2017/11/05 08:15:05 
+Built site for language en:
+LOG:   2017/11/05 08:15:05 2 of 2 drafts rendered
+LOG:   2017/11/05 08:15:05 0 future content
+LOG:   2017/11/05 08:15:05 0 expired content
+LOG:   2017/11/05 08:15:05 0 regular pages created
+LOG:   2017/11/05 08:15:05 10 other pages created
+LOG:   2017/11/05 08:15:05 0 non-page files copied
+LOG:   2017/11/05 08:15:05 0 paginator pages created
+LOG:   2017/11/05 08:15:05 0 tags created
+LOG:   2017/11/05 08:15:05 0 categories created
+LOG:   2017/11/05 08:15:05 total in 10 ms
+LOG:   2017/11/05 08:15:26 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:15:26 2017-11-05 08:15 +1100
+LOG:   2017/11/05 08:15:26 
+Built site for language en:
+LOG:   2017/11/05 08:15:26 2 of 2 drafts rendered
+LOG:   2017/11/05 08:15:26 0 future content
+LOG:   2017/11/05 08:15:26 0 expired content
+LOG:   2017/11/05 08:15:26 0 regular pages created
+LOG:   2017/11/05 08:15:26 10 other pages created
+LOG:   2017/11/05 08:15:26 0 non-page files copied
+LOG:   2017/11/05 08:15:26 0 paginator pages created
+LOG:   2017/11/05 08:15:26 0 tags created
+LOG:   2017/11/05 08:15:26 0 categories created
+LOG:   2017/11/05 08:15:26 total in 11 ms
+LOG:   2017/11/05 08:15:39 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:15:39 2017-11-05 08:15 +1100
+LOG:   2017/11/05 08:15:39 
+Built site for language en:
+LOG:   2017/11/05 08:15:39 2 of 2 drafts rendered
+LOG:   2017/11/05 08:15:39 0 future content
+LOG:   2017/11/05 08:15:39 0 expired content
+LOG:   2017/11/05 08:15:39 0 regular pages created
+LOG:   2017/11/05 08:15:39 10 other pages created
+LOG:   2017/11/05 08:15:39 0 non-page files copied
+LOG:   2017/11/05 08:15:39 0 paginator pages created
+LOG:   2017/11/05 08:15:39 0 tags created
+LOG:   2017/11/05 08:15:39 0 categories created
+LOG:   2017/11/05 08:15:39 total in 9 ms
+LOG:   2017/11/05 08:22:33 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:22:33 2017-11-05 08:22 +1100
+LOG:   2017/11/05 08:22:33 
+Built site for language en:
+LOG:   2017/11/05 08:22:33 2 of 2 drafts rendered
+LOG:   2017/11/05 08:22:33 0 future content
+LOG:   2017/11/05 08:22:33 0 expired content
+LOG:   2017/11/05 08:22:33 0 regular pages created
+LOG:   2017/11/05 08:22:33 10 other pages created
+LOG:   2017/11/05 08:22:33 0 non-page files copied
+LOG:   2017/11/05 08:22:33 0 paginator pages created
+LOG:   2017/11/05 08:22:33 0 tags created
+LOG:   2017/11/05 08:22:33 0 categories created
+LOG:   2017/11/05 08:22:33 total in 9 ms
+LOG:   2017/11/05 08:22:52 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:22:52 2017-11-05 08:22 +1100
+LOG:   2017/11/05 08:22:52 
+Built site for language en:
+LOG:   2017/11/05 08:22:52 2 of 2 drafts rendered
+LOG:   2017/11/05 08:22:52 0 future content
+LOG:   2017/11/05 08:22:52 0 expired content
+LOG:   2017/11/05 08:22:52 0 regular pages created
+LOG:   2017/11/05 08:22:52 10 other pages created
+LOG:   2017/11/05 08:22:52 0 non-page files copied
+LOG:   2017/11/05 08:22:52 0 paginator pages created
+LOG:   2017/11/05 08:22:52 0 tags created
+LOG:   2017/11/05 08:22:52 0 categories created
+LOG:   2017/11/05 08:22:52 total in 10 ms
+LOG:   2017/11/05 08:23:59 adding created directory to watchlist /Users/hzxu/Projects/Hugo/Huiimy/static/images
+LOG:   2017/11/05 08:23:59 
+Static file changes detected
+LOG:   2017/11/05 08:23:59 2017-11-05 08:23 +1100
+LOG:   2017/11/05 08:24:12 
+Static file changes detected
+LOG:   2017/11/05 08:24:12 2017-11-05 08:24 +1100
+ERROR 2017/11/05 08:24:12 stat /Users/hzxu/Projects/Hugo/Huiimy/themes/hugo-xmin/static/images/about_cover.jpg.crdownload: no such file or directory
+LOG:   2017/11/05 08:24:37 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:24:37 2017-11-05 08:24 +1100
+LOG:   2017/11/05 08:24:37 
+Built site for language en:
+LOG:   2017/11/05 08:24:37 2 of 2 drafts rendered
+LOG:   2017/11/05 08:24:37 0 future content
+LOG:   2017/11/05 08:24:37 0 expired content
+LOG:   2017/11/05 08:24:37 0 regular pages created
+LOG:   2017/11/05 08:24:37 10 other pages created
+LOG:   2017/11/05 08:24:37 0 non-page files copied
+LOG:   2017/11/05 08:24:37 0 paginator pages created
+LOG:   2017/11/05 08:24:37 0 tags created
+LOG:   2017/11/05 08:24:37 0 categories created
+LOG:   2017/11/05 08:24:37 total in 8 ms
+LOG:   2017/11/05 08:24:52 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:24:52 2017-11-05 08:24 +1100
+LOG:   2017/11/05 08:24:52 
+Built site for language en:
+LOG:   2017/11/05 08:24:52 2 of 2 drafts rendered
+LOG:   2017/11/05 08:24:52 0 future content
+LOG:   2017/11/05 08:24:52 0 expired content
+LOG:   2017/11/05 08:24:52 0 regular pages created
+LOG:   2017/11/05 08:24:52 10 other pages created
+LOG:   2017/11/05 08:24:52 0 non-page files copied
+LOG:   2017/11/05 08:24:52 0 paginator pages created
+LOG:   2017/11/05 08:24:52 0 tags created
+LOG:   2017/11/05 08:24:52 0 categories created
+LOG:   2017/11/05 08:24:52 total in 14 ms
+LOG:   2017/11/05 08:25:07 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:25:07 2017-11-05 08:25 +1100
+LOG:   2017/11/05 08:25:07 
+Built site for language en:
+LOG:   2017/11/05 08:25:07 2 of 2 drafts rendered
+LOG:   2017/11/05 08:25:07 0 future content
+LOG:   2017/11/05 08:25:07 0 expired content
+LOG:   2017/11/05 08:25:07 0 regular pages created
+LOG:   2017/11/05 08:25:07 10 other pages created
+LOG:   2017/11/05 08:25:07 0 non-page files copied
+LOG:   2017/11/05 08:25:07 0 paginator pages created
+LOG:   2017/11/05 08:25:07 0 tags created
+LOG:   2017/11/05 08:25:07 0 categories created
+LOG:   2017/11/05 08:25:07 total in 10 ms
+LOG:   2017/11/05 08:25:18 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:25:18 2017-11-05 08:25 +1100
+LOG:   2017/11/05 08:25:18 
+Built site for language en:
+LOG:   2017/11/05 08:25:18 2 of 2 drafts rendered
+LOG:   2017/11/05 08:25:18 0 future content
+LOG:   2017/11/05 08:25:18 0 expired content
+LOG:   2017/11/05 08:25:18 0 regular pages created
+LOG:   2017/11/05 08:25:18 10 other pages created
+LOG:   2017/11/05 08:25:18 0 non-page files copied
+LOG:   2017/11/05 08:25:18 0 paginator pages created
+LOG:   2017/11/05 08:25:18 0 tags created
+LOG:   2017/11/05 08:25:18 0 categories created
+LOG:   2017/11/05 08:25:18 total in 14 ms
+LOG:   2017/11/05 08:26:00 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:26:00 2017-11-05 08:26 +1100
+LOG:   2017/11/05 08:26:00 
+Built site for language en:
+LOG:   2017/11/05 08:26:00 2 of 2 drafts rendered
+LOG:   2017/11/05 08:26:00 0 future content
+LOG:   2017/11/05 08:26:00 0 expired content
+LOG:   2017/11/05 08:26:00 0 regular pages created
+LOG:   2017/11/05 08:26:00 10 other pages created
+LOG:   2017/11/05 08:26:00 0 non-page files copied
+LOG:   2017/11/05 08:26:00 0 paginator pages created
+LOG:   2017/11/05 08:26:00 0 tags created
+LOG:   2017/11/05 08:26:00 0 categories created
+LOG:   2017/11/05 08:26:00 total in 8 ms
+LOG:   2017/11/05 08:26:13 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:26:13 2017-11-05 08:26 +1100
+LOG:   2017/11/05 08:26:13 
+Built site for language en:
+LOG:   2017/11/05 08:26:13 2 of 2 drafts rendered
+LOG:   2017/11/05 08:26:13 0 future content
+LOG:   2017/11/05 08:26:13 0 expired content
+LOG:   2017/11/05 08:26:13 0 regular pages created
+LOG:   2017/11/05 08:26:13 10 other pages created
+LOG:   2017/11/05 08:26:13 0 non-page files copied
+LOG:   2017/11/05 08:26:13 0 paginator pages created
+LOG:   2017/11/05 08:26:13 0 tags created
+LOG:   2017/11/05 08:26:13 0 categories created
+LOG:   2017/11/05 08:26:13 total in 8 ms
+LOG:   2017/11/05 08:26:25 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:26:25 2017-11-05 08:26 +1100
+LOG:   2017/11/05 08:26:25 
+Built site for language en:
+LOG:   2017/11/05 08:26:25 2 of 2 drafts rendered
+LOG:   2017/11/05 08:26:25 0 future content
+LOG:   2017/11/05 08:26:25 0 expired content
+LOG:   2017/11/05 08:26:25 0 regular pages created
+LOG:   2017/11/05 08:26:25 10 other pages created
+LOG:   2017/11/05 08:26:25 0 non-page files copied
+LOG:   2017/11/05 08:26:25 0 paginator pages created
+LOG:   2017/11/05 08:26:25 0 tags created
+LOG:   2017/11/05 08:26:25 0 categories created
+LOG:   2017/11/05 08:26:25 total in 8 ms
+LOG:   2017/11/05 08:26:35 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:26:35 2017-11-05 08:26 +1100
+LOG:   2017/11/05 08:26:35 
+Built site for language en:
+LOG:   2017/11/05 08:26:35 2 of 2 drafts rendered
+LOG:   2017/11/05 08:26:35 0 future content
+LOG:   2017/11/05 08:26:35 0 expired content
+LOG:   2017/11/05 08:26:35 0 regular pages created
+LOG:   2017/11/05 08:26:35 10 other pages created
+LOG:   2017/11/05 08:26:35 0 non-page files copied
+LOG:   2017/11/05 08:26:35 0 paginator pages created
+LOG:   2017/11/05 08:26:35 0 tags created
+LOG:   2017/11/05 08:26:35 0 categories created
+LOG:   2017/11/05 08:26:35 total in 11 ms
+LOG:   2017/11/05 08:26:41 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:26:41 2017-11-05 08:26 +1100
+LOG:   2017/11/05 08:26:41 
+Built site for language en:
+LOG:   2017/11/05 08:26:41 2 of 2 drafts rendered
+LOG:   2017/11/05 08:26:41 0 future content
+LOG:   2017/11/05 08:26:41 0 expired content
+LOG:   2017/11/05 08:26:41 0 regular pages created
+LOG:   2017/11/05 08:26:41 10 other pages created
+LOG:   2017/11/05 08:26:41 0 non-page files copied
+LOG:   2017/11/05 08:26:41 0 paginator pages created
+LOG:   2017/11/05 08:26:41 0 tags created
+LOG:   2017/11/05 08:26:41 0 categories created
+LOG:   2017/11/05 08:26:41 total in 8 ms
+LOG:   2017/11/05 08:26:48 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:26:48 2017-11-05 08:26 +1100
+LOG:   2017/11/05 08:26:48 
+Built site for language en:
+LOG:   2017/11/05 08:26:48 2 of 2 drafts rendered
+LOG:   2017/11/05 08:26:48 0 future content
+LOG:   2017/11/05 08:26:48 0 expired content
+LOG:   2017/11/05 08:26:48 0 regular pages created
+LOG:   2017/11/05 08:26:48 10 other pages created
+LOG:   2017/11/05 08:26:48 0 non-page files copied
+LOG:   2017/11/05 08:26:48 0 paginator pages created
+LOG:   2017/11/05 08:26:48 0 tags created
+LOG:   2017/11/05 08:26:48 0 categories created
+LOG:   2017/11/05 08:26:48 total in 12 ms
+LOG:   2017/11/05 08:27:25 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:27:25 2017-11-05 08:27 +1100
+LOG:   2017/11/05 08:27:25 
+Built site for language en:
+LOG:   2017/11/05 08:27:25 2 of 2 drafts rendered
+LOG:   2017/11/05 08:27:25 0 future content
+LOG:   2017/11/05 08:27:25 0 expired content
+LOG:   2017/11/05 08:27:25 0 regular pages created
+LOG:   2017/11/05 08:27:25 10 other pages created
+LOG:   2017/11/05 08:27:25 0 non-page files copied
+LOG:   2017/11/05 08:27:25 0 paginator pages created
+LOG:   2017/11/05 08:27:25 0 tags created
+LOG:   2017/11/05 08:27:25 0 categories created
+LOG:   2017/11/05 08:27:25 total in 7 ms
+LOG:   2017/11/05 08:27:28 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:27:28 2017-11-05 08:27 +1100
+LOG:   2017/11/05 08:27:28 
+Built site for language en:
+LOG:   2017/11/05 08:27:28 2 of 2 drafts rendered
+LOG:   2017/11/05 08:27:28 0 future content
+LOG:   2017/11/05 08:27:28 0 expired content
+LOG:   2017/11/05 08:27:28 0 regular pages created
+LOG:   2017/11/05 08:27:28 10 other pages created
+LOG:   2017/11/05 08:27:28 0 non-page files copied
+LOG:   2017/11/05 08:27:28 0 paginator pages created
+LOG:   2017/11/05 08:27:28 0 tags created
+LOG:   2017/11/05 08:27:28 0 categories created
+LOG:   2017/11/05 08:27:28 total in 7 ms
+LOG:   2017/11/05 08:27:35 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:27:35 2017-11-05 08:27 +1100
+LOG:   2017/11/05 08:27:35 
+Built site for language en:
+LOG:   2017/11/05 08:27:35 2 of 2 drafts rendered
+LOG:   2017/11/05 08:27:35 0 future content
+LOG:   2017/11/05 08:27:35 0 expired content
+LOG:   2017/11/05 08:27:35 0 regular pages created
+LOG:   2017/11/05 08:27:35 10 other pages created
+LOG:   2017/11/05 08:27:35 0 non-page files copied
+LOG:   2017/11/05 08:27:35 0 paginator pages created
+LOG:   2017/11/05 08:27:35 0 tags created
+LOG:   2017/11/05 08:27:35 0 categories created
+LOG:   2017/11/05 08:27:35 total in 8 ms
+LOG:   2017/11/05 08:27:45 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:27:45 2017-11-05 08:27 +1100
+LOG:   2017/11/05 08:27:45 
+Built site for language en:
+LOG:   2017/11/05 08:27:45 2 of 2 drafts rendered
+LOG:   2017/11/05 08:27:45 0 future content
+LOG:   2017/11/05 08:27:45 0 expired content
+LOG:   2017/11/05 08:27:45 0 regular pages created
+LOG:   2017/11/05 08:27:45 10 other pages created
+LOG:   2017/11/05 08:27:45 0 non-page files copied
+LOG:   2017/11/05 08:27:45 0 paginator pages created
+LOG:   2017/11/05 08:27:45 0 tags created
+LOG:   2017/11/05 08:27:45 0 categories created
+LOG:   2017/11/05 08:27:45 total in 11 ms
+LOG:   2017/11/05 08:28:20 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:28:20 2017-11-05 08:28 +1100
+LOG:   2017/11/05 08:28:20 
+Built site for language en:
+LOG:   2017/11/05 08:28:20 2 of 2 drafts rendered
+LOG:   2017/11/05 08:28:20 0 future content
+LOG:   2017/11/05 08:28:20 0 expired content
+LOG:   2017/11/05 08:28:20 0 regular pages created
+LOG:   2017/11/05 08:28:20 10 other pages created
+LOG:   2017/11/05 08:28:20 0 non-page files copied
+LOG:   2017/11/05 08:28:20 0 paginator pages created
+LOG:   2017/11/05 08:28:20 0 tags created
+LOG:   2017/11/05 08:28:20 0 categories created
+LOG:   2017/11/05 08:28:20 total in 7 ms
+LOG:   2017/11/05 08:28:33 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:28:33 2017-11-05 08:28 +1100
+LOG:   2017/11/05 08:28:33 
+Built site for language en:
+LOG:   2017/11/05 08:28:33 2 of 2 drafts rendered
+LOG:   2017/11/05 08:28:33 0 future content
+LOG:   2017/11/05 08:28:33 0 expired content
+LOG:   2017/11/05 08:28:33 0 regular pages created
+LOG:   2017/11/05 08:28:33 10 other pages created
+LOG:   2017/11/05 08:28:33 0 non-page files copied
+LOG:   2017/11/05 08:28:33 0 paginator pages created
+LOG:   2017/11/05 08:28:33 0 tags created
+LOG:   2017/11/05 08:28:33 0 categories created
+LOG:   2017/11/05 08:28:33 total in 9 ms
+LOG:   2017/11/05 08:28:39 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:28:39 2017-11-05 08:28 +1100
+LOG:   2017/11/05 08:28:39 
+Built site for language en:
+LOG:   2017/11/05 08:28:39 2 of 2 drafts rendered
+LOG:   2017/11/05 08:28:39 0 future content
+LOG:   2017/11/05 08:28:39 0 expired content
+LOG:   2017/11/05 08:28:39 0 regular pages created
+LOG:   2017/11/05 08:28:39 10 other pages created
+LOG:   2017/11/05 08:28:39 0 non-page files copied
+LOG:   2017/11/05 08:28:39 0 paginator pages created
+LOG:   2017/11/05 08:28:39 0 categories created
+LOG:   2017/11/05 08:28:39 0 tags created
+LOG:   2017/11/05 08:28:39 total in 9 ms
+LOG:   2017/11/05 08:28:55 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:28:55 2017-11-05 08:28 +1100
+LOG:   2017/11/05 08:28:55 
+Built site for language en:
+LOG:   2017/11/05 08:28:55 2 of 2 drafts rendered
+LOG:   2017/11/05 08:28:55 0 future content
+LOG:   2017/11/05 08:28:55 0 expired content
+LOG:   2017/11/05 08:28:55 0 regular pages created
+LOG:   2017/11/05 08:28:55 10 other pages created
+LOG:   2017/11/05 08:28:55 0 non-page files copied
+LOG:   2017/11/05 08:28:55 0 paginator pages created
+LOG:   2017/11/05 08:28:55 0 tags created
+LOG:   2017/11/05 08:28:55 0 categories created
+LOG:   2017/11/05 08:28:55 total in 12 ms
+LOG:   2017/11/05 08:28:56 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:28:56 2017-11-05 08:28 +1100
+LOG:   2017/11/05 08:28:56 
+Built site for language en:
+LOG:   2017/11/05 08:28:56 2 of 2 drafts rendered
+LOG:   2017/11/05 08:28:56 0 future content
+LOG:   2017/11/05 08:28:56 0 expired content
+LOG:   2017/11/05 08:28:56 0 regular pages created
+LOG:   2017/11/05 08:28:56 10 other pages created
+LOG:   2017/11/05 08:28:56 0 non-page files copied
+LOG:   2017/11/05 08:28:56 0 paginator pages created
+LOG:   2017/11/05 08:28:56 0 tags created
+LOG:   2017/11/05 08:28:56 0 categories created
+LOG:   2017/11/05 08:28:56 total in 9 ms
+LOG:   2017/11/05 08:29:04 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:29:04 2017-11-05 08:29 +1100
+LOG:   2017/11/05 08:29:04 
+Built site for language en:
+LOG:   2017/11/05 08:29:04 2 of 2 drafts rendered
+LOG:   2017/11/05 08:29:04 0 future content
+LOG:   2017/11/05 08:29:04 0 expired content
+LOG:   2017/11/05 08:29:04 0 regular pages created
+LOG:   2017/11/05 08:29:04 10 other pages created
+LOG:   2017/11/05 08:29:04 0 non-page files copied
+LOG:   2017/11/05 08:29:04 0 paginator pages created
+LOG:   2017/11/05 08:29:04 0 tags created
+LOG:   2017/11/05 08:29:04 0 categories created
+LOG:   2017/11/05 08:29:04 total in 10 ms
+LOG:   2017/11/05 08:29:15 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:29:15 2017-11-05 08:29 +1100
+LOG:   2017/11/05 08:29:15 
+Built site for language en:
+LOG:   2017/11/05 08:29:15 2 of 2 drafts rendered
+LOG:   2017/11/05 08:29:15 0 future content
+LOG:   2017/11/05 08:29:15 0 expired content
+LOG:   2017/11/05 08:29:15 0 regular pages created
+LOG:   2017/11/05 08:29:15 10 other pages created
+LOG:   2017/11/05 08:29:15 0 non-page files copied
+LOG:   2017/11/05 08:29:15 0 paginator pages created
+LOG:   2017/11/05 08:29:15 0 tags created
+LOG:   2017/11/05 08:29:15 0 categories created
+LOG:   2017/11/05 08:29:15 total in 10 ms
+LOG:   2017/11/05 08:30:00 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:30:00 2017-11-05 08:30 +1100
+LOG:   2017/11/05 08:30:00 
+Built site for language en:
+LOG:   2017/11/05 08:30:00 2 of 2 drafts rendered
+LOG:   2017/11/05 08:30:00 0 future content
+LOG:   2017/11/05 08:30:00 0 expired content
+LOG:   2017/11/05 08:30:00 0 regular pages created
+LOG:   2017/11/05 08:30:00 10 other pages created
+LOG:   2017/11/05 08:30:00 0 non-page files copied
+LOG:   2017/11/05 08:30:00 0 paginator pages created
+LOG:   2017/11/05 08:30:00 0 tags created
+LOG:   2017/11/05 08:30:00 0 categories created
+LOG:   2017/11/05 08:30:00 total in 8 ms
+LOG:   2017/11/05 08:30:11 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:30:11 2017-11-05 08:30 +1100
+LOG:   2017/11/05 08:30:11 
+Built site for language en:
+LOG:   2017/11/05 08:30:11 2 of 2 drafts rendered
+LOG:   2017/11/05 08:30:11 0 future content
+LOG:   2017/11/05 08:30:11 0 expired content
+LOG:   2017/11/05 08:30:11 0 regular pages created
+LOG:   2017/11/05 08:30:11 10 other pages created
+LOG:   2017/11/05 08:30:11 0 non-page files copied
+LOG:   2017/11/05 08:30:11 0 paginator pages created
+LOG:   2017/11/05 08:30:11 0 tags created
+LOG:   2017/11/05 08:30:11 0 categories created
+LOG:   2017/11/05 08:30:11 total in 7 ms
+LOG:   2017/11/05 08:30:27 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:30:27 2017-11-05 08:30 +1100
+LOG:   2017/11/05 08:30:27 
+Built site for language en:
+LOG:   2017/11/05 08:30:27 2 of 2 drafts rendered
+LOG:   2017/11/05 08:30:27 0 future content
+LOG:   2017/11/05 08:30:27 0 expired content
+LOG:   2017/11/05 08:30:27 0 regular pages created
+LOG:   2017/11/05 08:30:27 10 other pages created
+LOG:   2017/11/05 08:30:27 0 non-page files copied
+LOG:   2017/11/05 08:30:27 0 paginator pages created
+LOG:   2017/11/05 08:30:27 0 tags created
+LOG:   2017/11/05 08:30:27 0 categories created
+LOG:   2017/11/05 08:30:27 total in 12 ms
+LOG:   2017/11/05 08:30:43 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:30:43 2017-11-05 08:30 +1100
+LOG:   2017/11/05 08:30:43 
+Built site for language en:
+LOG:   2017/11/05 08:30:43 2 of 2 drafts rendered
+LOG:   2017/11/05 08:30:43 0 future content
+LOG:   2017/11/05 08:30:43 0 expired content
+LOG:   2017/11/05 08:30:43 0 regular pages created
+LOG:   2017/11/05 08:30:43 10 other pages created
+LOG:   2017/11/05 08:30:43 0 non-page files copied
+LOG:   2017/11/05 08:30:43 0 paginator pages created
+LOG:   2017/11/05 08:30:43 0 categories created
+LOG:   2017/11/05 08:30:43 0 tags created
+LOG:   2017/11/05 08:30:43 total in 7 ms
+LOG:   2017/11/05 08:30:52 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:30:52 2017-11-05 08:30 +1100
+LOG:   2017/11/05 08:30:52 
+Built site for language en:
+LOG:   2017/11/05 08:30:52 2 of 2 drafts rendered
+LOG:   2017/11/05 08:30:52 0 future content
+LOG:   2017/11/05 08:30:52 0 expired content
+LOG:   2017/11/05 08:30:52 0 regular pages created
+LOG:   2017/11/05 08:30:52 10 other pages created
+LOG:   2017/11/05 08:30:52 0 non-page files copied
+LOG:   2017/11/05 08:30:52 0 paginator pages created
+LOG:   2017/11/05 08:30:52 0 tags created
+LOG:   2017/11/05 08:30:52 0 categories created
+LOG:   2017/11/05 08:30:52 total in 11 ms
+LOG:   2017/11/05 08:31:01 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:31:01 2017-11-05 08:31 +1100
+LOG:   2017/11/05 08:31:01 
+Built site for language en:
+LOG:   2017/11/05 08:31:01 2 of 2 drafts rendered
+LOG:   2017/11/05 08:31:01 0 future content
+LOG:   2017/11/05 08:31:01 0 expired content
+LOG:   2017/11/05 08:31:01 0 regular pages created
+LOG:   2017/11/05 08:31:01 10 other pages created
+LOG:   2017/11/05 08:31:01 0 non-page files copied
+LOG:   2017/11/05 08:31:01 0 paginator pages created
+LOG:   2017/11/05 08:31:01 0 tags created
+LOG:   2017/11/05 08:31:01 0 categories created
+LOG:   2017/11/05 08:31:01 total in 9 ms
+LOG:   2017/11/05 08:31:17 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:31:17 2017-11-05 08:31 +1100
+LOG:   2017/11/05 08:31:17 
+Built site for language en:
+LOG:   2017/11/05 08:31:17 2 of 2 drafts rendered
+LOG:   2017/11/05 08:31:17 0 future content
+LOG:   2017/11/05 08:31:17 0 expired content
+LOG:   2017/11/05 08:31:17 0 regular pages created
+LOG:   2017/11/05 08:31:17 10 other pages created
+LOG:   2017/11/05 08:31:17 0 non-page files copied
+LOG:   2017/11/05 08:31:17 0 paginator pages created
+LOG:   2017/11/05 08:31:17 0 tags created
+LOG:   2017/11/05 08:31:17 0 categories created
+LOG:   2017/11/05 08:31:17 total in 11 ms
+LOG:   2017/11/05 08:31:45 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:31:45 2017-11-05 08:31 +1100
+LOG:   2017/11/05 08:31:45 
+Built site for language en:
+LOG:   2017/11/05 08:31:45 2 of 2 drafts rendered
+LOG:   2017/11/05 08:31:45 0 future content
+LOG:   2017/11/05 08:31:45 0 expired content
+LOG:   2017/11/05 08:31:45 0 regular pages created
+LOG:   2017/11/05 08:31:45 10 other pages created
+LOG:   2017/11/05 08:31:45 0 non-page files copied
+LOG:   2017/11/05 08:31:45 0 paginator pages created
+LOG:   2017/11/05 08:31:45 0 tags created
+LOG:   2017/11/05 08:31:45 0 categories created
+LOG:   2017/11/05 08:31:45 total in 6 ms
+LOG:   2017/11/05 08:32:08 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:32:08 2017-11-05 08:32 +1100
+LOG:   2017/11/05 08:32:08 
+Built site for language en:
+LOG:   2017/11/05 08:32:08 2 of 2 drafts rendered
+LOG:   2017/11/05 08:32:08 0 future content
+LOG:   2017/11/05 08:32:08 0 expired content
+LOG:   2017/11/05 08:32:08 0 regular pages created
+LOG:   2017/11/05 08:32:08 10 other pages created
+LOG:   2017/11/05 08:32:08 0 non-page files copied
+LOG:   2017/11/05 08:32:08 0 paginator pages created
+LOG:   2017/11/05 08:32:08 0 tags created
+LOG:   2017/11/05 08:32:08 0 categories created
+LOG:   2017/11/05 08:32:08 total in 12 ms
+LOG:   2017/11/05 08:32:21 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:32:21 2017-11-05 08:32 +1100
+LOG:   2017/11/05 08:32:21 
+Built site for language en:
+LOG:   2017/11/05 08:32:21 2 of 2 drafts rendered
+LOG:   2017/11/05 08:32:21 0 future content
+LOG:   2017/11/05 08:32:21 0 expired content
+LOG:   2017/11/05 08:32:21 0 regular pages created
+LOG:   2017/11/05 08:32:21 10 other pages created
+LOG:   2017/11/05 08:32:21 0 non-page files copied
+LOG:   2017/11/05 08:32:21 0 paginator pages created
+LOG:   2017/11/05 08:32:21 0 tags created
+LOG:   2017/11/05 08:32:21 0 categories created
+LOG:   2017/11/05 08:32:21 total in 9 ms
+LOG:   2017/11/05 08:33:37 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:33:37 2017-11-05 08:33 +1100
+LOG:   2017/11/05 08:33:37 
+Built site for language en:
+LOG:   2017/11/05 08:33:37 2 of 2 drafts rendered
+LOG:   2017/11/05 08:33:37 0 future content
+LOG:   2017/11/05 08:33:37 0 expired content
+LOG:   2017/11/05 08:33:37 0 regular pages created
+LOG:   2017/11/05 08:33:37 10 other pages created
+LOG:   2017/11/05 08:33:37 0 non-page files copied
+LOG:   2017/11/05 08:33:37 0 paginator pages created
+LOG:   2017/11/05 08:33:37 0 tags created
+LOG:   2017/11/05 08:33:37 0 categories created
+LOG:   2017/11/05 08:33:37 total in 12 ms
+LOG:   2017/11/05 08:34:25 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:34:25 2017-11-05 08:34 +1100
+LOG:   2017/11/05 08:34:25 
+Built site for language en:
+LOG:   2017/11/05 08:34:25 2 of 2 drafts rendered
+LOG:   2017/11/05 08:34:25 0 future content
+LOG:   2017/11/05 08:34:25 0 expired content
+LOG:   2017/11/05 08:34:25 0 regular pages created
+LOG:   2017/11/05 08:34:25 10 other pages created
+LOG:   2017/11/05 08:34:25 0 non-page files copied
+LOG:   2017/11/05 08:34:25 0 paginator pages created
+LOG:   2017/11/05 08:34:25 0 tags created
+LOG:   2017/11/05 08:34:25 0 categories created
+LOG:   2017/11/05 08:34:25 total in 9 ms
+LOG:   2017/11/05 08:35:04 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:35:04 2017-11-05 08:35 +1100
+LOG:   2017/11/05 08:35:04 
+Built site for language en:
+LOG:   2017/11/05 08:35:04 2 of 2 drafts rendered
+LOG:   2017/11/05 08:35:04 0 future content
+LOG:   2017/11/05 08:35:04 0 expired content
+LOG:   2017/11/05 08:35:04 0 regular pages created
+LOG:   2017/11/05 08:35:04 10 other pages created
+LOG:   2017/11/05 08:35:04 0 non-page files copied
+LOG:   2017/11/05 08:35:04 0 paginator pages created
+LOG:   2017/11/05 08:35:04 0 tags created
+LOG:   2017/11/05 08:35:04 0 categories created
+LOG:   2017/11/05 08:35:04 total in 12 ms
+LOG:   2017/11/05 08:35:49 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:35:49 2017-11-05 08:35 +1100
+LOG:   2017/11/05 08:35:49 
+Built site for language en:
+LOG:   2017/11/05 08:35:49 2 of 2 drafts rendered
+LOG:   2017/11/05 08:35:49 0 future content
+LOG:   2017/11/05 08:35:49 0 expired content
+LOG:   2017/11/05 08:35:49 0 regular pages created
+LOG:   2017/11/05 08:35:49 10 other pages created
+LOG:   2017/11/05 08:35:49 0 non-page files copied
+LOG:   2017/11/05 08:35:49 0 paginator pages created
+LOG:   2017/11/05 08:35:49 0 tags created
+LOG:   2017/11/05 08:35:49 0 categories created
+LOG:   2017/11/05 08:35:49 total in 9 ms
+LOG:   2017/11/05 08:36:14 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:36:14 2017-11-05 08:36 +1100
+LOG:   2017/11/05 08:36:14 
+Built site for language en:
+LOG:   2017/11/05 08:36:14 2 of 2 drafts rendered
+LOG:   2017/11/05 08:36:14 0 future content
+LOG:   2017/11/05 08:36:14 0 expired content
+LOG:   2017/11/05 08:36:14 0 regular pages created
+LOG:   2017/11/05 08:36:14 10 other pages created
+LOG:   2017/11/05 08:36:14 0 non-page files copied
+LOG:   2017/11/05 08:36:14 0 paginator pages created
+LOG:   2017/11/05 08:36:14 0 tags created
+LOG:   2017/11/05 08:36:14 0 categories created
+LOG:   2017/11/05 08:36:14 total in 10 ms
+LOG:   2017/11/05 08:36:16 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:36:16 2017-11-05 08:36 +1100
+LOG:   2017/11/05 08:36:16 
+Built site for language en:
+LOG:   2017/11/05 08:36:16 2 of 2 drafts rendered
+LOG:   2017/11/05 08:36:16 0 future content
+LOG:   2017/11/05 08:36:16 0 expired content
+LOG:   2017/11/05 08:36:16 0 regular pages created
+LOG:   2017/11/05 08:36:16 10 other pages created
+LOG:   2017/11/05 08:36:16 0 non-page files copied
+LOG:   2017/11/05 08:36:16 0 paginator pages created
+LOG:   2017/11/05 08:36:16 0 tags created
+LOG:   2017/11/05 08:36:16 0 categories created
+LOG:   2017/11/05 08:36:16 total in 9 ms
+LOG:   2017/11/05 08:36:25 adding created directory to watchlist /Users/hzxu/Projects/Hugo/Huiimy/static/untitled folder
+LOG:   2017/11/05 08:36:25 
+Static file changes detected
+LOG:   2017/11/05 08:36:25 2017-11-05 08:36 +1100
+LOG:   2017/11/05 08:36:26 adding created directory to watchlist /Users/hzxu/Projects/Hugo/Huiimy/static/docs
+LOG:   2017/11/05 08:36:26 
+Static file changes detected
+LOG:   2017/11/05 08:36:26 2017-11-05 08:36 +1100
+LOG:   2017/11/05 08:45:53 
+Static file changes detected
+LOG:   2017/11/05 08:45:53 2017-11-05 08:45 +1100
+LOG:   2017/11/05 08:46:14 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:46:14 2017-11-05 08:46 +1100
+LOG:   2017/11/05 08:46:14 
+Built site for language en:
+LOG:   2017/11/05 08:46:14 2 of 2 drafts rendered
+LOG:   2017/11/05 08:46:14 0 future content
+LOG:   2017/11/05 08:46:14 0 expired content
+LOG:   2017/11/05 08:46:14 0 regular pages created
+LOG:   2017/11/05 08:46:14 10 other pages created
+LOG:   2017/11/05 08:46:14 0 non-page files copied
+LOG:   2017/11/05 08:46:14 0 paginator pages created
+LOG:   2017/11/05 08:46:14 0 tags created
+LOG:   2017/11/05 08:46:14 0 categories created
+LOG:   2017/11/05 08:46:14 total in 8 ms
+LOG:   2017/11/05 08:46:19 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:46:19 2017-11-05 08:46 +1100
+LOG:   2017/11/05 08:46:19 
+Built site for language en:
+LOG:   2017/11/05 08:46:19 2 of 2 drafts rendered
+LOG:   2017/11/05 08:46:19 0 future content
+LOG:   2017/11/05 08:46:19 0 expired content
+LOG:   2017/11/05 08:46:19 0 regular pages created
+LOG:   2017/11/05 08:46:19 10 other pages created
+LOG:   2017/11/05 08:46:19 0 non-page files copied
+LOG:   2017/11/05 08:46:19 0 paginator pages created
+LOG:   2017/11/05 08:46:19 0 tags created
+LOG:   2017/11/05 08:46:19 0 categories created
+LOG:   2017/11/05 08:46:19 total in 8 ms
+LOG:   2017/11/05 08:47:22 
+Change detected, rebuilding site
+LOG:   2017/11/05 08:47:22 2017-11-05 08:47 +1100
+LOG:   2017/11/05 08:47:22 
+Built site for language en:
+LOG:   2017/11/05 08:47:22 2 of 2 drafts rendered
+LOG:   2017/11/05 08:47:22 0 future content
+LOG:   2017/11/05 08:47:22 0 expired content
+LOG:   2017/11/05 08:47:22 0 regular pages created
+LOG:   2017/11/05 08:47:22 10 other pages created
+LOG:   2017/11/05 08:47:22 0 non-page files copied
+LOG:   2017/11/05 08:47:22 0 paginator pages created
+LOG:   2017/11/05 08:47:22 0 tags created
+LOG:   2017/11/05 08:47:22 0 categories created
+LOG:   2017/11/05 08:47:22 total in 12 ms
+LOG:   2017/11/05 08:48:02 Config file changed: /Users/hzxu/Projects/Hugo/Huiimy/config.toml
+LOG:   2017/11/05 08:48:02 Started building sites ...
+WARN 2017/11/05 08:48:02 No translation bundle found for default language "en"
+LOG:   2017/11/05 08:48:41 Config file changed: /Users/hzxu/Projects/Hugo/Huiimy/config.toml
+LOG:   2017/11/05 08:48:41 Started building sites ...
+WARN 2017/11/05 08:48:41 No translation bundle found for default language "en"

@@ -1,7 +1,7 @@
 ---
 title: "Pseudo Science - Prologue"
 date: 2017-11-06T07:23:49+11:00
-draft: true
+draft: false
 categories:
   - Article
 tags:

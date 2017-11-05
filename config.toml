@@ -29,13 +29,17 @@ footnotereturnlinkcontents = "↩"
     url = "/poems/"
     weight = 4
 [[menu.main]]
+    name = "Article"
+    url = "/article"
+    weight = 5
+[[menu.main]]
     name = "Categories"
     url = "/categories/"
-    weight = 5
+    weight = 6
 [[menu.main]]
     name = "Tags"
     url = "/tags/"
-    weight = 6
+    weight = 7
 ##[[menu.main]]
 ##    name = "Subscribe"
 ##    url = "/index.xml"

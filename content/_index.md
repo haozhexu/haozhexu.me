@@ -1,5 +1,5 @@
 ---
-title: "Haozhe XU | 徐昊哲"
+title: "Haozhe XU"
 date: 2017-11-05T08:57:48+11:00
 draft: false
 ---

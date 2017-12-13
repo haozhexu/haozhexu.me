@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Haozhe XU | 徐昊哲</title>
+    <title>Haozhe XU</title>
     <link>http://www.haozhexu.me/</link>
-    <description>Recent content on Haozhe XU | 徐昊哲</description>
+    <description>Recent content on Haozhe XU</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
     <lastBuildDate>Sun, 05 Nov 2017 08:57:48 +1100</lastBuildDate>
     
 	<atom:link href="http://www.haozhexu.me/index.xml" rel="self" type="application/rss+xml" />
@@ -18,6 +17,32 @@
       
       <guid>http://www.haozhexu.me/article/pseudo_science/prologue/</guid>
       <description>Rediscover the Wonderful World with Pseudo-Science Prologue I was on the flight back to China, the air conditioner made me feel sick, it was a bit too cold. I tried to focus on something that could distract me from the sickness, then I noticed the small round window next to me, it reminded me of the windows in the classroom of my elementary school — they have wooden frames painted in green and are always clean.</description>
+    </item>
+    
+    <item>
+      <title>Apps</title>
+      <link>http://www.haozhexu.me/apps/</link>
+      <pubDate>Sun, 05 Nov 2017 09:01:49 +1100</pubDate>
+      
+      <guid>http://www.haozhexu.me/apps/</guid>
+      <description>Below are my apps currently on AppStore:
+East Solitaire An ancient Chinese pebble chess game.
+
+I&amp;rsquo;m Sucker An app that generates poems following ancient Chinese poetry pattern and style, with random intelligence.
+
+fortune | cowsay Mimics the classic Unix fortune piped to a cowsay output.
+
+Retro Blocks A match-3 style game where you need to match dropping clubs of blocks.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://www.haozhexu.me/about/</link>
+      <pubDate>Sat, 04 Nov 2017 08:30:16 +1100</pubDate>
+      
+      <guid>http://www.haozhexu.me/about/</guid>
+      <description>Photo taken by a colleague at lunch time, I was using a piece of tissue to cover my face since I’m a shy guy who never wants to be in photos. Until I looked at the photo I didn’t realise that I wasn’t even in focus. Lesson learned from this: one’s not as important as he/she thought in other people’s eyes.
+My name is Haozhe XU and I’m an iOS software developer currently based in Melbourne, Australia.</description>
     </item>
     
   </channel>

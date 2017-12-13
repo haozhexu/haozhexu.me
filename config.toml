@@ -1,6 +1,5 @@
 baseURL = "http://www.haozhexu.me"
-languageCode = "en-us"
-title = "Haozhe XU | 徐昊哲"
+DefaultContentLanguage = "en"
 theme = "hugo-xmin"
 googleAnalytics = ""
 disqusShortname = ""
@@ -9,41 +8,88 @@ preserveTaxonomyNames = true
 footnotereturnlinkcontents = "↩"
 
 [permalinks]
-    post = "/post/:day/:month/:year/:slug/"
-    note = "/note/:day/:month/:year/:slug/"
+    en = "/en/:day/:month/:year/:slug/"
+    cn = "/cn/:year/:month/:day/:slug/"
 
-[[menu.main]]
-    name = "Home"
-    url = "/"
-    weight = 1
-[[menu.main]]
-    name = "About"
-    url = "/about/"
-    weight = 2
-[[menu.main]]
-    name = "Apps"
-    url = "/apps/"
-    weight = 3
-[[menu.main]]
-    name = "Poem / 诗词"
-    url = "/poems/"
-    weight = 4
-[[menu.main]]
-    name = "Article"
-    url = "/article"
-    weight = 5
-[[menu.main]]
-    name = "Categories"
-    url = "/categories/"
-    weight = 6
-[[menu.main]]
-    name = "Tags"
-    url = "/tags/"
-    weight = 7
 ##[[menu.main]]
 ##    name = "Subscribe"
 ##    url = "/index.xml"
 
-[params]
-    description = "A website built through Hugo and blogdown."
+[Languages]
+[Languages.en]
+    title = "Haozhe XU"
+    weight = 1
+[[Languages.en.menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+[[Languages.en.menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
+[[Languages.en.menu.main]]
+    name = "Apps"
+    url = "/apps/"
+    weight = 3
+[[Languages.en.menu.main]]
+    name = "Poem / 诗词"
+    url = "/poems/"
+    weight = 4
+[[Languages.en.menu.main]]
+    name = "Article"
+    url = "/article"
+    weight = 5
+[[Languages.en.menu.main]]
+    name = "Categories"
+    url = "/categories/"
+    weight = 6
+[[Languages.en.menu.main]]
+    name = "Tags"
+    url = "/tags/"
+    weight = 7
+[[Languages.en.menu.main]]
+    name = "简体中文"
+    url = "/cn/"
+    weight = 8
+[Languages.en.params]
+    description = "A website built through Hugo."
     footer = "&copy; [Haozhe XU](http://www.huiimy.ninja) 2017"
+
+[Languages.cn]
+    title = "徐昊哲的个人网页"
+    weight = 2
+[[Languages.cn.menu.main]]
+    name = "首页"
+    url = "/cn"
+    weight = 1
+[[Languages.cn.menu.main]]
+    name = "关于"
+    url = "/cn/about"
+    weight = 2
+[[Languages.cn.menu.main]]
+    name = "App应用"
+    url = "/cn/apps"
+    weight = 3
+[[Languages.cn.menu.main]]
+    name = "诗词"
+    url = "/cn/poems/"
+    weight = 4
+[[Languages.cn.menu.main]]
+    name = "文章"
+    url = "/cn/article"
+    weight = 5
+[[Languages.cn.menu.main]]
+    name = "所有分类"
+    url = "/cn/categories/"
+    weight = 6
+[[Languages.cn.menu.main]]
+    name = "所有标签"
+    url = "/cn/tags/"
+    weight = 7
+[[Languages.cn.menu.main]]
+    name = "English"
+    url = "/en/"
+    weight = 8
+[Languages.cn.params]
+    description = "一个Hugo生成的静态网页。"
+    footer = "&copy; [徐昊哲](http://www.huiimy.ninja) 2017"

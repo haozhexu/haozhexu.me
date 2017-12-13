@@ -1,84 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
-  <url>
-    <loc>http://www.haozhexu.me/article/pseudo_science/prologue/</loc>
-    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.haozhexu.me/apps/</loc>
-    <lastmod>2017-11-05T09:01:49+11:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.haozhexu.me/</loc>
-    <lastmod>2017-11-05T08:57:48+11:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.haozhexu.me/poems/</loc>
-    <lastmod>2017-11-04T08:47:12+11:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.haozhexu.me/about/</loc>
-    <lastmod>2017-11-04T08:30:16+11:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.haozhexu.me/categories/article/</loc>
-    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.haozhexu.me/article/</loc>
-    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.haozhexu.me/categories/</loc>
-    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.haozhexu.me/tags/human/</loc>
-    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.haozhexu.me/tags/metaphysics/</loc>
-    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.haozhexu.me/tags/philosophy/</loc>
-    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.haozhexu.me/tags/pseudo-science/</loc>
-    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.haozhexu.me/tags/science/</loc>
-    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://www.haozhexu.me/tags/</loc>
-    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+	
+	<sitemap>
+	   	<loc>http://www.haozhexu.me/en/sitemap.xml</loc>
+		
+	   	<lastmod>2017-11-06T07:23:49+11:00</lastmod>
+		
+	</sitemap>
+	
+	<sitemap>
+	   	<loc>http://www.haozhexu.me/cn/sitemap.xml</loc>
+		
+	   	<lastmod>2017-11-06T07:23:49+11:00</lastmod>
+		
+	</sitemap>
+	
+</sitemapindex>

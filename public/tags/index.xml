@@ -1,14 +1,59 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Hui is my ninja</title>
-    <link>http://www.huiimy.ninja/tags/</link>
-    <description>Recent content in Tags on Hui is my ninja</description>
+    <title>Tags on Haozhe XU</title>
+    <link>http://www.haozhexu.me/tags/</link>
+    <description>Recent content in Tags on Haozhe XU</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Nov 2017 07:23:49 +1100</lastBuildDate>
     
-	<atom:link href="http://www.huiimy.ninja/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.haozhexu.me/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Human</title>
+      <link>http://www.haozhexu.me/tags/human/</link>
+      <pubDate>Mon, 06 Nov 2017 07:23:49 +1100</pubDate>
+      
+      <guid>http://www.haozhexu.me/tags/human/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Metaphysics</title>
+      <link>http://www.haozhexu.me/tags/metaphysics/</link>
+      <pubDate>Mon, 06 Nov 2017 07:23:49 +1100</pubDate>
+      
+      <guid>http://www.haozhexu.me/tags/metaphysics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Philosophy</title>
+      <link>http://www.haozhexu.me/tags/philosophy/</link>
+      <pubDate>Mon, 06 Nov 2017 07:23:49 +1100</pubDate>
+      
+      <guid>http://www.haozhexu.me/tags/philosophy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pseudo-science</title>
+      <link>http://www.haozhexu.me/tags/pseudo-science/</link>
+      <pubDate>Mon, 06 Nov 2017 07:23:49 +1100</pubDate>
+      
+      <guid>http://www.haozhexu.me/tags/pseudo-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Science</title>
+      <link>http://www.haozhexu.me/tags/science/</link>
+      <pubDate>Mon, 06 Nov 2017 07:23:49 +1100</pubDate>
+      
+      <guid>http://www.haozhexu.me/tags/science/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

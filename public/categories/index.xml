@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Hui is my ninja</title>
-    <link>http://www.huiimy.ninja/categories/</link>
-    <description>Recent content in Categories on Hui is my ninja</description>
+    <title>Categories on Haozhe XU</title>
+    <link>http://www.haozhexu.me/categories/</link>
+    <description>Recent content in Categories on Haozhe XU</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <lastBuildDate>Mon, 06 Nov 2017 07:23:49 +1100</lastBuildDate>
     
-	<atom:link href="http://www.huiimy.ninja/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.haozhexu.me/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Article</title>
+      <link>http://www.haozhexu.me/categories/article/</link>
+      <pubDate>Mon, 06 Nov 2017 07:23:49 +1100</pubDate>
+      
+      <guid>http://www.haozhexu.me/categories/article/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

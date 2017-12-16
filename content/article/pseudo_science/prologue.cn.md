@@ -1,48 +1,50 @@
 ---
-title: "Pseudo Science - Prologue"
+title: "用玄学重新探索奇妙世界 - 前言"
 date: 2017-11-06T07:23:49+11:00
 draft: false
 categories:
-  - Article
+  - 文章
 tags:
-  - pseudo-science
-  - science
-  - metaphysics
-  - philosophy
-  - human
+  - 科学
+  - 玄学
+  - 哲学
+  - 人类
+  - 宇宙
 ---
 
 # 用玄学重新探索奇妙世界
 
-（这篇文章的中文翻译即将发布，请怀着看中文的朋友先别捉急）
+## 前言
 
-## Prologue
+我此时正在去中国的飞机上，空调的冷气让我感觉很不舒服，于是想找点东西来转移自己的注意力，随后就注意到了机舱两边的小圆窗，让我想起小学教室里的窗户，绿色的木窗框并且始终透明干净。
 
-I was on the flight back to China, the air conditioner made me feel sick, it was a bit too cold. I tried to focus on something that could distract me from the sickness, then I noticed the small round window next to me, it reminded me of the windows in the classroom of my elementary school — they have wooden frames painted in green and are always clean.
+刚上小学时姨父送了我一套书，叫《世界真奇妙》，里面介绍了世界各地的风俗文化以及历史遗迹，最让我感兴趣的是许多不解之谜，包括古埃及的金字塔，百慕大三角，玛雅文化等等。好奇心驱使我努力学习，想从科学里找到答案，然而我失败了。科学相关的课程，无论是初中时和蔼可亲的物理老师通过各种实验来教授的物理、高中时刻板严谨的班主任教授的数学、化学甚至学术气息浓厚的墨尔本大学的计算机科学，都没能帮我解开心中的疑惑，当然不能否认它们极大的增长了我的知识水平，并让我有一技之能在社会里生存。
 
-When I finished kindergarten and started elementary school, my uncle bought me a trilogy of books, called “Discover a Wonderful World”, the books have a storyline of three cartoon characters travelling around the world, visiting different places and discovering different cultures, scenes, architectures on their way, including the Egyptian Pyramid, Bermuda Triangle, Maya and so on, there seems to be a lot of things created in history that human could not understand or explain, I was very much into them. Curiosity is a good teacher that drives me to study hard with a hope of finding the answers of the unknowns, but it didn’t work. Science related subjects, physics, mathematics, chemistry, even computer science I studied at Melbourne University, none of them gave me the answer to those unknowns. Of course, school education largely increased my knowledge base and provided me the skills to survive in a modern society.
+我在写这段文字的时候距离大学毕业已经有五年了，回想起求学的生涯，虽然学到的知识深印在我脑海，但求学过程中至今仍记忆清晰的，竟然只有小学教室里那些绿框的窗户。学习难免枯燥，尤其是带着一颗寻求答案的心却一无所获的时候；然而透过每天被值日生擦的干净透亮的窗玻璃，我看到了外面的世界。无论是高高的梧桐树几乎贴在窗上的枝叶，还是楼下路两旁叫卖的小贩，或是匆匆赶路的行人，无一不充满了生机；更妙的是这些景致并非一成不变，随季节变化人们会穿不同的衣服，即使同一天里，也会看到形形色色不同的人，有天真无忧的孩童，有奔波赶路的年轻人，也有悠然自得的老人，这一切都正如佛家说的成住坏空，循环往复。
 
-At the time when I was writing these piece of text, it’s been five years since I graduated from university. Recalling my life as a student, apart from the knowledge I learned, the most remarkable thing I could clearly remember is just the green-framed windows in my elementary school. Learning could be boring, especially when the motivation of study is to explain the unknowns but nothing could be explained. However, through the daily-cleaned windows, I saw a different world: leaves of tall trees touching the windows, people yielding and selling goods off the streets and people walking in a hurry. They let me feel the sense of life, and the scene was never repetitive. Throughout the year, people wear different clothes in different seasons; Even on the same day, I could see different kinds of people: innocent children laughing and playing, young people are always busy and working hard for their living and elders walking around at a slower pace. These often remind me of the Four States of Phenomena in the Principle of Physics (as described in Buddhism scripture): formation, existence, destruction, and emptiness.
+如今科学昌明，科技日新月异，人们在享受科学带来的各种便利并不断被新事物冲击时，却似乎面临越来越多的问题，无论是战争、天灾、环境污染、资源枯竭，还是大至国家、民族，小至亲朋好友之间的矛盾与不和谐，经济的发展并没有带来生活的闲适，反倒让人越来越感觉到生活的压力，并时不时怀念曾经的时光。人类社会在以科学为基础的发展道路上似乎越走越艰难，却始终期望可以靠科学来解决所有问题，科学主导了人类的认知。实际上，在科学之外，还存在着另一种对世界的认知体系，由于唯物主义的灌输以及人们在物质上对科学的依赖，许多人不愿触及，不愿接受甚至不知道这个曾经主导了中华乃至世界各地不同族群几千年发展历史，创造了璀璨的文明以及无数现今无法解释的发明创造，与现今西方科学截然不同的另一个科学体系：玄学。
 
-With the advancement of science, while people all enjoy the convenience provided by new technologies, at the same time we are also facing more and more troubles: wars, natural disasters, environmental pollution, resources shortage, or the ethnic conflict and discord between as large as nations and as small as friends and families. It seems that the way human is walking on is getting narrower, but we expect science to be the only solution for all these problems, specifically, we largely do not know any other solutions that can be better than science, which leads and predominates the way human discover the world. The fact is, besides modern science, there are other cognitive structures, which can be used to learn and explain the universe, but due to the predominance of modern science which people heavily rely on for the purpose of corporeal enjoyment in a material world, many people do not want to touch, accept, or even don’t know there is a completely different scientific system, which, as a guiding ideology in ancient China and many other colonies in the past, created wonderful civilisations whose technologies and creations can not be explained by modern science. People call it metaphysics, also called as pseudo-science.
+> 别让你孩子的学校耽误了他的教育。
+> — 马克吐温
 
-So what is metaphysics? This text was originally written in Chinese and later translated to English, when I looked in the dictionary, I found two translations of the Chinese word of “metaphysics”: “metaphysics” and the other is “pseudo-science”. Emotionally I tend to prefer the former, since ‘pseudo’ more or less implies cheating and lying, but ‘pseudo-science’ was chosen for the title of the book, this is on purpose: it doesn’t only emphasise the things discussed here are beyond science (more specifically, modern science), but it is also a satire on modern science that most people are pretty much into.
+何为玄学？英文里有两种解释，一种是metaphysics，存在于物质之外的抽象概念；另一种是pseudo-science，意为伪科学。情感上我更倾向于第一种解释，因为后者的“伪”字会让人觉得有欺骗的成分，但此书的英文版标题却用了后者，它既点明了科学以外的东西，又有着对科学的讽刺，类似于钱钟书的一张肖像照里嘴角向下的隐隐微笑被解释为他对现实的轻蔑和不屑。科学 -- 如果特指西方科学，应该是人类对身处的世界的探索与总结，其中包括从观察试验中得出的各种定律、法则，而人类的文明社会则是构筑在这些研究探索之上。对于未知的宇宙、时空，科学显得微不足道，就好像井底的青蛙，身处狭小的空间里，不知道外面广阔的世界而以为头顶能看到一块天就是整个世界，人们有意或无意的把科学作为恒定的真理来判断未知的事物，如果科学无法证实，那便是伪科学。且不说这种逻辑本身就是不科学的，更不用说整个科学的发展史，很多时候都是以新发现否定旧认识的方式来进步的。胡适说科学的精神在于大胆的假设并严谨的探索和小心的求证，而并非是用已知的东西作为绝对的真理来排斥其无法证实或与其不同的理论。
 
-> Don’t let your boy’s schooling interfere with his education.
-> — Mark Twain
+### 方法论
 
-A while ago I read a story: given a certain amount of fencing timber, what you need to do is to fence an area that you can claim ownership of the land inside; The question is, how do you shape your fence so you get the largest possible area of land. A financier then used only a small amount of timber to fence himself, then declared he was outside of the fence. Despite the intended meaning of the story, I read it as the person is trying to be smart but his greediness and desire have put himself in a narrow space, in which his vision is limited. This narrow space is called modern science. I’m trying to break the fence, and see what is the world outside.
+我的大学同学有一部分毕业后继续深造，有些已经读到了博士，其中有一个基督徒，每周末都要去教堂。我告诉他我准备把自己的研究发现写下来，他对我的想法很好奇，并以非常学术的角度问我，需要用到哪些参考文献。我告诉他我参考的是佛经、圣经、中国的神话古书、我自己在打坐入定后看到的景象、网上的小道消息、YouTube视频以及我自己做过的梦。那一刻他脸上的表情就像是我第一次吃Vegemite(酵母酱)时一样(虽然我当时没照镜子看自己是何种表情)，然后对我说：
 
-Some of my classmates stayed in university after graduation and did some further study, a few of them were doing Ph.D. One of them is a Christian, he went to church every weekend. I told him I was about to write down all my findings related to the world and the universe, he was very interested and asked me in an academic accent that what kind of articles and papers I would reference, I told him the things I referenced include Buddhism scripture, Bible, Chinese mythology books, the scene appeared in my brain during meditation, rumours on the internet, youtube videos and some dreams I had when I sleep. His face looked like when the first time I ate sliced bread with Vegemite (although at that time I didn’t look at myself in a mirror), and yielded at me:
+> “我的上帝啊，没听错吧？圣经作为参考文献？在我们科学系这样写论文你肯定不能毕业。”
 
-> Oh my God, are you OK? Referencing Bible? You will fail your thesis in science faculty.
+看出问题了吗？他作为一个基督徒，并且先对他的上帝感叹了一下，然后质疑我用圣经做参考文献的可靠性。初中历史课学西方历史的时候，老师告诉我们有个西方人提出信上帝便可得永生，先不说是不是真的只要相信上帝便能得救，就说我这个朋友，虽然每周去教堂，但我却不敢说他真的信上帝。他从学术角度说的这句话完全可以理解，正因为此，让我深深感觉到，人们对科学的依赖潜移默化的封闭了人们的眼界。之前说过，我一直觉得科学本身只是人类对世界探索发现的总结，而其精神却是对未知的东西大胆的假设和谨慎的求证，只是不少人认识不到这一点，尤其是在现实中享受着科学带来的便利时，会觉得科学就是书本里学到的东西。心中充斥这种观念，就无法深入探索玄学，也同样无法深入探索科学。只有从根本上改变已有的科学观念，才能有一个全新的对世界的认识。
 
-See the problem here? He was a Christian, sighed to his God, then questioned Bible as a trustable source. In the class of world history in my secondary school, the teacher told us that if one believes in God, he/she could be saved. I don’t know if my friend can be saved since I’m not sure whether he really believes in God, even though he goes to church every week. I fully understand his concern from an academic point of view, and just because of this, I deeply feel the fact that human nowadays rely heavily on modern science has sealed up our vision. If what modern science found so far are considered as universal truth, there is no way for people to value different cognitive systems other than modern science. **Only if human can change their rigid way of thinking, mankind will make a leap forward towards discovering the truth of life, time, space, and universe.** I quite like the quote from the movie “2012”, when Nima seeks help from Lama Rinpoche for his confusion, Lama then tries to add water to a cup which is already full (so the water flows out), and said:
-Like this cup, you are full of opinions and speculations. To see the light of wisdom, you first must empty your cup.
+电影《2012》里，小喇嘛遇到困惑的时候向大喇嘛请教，大喇嘛提起茶壶往装满了水的杯子里倒水，而水只能溢出杯外，然后大喇嘛说：
 
-As far as I can see, science and metaphysics are not contradicting, they are just different views of life, time, space and universe. Modern science has its convenience that everyone can learn some knowledge in order to improve the quality of their lives in a material world — isn’t living a better life good enough? Who’d need to care whether the knowledge is really the truth?
+> “正如这杯水，你心中充满了想法和主见，若想得到真正的智慧，就必须先把这杯水倒掉。”
 
-I read a book called Sophie’s World (by Jostein Gaarder), the book describes the world as a giant rabbit, everyone lives on the surface of its skin, people believe the skin is the whole world; Most of them keep digging into the skin, that’s where material benefit resides, they believe this is the way of life because the skin is the only thing their eyes could see and their hands could touch. Sometimes, they raise up their heads but see a black sky which is a silent void, far away and unreachable, thus they don’t think too much about it since they don’t understand it — after all, they don’t have to understand it because it’s nothing to do with their lives: life is all about digging further into the rabbit’s skin, just like what we do.
-There are a few philosophers, however, when looking at the sky, wondered what those shining spots are and eventually realized their “world” is merely a giant rabbit. They want to see the world outside (like I saw the outside world through the green-framed window in my elementary school), so they climb up to the top of the rabbit’s fur. Ordinary people see those philosophers as idiots because they don’t get any material benefit by doing that, and it’s also quite dangerous on top of the rabbit’s fur. Why do we care about something far away? What’s wrong with digging inside as long as people feel happy and desires are satisfied? It could be that those philosophers have a different understanding of happiness, but no matter how one understands it, no matter how one lives his/her life, one cannot escape from death, and always has to face the ultimate questions of human being (that those philosophers try to answer): where are we from, what are the final destination, who are we?
+如果宇宙的真理只有一种，那么玄学与科学便只是从不同的角度来解释这个宇宙，就好像古人说白云像苍狗，现代人说白云像棉花糖，但并不能说古人认为白云苍狗就是错的。玄学有其特殊性，这种特殊性决定了它不能被所有人接受和理解，而科学却有它的便利性，任何人通过学习都可以获得，并且能在相当程度上改善人的生活--这样难到还不够吗？为什么还要玄学？
 
-Let’s start with a dream I had, not long ago.
+小学四年级时我读《苏菲的世界》时也是这么想，书中把世界比喻成一只兔子，人们都生活在兔子皮的表面，以为这就是整个世界了，在现实中为了物质利益而往兔子皮里面钻；因为在人们看来，兔子皮是自己脚踏实地，看得见摸得着的东西，抬起头只有黑漆漆的天空，无边无际，遥不可及。因此“里面”是发展的方向，却不知正是因为只看到“里面”，才让自己不识庐山真面目，看不见宇宙的全貌；而哲学家仰望星空，繁星的光芒就像落在牛顿头上的苹果一样，使他们意识到世界并非只是一个让人可以往皮毛里钻而得到利益的兔子，为了看看外面的世界，他们开始往兔毛的顶端爬。往里面钻的人享受着现实的物质生活同时嘲笑往外爬的人，笑他们不去享受现实的利益而且容易掉下来摔死。我当时也是想，即便世界只是一只兔子，即便往里钻的人目光狭隘，但那又如何，只要活的快乐不就行了吗？后来逐渐发现，快乐并非简单的物质享受，况且无论快乐与否，人总是逃不出死亡，这就是哲学家想要回答的终极问题：
+
+> 人从哪里来，到何处去，我们是谁？
+
+我也想试着回答这个问题。当年释迦摩尼贵为太子，享受荣华富贵，忽然发现宫中有人老死，意识到人终有一死，发现宫女酒醉后丑态百出，意识到美丽并不持久，生命并不永恒，所以逃出皇宫寻找永恒之理，最终在菩提树下开悟。我没有佛的功德，只能从有限的知识里探求未知的真相，而这一切得从一个梦开始说起。

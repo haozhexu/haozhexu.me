@@ -81,16 +81,6 @@
     <loc>http://www.haozhexu.me/categories/article/</loc>
     <lastmod>2017-11-06T07:23:49+11:00</lastmod>
     <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="http://www.haozhexu.me/cn/categories/article/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://www.haozhexu.me/categories/article/"
-                />
   </url>
   
   <url>
@@ -129,80 +119,30 @@
     <loc>http://www.haozhexu.me/tags/human/</loc>
     <lastmod>2017-11-06T07:23:49+11:00</lastmod>
     <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="http://www.haozhexu.me/cn/tags/human/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://www.haozhexu.me/tags/human/"
-                />
   </url>
   
   <url>
     <loc>http://www.haozhexu.me/tags/metaphysics/</loc>
     <lastmod>2017-11-06T07:23:49+11:00</lastmod>
     <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="http://www.haozhexu.me/cn/tags/metaphysics/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://www.haozhexu.me/tags/metaphysics/"
-                />
   </url>
   
   <url>
     <loc>http://www.haozhexu.me/tags/philosophy/</loc>
     <lastmod>2017-11-06T07:23:49+11:00</lastmod>
     <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="http://www.haozhexu.me/cn/tags/philosophy/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://www.haozhexu.me/tags/philosophy/"
-                />
   </url>
   
   <url>
     <loc>http://www.haozhexu.me/tags/pseudo-science/</loc>
     <lastmod>2017-11-06T07:23:49+11:00</lastmod>
     <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="http://www.haozhexu.me/cn/tags/pseudo-science/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://www.haozhexu.me/tags/pseudo-science/"
-                />
   </url>
   
   <url>
     <loc>http://www.haozhexu.me/tags/science/</loc>
     <lastmod>2017-11-06T07:23:49+11:00</lastmod>
     <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="http://www.haozhexu.me/cn/tags/science/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://www.haozhexu.me/tags/science/"
-                />
   </url>
   
   <url>

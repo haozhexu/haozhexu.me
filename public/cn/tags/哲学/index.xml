@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Haozhe XU on 徐昊哲的个人网页</title>
-    <link>http://www.haozhexu.me/cn/</link>
-    <description>Recent content in Haozhe XU on 徐昊哲的个人网页</description>
+    <title>哲学 on 徐昊哲的个人网页</title>
+    <link>http://www.haozhexu.me/cn/tags/%E5%93%B2%E5%AD%A6/</link>
+    <description>Recent content in 哲学 on 徐昊哲的个人网页</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 05 Nov 2017 08:57:48 +1100</lastBuildDate>
+    <lastBuildDate>Mon, 06 Nov 2017 07:23:49 +1100</lastBuildDate>
     
-	<atom:link href="http://www.haozhexu.me/cn/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://www.haozhexu.me/cn/tags/%E5%93%B2%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -31,37 +31,6 @@
 小学四年级时我读《苏菲的世界》时也是这么想，书中把世界比喻成一只兔子，人们都生活在兔子皮的表面，以为这就是整个世界了，在现实中为了物质利益而往兔子皮里面钻；因为在人们看来，兔子皮是自己脚踏实地，看得见摸得着的东西，抬起头只有黑漆漆的天空，无边无际，遥不可及。因此“里面”是发展的方向，却不知正是因为只看到“里面”，才让自己不识庐山真面目，看不见宇宙的全貌；而哲学家仰望星空，繁星的光芒就像落在牛顿头上的苹果一样，使他们意识到世界并非只是一个让人可以往皮毛里钻而得到利益的兔子，为了看看外面的世界，他们开始往兔毛的顶端爬。往里面钻的人享受着现实的物质生活同时嘲笑往外爬的人，笑他们不去享受现实的利益而且容易掉下来摔死。我当时也是想，即便世界只是一只兔子，即便往里钻的人目光狭隘，但那又如何，只要活的快乐不就行了吗？后来逐渐发现，快乐并非简单的物质享受，况且无论快乐与否，人总是逃不出死亡，这就是哲学家想要回答的终极问题：
  人从哪里来，到何处去，我们是谁？
  我也想试着回答这个问题。当年释迦摩尼贵为太子，享受荣华富贵，忽然发现宫中有人老死，意识到人终有一死，发现宫女酒醉后丑态百出，意识到美丽并不持久，生命并不永恒，所以逃出皇宫寻找永恒之理，最终在菩提树下开悟。我没有佛的功德，只能从有限的知识里探求未知的真相，而这一切得从一个梦开始说起。</description>
-    </item>
-    
-    <item>
-      <title>Apps</title>
-      <link>http://www.haozhexu.me/cn/apps/</link>
-      <pubDate>Sun, 05 Nov 2017 09:01:49 +1100</pubDate>
-      
-      <guid>http://www.haozhexu.me/cn/apps/</guid>
-      <description>下面是仍在AppStore上的我个人做的App:
-孔明棋 一个古老的跳棋类游戏，好像后面某一关有个bug，始终过不去。
-
-我是骚客 一个会创作诗词的软件，所做诗词没太有规律可寻，不经意会作出一首千古绝句。
-
-fortune | cowsay （奶牛说） 经典Unix上的fortune以奶牛（cowsay）的形式显示出来，闲时随机一段文字也许让你深受启发。
-
-经典方块 一个消除类游戏，类似俄罗斯方块，可以连接横竖斜三个方向。</description>
-    </item>
-    
-    <item>
-      <title>关于</title>
-      <link>http://www.haozhexu.me/cn/about/</link>
-      <pubDate>Sat, 04 Nov 2017 08:30:16 +1100</pubDate>
-      
-      <guid>http://www.haozhexu.me/cn/about/</guid>
-      <description>这是某次午饭时同事帮我拍的照片，因为我一直是个性格内向沉默寡言的人，比较不喜欢被拍照，所以用一张纸巾挡住脸。然而看到照片时才发现拍照的人根本没把焦点对在我脸上。最后的教训是：在别人眼里你未必有你自己想象的那么重要。
-这是徐昊哲的个人网页。我目前在墨尔本从事iOS软件开发。除了日常工作，我还参与街头摄影、诗词创作、撰写技术文章以及研究玄学（包括且不限于易经、塔罗命理、佛学），目前在创作一部集科学与玄学之大成的书。
-业余时间所做的所有事情其实可以用一句话来形容，就是从科学意外的角度来探索这个世界。通过宗教、玄学、相机镜头等等看似毫无关联甚至荒诞的东西，以多个视角来理解这个世界和宇宙。什么是科学？胡适说“大胆的假设，小心的求证”，我相信科学的精神是不断的探索未知，而不是将已有的发现作为绝对的真理却忽视甚至否认科学尚未能解释清的东西。
-iOS软件开发 我有若干年的iOS软件开发经验，参与过澳大利亚人常用的许多软件，体育相关的如AFL澳式足球联盟赛，NRL澳洲橄榄球联赛以及澳洲板球联赛Cricket的手机应用，还有澳纽银行ANZ的手机应用。担任过开发员以及技术组长。
-摄影 我的一部分业余时间会用来摄影，学习并提高摄影水平。在我的背包里一般会有理光GR，富士X-Pro2或松下的M43微单，我最常用的镜头焦距是等效50mm。摄影作品主要放在Instagram以及Lofter上。
-文学与诗词创作 出了工作外我还会时不时写一些小说与创作一些诗词。
-社交网络与联系方式  电子邮箱：haozhe.xu3@gmail.com 推特：twitter.com/hzxu 脸书：facebook.com/haozhe.xu 500px（很少更新）：500px.com/haoever Instagram：Instagram.com/haozhe.xu LinkedIn（中文好像叫领英）：Linkedin.com/in/haoever 微博：Weibo.com/huiimyninja Lofter：huiimy.lofter.com/  我的英文简历：点这里</description>
     </item>
     
   </channel>

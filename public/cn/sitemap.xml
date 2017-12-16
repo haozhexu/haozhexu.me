@@ -78,22 +78,6 @@
   </url>
   
   <url>
-    <loc>http://www.haozhexu.me/cn/categories/article/</loc>
-    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://www.haozhexu.me/categories/article/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="http://www.haozhexu.me/cn/categories/article/"
-                />
-  </url>
-  
-  <url>
     <loc>http://www.haozhexu.me/cn/article/</loc>
     <lastmod>2017-11-06T07:23:49+11:00</lastmod>
     <priority>0</priority>
@@ -111,7 +95,6 @@
   
   <url>
     <loc>http://www.haozhexu.me/cn/categories/</loc>
-    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -126,88 +109,7 @@
   </url>
   
   <url>
-    <loc>http://www.haozhexu.me/cn/tags/human/</loc>
-    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://www.haozhexu.me/tags/human/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="http://www.haozhexu.me/cn/tags/human/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://www.haozhexu.me/cn/tags/metaphysics/</loc>
-    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://www.haozhexu.me/tags/metaphysics/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="http://www.haozhexu.me/cn/tags/metaphysics/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://www.haozhexu.me/cn/tags/philosophy/</loc>
-    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://www.haozhexu.me/tags/philosophy/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="http://www.haozhexu.me/cn/tags/philosophy/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://www.haozhexu.me/cn/tags/pseudo-science/</loc>
-    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://www.haozhexu.me/tags/pseudo-science/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="http://www.haozhexu.me/cn/tags/pseudo-science/"
-                />
-  </url>
-  
-  <url>
-    <loc>http://www.haozhexu.me/cn/tags/science/</loc>
-    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="http://www.haozhexu.me/tags/science/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="http://www.haozhexu.me/cn/tags/science/"
-                />
-  </url>
-  
-  <url>
     <loc>http://www.haozhexu.me/cn/tags/</loc>
-    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -219,6 +121,42 @@
                 hreflang="cn"
                 href="http://www.haozhexu.me/cn/tags/"
                 />
+  </url>
+  
+  <url>
+    <loc>http://www.haozhexu.me/cn/tags/%E4%BA%BA%E7%B1%BB/</loc>
+    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haozhexu.me/cn/tags/%E5%93%B2%E5%AD%A6/</loc>
+    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haozhexu.me/cn/tags/%E5%AE%87%E5%AE%99/</loc>
+    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haozhexu.me/cn/categories/%E6%96%87%E7%AB%A0/</loc>
+    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haozhexu.me/cn/tags/%E7%8E%84%E5%AD%A6/</loc>
+    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://www.haozhexu.me/cn/tags/%E7%A7%91%E5%AD%A6/</loc>
+    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
+    <priority>0</priority>
   </url>
   
 </urlset>

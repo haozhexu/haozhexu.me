@@ -1,5 +1,5 @@
 ---
-title: "用玄学重新探索奇妙世界 - 月轮"
+title: "用玄学重新探索奇妙世界 - 晓月"
 date: 2017-12-22T06:15:36+11:00
 draft: false
 categories:
@@ -57,3 +57,5 @@ tags:
 “正如这杯水，你心中充满了想法和成见，若想得到真正的智慧，就必须先把这杯水倒掉。”
 
 [1]: https://starchild.gsfc.nasa.gov/docs/StarChild/questions/question38.html
+
+上一章： [前言](/cn/article/pseudo_science/prologue/)

@@ -2,6 +2,7 @@
 title: "Haozhe XU"
 date: 2017-11-05T08:57:48+11:00
 draft: false
+comments: false
 ---
 
 _思绪来如黄鹤去如晨风，偶尔会在这里停留。_

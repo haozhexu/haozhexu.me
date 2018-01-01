@@ -2,6 +2,7 @@
 title: "Apps"
 date: 2017-11-05T09:01:49+11:00
 draft: false
+comments: false
 ---
 
 下面是仍在AppStore上的我个人做的App:

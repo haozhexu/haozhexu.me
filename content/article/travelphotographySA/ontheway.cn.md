@@ -2,6 +2,14 @@
 title: "相逢若只如初见 - Adelaide（一）灯塔"
 date: 2017-12-30T20:55:26+11:00
 draft: false
+categories:
+  - 旅行摄影
+tags:
+  - 旅行
+  - 摄影
+  - Adelaide
+  - OtwayLighthouse
+  - 灯塔
 ---
 在我看来，旅游、旅行和旅途三者的差别在于，随旅游团一起的叫旅游，参观固定的景点，每个地方停留足够拍照留念的时间；旅行则相对随意一些，有自己的行程计划；而旅途却不一定要去到哪里，可以是心灵的自我发现和探索。现实中有不少人因为时间等因素制约而只能参加旅游团，幸运的是2017年的圣诞假期我们按照自己安排的行程，从墨尔本自驾去南澳的阿德莱德。
 
@@ -34,6 +42,8 @@ draft: false
 灯塔不远处有一堆柴火，弥漫着炊烟，我猜可能古时的文人墨客在临海感叹时只看到了海浪而没看到灯塔，更没闻到炊烟，否则也不会如此悲观，因为对于归航回家的人来说，看到了灯塔，就看到了希望。
 
 ![近处的柴火堆与远处的灯塔][lighthouse-6]
+
+下一章： [相逢若只如初见 - Adelaide（二）岛上街头](/cn/article/travelphotographySA/streetonisland/)
 
 [lighthouse-1]: /photos/travelphotographySA/lighthouse-1-anno.jpg
 [lighthouse-2]: /photos/travelphotographySA/lighthouse-2-anno.jpg

@@ -43,7 +43,7 @@ tags:
 
 ![近处的柴火堆与远处的灯塔][lighthouse-6]
 
-下一章： [相逢若只如初见 - Adelaide（二）岛上街头](/cn/article/travelphotographySA/streetonisland/)
+下一章： [相逢若只如初见 - Adelaide（二）岛上街头](/cn/article/travelphotographysa/streetonisland/)
 
 [lighthouse-1]: /photos/travelphotographySA/lighthouse-1-anno.jpg
 [lighthouse-2]: /photos/travelphotographySA/lighthouse-2-anno.jpg

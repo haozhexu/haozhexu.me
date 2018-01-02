@@ -2,6 +2,7 @@
 title: "关于"
 date: 2017-11-04T08:30:16+11:00
 draft: false
+comments: false
 ---
 
 ![同事帮我拍的我用卫生纸遮住脸的照片][about_cover]

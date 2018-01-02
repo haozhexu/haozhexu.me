@@ -2,6 +2,7 @@
 title: "Haozhe XU"
 date: 2017-11-05T08:57:48+11:00
 draft: false
+comments: false
 ---
 
 _Thoughts, flow far away and return on the wind of morning._

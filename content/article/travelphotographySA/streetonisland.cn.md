@@ -150,6 +150,8 @@ tags:
 
 上一章：[相逢若只如初见 - Adelaide（一）灯塔](/cn/article/travelphotographysa/ontheway/)
 
+下一张：[相逢若只如初见 - Adelaide（三）城市安逸，人生匆匆](/cn/article/travelphotographysa/city/)
+
 [island-1]: /photos/travelphotographySA/island-1-anno.jpg
 [island-2]: /photos/travelphotographySA/island-2-anno.jpg
 [island-3]: /photos/travelphotographySA/island-3-anno.jpg

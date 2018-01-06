@@ -8,7 +8,8 @@ tags:
   - 旅行
   - 摄影
   - Adelaide
-  - 袋鼠岛
+  - 街头
+  - CBD
 ---
 # （三）城市安逸，人生匆匆
 
@@ -149,6 +150,7 @@ tags:
 ![镇江香醋][city-32]
 
 上一章： [相逢若只如初见 - Adelaide（二）岛上街头](/cn/article/travelphotographysa/streetonisland/)
+下一章： [相逢若只如初见 - Adelaide（四）醉过知酒浓](/cn/article/travelphotographysa/penfold/)
 
 [city-1]: /photos/travelphotographySA/city-1-anno.jpg
 [city-2]: /photos/travelphotographySA/city-2-anno.jpg

@@ -83,6 +83,8 @@ Penfold酒庄距离阿德莱德市区不远，“Penfold”中文一般译作奔
 
 ![酒瓶与烟囱][penfold-18]
 
+上一章： [相逢若只如初见 - Adelaide（三）城市安逸，人生匆匆](/cn/article/travelphotographysa/city/)
+
 [penfold-1]: /photos/travelphotographySA/penfold-1-anno.jpg
 [penfold-2]: /photos/travelphotographySA/penfold-2-anno.jpg
 [penfold-3]: /photos/travelphotographySA/penfold-3-anno.jpg

@@ -150,6 +150,7 @@ tags:
 ![镇江香醋][city-32]
 
 上一章： [相逢若只如初见 - Adelaide（二）岛上街头](/cn/article/travelphotographysa/streetonisland/)
+下一章： [相逢若只如初见 - Adelaide（四）醉过知酒浓](/cn/article/travelphotographysa/penfold/)
 
 [city-1]: /photos/travelphotographySA/city-1-anno.jpg
 [city-2]: /photos/travelphotographySA/city-2-anno.jpg

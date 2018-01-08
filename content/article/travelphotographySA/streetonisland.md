@@ -18,19 +18,19 @@ tags:
 
 ## Kangaroo Island
 
-Kangaroo Island isn't far from Adelaide, famous for its large number of scenaries - actually I don't know whether it's famous or not, the only reason I said so, is because there wasn't any ferry ticket available several weeks before we travel, so we had no choice but had to go with a tourist group. I guess they bought lots of tickets long time ago, in order to take their customers onto the island. Boarding the ferry doesn't require verification of identity, the name on the ticket doesn't need to be the same as the name on your ID. According to the ticket the guide gave me, my name is Xiao Lan.
+Kangaroo Island isn't far from Adelaide, famous for its large number of scenery - actually I don't know whether it's famous or not, the only reason I said so, is because there wasn't any ferry ticket available several weeks before we travel, so we had no choice but had to go with a tourist group. I guess they bought lots of tickets long time ago, in order to take their customers onto the island. Boarding the ferry doesn't require verification of identity, the name on the ticket doesn't need to be the same as the name on your ID. According to the ticket the guide gave me, my name is Xiao Lan.
 
 ![Ticket of Xiao Lan][island-1]
 
 This time I only brought X-Pro2 with 23mm f2 lens, the focal length is 35mm equivalent. I prefer primes and I wanted to see if it could give me a feeling of taking photos on street. This reminds me that, actually a single fixed camera travel solution would be Fuji's X100F, which is smaller and lighter than X-Pro2, however I always want to use 50mm and Australia's sandy wind across the beach is very tough, so a weather sealed X-Pro2 and 23mm package feels more confident to me.
 
-The photos takens on Kangaroo island were mainly processed using built-in Acros film simulation with red filter, the reason for not taking colors is similar to not using zooms, zoom gives you too much choices and it can be hard to decide, similarly, color also gives you too much choices when processing the photos, deciding which color to use would lead to a lost of the essence of photography: it's hard to say this color is better than that color. But you won't have this kind of trouble when processing black and white (to some degree), and you focus more on the content of the photo itself.
+The photos taken on Kangaroo Island were mainly processed using built-in Acros film simulation with red filter, the reason for not taking colors is similar to not using zooms, zoom gives you too many choices and it can be hard to decide, similarly, color also gives you too many choices when processing the photos, deciding which color to use would lead to a loss of the essence of photography: it's hard to say this color is better than that color. But you won't have this kind of trouble when processing black and white (to some degree), and you focus more on the content of the photo itself.
 
 We first stopped at Seal Bay, after getting off the tour bus, everyone can't wait to see the seals.
 
 ![People Who can't Wait][island-2]
 
-The staff was very patiently explaning things we should know, a kid was not very interested and rather focused on something else. I guess those adults were not interested either, they just want to see the seals, but obviously adults couldn't behave like the kid.
+The staff was very patiently explaining things we should know, a kid was not very interested and rather focused on something else. I guess those adults were not interested either, they just want to see the seals, but obviously, adults couldn't behave like the kid.
 
 ![Staff][island-3]
 
@@ -38,7 +38,7 @@ Then the staff led people down to the beach.
 
 ![To the Beach][island-4]
 
-Finally we saw the seals, everyone was taking photos. They were wild seals so we couldn't stand too close. I wondered how the seals feel when seeing groups of people coming and visiting every day. Most people used their phones for taking photos, the advantage of phone photography is convenience, and easy to share with friends and socials; However phones mostly have wide angle fixed lens, and people seemed to zoom in digitally in order to capture the seals as portrait, along with the strong wind and non-steady hands, the photos were not clear.
+Finally we saw the seals, everyone was taking photos. They were wild seals so we couldn't stand too close. I wondered how the seals feel when seeing groups of people coming and visiting every day. Most people used their phones for taking photos, the advantage of phone photography is convenience, and easy to share with friends and socials; However phones mostly have wide-angle fixed lens, and people seemed to zoom in digitally in order to capture the seals as portrait, along with the strong wind and non-steady hands, the photos were not clear.
 
 ![View the Seals][island-5]
 
@@ -46,11 +46,11 @@ I was just observing people taking photos, now I'm part of them.
 
 ![Me Too][island-6]
 
-I think one important thing of using prime lens is, due to the constraint of single focal length, if it's not widt/narrow enough for something, then just let it go. The key is to find a good frame, or composition that satisfy yourself. This photo includes both the seals, the beach and the sea, let's call it environmental portrait.
+I think one important thing about using prime lens is, due to the constraint of single focal length, if it's not wide/narrow enough for something, then just let it go. The key is to find a good frame or composition that satisfy yourself. This photo includes both the seals, the beach and the sea, let's call it environmental portrait.
 
 ![Seal and the Sea][island-7]
 
-The staff was very patient, answering questions, I was a bit surprised that someone did ask question, I thought they would just take photos of the seals and selfie.
+The staff was very patient, answering questions, I was a bit surprised that someone did ask questions, I thought they would just take photos of the seals and selfie.
 
 ![Q and A][island-8]
 
@@ -70,7 +70,7 @@ Just when I left the beach, another group of visitor came, with exciting facial 
 
 ![Another Group][island-12]
 
-I usually use 50mm equiv. lens, it has made me become an observer, even when I'm in a tourist group, my altitude was still an observer. However when I saw this guy lying on the chair watching the sky, ignoring any visitors passing by, I realised he was the true observer, outsider.
+I usually use 50mm equiv. lens, it has made me become an observer, even when I'm in a tourist group, my altitude was still an observer. However when I saw this guy lying on the chair watching the sky, ignoring any visitors passing by, I realized he was the true observer, outsider.
 
 ![Outsider][island-13]
 
@@ -80,7 +80,7 @@ Next stop is the Remarkable Rocks, created by 500 million years of rain, wind, a
 
 ![Koala][island-14]
 
-Just before the Remarkable Rocks, there's a platform for sight seeing, the guide let us take some photos on the platform. The girl was using DSLR with a zoom lens, which should be able to take clear and closer photos of the rocks. Compared to which, my 35mm equivalent lens could only take the rocks as dots, however with the girl holding a DSLR shooting something far away, this by itself became another scene.
+Just before the Remarkable Rocks, there's a platform for sightseeing, the guide let us take some photos on the platform. The girl was using DSLR with a zoom lens, which should be able to take clear and closer photos of the rocks. Compared to which, my 35mm equivalent lens could only take the rocks as dots, however with the girl holding a DSLR shooting something far away, this by itself became another scene.
 
 ![Another Scene][island-15]
 
@@ -106,7 +106,7 @@ It looks like the photo has been taken but the person was still posing, waiting 
 
 ![Next Shot][island-20]
 
-Through the gap of the two rocks I could see two visitors, X-Pro2 has optical and digital view finder, the optical one mimics rangerfinder, which has certain parallax error, especially in this case. I need to switch to EVF for this kind of precise framing.
+Through the gap between the two rocks I could see two visitors, X-Pro2 has optical and digital view finder, the optical one mimics rangerfinder, which has certain parallax error, especially in this case. I need to switch to EVF for this kind of precise framing.
 
 ![In the Gap][island-21]
 
@@ -132,11 +132,11 @@ Now it's the Arch.
 
 ![Arch][island-26]
 
-Finally we came back to the small town where we got off the ferry. It's very empty, you have to see the wire pole to realise a sense of living.
+Finally we came back to the small town where we got off the ferry. It's very empty, you have to see the wire pole to realize a sense of living.
 
 ![Wire Pole][island-27]
 
-Sometimes you see a human, less frequent than you see birds. I guess mobile phone is the limited way of reaching the world outside, while using her phone, she didn't feel lonely, and forgot the boundless sea behind.
+Sometimes you see a human, less frequent than you see birds. I guess mobile phone is the limited way of reaching the world outside while using her phone, she didn't feel lonely and forgot the boundless sea behind.
 
 ![People][island-28]
 
@@ -144,17 +144,17 @@ The ferry had landed, through the dusty window, the sky was dusty as well.
 
 ![Landing][island-29]
 
-I was sitting inside the tour bus, waiting for the driver.
+I was sitting on the tour bus, waiting for the driver.
 
 ![Bus][island-30]
 
-Before sunset, there was a thin gap of sky without cloud and the sun shined through.
+Before sunset, there was a thin gap of the cloud where sky was exposed and the sun shined through.
 
 ![Sunset][island-31]
 
-Previous: [If life is always like first seeing - Adelaide (1) Lighthouse](/article/travelphotographysa/ontheway/)
+Part 1: [If life is always like first seeing - Adelaide (1) Lighthouse](/article/travelphotographysa/ontheway/)
 
-下一张：[相逢若只如初见 - Adelaide（三）城市安逸，人生匆匆](/cn/article/travelphotographysa/city/)
+Part 2: [If life is always like first seeing - Adelaide (3) Slow City, Flying Life](/article/travelphotographysa/city/)
 
 [island-1]: /photos/travelphotographySA/island-1-anno.jpg
 [island-2]: /photos/travelphotographySA/island-2-anno.jpg

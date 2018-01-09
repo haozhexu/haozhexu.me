@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>http://www.haozhexu.me/article/travelphotographysa/penfold/</loc>
+    <lastmod>2018-01-09T20:27:58+11:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="http://www.haozhexu.me/cn/article/travelphotographysa/penfold/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="http://www.haozhexu.me/article/travelphotographysa/penfold/"
+                />
+  </url>
+  
+  <url>
     <loc>http://www.haozhexu.me/article/travelphotographysa/city/</loc>
     <lastmod>2018-01-07T12:28:58+11:00</lastmod>
     <xhtml:link
@@ -130,7 +145,7 @@
   
   <url>
     <loc>http://www.haozhexu.me/tags/adelaide/</loc>
-    <lastmod>2018-01-07T12:28:58+11:00</lastmod>
+    <lastmod>2018-01-09T20:27:58+11:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -152,7 +167,7 @@
   
   <url>
     <loc>http://www.haozhexu.me/article/</loc>
-    <lastmod>2018-01-07T12:28:58+11:00</lastmod>
+    <lastmod>2018-01-09T20:27:58+11:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -196,7 +211,7 @@
   
   <url>
     <loc>http://www.haozhexu.me/tags/gx85/</loc>
-    <lastmod>2018-01-07T08:39:53+11:00</lastmod>
+    <lastmod>2018-01-09T20:27:58+11:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -220,7 +235,7 @@
   
   <url>
     <loc>http://www.haozhexu.me/tags/m43/</loc>
-    <lastmod>2018-01-07T08:39:53+11:00</lastmod>
+    <lastmod>2018-01-09T20:27:58+11:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -247,6 +262,12 @@
   </url>
   
   <url>
+    <loc>http://www.haozhexu.me/tags/penfold/</loc>
+    <lastmod>2018-01-09T20:27:58+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>http://www.haozhexu.me/tags/philosophy/</loc>
     <lastmod>2017-11-06T07:23:49+11:00</lastmod>
     <priority>0</priority>
@@ -254,7 +275,7 @@
   
   <url>
     <loc>http://www.haozhexu.me/tags/photography/</loc>
-    <lastmod>2018-01-07T12:28:58+11:00</lastmod>
+    <lastmod>2018-01-09T20:27:58+11:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -294,13 +315,13 @@
   
   <url>
     <loc>http://www.haozhexu.me/tags/travel/</loc>
-    <lastmod>2018-01-07T12:28:58+11:00</lastmod>
+    <lastmod>2018-01-09T20:27:58+11:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://www.haozhexu.me/categories/travelphotography/</loc>
-    <lastmod>2018-01-07T12:28:58+11:00</lastmod>
+    <lastmod>2018-01-09T20:27:58+11:00</lastmod>
     <priority>0</priority>
   </url>
   

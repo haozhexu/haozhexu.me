@@ -154,6 +154,8 @@ I went through the walking street when I walked back to the hotel, I bought a bo
 
 Part 2: [If life is always like first seeing - Adelaide (2) Street on Island](/article/travelphotographysa/streetonisland/)
 
+Part 4: [If life is always like first seeing - Adelaide (4) The Wine Is Strong](/article/travelphotographysa/penfold/)
+
 [city-1]: /photos/travelphotographySA/city-1-anno.jpg
 [city-2]: /photos/travelphotographySA/city-2-anno.jpg
 [city-3]: /photos/travelphotographySA/city-3-anno.jpg

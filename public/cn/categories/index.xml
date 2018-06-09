@@ -2,28 +2,28 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 徐昊哲的个人网页</title>
-    <link>http://www.haozhexu.me/cn/categories/</link>
+    <link>https://www.haozhexu.me/cn/categories/</link>
     <description>Recent content in Categories on 徐昊哲的个人网页</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="http://www.haozhexu.me/cn/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.haozhexu.me/cn/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>文章</title>
-      <link>http://www.haozhexu.me/cn/categories/%E6%96%87%E7%AB%A0/</link>
+      <link>https://www.haozhexu.me/cn/categories/%E6%96%87%E7%AB%A0/</link>
       <pubDate>Fri, 22 Dec 2017 06:15:36 +1100</pubDate>
       
-      <guid>http://www.haozhexu.me/cn/categories/%E6%96%87%E7%AB%A0/</guid>
+      <guid>https://www.haozhexu.me/cn/categories/%E6%96%87%E7%AB%A0/</guid>
       <description></description>
     </item>
     
     <item>
       <title>旅行摄影</title>
-      <link>http://www.haozhexu.me/cn/categories/%E6%97%85%E8%A1%8C%E6%91%84%E5%BD%B1/</link>
+      <link>https://www.haozhexu.me/cn/categories/%E6%97%85%E8%A1%8C%E6%91%84%E5%BD%B1/</link>
       <pubDate>Wed, 03 Jan 2018 22:21:23 +1100</pubDate>
       
-      <guid>http://www.haozhexu.me/cn/categories/%E6%97%85%E8%A1%8C%E6%91%84%E5%BD%B1/</guid>
+      <guid>https://www.haozhexu.me/cn/categories/%E6%97%85%E8%A1%8C%E6%91%84%E5%BD%B1/</guid>
       <description></description>
     </item>
     

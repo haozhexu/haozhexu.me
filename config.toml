@@ -1,4 +1,4 @@
-baseURL = "http://www.haozhexu.me"
+baseURL = "https://www.haozhexu.me"
 DefaultContentLanguage = "en"
 theme = "hugo-xmin"
 googleAnalytics = ""
@@ -53,7 +53,7 @@ footnotereturnlinkcontents = "↩"
     weight = 8
 [Languages.en.params]
     description = "A website built through Hugo."
-    footer = "&copy; [Haozhe XU](http://www.huiimy.ninja) 2017"
+    footer = "&copy; [Haozhe XU](https://www.haozhexu.me) 2017"
 
 [Languages.cn]
     title = "徐昊哲的个人网页"
@@ -92,4 +92,4 @@ footnotereturnlinkcontents = "↩"
     weight = 8
 [Languages.cn.params]
     description = "一个Hugo生成的静态网页。"
-    footer = "&copy; [徐昊哲](http://www.huiimy.ninja) 2017"
+    footer = "&copy; [徐昊哲](https://www.haozhexu.me) 2017"

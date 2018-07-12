@@ -2,6 +2,7 @@
 title: "相逢若只如初见 - Adelaide（二）岛上街头"
 date: 2018-01-02T08:16:57+11:00
 draft: false
+ads: true
 categories:
   - 旅行摄影
 tags:

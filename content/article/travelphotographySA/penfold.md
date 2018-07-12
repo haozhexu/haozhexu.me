@@ -2,6 +2,7 @@
 title: "If life is always like first seeing - Adelaide (4) The Wine Is Strong"
 date: 2018-01-09T20:27:58+11:00
 draft: false
+ads: true
 categories:
   - travelphotography
 tags:

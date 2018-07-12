@@ -2,6 +2,7 @@
 title: "Poems/詩詞"
 date: 2017-11-04T08:47:12+11:00
 draft: false
+ads: true
 ---
 
 Here is a collection of the poems I’ve composed over last few years, they follow the style and format of classic Chinese poems, and are written in Chinese, of course. The translation to other languages (e.g. English) is left as an exercise for the readers.

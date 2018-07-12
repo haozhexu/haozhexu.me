@@ -2,6 +2,7 @@
 title: "If life is always like first seeing - Adelaide (1) Lighthouse"
 date: 2018-01-07T08:39:53+11:00
 draft: false
+ads: true
 categories:
   - travelphotography
 tags:

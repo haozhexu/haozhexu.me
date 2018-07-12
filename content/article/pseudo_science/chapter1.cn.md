@@ -2,6 +2,7 @@
 title: "用玄学重新探索奇妙世界 - 晓月"
 date: 2017-12-22T06:15:36+11:00
 draft: false
+ads: true
 categories:
   - 文章
 tags:

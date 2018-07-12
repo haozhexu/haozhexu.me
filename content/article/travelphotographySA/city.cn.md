@@ -2,6 +2,7 @@
 title: "相逢若只如初见 - Adelaide（三）城市安逸，人生匆匆"
 date: 2018-01-03T13:45:13+11:00
 draft: false
+ads: true
 categories:
   - 旅行摄影
 tags:

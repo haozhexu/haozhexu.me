@@ -2,6 +2,7 @@
 title: "If life is always like first seeing - Adelaide (3) Slow City, Flying Life"
 date: 2018-01-07T12:28:58+11:00
 draft: false
+ads: true
 categories:
   - travelphotography
 tags:

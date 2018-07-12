@@ -2,6 +2,7 @@
 title: "相逢若只如初见 - Adelaide（四）醉过知酒浓"
 date: 2018-01-03T22:21:23+11:00
 draft: false
+ads: true
 categories:
   - 旅行摄影
 tags:

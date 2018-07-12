@@ -2,6 +2,7 @@
 title: "相逢若只如初见 - Adelaide（一）灯塔"
 date: 2017-12-30T20:55:26+11:00
 draft: false
+ads: true
 categories:
   - 旅行摄影
 tags:

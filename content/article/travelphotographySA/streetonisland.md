@@ -2,6 +2,7 @@
 title: "If life is always like first seeing - Adelaide (2) Street on Island"
 date: 2018-01-07T09:26:43+11:00
 draft: false
+ads: true
 categories:
   - travelphotography
 tags:

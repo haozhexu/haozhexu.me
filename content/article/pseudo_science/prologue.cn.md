@@ -2,6 +2,7 @@
 title: "用玄学重新探索奇妙世界 - 前言"
 date: 2017-11-06T07:23:49+11:00
 draft: false
+ads: true
 categories:
   - 文章
 tags:

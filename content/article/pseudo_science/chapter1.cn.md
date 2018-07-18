@@ -59,4 +59,6 @@ tags:
 
 [1] http://starchild.gsfc.nasa.gov/docs/StarChild/questions/question38.html
 
+继续： [月球（中）](/cn/article/pseudo_science/chapter2/)
+
 上一章： [前言](/cn/article/pseudo_science/prologue/)

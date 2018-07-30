@@ -4,7 +4,7 @@ date: 2018-07-18T06:15:36+11:00
 draft: false
 ads: true
 categories:
-  - 文章
+  - 玄学
 tags:
   - 科学
   - 玄学
@@ -100,6 +100,7 @@ tags:
 等等！西藏？那里不就是海拔高气压低，以至游客多有缺氧症状的地方吗？
 
 上一章： [月球（上）](/cn/article/pseudo_science/chapter1/)
+下一章： [月球（下）](/cn/article/pseudo_science/chapter3/)
 
 [1]: http://www.astrosurf.com/lunascan/papers/R-277.pdf
 [2]: https://en.wikipedia.org/wiki/Transient_lunar_phenomenon

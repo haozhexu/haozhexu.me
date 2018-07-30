@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.haozhexu.me/cn/article/pseudo_science/chapter3/</loc>
+    <lastmod>2018-07-30T21:05:36+11:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.haozhexu.me/cn/article/pseudo_science/chapter2/</loc>
     <lastmod>2018-07-18T06:15:36+11:00</lastmod>
   </url>
@@ -165,7 +170,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/cn/article/</loc>
-    <lastmod>2018-07-18T06:15:36+11:00</lastmod>
+    <lastmod>2018-07-30T21:05:36+11:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -240,19 +245,19 @@
   
   <url>
     <loc>https://www.haozhexu.me/cn/tags/%E4%BA%BA%E7%B1%BB/</loc>
-    <lastmod>2018-07-18T06:15:36+11:00</lastmod>
+    <lastmod>2018-07-30T21:05:36+11:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.haozhexu.me/cn/tags/%E5%93%B2%E5%AD%A6/</loc>
-    <lastmod>2018-07-18T06:15:36+11:00</lastmod>
+    <lastmod>2018-07-30T21:05:36+11:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.haozhexu.me/cn/tags/%E5%AE%87%E5%AE%99/</loc>
-    <lastmod>2018-07-18T06:15:36+11:00</lastmod>
+    <lastmod>2018-07-30T21:05:36+11:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -264,7 +269,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/cn/categories/%E6%96%87%E7%AB%A0/</loc>
-    <lastmod>2018-07-18T06:15:36+11:00</lastmod>
+    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -288,13 +293,19 @@
   
   <url>
     <loc>https://www.haozhexu.me/cn/tags/%E7%8E%84%E5%AD%A6/</loc>
-    <lastmod>2018-07-18T06:15:36+11:00</lastmod>
+    <lastmod>2018-07-30T21:05:36+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/cn/categories/%E7%8E%84%E5%AD%A6/</loc>
+    <lastmod>2018-07-30T21:05:36+11:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.haozhexu.me/cn/tags/%E7%A7%91%E5%AD%A6/</loc>
-    <lastmod>2018-07-18T06:15:36+11:00</lastmod>
+    <lastmod>2018-07-30T21:05:36+11:00</lastmod>
     <priority>0</priority>
   </url>
   

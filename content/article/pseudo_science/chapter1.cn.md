@@ -4,7 +4,7 @@ date: 2017-12-22T06:15:36+11:00
 draft: false
 ads: true
 categories:
-  - 文章
+  - 玄学
 tags:
   - 科学
   - 玄学

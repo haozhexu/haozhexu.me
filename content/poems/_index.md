@@ -2,12 +2,20 @@
 title: "Poems/詩詞"
 date: 2017-11-04T08:47:12+11:00
 draft: false
-ads: true
+auto_ads: true
 ---
 
 Here is a collection of the poems I’ve composed over last few years, they follow the style and format of classic Chinese poems, and are written in Chinese, of course. The translation to other languages (e.g. English) is left as an exercise for the readers.
 
 以下是我平時偶然寫的中文詩詞，其他文字的翻譯就留給讀者來做吧。
+
+**《清晨收露》**
+蠟火微茫燭影深  
+冷寂霜凝在今晨  
+油盡燈枯芯作古  
+向來舊時獨夜人
+
+_- 20/6/2018_
 
 **《亦復如是》**
 

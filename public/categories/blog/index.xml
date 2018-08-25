@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog on Haozhe XU</title>
+    <link>https://www.haozhexu.me/categories/blog/</link>
+    <description>Recent content in Blog on Haozhe XU</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 24 Aug 2018 10:00:00 +1100</lastBuildDate>
+    
+	<atom:link href="https://www.haozhexu.me/categories/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lumix GX9 - Dedication to Street Photography</title>
+      <link>https://www.haozhexu.me/article/2018/reviewgx9/</link>
+      <pubDate>Fri, 24 Aug 2018 10:00:00 +1100</pubDate>
+      
+      <guid>https://www.haozhexu.me/article/2018/reviewgx9/</guid>
+      <description>Lumix GX9 - Dedication to Street Photography  “For me, photography is not a means by which to create beautiful art, but a unique way of encountering genuine reality.” - Daido Moriyama
+ My first mirrorless camera was a Panasonic Lumix GX7 which I bought more than three years ago, at that time I did not know anything about photography. When I was deciding which camera to buy, I only saw three facts: Mirrorless cameras from Panasonic and Olympus can share lens, there was a large number of lens to choose from, and, they were relatively cheaper compared to the ones from other systems.</description>
+    </item>
+    
+  </channel>
+</rss>

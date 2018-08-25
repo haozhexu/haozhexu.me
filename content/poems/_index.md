@@ -10,6 +10,7 @@ Here is a collection of the poems I’ve composed over last few years, they foll
 以下是我平時偶然寫的中文詩詞，其他文字的翻譯就留給讀者來做吧。
 
 **《清晨收露》**
+
 蠟火微茫燭影深  
 冷寂霜凝在今晨  
 油盡燈枯芯作古  

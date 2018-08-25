@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.haozhexu.me/article/2018/reviewgx9/</loc>
+    <lastmod>2018-08-24T10:00:00+11:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/article/2018/reviewgx9/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/article/2018/reviewgx9/"
+                />
+  </url>
+  
+  <url>
     <loc>https://www.haozhexu.me/article/travelphotographysa/penfold/</loc>
     <lastmod>2018-01-09T20:27:58+11:00</lastmod>
     <xhtml:link
@@ -161,13 +176,23 @@
   
   <url>
     <loc>https://www.haozhexu.me/categories/article/</loc>
-    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
+    <lastmod>2018-08-24T10:00:00+11:00</lastmod>
     <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/categories/article/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/categories/article/"
+                />
   </url>
   
   <url>
     <loc>https://www.haozhexu.me/article/</loc>
-    <lastmod>2018-01-09T20:27:58+11:00</lastmod>
+    <lastmod>2018-08-24T10:00:00+11:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -182,8 +207,24 @@
   </url>
   
   <url>
+    <loc>https://www.haozhexu.me/tags/camerareview/</loc>
+    <lastmod>2018-08-24T10:00:00+11:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/tags/camerareview/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/tags/camerareview/"
+                />
+  </url>
+  
+  <url>
     <loc>https://www.haozhexu.me/categories/</loc>
-    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
+    <lastmod>2018-08-24T10:00:00+11:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -213,6 +254,22 @@
     <loc>https://www.haozhexu.me/tags/gx85/</loc>
     <lastmod>2018-01-09T20:27:58+11:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/tags/gx9/</loc>
+    <lastmod>2018-08-24T10:00:00+11:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/tags/gx9/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/tags/gx9/"
+                />
   </url>
   
   <url>
@@ -262,6 +319,22 @@
   </url>
   
   <url>
+    <loc>https://www.haozhexu.me/tags/panasonic/</loc>
+    <lastmod>2018-08-24T10:00:00+11:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/tags/panasonic/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/tags/panasonic/"
+                />
+  </url>
+  
+  <url>
     <loc>https://www.haozhexu.me/tags/penfold/</loc>
     <lastmod>2018-01-09T20:27:58+11:00</lastmod>
     <priority>0</priority>
@@ -275,8 +348,18 @@
   
   <url>
     <loc>https://www.haozhexu.me/tags/photography/</loc>
-    <lastmod>2018-01-09T20:27:58+11:00</lastmod>
+    <lastmod>2018-08-24T10:00:00+11:00</lastmod>
     <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/tags/photography/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/tags/photography/"
+                />
   </url>
   
   <url>
@@ -293,8 +376,18 @@
   
   <url>
     <loc>https://www.haozhexu.me/tags/streetphotography/</loc>
-    <lastmod>2018-01-07T12:28:58+11:00</lastmod>
+    <lastmod>2018-08-24T10:00:00+11:00</lastmod>
     <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/tags/streetphotography/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/tags/streetphotography/"
+                />
   </url>
   
   <url>

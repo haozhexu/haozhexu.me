@@ -47,7 +47,7 @@ I mainly use 50mm equivalent lens before, so having a 50mm lens on Leica isn't a
 
 ![Kiss Horse][M10P-Street-8]
 
-Later I began to understand, rather than extension, 50mm (and actually, all primes) is an limitation which forces you to view in certain ways, you can only see what the focal length sees, at first it feels like a limitation, but as you use it more and more, the visual limitation also becomes a constraint for your brain, that you would think in certain way when visualising a frame, eventually the limitation would become an extension.
+Later I began to understand, rather than extension, 50mm (and actually, all primes) is a limitation which forces you to view in certain ways, you can only see what the focal length sees, at first it feels like a limitation, but as you use it more and more, the limitation creates some constraint for your brain, that you would think in certain ways when visualising a frame, eventually the limitation would become an extension.
 
 ![Happy Kid][M10P-Street-9]
 
@@ -63,7 +63,7 @@ I'm not sure what does Leica wants to achieve with this testing event, I can onl
 
 ![Fly Away][M10P-Street-12]
 
-The shooting experience of M10-P is very different from my Panasonic cameras or Fujifilm X-Pro2. With Panasonic, I usually use multi-point auto focus and let it figure out where to focus. I saw articles written by street photographer who doesn't suggest using multi-point auto-focus because the camera may not focus on what you want, to be honest, I found reading those articles misleading without context, especially for beginners who don't have much experience and blindly follow. Panasonic has DFD technology which is contrast-detection based, its focusing is not only fast, but also tends to focus on object that're nearer to the camera, with the 2x crop M43 sensor and a relatively small aperture like F5.6, you get most stuff in focus most of the time.
+The shooting experience of M10-P is very different from my Panasonic cameras or Fujifilm X-Pro2. With Panasonic, I usually use multi-point auto focus and let it figure out where to focus. I saw articles written by street photographer who doesn't suggest using multi-point auto-focus because the camera may not focus on what you want, to be honest, I found reading those articles without proper context can be misleading, especially for beginners who don't have much experience and blindly follow. Panasonic has DFD technology which is contrast-detection based, its AF is not only fast, but also tends to lock on object that're nearer to the camera, with the 2x crop M43 sensor and a relatively small aperture, you can get most stuff in focus most of the time.
 
 ![Star in Bin][M10P-Street-13]
 
@@ -71,19 +71,19 @@ The camera forces me to think before taking photos, at least to think where the 
 
 ![About to Fly][M10P-Street-14]
 
-Moriyama is known as a Ricoh GR user, many of GRs have 28mm equivalent focal length. With wide angle it is often suggested to get closer to the object, I didn't get a chance touse 28mm or even 35mm on Leica M, but I could imagine I'd use zone focus most of the time, especially for shooting "decisive moment", where you may not have time to focus and re-compose, you can only decide to press the shutter, or moment gone.
+Moriyama is known as a Ricoh GR user, many of GRs have 28mm equivalent focal length. With wide angle it is often suggested to get closer to the object, I didn't get a chance to use 28mm or even 35mm on Leica M, but I could imagine I'd use zone focus most of the time, especially for shooting "decisive moment", where the moment won't wait for you and the only thing you can decide is to press the shutter, or moment gone.
 
 ![Selfie][M10P-Street-15]
 
-I like black and white, but I'm also afraid that monochrome can sometimes be mis-used to save a bad photo, just like drawing a gold/yellow rectangle on the bottom corner of a photo.
+I like black and white, but I'm also afraid that monochrome can sometimes be mis-used as an attempt to save bad photos, just like drawing a gold/yellow rectangle on the bottom corner of a photo.
 
 ![Behaviour Artist][M10P-Street-16]
 
-The camera feels heavy in hand, I couldn't hold it using one hand but have to use to hands, which is vastly different from Ricoh GR. I also found that shooting portrait orientation more difficult than landscape due to the leather case and neck strap.
+The camera feels heavy in hand, I couldn't hold it using one hand but have to use two hands, which is vastly different from Ricoh GR. I also found that shooting portrait orientation more difficult than landscape due to the leather case and neck strap.
 
 ![Give][M10P-Street-17]
 
-I was impressed by the image quality in terms of sharpness, color tone as well as micro-contrast, which many Leica users would agree, ironically, when looking at famous photos from old times that were taken by film Leica, people only pay attention to the content, instead of checking any of the image quality related specs. It feels weird that while Leica users praise their cameras for having top image quality, they also say that street photography isn't all about image quality, just like Joan Miro said:
+I was impressed by the image quality in terms of sharpness, color tone as well as micro-contrast, which many Leica users would agree; Ironically, when looking at famous photos from old time that were taken by film Leica, people only pay attention to the content, instead of checking any of the image quality related specs. It feels weird that while Leica users praise their cameras for having top image quality, they also say that street photography isn't all about image quality, just like Joan Miro said:
 
 > "You can look at a picture for a week and never think of it again. You can also look at a picture for a second and think of it all your life.”
 

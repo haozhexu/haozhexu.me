@@ -21,7 +21,7 @@ It was the first time for me to use a Leica M, also the first time using a range
 
 ![Hotshoe][M10P-1]
 
-When I was a kid, many of the items at home were of high quality based on their lifespan: grandmother’s sewing machine that had been used for ten years, grandfathers radio receiver which lasted for ages, father had a bicycle since he started his job which still works…some of them requires regular maintenance like oiling, but they generally last. After I grown up, things changed rapidly, materials are abundant and people's expectation for quality became lower than before, most things are mass produced and cheap enough that getting a new one isn’t much more expensive than fixing and maintain old ones - why fixing it if you can get brand new one at similar cost?
+When I was a kid, many of the items in my home were of high quality based on their lifespan: grandmother’s sewing machine that had been used for ten years, grandfathers radio receiver which lasted for ages, father had a bicycle since he started his job which still works…some of them requires regular maintenance like oiling, but they generally last. After I grown up, things changed rapidly, materials are abundant and people's expectation for quality became lower than before, most things are mass produced and cheap enough that getting a new one isn’t much more expensive than fixing and maintain old ones - why fixing it if you can get brand new one at similar cost?
 
 ![Shutter][M10P-2]
 
@@ -33,7 +33,7 @@ I’m fully aware that a digital camera will become outdated when internal elect
 
 ![Signature][M10P-4]
 
-In Chinese classics, it is believed that any item can gain a soul after being used for enough timespan with a specific purpose. For example, mirrors are mainly used to adjust things related to one’s appearance before one leaves home; Rulers are used to make sure sizes and dimensions are measured correctly. Both of them have the function of “correcting things”, and over a long period of usage time, they accumulate the character of "correction", which then become their soul. That's why in many Asian areas people believe that old mirror and ruler can be used as a hierograph to get rid of evil (negative energy in the household) because they have been used for ages for the purpose of correcting mistakes. I heard in some western countries it is also said that breaking a mirror would bring bad luck, could it be a symbolic meaning that if the mirror is used to correct things and if it's broken then things would go wrong?
+In Chinese classics, it is believed that any item can gain a soul after being used for enough timespan with a specific purpose. For example, mirrors are mainly used to adjust things related to one’s appearance before one leaves home; Rulers are used to make sure sizes and dimensions are measured correctly. Both of them have the function of “correcting things”, and over a long period of usage, they accumulate the character of "correction", which then become their soul. That's why in many Asian countries people believe old mirrors and rulers can be used as a hierograph to get rid of evil (negative energy in the household), because they have been used for the purpose of correcting mistakes over a long time period. I heard in some western countries it is also said that breaking a mirror would bring bad luck, could it be a symbolic meaning that if the mirror is used to correct things and if it's broken then things would go wrong?
 
 ![Lens][M10P-5]
 
@@ -41,7 +41,7 @@ The lens mounted on M10-P is the 50mm f/2.5 Summarit, without auto focusing moto
 
 ![Auto][M10P-6]
 
-People say that digital Leica doesn't hold value over time compared to film ones, this is probably true, but keep in mind, there are still film Leica M produced and sold, so I see it as a compromise, or balance, between tradition and modern: not everyone wants to spend effort shooting and developing films, but at the same time people do not want to lose the connection from modern to tradition, they still prefer the build quality and the way camera works that they enjoyed when they were young, or when their parents were young, that nostalgic feelinig which cannot be described by specs and technology, thus the existance of digital Ms, just like the A mode on a manual control camera, which is the same red as the brand dot.
+People say that digital Leica doesn't hold value over time compared to film ones, this is probably true, but keep in mind, there are still film Leica M produced and sold, so I see it as a compromise, or balance, between classic and modern: not everyone wants to spend effort shooting and developing films, but at the same time people do not want to lose the connection with photography tradition, they still prefer the build quality and the way camera works that they enjoyed when they were young, or when their parents were young, that nostalgic feelinig which cannot be described by specs and technology, thus the existance of digital Ms, just like the A mode on a manual control camera, which is the same red as the brand dot.
 
 Next: [100 Years in One Day - Leica M10-P Review (2) The Street](/article/2018/reviewleicam10p2/)
 

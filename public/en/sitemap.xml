@@ -5,11 +5,31 @@
   <url>
     <loc>https://www.haozhexu.me/article/2018/reviewleicam10p2/</loc>
     <lastmod>2018-09-04T21:00:00+11:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/article/2018/reviewleicam10p2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/article/2018/reviewleicam10p2/"
+                />
   </url>
   
   <url>
     <loc>https://www.haozhexu.me/article/2018/reviewleicam10p1/</loc>
     <lastmod>2018-09-03T10:00:00+11:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/article/2018/reviewleicam10p1/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/article/2018/reviewleicam10p1/"
+                />
   </url>
   
   <url>
@@ -298,6 +318,16 @@
     <loc>https://www.haozhexu.me/tags/leica/</loc>
     <lastmod>2018-09-04T21:00:00+11:00</lastmod>
     <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/tags/leica/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/tags/leica/"
+                />
   </url>
   
   <url>
@@ -310,6 +340,16 @@
     <loc>https://www.haozhexu.me/tags/m10p/</loc>
     <lastmod>2018-09-04T21:00:00+11:00</lastmod>
     <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/tags/m10p/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/tags/m10p/"
+                />
   </url>
   
   <url>

@@ -1,7 +1,7 @@
 ---
 title: "一日百年 - 徕卡M10-P评测 (1) 初见"
 date: 2018-09-03T10:00:00+11:00
-draft: true
+draft: false
 ads: true
 categories:
   - Article
@@ -21,29 +21,31 @@ tags:
 
 ![热靴][M10P-1]
 
-小时候家里的很多物件都给我质量很好的感觉，因为它们都有很长的使用历史：奶奶的蝴蝶牌缝纫机用了十年多还一直在用，爷爷的收音机用了许多年还没有坏，父亲自从工作后就一直骑的永久自行车……这些东西有的需要定期维护，常见的比如上油，总体来说它们都能用很长时间。长大之后这些东西都不用了，人们在一个
-When I was a kid, many of the items at home were of high quality based on their lifespan: grandmother’s sewing machine that had been used for ten years, grandfathers radio receiver which lasted for ages, father had a bicycle since he started his job which still works…some of them requires regular maintenance like oiling, but they generally last. After I grown up, things changed rapidly, materials are abundant and people's expectation for quality became lower than before, most things are mass produced and cheap enough that getting a new one isn’t much more expensive than fixing and maintain old ones - why fixing it if you can get brand new one at similar cost?
+小时候家里的很多物件都给我质量很好的感觉，因为它们都有很长的使用历史：奶奶的蝴蝶牌缝纫机用了十年多还一直在用，爷爷的收音机用了许多年还没有坏，父亲自从工作后就一直骑的永久自行车……这些东西有的需要定期维护上油，但总体来说它们都很耐用。长大以后，时代变得跟以往不同了，物质比以前丰富了太多，在流水线上被大批量生产出的各种用品让人们忘了曾经老物件的做工和质量，只知道东西用坏了再买一个也不贵，更不会去费时费力的修理维护 —— 维修的成本也不低，为什么不直接买个新的？
 
-![Shutter][M10P-2]
+![快门][M10P-2]
 
-Then there’s a company who has more than 100 years’ history, still values top quality and craftsmanship, refuses to be a mass product manufacturer and does not try to catch up with anyone but stays with its own tradition, who is often criticised for over-charging and considered as a luxury attachment rather than a photography equipment, whose signature is a red dot.
+在如此潮流中，一个有着一百多年历史的相机制造厂默默的传承了工匠精神，依然坚持着严谨的做工，超高的质量和顶尖的画质，拒绝让自己的产品在流水线上量产，不去追逐电子技术而坚守传统，它的产品经常被批评售价过高，也经常被认为是奢侈品而非摄影器材，它的经典标志是一个红点。
 
 ![Red Dot][M10P-3]
 
 I’m fully aware that a digital camera will become outdated when internal electronic wears out and technology gets old, I also think it could be cheaper to get more people in the Leica world. What I enjoyed though, is the quality and craftsmanship that remained for more than 100 years, in this regard, once you hold an M in hand, you’ll realised how camera should be built and how things should work. Some people say that each Leica M has a soul, I kind of agree if it means each camera has to go through a series of manual procedures before it can be shipped, however, regarding soul, I have some different theory learned from Chinese classics.
 
-![Signature][M10P-4]
+再高级的数码相机都会随着内部电子元件的老化和技术的更新而被淘汰，我也觉得徕卡相机应该更便宜一些以吸引更多的用户，然而我欣赏的却是对传统的坚持和对做工的严格，这种传承了一百年的工匠精神，以至于当你把徕卡M拿在手里时，你会立刻意识到相机原本就该如此。有人说每个徕卡M都有一个灵魂，也许这种说法的意思是每一部相机在出厂前都会经过一系列的手工检测以确保质量，然而对于相机的灵魂，我却有另一番理解。
 
-In Chinese classics, it is believed that any item can gain a soul after being used for enough timespan with a specific purpose. For example, mirrors are mainly used to adjust things related to one’s appearance before one leaves home; Rulers are used to make sure sizes and dimensions are measured correctly. Both of them have the function of “correcting things”, and over a long period of usage time, they accumulate the character of "correction", which then become their soul. That’s why in some Asian countries people like hanging old brass mirror or old tailor’s ruler somewhere on the wall, in order to get rid of evils (ie. negative energy in the household).
+![签名]][M10P-4]
 
-![Lens][M10P-5]
+传统的说法认为，任何物件在长期试用后都会有一个“灵魂”，科学一点的说法是聚集了一定的能量，而“灵魂”的特征跟此物件的用途有关。比如某家人出门前都会对着镜子，调整一下穿着打扮；而裁缝的尺子用来量衣服的尺寸，确保做出来的衣服大小合适，这两者都有“纠正不正确”的功能，过了很长的时间后，它们就会逐渐的聚积一种“纠正不当”的能量，就使它们有了“灵魂”。所以一些亚洲人会把老铜镜或者老裁缝的尺子放在家里辟邪。同样的，人们说布列松的相机有灵魂，并非他的相机质量最高，镜头锐度顶尖，胶片高感惊人，而是他的摄影经历给了相机一个摄影的“灵魂”，一个能够捕捉决定性瞬间的“灵魂”。
 
-The lens mounted on M10-P is the 50mm f/2.5 Summarit, without auto focusing motor, it is even smaller than many M43 primes, actually the Summilux f/1.4 isn't big either. M lenses have aperture ring and distance scale marked, the lens shell is mostly more flush compared to AF lenses from other systems which makes the whole system looking slim.
+![镜头][M10P-5]
 
-![Auto][M10P-6]
+机身配的镜头是50mm f/2.5 Summarit，没有自动对焦马达，使得这个全画幅镜头比许多M43的小定焦还要小。M镜头都有光圈环和对焦距离标尺，镜头外壳很平滑，不像许多其他系统的自动镜头上那么多凹凸不平的控件，这使得徕卡镜头和机身成为一个和谐的整体。
 
-People say that digital Leica doesn't hold value over time compared to film ones, this is probably true, but keep in mind, there are still film Leica M produced and sold, so I see it as a compromise, or balance, between tradition and modern: not everyone wants to spend effort shooting and developing films, but at the same time people do not want to lose the connection from modern to tradition, they still prefer the build quality and the way camera works that they enjoyed when they were young, or when their parents were young, that nostalgic feelinig which cannot be described by specs and technology, thus the existance of digital Ms, just like the A mode on a manual control camera, which is the same red as the brand dot.
+![自动][M10P-6]
 
+人们说数码徕卡不如胶片徕卡那么保值，这也许是真的，然而要知道，徕卡至今依然在生产胶片相机，因此我觉得数码徕卡是一个传统与现代的折中或平衡：并非所有人都愿意花功夫拍胶片，同时人们又想拥有传统的情怀，他们喜欢严谨的做工和质量，乐于用传统的方式来拍照，他们沉浸在不能用参数或技术来描述的情怀中，因此有了数码M，就好像手动相机上的A一样，有着跟其品牌标志一样的红。
+
+下一篇：[一日百年 - 徕卡M10-P评测 (2) 街头](/cn/article/2018/reviewleicam10p2/)
 
 [M10P-1]: /photos/2018/LeicaM10P/leica_m10p_01.jpg "Leica M10-P Macro"
 [M10P-2]: /photos/2018/LeicaM10P/leica_m10p_02.jpg "Leica M10-P Macro"

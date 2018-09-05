@@ -71,7 +71,7 @@ The camera forces me to think before taking photos, at least to think where the 
 
 ![About to Fly][M10P-Street-14]
 
-Moriyama is known as a Ricoh GR user, many of GRs have 28mm equivalent focal length. With wide angle it is often suggested to get closer to the object, I didn't get a chance to use 28mm or even 35mm on Leica M, but I could imagine I'd use zone focus most of the time, especially for shooting "decisive moment", where the moment won't wait for you and the only thing you can decide is to press the shutter, or moment gone.
+Moriyama is known as a Ricoh GR user, many of GRs have 28mm equivalent focal length. With wide angle it is often suggested to get closer to the object, I didn't get a chance to use 28mm or even 35mm on Leica M, but I could imagine I'd use zone focus most of the time, the distance scale marked on the lens made this easy. To me it feels that zone focus is good for shooting "decisive moment", where the moment won't wait for you to think, focus and/or recompose, the only thing you can decide is to press the shutter, or moment gone.
 
 ![Selfie][M10P-Street-15]
 

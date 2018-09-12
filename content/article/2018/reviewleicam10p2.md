@@ -15,6 +15,8 @@ tags:
 
 # 100 Years in One Day - Leica M10-P Review (2) The Street
 
+Previous: [100 Years in One Day - Leica M10-P Review (1) The Build](/article/2018/reviewleicam10p1/)
+
 I could only use the M10-P for the weekend, unfortunately the weather was bad most of the time and I was afraid of using it even in light rain, I first thought this was because I have to return the camera to get my deposit back, but soon I realised even if it's my own camera, I wouldn't want to risk it in rain consider how much it costs.
 
 ![Dog Face][M10P-Street-1]

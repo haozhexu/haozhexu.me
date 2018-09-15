@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.haozhexu.me/cn/article/2018/reviewleicam10p4/</loc>
+    <lastmod>2018-09-15T08:00:00+11:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/article/2018/reviewleicam10p4/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/article/2018/reviewleicam10p4/"
+                />
+  </url>
+  
+  <url>
     <loc>https://www.haozhexu.me/cn/article/afterriversandlakes/prologue/</loc>
     <lastmod>2018-09-12T22:00:12+11:00</lastmod>
   </url>
@@ -235,7 +250,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/cn/categories/article/</loc>
-    <lastmod>2018-09-12T08:00:00+11:00</lastmod>
+    <lastmod>2018-09-15T08:00:00+11:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -251,7 +266,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/cn/article/</loc>
-    <lastmod>2018-09-12T22:00:12+11:00</lastmod>
+    <lastmod>2018-09-15T08:00:00+11:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -273,7 +288,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/cn/tags/camerareview/</loc>
-    <lastmod>2018-09-12T08:00:00+11:00</lastmod>
+    <lastmod>2018-09-15T08:00:00+11:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -289,7 +304,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/cn/categories/</loc>
-    <lastmod>2018-09-12T08:00:00+11:00</lastmod>
+    <lastmod>2018-09-15T08:00:00+11:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -305,7 +320,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/cn/tags/gx9/</loc>
-    <lastmod>2018-09-12T08:00:00+11:00</lastmod>
+    <lastmod>2018-09-15T08:00:00+11:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -321,7 +336,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/cn/tags/leica/</loc>
-    <lastmod>2018-09-12T08:00:00+11:00</lastmod>
+    <lastmod>2018-09-15T08:00:00+11:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -337,7 +352,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/cn/tags/m10p/</loc>
-    <lastmod>2018-09-12T08:00:00+11:00</lastmod>
+    <lastmod>2018-09-15T08:00:00+11:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -391,7 +406,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/cn/tags/photography/</loc>
-    <lastmod>2018-09-12T08:00:00+11:00</lastmod>
+    <lastmod>2018-09-15T08:00:00+11:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -504,13 +519,13 @@
   </url>
   
   <url>
-    <loc>https://www.haozhexu.me/cn/categories/%E7%8E%84%E5%AD%A6/</loc>
+    <loc>https://www.haozhexu.me/cn/tags/%E7%8E%84%E5%AD%A6/</loc>
     <lastmod>2018-07-30T21:05:36+11:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.haozhexu.me/cn/tags/%E7%8E%84%E5%AD%A6/</loc>
+    <loc>https://www.haozhexu.me/cn/categories/%E7%8E%84%E5%AD%A6/</loc>
     <lastmod>2018-07-30T21:05:36+11:00</lastmod>
     <priority>0</priority>
   </url>

@@ -93,7 +93,7 @@ I was impressed by the image quality in terms of sharpness, color tone as well a
 
 Previous: [100 Years in One Day - Leica M10-P Review (1) The Build](/article/2018/reviewleicam10p1/)
 
-Next: _100 Years in One Day - Leica M10-P Review (3) The Color_ (__In Progress__)
+Next: [100 Years in One Day - Leica M10-P Review (3) The Color](/article/2018/reviewleicam10p3/)
 
 [M10P-Street-1]: /photos/2018/LeicaM10P/leicam10p_street_01.jpg "Leica M10-P Street"
 [M10P-Street-2]: /photos/2018/LeicaM10P/leicam10p_street_02.jpg "Leica M10-P Street"

@@ -97,7 +97,7 @@ M10-P的拍摄体验跟我一直用的松下微单或富士X-Pro2都不同。松
 
 前一篇：[一日百年 - 徕卡M10-P评测 (1) 初见](/cn/article/2018/reviewleicam10p1/)
 
-下一片：_一日百年 - 徕卡M10-P评测 (3) 色彩_ (__正在写__)
+下一篇：[一日百年 - 徕卡M10-P评测 (3) 色彩](/cn/article/2018/reviewleicam10p3/)
 
 [M10P-Street-1]: /photos/2018/LeicaM10P/leicam10p_street_01.jpg "Leica M10-P Street"
 [M10P-Street-2]: /photos/2018/LeicaM10P/leicam10p_street_02.jpg "Leica M10-P Street"

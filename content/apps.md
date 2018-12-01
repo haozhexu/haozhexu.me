@@ -7,6 +7,18 @@ comments: false
 
 Below are my apps currently on AppStore:
 
+### Social Tagman
+
+Tired of typing #tags for different photos/contents on social media? Social Tagman is a manager for all your social tags, you can add and group often used social tags, selectively copy them with one click.
+
+[<img src="/images/download_on_appstore.svg" style="max-width:15%;min-width:40px;" alt="Download on AppStore" />](https://itunes.apple.com/app/social-tagman/id1433589047?mt=8)
+
+### Ancient Names (Chinese)
+
+Randomly generate names (in Chinese) with strong ancient Chinese culture.
+
+[<img src="/images/download_on_appstore.svg" style="max-width:15%;min-width:40px;" alt="Download on AppStore" />](https://itunes.apple.com/app/%E5%8F%A4%E4%BA%BA%E5%90%8D/id1345012854)
+
 ### East Solitaire
 
 An ancient Chinese pebble chess game.

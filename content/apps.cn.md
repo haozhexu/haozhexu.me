@@ -7,6 +7,18 @@ comments: false
 
 下面是仍在AppStore上的我个人做的App:
 
+### 社会人标签
+
+是否厌倦了每次分享图片时重复输入各种不同的#tag标签？“社会人标签”可以帮你管理、分类各种标签，一键复制你选择的标签到剪贴板。
+
+[<img src="/images/download_on_appstore.svg" style="max-width:15%;min-width:40px;" alt="Download on AppStore" />](https://itunes.apple.com/app/social-tagman/id1433589047?mt=8)
+
+### 古人名
+
+随机生成古风古韵的名字，有的古朴，有的优雅，哪怕是一个很普通的汉字，组合起来，也能让人回味无穷。古人名能体现汉字的独特魅力和深厚内涵。
+
+[<img src="/images/download_on_appstore.svg" style="max-width:15%;min-width:40px;" alt="Download on AppStore" />](https://itunes.apple.com/app/%E5%8F%A4%E4%BA%BA%E5%90%8D/id1345012854)
+
 ### 孔明棋
 
 一个古老的跳棋类游戏，好像后面某一关有个bug，始终过不去。

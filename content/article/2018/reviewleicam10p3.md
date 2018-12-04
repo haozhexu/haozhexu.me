@@ -127,7 +127,7 @@ GX9 Edit:
 
 Previous: [100 Years in One Day - Leica M10-P Review (2) The Street](/article/2018/reviewleicam10p2/)
 
-Next: _100 Years in One Day - Leica M10-P Review (3) The Other_ (__Work in Progress__)
+Next: [100 Years in One Day - Leica M10-P Review (4) The Other](/article/2018/reviewleicam10p4/)
 
 [leica-01-ooc]: /photos/2018/LeicaM10P/color01_leica_ooc.jpg "Color"
 [leica-02-ooc]: /photos/2018/LeicaM10P/color02_leica_ooc.jpg "Color"

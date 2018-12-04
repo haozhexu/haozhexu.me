@@ -127,7 +127,7 @@ GX9修改：
 
 前一篇：[一日百年 - 徕卡M10-P评测 (2) 街头](/cn/article/2018/reviewleicam10p2/)
 
-下一片：_一日百年 - 徕卡M10-P评测 (4) 琐碎_ (__正在写__)
+下一篇：[一日百年 - 徕卡M10-P评测 (4) 琐碎](/cn/article/2018/reviewleicam10p4/)
 
 [leica-01-ooc]: /photos/2018/LeicaM10P/color01_leica_ooc.jpg "Color"
 [leica-02-ooc]: /photos/2018/LeicaM10P/color02_leica_ooc.jpg "Color"

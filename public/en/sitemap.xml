@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.haozhexu.me/article/pseudo_science/prologue/</loc>
+    <lastmod>2018-12-06T08:01:00+11:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/article/pseudo_science/prologue/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/article/pseudo_science/prologue/"
+                />
+  </url>
+  
+  <url>
     <loc>https://www.haozhexu.me/article/2018/reviewleicam10p4/</loc>
     <lastmod>2018-09-15T08:00:00+11:00</lastmod>
     <xhtml:link
@@ -138,21 +153,6 @@
   </url>
   
   <url>
-    <loc>https://www.haozhexu.me/article/pseudo_science/prologue/</loc>
-    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://www.haozhexu.me/cn/article/pseudo_science/prologue/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.haozhexu.me/article/pseudo_science/prologue/"
-                />
-  </url>
-  
-  <url>
     <loc>https://www.haozhexu.me/apps/</loc>
     <lastmod>2017-11-05T09:01:49+11:00</lastmod>
     <xhtml:link
@@ -236,7 +236,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/categories/article/</loc>
-    <lastmod>2018-09-15T08:00:00+11:00</lastmod>
+    <lastmod>2018-12-06T08:01:00+11:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -252,7 +252,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/article/</loc>
-    <lastmod>2018-09-15T08:00:00+11:00</lastmod>
+    <lastmod>2018-12-06T08:01:00+11:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -268,7 +268,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/categories/</loc>
-    <lastmod>2018-09-15T08:00:00+11:00</lastmod>
+    <lastmod>2018-12-06T08:01:00+11:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -378,7 +378,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/tags/human/</loc>
-    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
+    <lastmod>2018-12-06T08:01:00+11:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -428,7 +428,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/tags/metaphysics/</loc>
-    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
+    <lastmod>2018-12-06T08:01:00+11:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -456,7 +456,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/tags/philosophy/</loc>
-    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
+    <lastmod>2018-12-06T08:01:00+11:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -478,13 +478,13 @@
   
   <url>
     <loc>https://www.haozhexu.me/tags/pseudo-science/</loc>
-    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
+    <lastmod>2018-12-06T08:01:00+11:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.haozhexu.me/tags/science/</loc>
-    <lastmod>2017-11-06T07:23:49+11:00</lastmod>
+    <lastmod>2018-12-06T08:01:00+11:00</lastmod>
     <priority>0</priority>
   </url>
   

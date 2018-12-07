@@ -3,7 +3,6 @@ title: "Metaphysics - Prologue"
 date: 2018-12-06T08:01:00+11:00
 draft: false
 ads: true
-auto_ads: true
 categories:
   - Article
 tags:

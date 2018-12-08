@@ -1,28 +1,33 @@
 ---
-title: "用玄学重新探索奇妙世界 - 月球（上）"
-date: 2017-12-22T06:15:36+11:00
+title: "Metaphysics - The Moon (1)"
+date: 2018-12-09T09:03:36+11:00
 draft: false
 ads: true
 categories:
   - Article
 tags:
-  - 科学
-  - 玄学
-  - 哲学
-  - 人类
-  - 宇宙
+  - science
+  - metaphysics
+  - philosophy
+  - human
+  - universe
+  - moon
 ---
-# 用玄学重新探索奇妙世界
+# Rediscover the Wonderful World with Metaphysics
 
-## 第一章 - 月球（上）
+## The Moon (1)
 
-> 明月几时有，把酒问青天，不知天上宫阙，今夕是何年？ -- 苏轼
+> How rare the moon, so round and clear!  
+> With cup in hand, I ask of the blue sky,  
+> "I do not know in the celestial sphere  
+> What name this festive night goes by?"  
+> Su Shi, Chinese Poem
 
-我曾经做过一个很长的梦，梦里被邀请去参加一个会，开会的场所在金字塔内部，这个会的名字叫法老会。现实工作中我时不时也需要开会，如果时间长，中间则会有休息时间，组织者会提供一些小的点心，让枯燥的会议不会那么无趣。梦中的会，具体内容已经记不清了，唯独记得中间也有类似的休息时间，我也在跟一群人聊天。按照佛罗伊德的说法，梦里的法老会大概是现实中开会的反射，也许是因为工作的烦闷，所以开会的地方在封闭的金字塔内部；为什么是金字塔？也许是我那段时间在搜集金字塔的资料 - “梦是现实的反射”似乎便解释得通了。
+I used to have a long dream, in which I was invited to a meeting and the meeting place is inside the pyramid. The name of the meeting was called the Pharaoh meeting. In real life, I also need to have meetings from time to time. If a meeting takes half day, there is usually a few rest time in the middle and the organizer would provide snacks, in order to make meeting not so boring. During the dream meeting, there was also some rest time in the middle, and during that time I was chatting with a group of people. According to Freud, my dream was a reflection of my life: work can be boring, so the meeting place was inside a closed space, and why was it pyramid? Perhaps I was collecting information about pyramid at that time - thus the statement that "dream is a reflection of reality" seems to make sense.
 
-佛罗伊德是个很了不起的人，他看到了许多实证科学无法证实的东西，可始终没有走出心理学、神经学的范畴。正如《苏菲的世界》里生活在兔子皮的表面，为了物质利益而往里面钻的人，假设兔子皮上的世界始终靠电灯照明，某天忽然停电了，人们才惊奇的发现，其实没有电的世界并不是一片黑暗，还是有光亮的，却不知光源来自哪里。人们只当这是个未解之谜放在一边，因为神秘的光源对他们往兔子皮里追逐物质利益无关紧要；而当大家都在为物质利益低着头往下看的时候，佛罗伊德偶然抬起头，看到璀璨的星空与皎洁的明月，星月的光芒刺进他眼里，让他发现神秘的光其实来自天上，也看到自己身处的地方只是一个巨大的兔子，在这个世界之外还有更广阔的宇宙。佛罗伊德站在比寻常人更高的境界里，发现了更接近真相的事实；然而他所看到的，在某个更高层次看来依然是个迷，因为“耶和华说：要有光。于是就有了光。”
+Freud is a great person, he has seen many things that can't be confirmed by empirical science. However, he seems to remain in the field of psychology and neurology. As in the book "Sophie's World", people who live on the surface of the rabbit skin and drilled for the sake of material interests, suppose the world is always illuminated by electric lights, and suddenly there is a power outage, people are surprised to find that the world is not in complete darkness, there is still some light, but they do not know where the light source is. People then put this unsolved mystery aside, because the mysterious light source does not matter to them in pursuing material interests in the rabbit skin. When everyone is looking down for material interests, Freud accidentally lifts his head, seeing the starry sky and the bright moon, the light of the moon and star pierced his eyes, letting him discover that the mysterious light actually comes from upper sky, he also saw that the world is just a huge rabbit and there is a much broader universe outside. Freud stood in a higher realm than ordinary people and discovered the facts closer to the truth; yet looking at him from an even higher level, what he saw was still an enigma, because "God said, Let there be light: and there was light."
 
-无论是玄学主导的古东方文化，神学主导的古西方文化，还是科技昌明的现代，月球始终充满了神秘感。东方文化里，月亮上有广寒宫，有奔月的嫦娥、伐树的吴刚和洁白的玉兔，而古人根据月球运行轨迹衍生出了一套完整的历法；西方的许多文化，无论是神秘的宗教还是一直被用作科幻素材的喜欢月光的吸血鬼和狼人，就连好莱坞电影《变形金刚》里，开篇时也暗示变形金刚躲在月球的背面。**看上去，世界各地的文化、历史中都或明或隐的透露出，人类和月亮曾经有着千丝万缕的联系。**
+Whether it is the ancient Eastern culture dominated by metaphysics, the ancient Western culture dominated by theology, or the modern age of science and technology, the moon always has been full of mystery. In the oriental culture, there was "Chang Er Flies to the Moon", Wu Gang and the Jade Rabbit living on the Moon Palace, and the ancients derived a complete calendar according to the lunar trajectory; Cultures in the West, there are mysterious religion, vampire and werewolves that are often used as sci-fi material, even the opening of the movie "Transformers" suggests that the Transformers are hiding on the back of the moon. **it seems that cultures and history around the world all have revealed either explicitly or implicitly that humans and the moon have been inextricably linked.**
 
 关于月球的起源，目前有四种主流的推测：
 

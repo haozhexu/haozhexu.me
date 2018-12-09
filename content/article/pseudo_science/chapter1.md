@@ -27,43 +27,52 @@ I used to have a long dream, in which I was invited to a meeting and the meeting
 
 Freud is a great person, he has seen many things that can't be confirmed by empirical science. However, he seems to remain in the field of psychology and neurology. As in the book "Sophie's World", people who live on the surface of the rabbit skin and drilled for the sake of material interests, suppose the world is always illuminated by electric lights, and suddenly there is a power outage, people are surprised to find that the world is not in complete darkness, there is still some light, but they do not know where the light source is. People then put this unsolved mystery aside, because the mysterious light source does not matter to them in pursuing material interests in the rabbit skin. When everyone is looking down for material interests, Freud accidentally lifts his head, seeing the starry sky and the bright moon, the light of the moon and star pierced his eyes, letting him discover that the mysterious light actually comes from upper sky, he also saw that the world is just a huge rabbit and there is a much broader universe outside. Freud stood in a higher realm than ordinary people and discovered the facts closer to the truth; yet looking at him from an even higher level, what he saw was still an enigma, because "God said, Let there be light: and there was light."
 
-Whether it is the ancient Eastern culture dominated by metaphysics, the ancient Western culture dominated by theology, or the modern age of science and technology, the moon always has been full of mystery. In the oriental culture, there was "Chang Er Flies to the Moon", Wu Gang and the Jade Rabbit living on the Moon Palace, and the ancients derived a complete calendar according to the lunar trajectory; Cultures in the West, there are mysterious religion, vampire and werewolves that are often used as sci-fi material, even the opening of the movie "Transformers" suggests that the Transformers are hiding on the back of the moon. **it seems that cultures and history around the world all have revealed either explicitly or implicitly that humans and the moon have been inextricably linked.**
+Whether it is in the ancient Eastern culture dominated by metaphysics, the ancient Western culture dominated by theology, or the modern age of science and technology, the moon always has been full of mystery. In the oriental culture, there was "Chang Er Flies to the Moon", Wu Gang and the Jade Rabbit living on the Moon Palace, and the ancients derived a complete calendar according to the lunar trajectory; Cultures in the West, there are mysterious religion, vampire and werewolves that are often used as sci-fi material, even the opening of the movie "Transformers" suggests that the Transformers are hiding on the back of the moon. **Tt seems that cultures and history around the world all have revealed either explicitly or implicitly that human and the moon have been inextricably linked.**
 
-关于月球的起源，目前有四种主流的推测：
+How was the moon formed? There are quite a few hypotheses about its origin:
 
-- **分裂说**：地球形成的初期呈熔融态，且自转不稳定，自转速度高，甩出去一部分地球物质，这一部分物质碰撞聚合形成了月球。
-- **同源说**：月球和地球同时形成于太阳系的同一物质源区，太空中的碎片聚集成地球同时也产生了月球。
-- **捕获说**：月球本是太空中运行的某一天体，经过地球时被地心引力捕获。
-- **撞击说**：一个大概有火星那么大的行星曾经撞击过地球，冲击产生的碎片在地球周围环绕，之后生成了月球。
+- **Fission**: an ancient, rapidly spinning Earth expelled a piece of its mass, and it was proposed that the Pacific Ocean represented the scar of [this event][1]. Today it is known that the oceanic crust that makes up this ocean basin is relatively young, about 200 million years old or less, whereas the Moon is much older. The Moon does not consist of oceanic crust but of mantle material, which originated inside the proto-Earth in the [Precambrian][2].
+- **Accretion**: this hypothesis suggests that the Earth and the Moon formed together as a double system from the primordial accretion disk of the [Solar System][3] The problem with this hypothesis is that it does not explain the angular momentum of the Earth-Moon system or why the Moon has a relatively small iron core compared to the Earth (25% of its radius compared to 50% for the Earth)[4]
+- **Capture**: This hypothesis states that the Moon was captured by the Earth. One problem is understanding the [capture mechanism][3], a close encounter with Earth typically results in either collision or altered trajectories. For this hypothesis to function, there might have been a large atmosphere around the primitive Earth, which would slow the movement of the Moon by natural aerobraking before it could escape. This hypothesis also has difficulty explaining the essentially [identical oxygen isotope ratios][5] of the two bodies. Furthermore, it's difficult to understand why the Moon was not captured by other bodies which has much greater abstraction than Earth.
+- **Impact**: A large planetesimal hits Earth, ejecting material which forms the Moon. This theory could explain ["why the rocks Apollo astronauts brought back from the moon closely resembled rocks on Earth"][6], however, there are also [challenges][3] to this theory: to get material past the Earth's Roche limit, the impactor needs more angular momentum than is now in the Earth-Moon system; And why is there just one moon?
 
-科学家一直在对月球进行各种研究，包括著名的阿波罗登月（据说带回了至少三分之一吨的岩石和土壤），人们发现月球与地球的金属成份有很大的差异，这就否定了同源说；如果月球是地球分裂出去的一部分，按照地球的运行轨迹，月球相对地球的角速度并不符合现在的地月系统，况且月球被地球甩出去后形成的太平洋大坑，已经被证实为冈瓦纳古老大陆裂解形成，而月球早在45亿年前就已经形成，远远早于太平洋，这些事实让分裂说站不住脚；捕获说的问题在于无法解释为什么月球和地球的很多同位素组成完全一样（太阳系不同位置的氧同位素组成，因距离太阳的远近而不同，如金星比海王星更靠近太阳，氧同位素的含量就更少），也无法解释为什么月球没有被质量引力比地球大许多倍的太阳捕获，并且月球被捕获时的运行轨迹与地球的夹角必须非常精确的使月球刚好成为地球的卫星，而不是坠入地球或与地球擦身而过，这种几率在自然发生的前提下几乎不存在。
+Although there's no defnite conclusion for the origin of the Moon, **scientists agreed that the origin of the moon must have been messier and more complicated than anyone had assumed**, and the reason why I believe Freud has his own limitation, was that my dream has a bit more than just a "reflection of reality": in the middle of the Pharaoh meeting, there was a short break, and when I chatted to a group of people, someone told me that the Moon was a giant aerocraft that was made by prehistorical human generations, it has an empty core, where Pharaoh's body was stored.
 
-相比之下，撞击说比其他推测更容易解释为什么地球与月球有着近似的化学成分，这种说法的必要条件是撞击地球的星体本身要么得由冰构成，撞击后融化在地球和之后形成的月球上，要么得有着与地球同样的化学成分 — 这些都未经证实，所以这一推论依然只是个推论。
+One thing worth noting, there is one prerequisite for all the theories proposed by scientist: the Moon was naturally formed. NASA mentioned that "any theory which explains the existence of the Moon must naturally explain the following facts":
 
-前文中我之所以认为佛罗伊德对梦的解释不全面，是因为在梦中法老会的休息时间里，有个人跟我说，真正法老的尸体其实被送到了月亮里，月球是史前人类制造出来的巨大飞行器。
+- the Moon does not have a substantial iron core like the Earth does
+- the lack of volatile substances (e.g. water) in moon rocks implies extra "baking" of the lunar surface relative to that of Earth
+- the identical relative abundance of oxygen isotopes on Earth and Moon suggests that the Moon and the Earth were formed at the same distance from the Sun
 
-值得注意的是，科学界关于月球起源的学说都有一个前提：月球是自然产生的。美国航空太空总署的网页里有一页[关于月球的起源][1]，指出任何解释月球起源的理论必须能同时解释以下的事实：
+Apart from above, there are quite a few coincidences about the Moon:
 
-- 月球的低密度显示它并不像地球一样有一个金属的核心。
-- 月球岩石中几乎没有不稳定的成分比如水，似乎月球表面曾被烤过。
-- 月球上的相对氧同位素和地球上的一样，因此月球产生时与太阳的距离和地球跟太阳的距离是一样的。
+- The Moon _happens to be_ about 400 times smaller than the Sun, but the Sun _happens to be_ about 400 times further from the Earth than the Moon is. As a result, the apparent disk of the Moon is almost exactly the size of the apparent disk of the Sun.
+- Only one side of the Moon is visible from Earth because the Moon _happens to_ rotate on its axis at the same rate that the Moon obits the Earth, this has been persisted for a few million years.
+- The orbits of most natural satelistes are roughly elliptical, whereas the orbit of the Moon _happens to be_ a perfect circle.
+- The Sun (and many other celestial bodies) has much greater attraction to the Moon, but the Moon stays as the Earth's satelite.
+- The diameter of most natural satelites do not exceed 5% of that of their host planet, but the diameter of the Moon _happens to be_ 27% of that of the Earth.
 
-除此之外，科学家还发现了各种“巧合”：
+Although this book is about metaphysics (or pseudo-science), even scientists have found too many coincidences about the Moon.
 
-- 太阳的直径比月球大四百倍，而太阳跟地球的距离 _恰好_ 也是月亮与地球距离的四百倍，因此在地球上肉眼观察两者大小相近。
-- 月亮面对地球的一面始终不变，因为其自转和公转周期 _恰好_ 一致，因此地球上看月亮始终是同一面。而这种运行方式已经持续了几百万年。
-- 尽管其他星球的天然卫星轨迹都是椭圆，月球的运行轨迹 _恰好_ 几乎是一个正圆。
-- 地球对月球的引力远远小于太阳对月球的引力，却一直停留在地球的卫星轨道上而非是被太阳系中其他星球如木星吸走。
-- 目前已发现的天然卫星里，直径最多也没超过母星的百分之五，而月球直径 _恰好_ 为地球的百分之二十七。
+> There is no astronomical reason why the moon and the sun should fit so well. It is the sheerest of coincidences, and only the Earth among all the planets is blessed in this fashion.
+>
+> -- Isaac Asimov
 
-虽然本文讨论的是玄学，然而即便是科学发现，也已经有太多的“巧合”了。关于月球的任何一个“巧合”，在自然产生的前提下，都只有极低的概率。著名科学家艾西莫夫（Isaac Asimov）曾说过：“从各种资料和法则来衡量，月球不应该出现在那里。”他又说：“月球正好大到能造成日蚀，小到仍能让人看到日冕，在天文学上找不出理由解释此种现象，这真是巧合中的巧合。”学过统计学的人都知道，无限趋近于零的概率在实际应用中往往是可以忽略不计的；而在如此多的“巧合”下，科学却不敢正视，不敢提及偶尔有人提出的，与梦中见闻相印证却被主流忽视的第五种推测：月球并非自然产生，而是被曾经地球上某种高级生命制造出来后被送上了太空。这个理论听起来似乎不可思议，然而仔细想想，它比主流的学说更能解释NASA提到的三个事实：没有金属核心，因为里面是空的（法老的尸体就在里面）；送上太空前被烤过，也许是一种特殊处理，类似现在的航天材料；而正因为是在地球上人为制造，所以氧同位素和地球一样，自然和地球与太阳的距离一致。它也同时解释了所有“巧合”，因为本没有巧合而只有人为。
+> ...is it also coincidence that the moon is at just the right distance from the earth to completely cover the sun during an eclipse? While the diameter of the moon is a mere 2160 miles against the sun's gigantic 864'000 miles, it is nevertheless in just the proper position to block out all but the sun's flaming corona when it moves between the sun and the earth.
+>
+> -- Jim Marrs
 
-这一章似乎与玄学关系不大，然而别忘了所有这些讨论都源于一个梦，并且这和此后要讨论的诸多话题都有联系。况且，仅仅是科学发现，也应该已经推翻了许多人心中固有的想法，更容易接受科学与玄学只是殊途同归的两条路。后续的章节将要讨论更多科学已发现却不被人在意的相关事实，以及月球在本次人类文明历史中所扮演的角色。最后，重复一次《2012》中喇嘛说的话：
+Compared to existing theories of the Moon's origin, my theory - or the dream theory sounds more reasonable: the Moon wasn't formed naturally, it was made by human from pre-history generation. This theory could explain all the facts: no iron core because it was designed to be a giant spaceship; Extra "baking" of lunar surface might be some special process of material, like the material we nowadays make aircraft; Since it was made in different parts on earth and later assembled together, its oxygen isotopes is identical to that of the Earth. It Also explains all the coincidences mentioned above: there's no coincidence at all because it was human made.
 
-“正如这杯水，你心中充满了想法和成见，若想得到真正的智慧，就必须先把这杯水倒掉。”
+In next chapter I'll briefly talk about some evidence of the co-existence of pre-historic generation and current human civilisation, and let's revisit the quote from the movie "2012":
 
-[1] http://starchild.gsfc.nasa.gov/docs/StarChild/questions/question38.html
+> Just like this cup of water, you are filled with thoughts and prejudices. If you want to see the real wisdom, you must first empty your cup before adding more.
 
-继续： [月球（中）](/cn/article/pseudo_science/chapter2/)
+[1] https://web.archive.org/web/20180323131439/http://lunarorigin.com:80/lunar-origin-models/  
+[2] http://adsabs.harvard.edu/abs/2012NatGe...5..251Z Zhang, Junjun; Nicolas Dauphas; Andrew M. Davis; Ingo Leya; Alexei Fedkin (25 March 2012). "The proto-Earth as a significant source of lunar material". Nature Geoscience. 5: 251–255  
+[3] http://burro.cwru.edu/Academics/Astr221/SolarSys/lunaform.html  
+[4] http://adsabs.harvard.edu/abs/2011Natur.476...69J  
+[5] http://science.sciencemag.org/content/294/5541/345  
+[6] http://science.sciencemag.org/content/342/6155/183  
 
-上一章： [前言](/cn/article/pseudo_science/prologue/)
+Prev: [Prologue](/article/pseudo_science/prologue/)

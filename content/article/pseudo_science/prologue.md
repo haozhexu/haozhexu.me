@@ -13,7 +13,7 @@ tags:
   - human
 ---
 
-# Rediscover the Wonderful World with Pseudo-Science
+# Rediscover the Wonderful World with Metaphysics
 
 ## Prologue
 
@@ -52,3 +52,5 @@ Where are we going?
 Who are we?  
 
 All these start with a dream.
+
+Next: [Chapter 1 - The Moon (1)](/article/pseudo_science/chapter1/)

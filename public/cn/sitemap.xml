@@ -292,60 +292,6 @@
   </url>
   
   <url>
-    <loc>https://www.haozhexu.me/cn/categories/</loc>
-    <lastmod>2018-09-15T08:00:00+11:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.haozhexu.me/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://www.haozhexu.me/cn/categories/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://www.haozhexu.me/cn/tags/otwaylighthouse/</loc>
-    <lastmod>2017-12-30T20:55:26+11:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.haozhexu.me/tags/otwaylighthouse/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://www.haozhexu.me/cn/tags/otwaylighthouse/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://www.haozhexu.me/cn/tags/penfold/</loc>
-    <lastmod>2018-01-03T22:21:23+11:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.haozhexu.me/cn/tags/</loc>
-    <lastmod>2018-01-03T22:21:23+11:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.haozhexu.me/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://www.haozhexu.me/cn/tags/"
-                />
-  </url>
-  
-  <url>
     <loc>https://www.haozhexu.me/cn/tags/camerareview/</loc>
     <lastmod>2018-09-15T08:00:00+11:00</lastmod>
     <priority>0</priority>
@@ -358,6 +304,22 @@
                 rel="alternate"
                 hreflang="cn"
                 href="https://www.haozhexu.me/cn/tags/camerareview/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/cn/categories/</loc>
+    <lastmod>2018-09-15T08:00:00+11:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/categories/"
                 />
   </url>
   
@@ -410,6 +372,22 @@
   </url>
   
   <url>
+    <loc>https://www.haozhexu.me/cn/tags/otwaylighthouse/</loc>
+    <lastmod>2017-12-30T20:55:26+11:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/tags/otwaylighthouse/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/tags/otwaylighthouse/"
+                />
+  </url>
+  
+  <url>
     <loc>https://www.haozhexu.me/cn/tags/panasonic/</loc>
     <lastmod>2018-08-24T10:00:00+11:00</lastmod>
     <priority>0</priority>
@@ -423,6 +401,12 @@
                 hreflang="cn"
                 href="https://www.haozhexu.me/cn/tags/panasonic/"
                 />
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/cn/tags/penfold/</loc>
+    <lastmod>2018-01-03T22:21:23+11:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -454,6 +438,22 @@
                 rel="alternate"
                 hreflang="cn"
                 href="https://www.haozhexu.me/cn/tags/streetphotography/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/cn/tags/</loc>
+    <lastmod>2018-01-03T22:21:23+11:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/tags/"
                 />
   </url>
   

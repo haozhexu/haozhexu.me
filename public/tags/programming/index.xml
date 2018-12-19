@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on Haozhe XU</title>
+    <link>https://www.haozhexu.me/tags/programming/</link>
+    <description>Recent content in Programming on Haozhe XU</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 19 Dec 2018 19:12:00 +1100</lastBuildDate>
+    
+	<atom:link href="https://www.haozhexu.me/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>iOS Questions</title>
+      <link>https://www.haozhexu.me/article/2018/ios_questions/</link>
+      <pubDate>Wed, 19 Dec 2018 19:12:00 +1100</pubDate>
+      
+      <guid>https://www.haozhexu.me/article/2018/ios_questions/</guid>
+      <description>iOS Questions How could you setup live rendering?
+The attribute @IBDesignable lets Interface Builder perform live updates on a particular view.
+Difference between synchronous and asynchronous tasks?
+ synchronous: blocks running thread until the task has completed asynchronous: completes a task in background and can notify you when complete  What are B-Trees?
+B-trees are search trees that provide an ordered key-value store with excellent performance characteristics. In principle, each node maintains a sorted array of its own elements, and another array for its children.</description>
+    </item>
+    
+  </channel>
+</rss>

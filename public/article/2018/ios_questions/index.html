@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>iOS Questions | Haozhe XU</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/apps/">Apps</a></li>
+      
+      <li><a href="/poems/">Poem / 诗词</a></li>
+      
+      <li><a href="/article">Article</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/cn/">简体中文</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">iOS Questions</span></h1>
+
+<h2 class="date">2018/12/19</h2>
+</div>
+
+<main>
+
+
+<h1 id="ios-questions">iOS Questions</h1>
+
+<p><strong>How could you setup live rendering?</strong></p>
+
+<p>The attribute <code>@IBDesignable</code> lets Interface Builder perform live updates on a particular view.</p>
+
+<p><strong>Difference between synchronous and asynchronous tasks?</strong></p>
+
+<ul>
+<li><em>synchronous</em>: blocks running thread until the task has completed</li>
+<li><em>asynchronous</em>: completes a task in background and can notify you when complete</li>
+</ul>
+
+<p><strong>What are B-Trees?</strong></p>
+
+<p>B-trees are search trees that provide an ordered key-value store with excellent performance characteristics. In principle, each node maintains a sorted array of its own elements, and another array for its children.</p>
+
+<p><strong>What is made up of <code>NSError</code> object?</strong></p>
+
+<p>A string domain, an integer code, and a user infor dictionary. Domain identifies what categories of errors this error is coming from.</p>
+
+<p><strong>What is <code>enum</code>?</strong></p>
+
+<p>Enumeration is a type that basically contains a group of related values in same umbrella.</p>
+
+<p><strong>What is bounding box?</strong></p>
+
+<p>Bounding box is a geometry term, it refers to the smallest area that can contain a given set of points.</p>
+
+<p><strong>Why don&rsquo;t we use <code>strong</code> for <code>enum</code> property in ObjC?</strong></p>
+
+<p><code>enum</code> is like a primitive value type which isn&rsquo;t object, so we don&rsquo;t specify <code>strong</code> or <code>weak</code>.</p>
+
+<p><strong>What is <code>@synthesize</code> in ObjC?</strong></p>
+
+<p>Synthesize generates getter and setter methods for property, there are a few special cases:</p>
+
+<ul>
+<li>readwrite property with custom getter and setter
+when providing <strong>both</strong> a getter and setter custom implementation, the property won&rsquo;t be automatically synthesized</li>
+<li>readonly property with custom getter
+when providing a custom getter for a readonly property, this won&rsquo;t be automatically synthesized</li>
+<li><code>@dynamic</code>
+when using <code>@dynamic propertyName</code>, the property won&rsquo;t be automatically synthesized</li>
+<li>properties declared in a <code>@protocol</code>
+when comforming to a protocol, any property the protocol defines won&rsquo;t be automatically synthesized</li>
+<li>properties declared in a category</li>
+<li>overriden property
+when you override a property of a superclass, you must explicitly synthesize it</li>
+</ul>
+
+<p><strong>What is <code>@dynamic</code> in ObjC?</strong></p>
+
+<p><code>@dynamic</code> tells the compiler that getter and setter are implemented somewhere else, examples like subclasses of <code>NSManagedObject</code>.</p>
+
+<p><strong>Why do we use <code>synchronized</code>?</strong></p>
+
+<p><code>synchronized</code> guarantees that only one thread can be executing the code in the block at any given time.</p>
+
+<p><strong>What is the difference between <code>strong</code>, <code>weak</code>, <code>readonly</code> and <code>copy</code>?</strong></p>
+
+<ul>
+<li><code>strong</code>: the reference count will be increased and the reference to it will be maintained through the life of the object</li>
+<li><code>weak</code>: referencing an object without increasing its reference count, often used when creating a parent child relationship</li>
+<li><code>readonly</code>: a property can be read but not modified</li>
+<li><code>copy</code>: the value of an object is copied when it&rsquo;s assigned, prevents its value from being modified</li>
+</ul>
+
+<p><strong>What is Dynamic Dispatch?</strong></p>
+
+<p>Dynamic Dispatch is the process of selecting which implementation
+of a polymorphic operation that’s a method or a function to call at run time. This means, that when we wanna invoke our methods like object method. but Swift does not default to dynamic dispatch.</p>
+
+<p><strong>What is code coverage?</strong></p>
+
+<p>Code coverage is a metric that helps us to measure the value of our unit tests.</p>
+
+<p><strong>What is completion handler?</strong></p>
+
+<p>It&rsquo;s a handler (usually block or closure) that handles the result when a task has finishes, and the task is often asynchronous.</p>
+
+<p><strong>What is the difference between frame and bounds?</strong></p>
+
+<p>They both specifies a rectangle in terms of origin and size, but frame is relative to a view&rsquo;s superview, and bounds is relative to its own coordination system.</p>
+
+<p><strong>What is responder chain?</strong></p>
+
+<p>A hierarchy of objects that have the opportunity to respond to events received.</p>
+
+<p><strong>What is Regular Expression?</strong></p>
+
+<p>RegEx specifies a pattern that describes a string, and can be used to check whether a string matches the pattern.</p>
+
+<p><strong>What is operator overloading?</strong></p>
+
+<p>Operator overloading is to define or change how existing operators behave with types.</p>
+
+<p><strong>What is platform limitation of tvOS?</strong></p>
+
+<ol>
+<li>no browser support, this means the app can&rsquo;t link out to a web browser for things like OAuth or social media sites</li>
+<li>cannot explicitly use local storage</li>
+<li>app bundle cannot exceeed 4GB</li>
+</ol>
+
+<p><strong>What is ABI?</strong></p>
+
+<p>ABI stands for Application Binary Interface, at runtime, Swift program binaries interact with other libraries through an ABI, it defines many low level details for binary. ABI stability means locking down the ABI to the point that future compiler versions can produce binaries conforming to the stable ABI. It enables binary compatibility between applications and libraries compiled with different Swift versions.</p>
+
+<p><strong>Why is design pattern important?</strong></p>
+
+<p>Design patterns are reusable solutions to common problems in software design. They are templates designed to help you write code that&rsquo;s easy to understand and reuse.</p>
+
+<p><strong>What is Singleton pattern?</strong></p>
+
+<p>The singleton pattern ensures that only one instance exists for a given class and that there&rsquo;s a global access point to that instance. It usually uses <code>lazy</code> loading to create the single instance when it&rsquo;s needed for the first time.</p>
+
+<p><strong>What is Facade pattern?</strong></p>
+
+<p>The facade pattern provides a single interface to a complex subsystem. Instead of exposing the user to a set of of classes and their APIs, only a simple unified API is exposed.</p>
+
+<p><strong>What is Decorator pattern?</strong></p>
+
+<p>The decorator pattern dynamically adds behaviours and responsibilities to an object without modifying its code. It&rsquo;s an alternative to subclassing where you modify a class&rsquo;s behavior by wrapping it with another object.</p>
+
+<p>In ObjC two common implementations are Category and Delegation, in Swift there are Extension and Delegation.</p>
+
+<p><strong>What is Adapter pattern?</strong></p>
+
+<p>An adapter allows classes with incompatible interfaces to work together, it wraps itself around an object and expose a standard interface to interact with that object.</p>
+
+<p>Protocol A makes request, B is a class that makes special request, adapter implements A and wraps a B instance, its request implementation would call B&rsquo;s special request.</p>
+
+<p><strong>What is Observer pattern?</strong></p>
+
+<p>In observer pattern, one object notifies other objects of any state changes.</p>
+
+<p><strong>What is Memento pattern?</strong></p>
+
+<p>In memento pattern, your stuff is saved somewhere external, later when needed, externalised state can be restored without violating encapsulation.
+???</p>
+
+<p><strong>What is VIPER?</strong></p>
+
+<p>View, Interactor, Presenter, Entity and Router:</p>
+
+<ul>
+<li><code>View</code>: UI related operations, similar to View in MVVM, user interaction is passed to Presenter.</li>
+<li><code>Presenter</code>: similar to ViewModel in MVVM, responds to user interaction, if needed, it asks Interactor to alter data model</li>
+<li><code>Router</code>: Screen transition and UI components switching</li>
+<li><code>Interactor</code>: Data processing, including network request, data storage and modelling</li>
+<li><code>Entity</code>: Data model</li>
+</ul>
+
+<p><strong>What is JSON/PLIST limits?</strong></p>
+
+<p>Can&rsquo;t use complex query to filter, can be slow, need serialize or deserialize it when used, not thread-safe.</p>
+
+<p><strong>What is SQLite limits?</strong></p>
+
+<p>Need to define schemas of tables and relations between tables, have to manually write query to fetch data, and need to map result to model</p>
+
+<p><strong>How many APIs are there for battery-efficient location tracking?</strong></p>
+
+<ul>
+<li>significant location changes</li>
+<li>region monitoring</li>
+<li>visit events</li>
+</ul>
+
+<p><strong>Swift&rsquo;s main advantage?</strong></p>
+
+<ul>
+<li>optionals makes application crash-resistant</li>
+<li>built-in error handling</li>
+<li>closures</li>
+<li>faster compared to other languages</li>
+<li>type-safe</li>
+<li>pattern matching</li>
+</ul>
+
+<p><strong>What is Generics?</strong></p>
+
+<p>Generics create code that does not need to specify underlying data type, so the code can be flexible and re-usable, code can be written without duplication and can express its intent in a clear and more abstract manner.</p>
+
+<p><strong>Explain <code>lazy</code> in Swift?</strong></p>
+
+<p>The initial value of a <code>lazy</code> property is calculated only when its called for the first time.</p>
+
+<p><strong>What is <code>defer</code> in Swift?</strong></p>
+
+<p><code>defer</code> specifies a block of code that will be executed when execution is leaving current scope.</p>
+
+<p><strong>How to pass data between view controllers?</strong></p>
+
+<ol>
+<li>Segue: in <code>prepareForSegue</code> method</li>
+<li>Delegate</li>
+<li>Setting variable directly</li>
+</ol>
+
+<p><strong>What is concurrency?</strong></p>
+
+<p>Concurrency is dividing up the execution paths of the program so that they can possibly run at the same time</p>
+
+<p><strong>What is GCD?</strong></p>
+
+<p>GCD is a library that provides a low-level and object-based API to run tasks concurrently while managing threads behind the scenes.</p>
+
+<ul>
+<li><strong>Dispatch Queues</strong>: responsible for executing tasks in first-in, first-out order</li>
+<li><strong>Serial Dispatch Queue</strong>: runs tasks one at a time</li>
+<li><strong>Concurrent Dispatch Queue</strong>: runs as many tasks as it can without waiting for the started tasks to finish</li>
+<li><strong>Main Dispatch Queue</strong>: a globally available queue that executes tasks on main thread</li>
+</ul>
+
+<p><strong>Explain <code>NSOperation</code>, <code>NSOperationQueue</code> and <code>NSBlockOperation</code></strong></p>
+
+<ul>
+<li><code>NSOperation</code>: adds a little extra overhead compared to GCD, but it can have dependency among various operations and support re-use, cancel or suspend.</li>
+<li><code>NSOperationQueue</code>: it allows a pool of threads to be created and used to execute <code>NSOperation</code>s in parallel.</li>
+<li><code>NSBlockOperation</code>: a concrete subclass of <code>NSOperation</code> that manages concurrent execution of one or more blocks, the operation is considered finished only when all blocks have finished executing.</li>
+</ul>
+
+<p><strong>Explain KVC and KVO?</strong></p>
+
+<p><strong>KVC</strong>: Key-Value Coding, it&rsquo;s a mechanism that lets you access an object&rsquo;s properties using strings at runtime than having to know the property name at development time
+<strong>KVO</strong>: Key-Value Observing, it let you be notified when properties of observed object changes value</p>
+
+<p><strong>Explain Swift&rsquo;s pattern matching techniques?</strong></p>
+
+<p>[Link][<a href="https://docs.swift.org/swift-book/ReferenceManual/Patterns.html#grammar_wildcard-pattern">https://docs.swift.org/swift-book/ReferenceManual/Patterns.html#grammar_wildcard-pattern</a>]</p>
+
+<ul>
+<li><strong>Tuple</strong>:</li>
+<li><strong>Type-casting</strong>:</li>
+<li><strong>Wildcard patterns</strong>:</li>
+<li><strong>Optional patterns</strong>:</li>
+<li><strong>Enumeration case patterns</strong>:</li>
+<li><strong>Expression patterns</strong>:</li>
+</ul>
+
+<p><strong>What is <code>guard</code>?</strong></p>
+
+<p>A <code>guard</code> statement is used to transfer program control out of a scope if one or more conditions aren’t met.</p>
+
+<p><strong>Explain method swizzling in Swift?</strong></p>
+
+<p>Swizzling can replace the implementation of a method with a different one at <em>runtime</em>, by changing the mapping between a specific <code>#selector(method)</code> and the function that contains its implementation. The class containing the method to be swizzled must extend <code>NSObject</code>, and the methods must have dynamic attributes.</p>
+
+<p><strong>What is the difference between escaping and non-escaping closures?</strong></p>
+
+<p>non-escaping closure is executed only inside the scope of a function, whereas escaping closures may be executed outside of the function&rsquo;s closure, for example, completion of asynchronous tasks.</p>
+
+<p><strong>Explain <code>[weak self]</code> and <code>[unowned self]</code></strong></p>
+
+<p><code>[weak self]</code> is used when <code>self</code> might be deallocated when the closure is executed, and you need to handle this; <code>[unowned self]</code> is used when it&rsquo;s certain that <code>self</code> won&rsquo;t be deallocated when closure is executed, it cannot be optional.</p>
+
+<p><strong>Explain <code>#keyPath()</code></strong></p>
+
+<p><code>class KeyPath&lt;Root, Value&gt;: PartialKeyPath&lt;Root&gt;</code></p>
+
+<p>a key path from a specific root type to a specific value type</p>
+
+<p><strong>What are the major debugging improvements in XCode 8?</strong></p>
+
+<ul>
+<li><strong>View Debugger</strong>: visualize UI layouts and see constraints at runtime, XCode 8 introduced warning for constraint conflicts</li>
+<li><strong>Thread Sanitizer</strong>: runtime tool that alerts you to threading issues - potentially race conditions</li>
+<li><strong>Memory Graph Debugger</strong>: visualization of memory graph at a point in time and flags leaks</li>
+</ul>
+
+<p><strong>What is TDD?</strong></p>
+
+<p>Test Driven Development</p>
+
+<p><strong>What does <code>final</code> do in Swift?</strong></p>
+
+<p>Prevents class or method from being overridden</p>
+
+<p><strong>Differences between <code>open</code>, <code>public</code>?</strong></p>
+
+<ul>
+<li><strong>open</strong> allows other modules to use and inherit the class, <code>open</code> class members can be used as well as overridden.</li>
+<li><strong>public</strong> only allows other modules to use the public classes and members, public classes cannot be subclassed, nor public member can be overridden.</li>
+</ul>
+
+<p><strong>Differences between <code>internal</code>, <code>fileprivate</code>, <code>private</code>, and <code>public private(set)</code>?</strong></p>
+
+<ul>
+<li><code>internal</code> entities can be used within any source file from defining module but not in any file outside</li>
+<li><code>file-private</code> entities can only be used by its own defining source file</li>
+<li><code>private</code> entities can be used only by the enclosing declaration and extensions of the declaration <strong>in the same file</strong></li>
+<li>default access level is <code>internal</code></li>
+</ul>
+
+<p><strong>What is BDD?</strong></p>
+
+<p>Business Driven Development, test cases can be read by non-engineers</p>
+
+<p><strong>What is forced unwrapping?</strong></p>
+
+<p>When we define a variable as <code>optional</code>, then to gt the value from it, we will have to <code>unwrap</code> it, forced unwrap is putting an exclamation mark at the end of this variable.</p>
+
+<p><strong>What is bitcode?</strong></p>
+
+<p>Bitcode refers to the type of code: &ldquo;LLVM Bitcode&rdquo; that is sent to iTunes Connect, this allows Apple to use certain calculations to re-optimize apps further and this can be done without uploading a new build.</p>
+
+<p><strong>Slicing</strong> is the process of Apple optimizing app for user&rsquo;s specific device
+<strong>App Thinning</strong> is the combination of slicing, bitcode and on-demand resources</p>
+
+<p><strong>What is <code>inout</code>?</strong></p>
+
+<p><code>inout</code> parameter means if function modifies the parameter as local variable, the passed-in parameter is also modified, it&rsquo;s like <code>inout</code> means reference type whereas value type if without <code>inout</code>.</p>
+
+<p><strong>What is nil coalescing?</strong></p>
+
+<p><code>nil-coalescing</code> operator unwraps an optional if it contains a value, or returns a default value on the right of the operator.</p>
+
+<p><strong>What is ternary operator?</strong></p>
+
+<p>Ternary operator operates on three targets, if the first expression is true, it evaluates and returns the value of second expression, otherwise it evaluates and returns the value of the third expression.</p>
+
+<p><strong>What is subscripts?</strong></p>
+
+<p>Subscripts are shortcuts for accessing the member elements of a collection, list or sequence, or a custom type that supports subscripts.</p>
+
+<p><strong>What is DispatchGroup?</strong></p>
+
+<p><code>DispatchGroup</code> allows for aggregate synchronization of work, you can use them to submit multiple different work items and track when they all complete.</p>
+
+<p><strong>Explain the difference between atomic and nonatomic synthesized properties?</strong></p>
+
+<ul>
+<li><code>atomic</code>: ensures integrity of setter and getter, safer than <code>nonatomic</code>, any thread access atomic object can get the correct object</li>
+<li><code>nonatomic</code>: doesn&rsquo;t ensure integrity of setter and getter, might be in problem state when different threads trying to access the same object, faster than <code>atomic</code></li>
+</ul>
+
+<p><strong>Explain polymorphism?</strong></p>
+
+<p>Polymorphism allows the expression of some sort of contract, with potentially many types implementing the contract in different ways, each according to their own purpose.</p>
+
+<p><strong>What are the major purposes of frameworks?</strong></p>
+
+<ul>
+<li>code encapsulation</li>
+<li>code modularity</li>
+<li>code reuse</li>
+</ul>
+
+<p><strong>What is downcasting?</strong></p>
+
+<ul>
+<li><code>as</code>: used for upcasting and type casting to bridged type</li>
+<li><code>as?</code>: used for safe casting, returns <code>nil</code> if failed</li>
+<li><code>as!</code>: used to force casting, crash if failed</li>
+</ul>
+
+<p><strong>What are the <code>ReadingOptions</code> of <code>JSONSerialization</code>?</strong></p>
+
+<ul>
+<li><em>mutableContainers</em>:</li>
+<li><em>mutableLeaves</em>:</li>
+<li><em>allowFragments</em>:</li>
+</ul>
+
+<p><strong>What is the difference between <code>Any</code> and <code>AnyObject</code>?</strong></p>
+
+<ul>
+<li><em>Any</em> can represent an instance of any type at all, including function types and optional types</li>
+<li><em>AnyObject</em> can represent an instance of any class type</li>
+</ul>
+
+<p><strong>What is <code>Hashable</code>?</strong></p>
+
+<p>A type that can be hashed to produce an integer hash value.</p>
+
+<p>The <code>Hashable</code> protocol inherits from <code>Equatable</code> protocol, which must also be satisfied.</p>
+
+<ul>
+<li>for <code>struct</code>: all its stored properties must conform to <code>Hashable</code></li>
+<li>for <code>enum</code>: all its associated values must conform to <code>Hashable</code>, an <code>enum</code> without associated values has <code>Hashable</code> conformance even without declaration</li>
+</ul>
+
+<p><strong>When do we use optional chaining vs <code>if let</code> or <code>guard</code>?</strong></p>
+
+<p>Optional chaining is used when we do not really care if the operation fails.</p>
+
+<p><strong>What is the difference between <code>nil</code> and <code>.None</code>?</strong></p>
+
+<p><code>nil</code> is just syntactic sugar for <code>.None</code></p>
+
+<p><strong>What is <code>availability</code> attributes?</strong></p>
+
+<p>It indicates the code should only be called if running system meet the requirement specified.</p>
+
+<pre><code class="language-swift">@available(iOS 9.0, *)
+
+@available(iOS, introduced: 9.0)
+@available(OSX, introduced: 10.11)
+// is replaced by
+@available(iOS 9.0, OSX 10.11, *)
+
+if #available(iOS 9.0, *) {}
+
+</code></pre>
+
+<p><strong>What is Protocol Extension?</strong></p>
+
+<p>Protocol extension is to extend a protocol and provide default implementation of methods, so that classes that conform to the protocol will have the default implementation for free, and classes can selectively override protocol methods just like class inheritance. The benefit of this is that a class can have 0 or 1 superclass but protocols don&rsquo;t have such constraint.</p>
+
+<p><strong>What is selector in Objc?</strong></p>
+
+<p>Selectors are ObjC&rsquo;s internal representation of a method name.</p>
+
+<p><strong>What is unwind segue?</strong></p>
+
+<p>An unwide segue (sometimes called exit segue) can be used to navigate back through push, modal or popover segues, you can go back multiple steps in navigation hierarchy.</p>
+
+<p><strong>What is the difference between iVar and <code>@property</code></strong></p>
+
+<p>iVar is like the backing variable for declared <code>@property</code>, <code>@synthesize</code>d property will have backing iVar created, <code>@property</code> is used with KVO, and can be overwritten with custom getter and setter.</p>
+
+<p><strong>Why do we need to specify <code>self</code> to refer to a stored property or a method in asynchronous code?</strong></p>
+
+<p>Since the code is dispatched to a background thread, we need to capture a reference to the correct object.</p>
+
+<p><strong>What is intrinsic content size?</strong></p>
+
+<p>The natural size for the receiving view, considering only properties of the view itself. Custom views typically have content that they display of which the layout system is unaware of, so it&rsquo;s important for such views to define its own <code>intrinsicContentSize</code> based on its content. If a custom view has no intrinsice content size for a given dimension, it can use <code>noIntrinsicMetric</code> for that dimension.</p>
+
+<p><strong>What is deep linking?</strong></p>
+
+<p>A technique that allows an app to be opened to a specific UI or resource, in response to some external event.</p>
+
+<p><strong>What is optional binding?</strong></p>
+
+<p>Optional binding checks whether an optional contains a value, if so, make the value available as a temporary constant or variable.</p>
+
+<p><strong>Explain Codable in Swift 4</strong>
+See Notes</p>
+
+<p><strong>What is Notification Center?</strong></p>
+
+<p>A notification dispatch mechanism that enables the broadcast of information to registered observers.</p>
+
+<p>Each running application has a <code>default</code> notification center, when an object adds itself as an observer, it specifies which notification it should receive, so an object may register itself a few times as observer for different notifications.</p>
+
+<p><strong>Explain <code>Sequence</code> in Swift</strong></p>
+
+<p>A type that provides sequential, iterated access to its elements. A sequence is a list of values that can be stepped through one at a time, the most common way to iterate over the elements of a sequence is to use <code>for-in</code> loop. This capability gives you access to a large number of operations that can be performed on any sequence, such like <code>contains(_:)</code>.</p>
+
+<p>To add <code>Sequence</code> conformance to your own custom type, add a <code>makeIterator()</code> method and returns an iterator. Alternatively, if your type can act as its own iterator, implementing the requirements of <code>IteratorProtocol</code> and declaring conformance to both <code>Sequence</code> and <code>IteratorProtocol</code>.</p>
+
+<pre><code class="language-swift">struct Countdown: Sequence, IteratorProtocol {
+    var count: Int
+
+    mutating func next() -&gt; Int? {
+        guard count &gt; 0 else {
+            return nil
+        }
+        deter { count -= 1 }
+        return count
+    }
+}
+</code></pre>
+
+<p><strong>Explain <code>zip(_:_:)</code></strong></p>
+
+<p><code>zip</code> creates a sequence of pairs built out of two underlying sequences.</p>
+
+<pre><code class="language-swift">let words = [&quot;one&quot;, &quot;two&quot;, &quot;three&quot;, &quot;four&quot;]
+let numbers = 1...4
+
+for (word, number) in zip(words, numbers) {
+    print(&quot;\(word): \(number)&quot;)
+}
+
+// prints &quot;one: 1&quot;
+// prints &quot;two: 2&quot;
+// prints &quot;three: 3&quot;
+// prints &quot;four: 4&quot;
+</code></pre>
+
+<p>If the two sequences are different lengths, the resulting sequence is the same length as the shorter sequence:</p>
+
+<pre><code class="language-swift">let naturalNumbers = 1...Int.max
+let zipped = Array(zip(words, naturalNumbers))
+// zipped == [(&quot;one&quot;, 1), (&quot;two&quot;, 2), (&quot;three&quot;, 3), (&quot;four&quot;, 4)]
+</code></pre>
+
+<p><strong>What is &ldquo;app ID&rdquo; and &ldquo;bundle ID&rdquo;?</strong></p>
+
+<p>Before code signing app during distribution, XCode automatically prefixes the bundle ID with team ID - the unique character sequence issued by Apple to each development team - and stores the combined string as the app ID. Bundle ID unique identifies an application in Apple&rsquo;s ecosystem.</p>
+
+<p><strong>Difference between <code>accessibilityIdentifier</code>, <code>accessibilityLabel</code> and <code>accessibilityValue</code></strong></p>
+
+<ul>
+<li><code>accessibilityLabel</code>: a succinct label that identifies the accessibility element, in a localized string.</li>
+<li><code>accessibilityValue</code>: the value of the accessibility element, in a localized string. Used when an accessibility element has static label and dynamic value, for example, a text field for message may have &ldquo;message&rdquo; as its label and the actual text as its value.</li>
+</ul>
+
+<p><strong>What&rsquo;s the difference between xib and storyboard?</strong></p>
+
+<p>Both for creating views using interface builder, xib is for view or single view controller, storyboard support multiple view controllers with transition flow.</p>
+
+<p><strong>What is <code>URLSession</code>?</strong></p>
+
+<p><code>URLSession</code> is responsible for sending and receiving HTTP requests, created via <code>URLSessionConfiguration</code></p>
+
+<p><strong>Difference between <code>WKWebView</code> and <code>UIWebView</code></strong></p>
+
+<p><code>UIWebview</code>:</p>
+
+<ul>
+<li>part of <code>UIKit</code>, no need to import additional module</li>
+<li>can scale page to fit</li>
+</ul>
+
+<p><code>WKWebView</code>:</p>
+
+<ul>
+<li>need to import <code>WebKit</code> framework</li>
+<li>higher and more efficient performance</li>
+<li>runs outside of app&rsquo;s main process</li>
+<li>supports server-side authentication challenge</li>
+<li><code>WKWebViewConfiguration</code> provides more custom options</li>
+</ul>
+
+<p><strong>What is OAuth?</strong></p>
+
+<p>OAuth is an open standard authorization protocol or framework that describes how unrelated servers and services can safely allow authenticated access to their assets without sharing the initial, related, single logon credential. One simple example is when you go to log onto a website, it offers a few ways to log on using another website&rsquo;s/service&rsquo;s logon.</p>
+
+<p><strong>Explain <code>rethrows</code> vs <code>throws</code></strong></p>
+
+<ul>
+<li><code>throws</code>: used to indicate a function, method or initializer can throw an error</li>
+<li><code>rethrows</code>: indicate a function or method could throw an error only if one of its function parameters throws an error, it&rsquo;s for functions that do not throw errors on their own, but only forward errors from their function parameters</li>
+</ul>
+
+<p><strong>What is Safe area?</strong></p>
+
+<p>The safe area of a view reflects the area not covered by navigation bars, tab bars, toolbars and other system component that overlaps a view controller&rsquo;s view. Additional insets can be specified via <code>additionalSafeAreaInsets</code>.</p>
+
+<p><strong>What is the difference between <code>Array</code> and <code>NSArray</code>?</strong></p>
+
+<p><code>Array</code> is a struct, thus it&rsquo;s value type in Swift, <code>NSArray</code> is an immutable ObjectiveC class, it is reference type and bridged to <code>Array&lt;AnyObject&gt;</code> in Swift.</p>
+
+<p><strong>Explain Semaphore in iOS?</strong></p>
+
+<p><code>DispatchSemaphore</code> provides an efficient implementation of a traditional counting semaphore, which can be used to control access to a resource across multiple execution contexts.</p>
+
+<p><strong>What is LLVM, LLDB and Clang?</strong></p>
+
+<p>The LLVM Project is a collection of modular and reusable compiler and toolchain technologies.
+Clang is a C language front-end for LLVM.
+LLDB builds on libraries provided by LLVM and Clang to provide a great native debugger.</p>
+
+<p><strong>What is Dependency Inversion Principle?</strong></p>
+
+<p>DI decouples classes from one another by explicitly providing dependencies for them, rather than having them create the dependencies themselves.</p>
+
+<p><strong>Explain difference between <code>class</code> and <code>struct</code> and when do we use one over the other?</strong></p>
+
+<p>Stack is used for static memory allocation and Heap for dynamic memory allocation, both stored in RAM. Allocation of stack is dealth with in compile-time, thus optimisation is possible.</p>
+
+<p><em>class:</em></p>
+
+<ul>
+<li>reference type, object with identity</li>
+<li>slower on heap</li>
+<li>updated with logic</li>
+<li>internals can remain mutable even when declared with <code>let</code></li>
+<li>can be inherited</li>
+<li>type conversion can check the type of instance at runtime</li>
+<li>can use <code>deinit</code></li>
+<li>same instance can be referenced more than once</li>
+</ul>
+
+<p><em>struct:</em></p>
+
+<ul>
+<li>value typed, used for object without identity, e.g. <code>Address</code>, copy on assignment</li>
+<li>faster on stack</li>
+<li>simple data store, safer for multi-threading</li>
+<li>immutable when declared with <code>let</code></li>
+</ul>
+
+</main>
+
+<footer>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5504633517481956"
+     data-ad-slot="4142928173"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+<div id="disqus_thread"></div>
+<script>
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/www.haozhexu.me\/article\/2018\/ios_questions\/";  
+this.page.identifier = "https:\/\/www.haozhexu.me\/article\/2018\/ios_questions\/"; 
+};
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://haozhexu.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+<hr/>
+&copy; <a href="https://www.haozhexu.me">Haozhe XU</a> 2017
+
+</footer>
+</body>
+</html>

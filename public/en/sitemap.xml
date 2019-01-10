@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.haozhexu.me/article/pseudo_science/chapter2/</loc>
+    <lastmod>2018-12-22T08:17:36+11:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/article/pseudo_science/chapter2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/article/pseudo_science/chapter2/"
+                />
+  </url>
+  
+  <url>
     <loc>https://www.haozhexu.me/article/pseudo_science/chapter1/</loc>
     <lastmod>2018-12-09T09:03:36+11:00</lastmod>
     <xhtml:link
@@ -251,7 +266,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/categories/article/</loc>
-    <lastmod>2018-12-09T09:03:36+11:00</lastmod>
+    <lastmod>2018-12-22T08:17:36+11:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -267,7 +282,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/article/</loc>
-    <lastmod>2018-12-09T09:03:36+11:00</lastmod>
+    <lastmod>2018-12-22T08:17:36+11:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -283,7 +298,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/categories/</loc>
-    <lastmod>2018-12-09T09:03:36+11:00</lastmod>
+    <lastmod>2018-12-22T08:17:36+11:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -393,7 +408,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/tags/human/</loc>
-    <lastmod>2018-12-09T09:03:36+11:00</lastmod>
+    <lastmod>2018-12-22T08:17:36+11:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -443,13 +458,13 @@
   
   <url>
     <loc>https://www.haozhexu.me/tags/metaphysics/</loc>
-    <lastmod>2018-12-09T09:03:36+11:00</lastmod>
+    <lastmod>2018-12-22T08:17:36+11:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://www.haozhexu.me/tags/moon/</loc>
-    <lastmod>2018-12-09T09:03:36+11:00</lastmod>
+    <lastmod>2018-12-22T08:17:36+11:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -477,7 +492,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/tags/philosophy/</loc>
-    <lastmod>2018-12-09T09:03:36+11:00</lastmod>
+    <lastmod>2018-12-22T08:17:36+11:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -505,7 +520,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/tags/science/</loc>
-    <lastmod>2018-12-09T09:03:36+11:00</lastmod>
+    <lastmod>2018-12-22T08:17:36+11:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -539,7 +554,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/tags/universe/</loc>
-    <lastmod>2018-12-09T09:03:36+11:00</lastmod>
+    <lastmod>2018-12-22T08:17:36+11:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -3,6 +3,21 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.haozhexu.me/article/2019/bestfujistreetlens/</loc>
+    <lastmod>2019-01-16T21:09:00+11:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/article/2019/bestfujistreetlens/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/article/2019/bestfujistreetlens/"
+                />
+  </url>
+  
+  <url>
     <loc>https://www.haozhexu.me/article/pseudo_science/chapter2/</loc>
     <lastmod>2018-12-22T08:17:36+11:00</lastmod>
     <xhtml:link
@@ -249,6 +264,22 @@
   </url>
   
   <url>
+    <loc>https://www.haozhexu.me/tags/24mm/</loc>
+    <lastmod>2019-01-16T21:09:00+11:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/tags/24mm/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/tags/24mm/"
+                />
+  </url>
+  
+  <url>
     <loc>https://www.haozhexu.me/tags/adelaide/</loc>
     <lastmod>2018-01-09T20:27:58+11:00</lastmod>
     <priority>0</priority>
@@ -266,7 +297,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/categories/article/</loc>
-    <lastmod>2018-12-22T08:17:36+11:00</lastmod>
+    <lastmod>2019-01-16T21:09:00+11:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -282,7 +313,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/article/</loc>
-    <lastmod>2018-12-22T08:17:36+11:00</lastmod>
+    <lastmod>2019-01-16T21:09:00+11:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -298,7 +329,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/categories/</loc>
-    <lastmod>2018-12-22T08:17:36+11:00</lastmod>
+    <lastmod>2019-01-16T21:09:00+11:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -388,6 +419,22 @@
     <loc>https://www.haozhexu.me/tags/city/</loc>
     <lastmod>2018-01-07T12:28:58+11:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/tags/fujifilm/</loc>
+    <lastmod>2018-01-07T12:28:58+11:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/tags/fujifilm/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/tags/fujifilm/"
+                />
   </url>
   
   <url>
@@ -498,7 +545,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/tags/photography/</loc>
-    <lastmod>2018-09-15T08:00:00+11:00</lastmod>
+    <lastmod>2019-01-16T21:09:00+11:00</lastmod>
     <priority>0</priority>
     <xhtml:link
                 rel="alternate"
@@ -516,6 +563,22 @@
     <loc>https://www.haozhexu.me/tags/pseudo-science/</loc>
     <lastmod>2018-12-06T08:01:00+11:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/tags/review/</loc>
+    <lastmod>2019-01-16T21:09:00+11:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/tags/review/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/tags/review/"
+                />
   </url>
   
   <url>
@@ -556,6 +619,22 @@
     <loc>https://www.haozhexu.me/tags/universe/</loc>
     <lastmod>2018-12-22T08:17:36+11:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/tags/xpro2/</loc>
+    <lastmod>2019-01-16T21:09:00+11:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/tags/xpro2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/tags/xpro2/"
+                />
   </url>
   
 </urlset>

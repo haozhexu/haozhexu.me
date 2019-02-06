@@ -328,22 +328,6 @@
   </url>
   
   <url>
-    <loc>https://www.haozhexu.me/tags/camerareview/</loc>
-    <lastmod>2018-09-15T08:00:00+11:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://www.haozhexu.me/cn/tags/camerareview/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.haozhexu.me/tags/camerareview/"
-                />
-  </url>
-  
-  <url>
     <loc>https://www.haozhexu.me/categories/</loc>
     <lastmod>2019-01-16T21:09:00+11:00</lastmod>
     <priority>0</priority>
@@ -360,13 +344,79 @@
   </url>
   
   <url>
-    <loc>https://www.haozhexu.me/tags/city/</loc>
+    <loc>https://www.haozhexu.me/tags/fujifilm/</loc>
     <lastmod>2018-01-07T12:28:58+11:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://www.haozhexu.me/tags/fujifilm/</loc>
+    <loc>https://www.haozhexu.me/tags/gx85/</loc>
+    <lastmod>2018-01-09T20:27:58+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/tags/m43/</loc>
+    <lastmod>2018-01-09T20:27:58+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/tags/otwaylighthouse/</loc>
+    <lastmod>2018-01-07T08:39:53+11:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/tags/otwaylighthouse/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/tags/otwaylighthouse/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/tags/</loc>
+    <lastmod>2018-01-07T12:28:58+11:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/tags/x-pro2/</loc>
+    <lastmod>2018-01-07T12:28:58+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/tags/camerareview/</loc>
+    <lastmod>2018-09-15T08:00:00+11:00</lastmod>
+    <priority>0</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/tags/camerareview/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/tags/camerareview/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/tags/city/</loc>
     <lastmod>2018-01-07T12:28:58+11:00</lastmod>
     <priority>0</priority>
   </url>
@@ -385,12 +435,6 @@
                 hreflang="en"
                 href="https://www.haozhexu.me/tags/fujifilm/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://www.haozhexu.me/tags/gx85/</loc>
-    <lastmod>2018-01-09T20:27:58+11:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -460,12 +504,6 @@
   </url>
   
   <url>
-    <loc>https://www.haozhexu.me/tags/m43/</loc>
-    <lastmod>2018-01-09T20:27:58+11:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://www.haozhexu.me/tags/metaphysics/</loc>
     <lastmod>2018-12-22T08:17:36+11:00</lastmod>
     <priority>0</priority>
@@ -475,22 +513,6 @@
     <loc>https://www.haozhexu.me/tags/moon/</loc>
     <lastmod>2018-12-22T08:17:36+11:00</lastmod>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.haozhexu.me/tags/otwaylighthouse/</loc>
-    <lastmod>2018-01-07T08:39:53+11:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://www.haozhexu.me/cn/tags/otwaylighthouse/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.haozhexu.me/tags/otwaylighthouse/"
-                />
   </url>
   
   <url>
@@ -582,22 +604,6 @@
   </url>
   
   <url>
-    <loc>https://www.haozhexu.me/tags/</loc>
-    <lastmod>2018-01-07T12:28:58+11:00</lastmod>
-    <priority>0</priority>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://www.haozhexu.me/cn/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.haozhexu.me/tags/"
-                />
-  </url>
-  
-  <url>
     <loc>https://www.haozhexu.me/tags/travel/</loc>
     <lastmod>2018-01-09T20:27:58+11:00</lastmod>
     <priority>0</priority>
@@ -612,12 +618,6 @@
   <url>
     <loc>https://www.haozhexu.me/tags/universe/</loc>
     <lastmod>2018-12-22T08:17:36+11:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.haozhexu.me/tags/x-pro2/</loc>
-    <lastmod>2018-01-07T12:28:58+11:00</lastmod>
     <priority>0</priority>
   </url>
   

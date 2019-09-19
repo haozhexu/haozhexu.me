@@ -52,6 +52,7 @@ For the sake of this artical, above are only recent 10 draws of Australian Power
 
 For example, every two numbers in the draw (10, 11, 20, 27, 28, 30, 31) has absolute differences below:
 
+```
 abs(10 - 11) = 1
 abs(10 - 20) = 10
 abs(10 - 27) = 17
@@ -73,6 +74,7 @@ abs(27 - 31) = 4
 abs(28 - 30) = 2
 abs(28 - 31) = 3 *
 abs(30 - 31) = 1 *
+```
 
 By calculating the differences between every two numbers in the draw, we got 21 results in total, then we eliminate duplicate results, and end up with 15 distinct numbers, so D = 15; Since there are 7 numbers in a draw, AC = D - (7 - 1) = 15 - 6 = 9.
 

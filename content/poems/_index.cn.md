@@ -7,6 +7,10 @@ auto_ads: true
 
 以下是我平时偶然写的中文诗词，其他文字的翻译就留给读者来做吧。
 
+苹果用户可以从苹果书店免费下载诗词电子书：
+
+[<img src="/images/ibook_badge_cn.svg" style="max-width:15%;min-width:40px;" alt="苹果书店下载" />][AppleBookstoreLink]
+
 **《醉深山》**
 
 红翠山中松柏长  
@@ -812,3 +816,5 @@ _- 13/05/2013_
 恍然见归路。  
 
 _- 28/04/2013_
+
+[AppleBookstoreLink]: https://books.apple.com/book/%E9%A8%B7%E5%AE%A2%E9%9B%86/id1491907575

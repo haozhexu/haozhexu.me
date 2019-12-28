@@ -93,3 +93,5 @@ footnotereturnlinkcontents = "↩"
 [Languages.cn.params]
     description = "一个Hugo生成的静态网页。"
     footer = "&copy; [徐昊哲](https://www.haozhexu.me) 2017"
+[markup.goldmark.renderer]
+    unsafe = true

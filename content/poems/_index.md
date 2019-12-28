@@ -25,9 +25,9 @@ Here is a collection of the poems I’ve composed over last few years, they foll
 風鈴誰家聽垂楊  
 花前空吟人欲醉  
 月下獨酌杯尚香  
-寂寂鶯啼花伴露  
+寂寂鶯啼孤山路  
 寥寥春色秋娘妒  
-盛夏少見潤土雨  
+酷暑難得潤土雨  
 嚴冬多有蒼天樹  
 
 _- 27/12/2019_

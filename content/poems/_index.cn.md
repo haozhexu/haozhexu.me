@@ -11,16 +11,22 @@ auto_ads: true
 
 [<img src="/images/ibook_badge_cn.svg" style="max-width:15%;min-width:40px;" alt="苹果书店下载" />][AppleBookstoreLink]
 
+非苹果用户可以直接下载ePub电子书文件：
+
+[ePub格式电子书](/epubs/ImSucker.epub)
+
+(诗词按时间顺序)
+
 **《醉深山》**
 
 红翠山中松柏长  
 风铃谁家听垂杨  
 花前空吟人欲醉  
 月下独酌酒尚想  
-寂寂莺啼孤山路  
+寂寂莺啼花伴露  
 寥寥春色秋娘妒  
-盛夏难得雨打篷  
-幽谷常有花伴露  
+盛夏难得润土雨  
+幽谷常有苍天树  
 
 _- 27/12/2019_
 

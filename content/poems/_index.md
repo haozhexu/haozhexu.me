@@ -13,16 +13,22 @@ Here is a collection of the poems I’ve composed over last few years, they foll
 
 [<img src="/images/ibook_badge_hk_tw.svg" style="max-width:15%;min-width:40px;" alt="蘋果書店下載" />][AppleBookstoreLink]
 
+非蘋果用戶可以直接下載ePub電子書文件：
+
+[ePub格式電子書](/epubs/ImSucker.epub)
+
+（詩詞按時間順序）
+
 **《醉深山》**
 
 紅翠山中松柏長  
 風鈴誰家聽垂楊  
 花前空吟人欲醉  
 月下獨酌杯尚香  
-寂寂鶯啼孤山路  
+寂寂鶯啼花伴露  
 寥寥春色秋娘妒  
-盛夏難得雨打篷  
-幽谷常有花伴露  
+盛夏少見潤土雨  
+嚴冬多有蒼天樹  
 
 _- 27/12/2019_
 

@@ -9,6 +9,16 @@ Here is a collection of the poems I’ve composed over last few years, they foll
 
 以下是我平時偶然寫的中文詩詞，其他文字的翻譯就留給讀者來做吧。
 
+蘋果用戶可以從蘋果書店免費下載詩詞電子書：
+
+[<img src="/images/ibook_badge_hk_tw.svg" style="max-width:15%;min-width:40px;" alt="蘋果書店下載" />][AppleBookstoreLink]
+
+非蘋果用戶可以直接下載ePub電子書文件：
+
+[ePub格式電子書](/epubs/ImSucker.epub)
+
+（詩詞按時間順序）
+
 **《醉深山》**
 
 紅翠山中松柏長  
@@ -17,8 +27,8 @@ Here is a collection of the poems I’ve composed over last few years, they foll
 月下獨酌杯尚香  
 寂寂鶯啼孤山路  
 寥寥春色秋娘妒  
-盛夏難得雨打篷  
-幽谷常有花伴露  
+酷暑難得潤土雨  
+嚴冬多有蒼天樹  
 
 _- 27/12/2019_
 
@@ -815,3 +825,4 @@ _- 13/05/2013_
 
 _- 28/04/2013_
 
+[AppleBookstoreLink]: https://books.apple.com/book/%E9%A8%B7%E5%AE%A2%E9%9B%86/id1491907575

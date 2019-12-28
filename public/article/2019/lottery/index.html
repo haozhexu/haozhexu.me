@@ -40,22 +40,15 @@
 </div>
 
 <main>
-
-
 <h1 id="a-concise-method-of-lottery-prediction">A Concise Method of Lottery Prediction</h1>
-
 <blockquote>
-<p>Q: The balls are randomly picked, how could you predict?<br />
-A: If so, why don&rsquo;t people usually buy number combinations like 1, 2, 3, 4, 5, 6?<br />
+<p>Q: The balls are randomly picked, how could you predict?<br>
+A: If so, why don't people usually buy number combinations like 1, 2, 3, 4, 5, 6?<br>
 Q: That does not look random at all!</p>
 </blockquote>
-
-<p>In fact, the chance that the next lottery winning numbers are 1, 2, 3, 4, 5, 6, is exactly the same as every other combination of numbers, but still, people wouldn&rsquo;t usually buy number combinations which <em>look like following certain pattern</em>, and this is precisely how the algorithm works for prediting future winning numbers.</p>
-
+<p>In fact, the chance that the next lottery winning numbers are 1, 2, 3, 4, 5, 6, is exactly the same as every other combination of numbers, but still, people wouldn't usually buy number combinations which <em>look like following certain pattern</em>, and this is precisely how the algorithm works for prediting future winning numbers.</p>
 <p>In the world of computing, we often hear the term &ldquo;random number&rdquo;, surprisingly, it is extremely difficult to make a real random number generator, they are all deterministic in certain ways. There are alternative methods for generating random numbers, for example, Random.org claims to &ldquo;offer true random numbers&rdquo;, whose randomness &ldquo;comes from atmospheric noise&rdquo;. However, in the context of lottery winning numbers, sampling history winning numbers, we could see certain implicit rules, patterns, or <strong>trends</strong>, that loosely drive winning numbers in the future.</p>
-
-<p>So, let&rsquo;s answer the simple question, why doesn&rsquo;t 1, 2, 3, 4, 5, 6 look random, despite its equal chance of being next winning numbers as any other number combination? To answer this question in a technically sound way, let&rsquo;s look at the history of PowerBall winning numbers.</p>
-
+<p>So, let's answer the simple question, why doesn't 1, 2, 3, 4, 5, 6 look random, despite its equal chance of being next winning numbers as any other number combination? To answer this question in a technically sound way, let's look at the history of PowerBall winning numbers.</p>
 <pre><code>10, 11, 20, 27, 28, 30, 31,  2
  2,  4, 14, 16, 19, 27, 29, 13
  8,  9, 11, 20, 22, 27, 32, 20
@@ -66,28 +59,21 @@ Q: That does not look random at all!</p>
  1,  3,  9, 11, 22, 23, 24,  4
  1,  6, 11, 13, 16, 23, 27, 11
  6,  7,  8, 21, 27, 28, 34, 16
-</code></pre>
-
-<p>For the sake of this artical, above are only recent 10 draws of Australian Powerball winning numbers, ideally we should sample as many draws as possible. To figure out the implicit pattern, we need to introduce several ways of <em>analytical quantification</em> for each winning draw:</p>
-
+</code></pre><p>For the sake of this artical, above are only recent 10 draws of Australian Powerball winning numbers, ideally we should sample as many draws as possible. To figure out the implicit pattern, we need to introduce several ways of <em>analytical quantification</em> for each winning draw:</p>
 <ul>
 <li>Sequential Pairs (SP): denotes how many pairs of sequential numbers are there in a particular draw, e.g. the draw (10, 11, 20, 27, 28, 30, 31) has an SP of 3, being (10, 11), (27, 28) and (30, 31).</li>
 <li>Odd Even Ratio (OE): denotes the ratio of odd and even numbers in a draw, e.g. the draw (10, 11, 20, 27, 28, 30, 31) has an OE of 3:4, there are 3 odd numbers and 4 even numbers.</li>
-<li>Big Small Ratio (BS): denotes the ratio of numbers that belong to upper half and lower half, within the possible number range. e.g. PowerBall has a range of 1 to 35 for its main matrix, so let&rsquo;s say Small range is 1-17 and Big range is 18-35, thus the draw (10, 11, 20, 27, 28, 30, 31) has a BS of 5:2</li>
+<li>Big Small Ratio (BS): denotes the ratio of numbers that belong to upper half and lower half, within the possible number range. e.g. PowerBall has a range of 1 to 35 for its main matrix, so let's say Small range is 1-17 and Big range is 18-35, thus the draw (10, 11, 20, 27, 28, 30, 31) has a BS of 5:2</li>
 <li>Three Partition Ratio (3P): dividing the range of possible numbers into three partitions, for PowerBall, they are 1-12, 13-24 and 25-35, 3P denotes the number of balls that belong to each partition. For the draw (10, 11, 20, 27, 28, 30, 31), its 3P is 214.</li>
 <li>Head Tail Distance (HTD): the distance between the smallest number and the largest number in a single draw, for the draw (10, 11, 20, 27, 28, 30, 31), its HTD is 21.</li>
-
-<li><p>Arithmetic Complexity (AC): the complexity of a draw, it&rsquo;s calculated in such a way:</p>
-
+<li>Arithmetic Complexity (AC): the complexity of a draw, it's calculated in such a way:</li>
+</ul>
 <ol>
 <li>Calculate the absolute difference between every two numbers in a draw.</li>
 <li>Eliminate the same numbers from result of 1, let D be the remaining number of differences.</li>
 <li>AC = D - (r - 1), r is the number of numbers in a draw</li>
-</ol></li>
-</ul>
-
+</ol>
 <p>For example, every two numbers in the draw (10, 11, 20, 27, 28, 30, 31) has absolute differences below:</p>
-
 <pre><code>abs(10 - 11) = 1
 abs(10 - 20) = 10
 abs(10 - 27) = 17
@@ -109,35 +95,25 @@ abs(27 - 31) = 4
 abs(28 - 30) = 2
 abs(28 - 31) = 3 *
 abs(30 - 31) = 1 *
-</code></pre>
-
-<p>By calculating the differences between every two numbers in the draw, we got 21 results in total, then we eliminate duplicate results, and end up with 15 distinct numbers, so D = 15; Since there are 7 numbers in a draw, AC = D - (7 - 1) = 15 - 6 = 9.</p>
-
+</code></pre><p>By calculating the differences between every two numbers in the draw, we got 21 results in total, then we eliminate duplicate results, and end up with 15 distinct numbers, so D = 15; Since there are 7 numbers in a draw, AC = D - (7 - 1) = 15 - 6 = 9.</p>
 <p>Apart from the methods above, there are lots of ways to analyse lottery winning numbers. The point is, by turning history winning numbers into several analytical figures, we could apply certain levels of <strong>logical inductions</strong>, for example:</p>
-
 <p>(with a large sample of history winning numbers)</p>
-
 <ul>
 <li>the maximum SP a draw ever had in history is 3.</li>
-<li>there isn&rsquo;t any draw in history that has two 0 components in 3P.</li>
+<li>there isn't any draw in history that has two 0 components in 3P.</li>
 <li>the minimum HTD in history is 16.</li>
 <li>the history has an AC within certain range.</li>
 <li>the same BS or OE has repeated in at most 3 consecutive draws in history.</li>
 </ul>
-
-<p>Now let&rsquo;s look at the numbers (1, 2, 3, 4, 5, 6, 7), it has:</p>
-
+<p>Now let's look at the numbers (1, 2, 3, 4, 5, 6, 7), it has:</p>
 <ul>
 <li>3P, 3 Partition Ratio: 100, meaning all numbers of this draw fall into the first partition.</li>
 <li>BS, Big Small Ratio: 0:7, meaning all numbers of this draw falls into Small range.</li>
 <li>HTD, Head Tail Distance: 6</li>
 </ul>
-
 <p>Now, (1, 2, 3, 4, 5, 6, 7) does look <strong>evidently</strong> not random, it is too far away from the implicit patterns of history winning draws, just like someone picked it by hand!</p>
-
 <p>And using the rule of <strong>logical induction</strong>, we could potentially filter out number combinations that are <em>unlikely to be the next winning draw</em>. For example, if the previous three winning draws all have Odd Even Ratio (OE) of 2:5, given that &ldquo;the same BS or OE has repeated in at most 3 consecutive draws in history&rdquo;, we could say that the next draw is less likely to maintain the same OE. After applying each induction rule, we could effectively eliminate a large number of combinations which do not follow history trend.</p>
-
-<p>Unfortunately, even after elimination of less likely numbers, permutating the remaining numbers can still get you a long list of draws, the cost of buying all the draws is usually higher than the 1st prize. In this case, we could apply something call Rotation Matrix, to further filter out numbers that are less likely to be winning number. I&rsquo;ll talk about this when I have time in the future.</p>
+<p>Unfortunately, even after elimination of less likely numbers, permutating the remaining numbers can still get you a long list of draws, the cost of buying all the draws is usually higher than the 1st prize. In this case, we could apply something call Rotation Matrix, to further filter out numbers that are less likely to be winning number. I'll talk about this when I have time in the future.</p>
 
 </main>
 
@@ -178,7 +154,7 @@ s.setAttribute('data-timestamp', +new Date());
 
 
 <hr/>
-&copy; <a href="https://www.haozhexu.me">Haozhe XU</a> 2017
+© <a href="https://www.haozhexu.me">Haozhe XU</a> 2017
 
 </footer>
 </body>

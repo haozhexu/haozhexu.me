@@ -128,17 +128,22 @@ The full system is way more complex than the four points above, I won't go into 
 
 ## A Possible Cure
 
-Let's start by first examing some of the well-known diseases in history, from the perspective of all we discussed before.
+Let's start by first examing some of the well-known diseases in human history, from the perspective of all we discussed before.
 
-(CI: Climatic Influence)
+__Georgian Calendar__
 
 | Disease | Start | End |
 | ------- | ----- | --- | 
 | SARS    | Late 2002 | Mid 2003 |
 
+__Sexagenary__
+
 | Desease | Start | End | Start Element | Climatic Influence |
 | ------- | ----- | --- | ------------- | ------------------ |
 | SARS |  I7 (壬午) | J8 (癸未) |  WATER  | (heavy) Moisture, Earth  |
+| 
+
+
 
 According to the Fact Sheet from Centers of Disease Control and Prevention of US, "SARS was first reported in Asia in February 2003", its symptoms include high fever, headache, body aches and an overall feeling of discomfort. Converting 2003 Georgian to Sexagenary Cycle we get J8 (癸未年), whose element is Water, and 
 

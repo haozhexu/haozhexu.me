@@ -101,6 +101,79 @@ Track file:
 
 It's a multipurpose command for tracking new files, staging files and other things like marking merge-conflicted files as resolved. If a file is modified after `git add`, it has to be added again to stage the latest version of the file.
 
+### Ignoring Files
 
+Ignore all files with suffix `.o` or `.a`, all files that end with a tilde:
 
+```
+cat .gitignore
+*.[oa]
+*~
+!lib.a  # do track lib.a, even though it's ignored before
+build/  # everything inside build directory are ignored
+```
+
+- blank lines or lines starting with # are ignored
+- standard glob patterns work
+- you can end patterns with a forward slash / to specify a dictionary
+- you can negate a pattern by starting it with an exclamation point (!)
+
+Glob pattern:
+
+- asterisk (*) matches zero or more characters
+- `[]` matches any character inside the brackets
+- questio mark (?) matches a single character
+- brackets enclosing characters separated by a hyphen (e.g. `[0-9]`) matches any character between them
+
+### Viewing Exact Changes
+
+`git diff` compares what is in working directory with what is in staging area, showing the changes that haven't been staged yet. If all changes are staged, `git diff` shows no output.
+
+`git diff --cached` or `git diff --staged` (for Git 1.6.1 or later) compares staged changes to last commit.
+
+### Committing Changes
+
+To commit staged changes:
+
+`git commit`
+
+This would launch pre-specified editor. To type commit message inline:
+
+`git commit -m "message"`
+
+To stage every file that is already tracked without `git add`:
+
+`git commit -a`
+
+### Remove Files
+
+To remove a file from Git, remove it from tracked files (staging area) and then commit. Removing the file (ie. `rm file`) would show up as "Changed but not updated", then `git rm file` makes it "Changes to be committed".
+
+If a file has been modified and added to the index (ie. staged), Git need a force removal (-f) to remove the file, this is a feature to prevent accidental removal of data.
+
+To keep the file in working tree but remove it from staging area:
+
+`git rm --cached file`
+
+It supports files, directories and file-glob patterns.
+
+e.g. remove all .log files in log directory:
+
+`git rm log/\*.log`
+(the backslash is necessary because Git does its own filename expansion in addition to shell's filename expansion)
+
+### Moving Files
+
+Git doesn't track file movments, if a file is renamed, no metadata is stored for this fact but Git is smart enough to figure out.
+
+Git has a `mv` command:
+
+`git mv from_file to_file`
+
+Git treats this as a rename, and this is equivalent to:
+
+```
+mv from_file to_file
+git add to_file
+```
 

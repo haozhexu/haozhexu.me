@@ -277,6 +277,225 @@ Remote repositories are versions of projects that are hosted on remote network.
 
 ### Add Remote Repositories
 
-- `git remote add shortname url`
-- fetch all from a specific remote: `git fetch shortname`
+`git remote add shortname url`
 
+### Fetching and Pulling
+
+`git fetch shortname`
+
+- fetch command pulls the data to local repository
+- fetch doesn't automatically merge anything with current work
+
+`git pull`
+
+- fetch and merge a remote branch into local branch
+- pre-requisite: local brach set up to track a remote branch
+- by default, `git clone` automatically sets up local master to track remote master
+
+### Pushing to Remotes
+
+`git push [remote-name] [branch-name]`
+
+e.g.
+
+`git push origin master`
+
+- only works if cloned from a server to which you have write access and nobody has pushed at the same time
+- push is rejected if someone else pushed upstream
+- you have to pull down their work first in incorporate it into your work
+
+### Inspecting a Remote
+
+`git remote show origin`
+
+```
+* remote origin
+  URL: git://github.com/account/repo.git
+  Remote branch merged with 'git pull' while on branch master
+    master
+  Tracked remote branches
+    master
+    test
+```
+
+More complex example:
+
+```
+$ git remote show origin
+* remote origin
+  URL: git@github.com:account/repo.git
+  Remote branch merged with 'git pull' while on branch issues
+    issues
+  Remote branch merged with 'git pull' while on branch master
+    master
+  New remote branches (next fetch will store in remote/origin)
+    caching
+  Stale tracking branches (use 'git remote prune')
+    legacy
+  Tracked remote branches
+    apiv2
+    master
+  Local branch pushed with 'git push'
+    master:master
+```
+
+Above information shows:
+- which branch is pushed when you run git push on certain branches
+- which remote branches on the server you don't yet have
+- which remote branches you have that have been removed from the server
+- multiple branches that are automatically merged when you run git pull
+
+### Removing and Renaming Remotes
+
+`git remote rename old_name new_name`
+
+- this would change remote branch names as well, e.g. `old_name/master` becomes `new_name/master`
+
+`git remote rm name`
+
+- remote a reference
+
+## Tagging
+
+- git has the ability to tag specific points in history
+- this is often used to mark release points (e.g. v1.0)
+
+### Listing Tags
+
+`git tag`
+
+- list tags in alphabetical order
+
+You can also search tags:
+
+`git tag -l v1.2.*`
+
+### Createing Tags
+
+- lightweight: like a branch that doesn't change, a pointer to a specific commit
+- annotated: stored as full objects in Git database, check-summed, contains tagger name, e-mail and date, have a tagging message and can be signed and verified with GNU Privacy Guard (GPG)
+
+#### Annotated Tags
+
+`git tag -a v1.1 -m "release version 1.1"
+
+```
+git show v1.1
+tag v1.1
+Tagger: Full Name <someone@test.com>
+Date: xxx
+release version 1.1
+commit <commit hash>
+Merge: merge hashes
+Author: Developer Name <developer@test.com>
+Date: <date>
+
+  Merge branch 'test'
+```
+
+#### Signed Tags
+
+```
+git tag -s v1.2 -m "signed release 1.2 tag"
+You need a passphrase to unlock the secret key for user: "User Name <username@test.com>"
+1024-bit DSA key, ID F12C123, created 2020-02-01
+```
+
+```
+git show v1.2
+tag v1.2
+Tagger: User Name <username@test.com>
+Date: <Date>
+
+signed release 1.2 tag
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.8 (Darwin)
+
+<long signature here>
+-----END PGP SIGNATURE---
+commit <commit hash>
+Merge <commit hashes>
+Author: Developer Name <developer@test.com>
+Date: <Date>
+
+  Merge branch 'test'
+```
+
+#### Lightweight Tags
+
+Lightweight tags are basically commit checksums stored in a file without other information.
+
+```
+git tag v2.0
+git tag
+v2.0
+```
+
+```
+git show v2.0
+commit <commit hash>
+Merge: <commit hashes>
+Author: Developer Name <developer@test.com>
+Date: <date>
+
+  Merge branch 'test'
+```
+
+#### Verifying Tags
+
+Use GPG to verify the signature:
+
+`git tag -v [tag-name]`
+
+#### Tagging Commits in the Past
+
+`git tag -a v2.1 <commit hash>`
+
+#### Sharing Tags
+
+- `git push` by default doesn't transfer tags to remote servers
+- have to explicitly push tags after creating them
+- the process is like sharing remote branches
+
+`git push origin v2.1`
+
+To push all tags:
+
+`it push origin --tags`
+
+### Tips and Tricks
+
+#### Auto-Completion
+
+Git comes with auto-completion script in its source `contrib/completion` directory, copy it to home directory and add below to `.bashrc` file:
+
+`source ~/.git-completion.bash`
+
+To set up auto-completion for all users, copy the script to `/opt/local/etc/bash_completion` on Mac or `/etc/bash_completion.d/` on Linux.
+
+#### Git Aliases
+
+Set up alias for commands using git config, for example:
+
+```
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
+```
+(instead of `git commit`, you can use `git ci`, etc)
+
+`git config --global alias.unstage 'reset HEAD --'`
+
+is equivalent to:
+
+```
+git unstage fileA
+git reset HEAD fileA
+```
+
+`git config --global alias.last 'log -1 HEAD'`
+
+this makes it easy to see last commit:
+
+`git last`

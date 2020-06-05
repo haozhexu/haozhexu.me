@@ -174,6 +174,109 @@ Git treats this as a rename, and this is equivalent to:
 
 ```
 mv from_file to_file
+git rm from_file
 git add to_file
 ```
+
+### Viewing the Commit History
+
+```
+git log
+```
+
+- by default without arguments, `git log` lists the commits in reverse chronological order
+
+```
+git log -p -2
+```
+
+- displays the same information but with a diff following each entry
+- limit result to 2 entries
+
+```
+git log --stat
+```
+
+- prints a list of modified files below each entry
+- how many files were changed and how many lines in those files were added and/or removed
+
+```
+git log --pretty=oneline
+```
+
+- specifies output format with a few prebuilt options available to use
+- `oneline` prints each commit on a single line
+- `format` lets you specify your own format, usually used for generating output for machine parsing
+- above options are useful with `--graph` for ASCII graph history
+
+__author__ vs __committer__
+
+- _author_ is the person who originally wrote the work
+- _committer_ is the person who last applied the work
+
+#### Limiting Log Output
+
+- `--since` lets you specify specific or relative date
+- `--author` allows you filter on specific author
+- `--grep` lets you search for keywords in the commit message
+- path can be passed to `git log`, limiting log output to commits introduced changes to those files
+- `--no-merges` exclude merge commits
+
+e.g.
+
+```
+git log --pretty="%h:%s" --author=someone --since="2020-01-01" --before="2020-04-01" --no-merges -- sources/
+```
+
+### Undoing Things
+
+```
+git commit --amend
+```
+
+- `--amend` takes staging area and use it for the commit
+- without change since last commit, the snapshot will look the same and only change commit message
+- commit message editor pops up with existing message, edit the message to overwrite previous commit
+
+#### Forgot Changes
+
+```
+git commit -m "my commit"
+git add forgotten.txt
+git commit --amend
+```
+
+- the second command replaces the results of the first with a single commit
+
+#### Unstage a Staged File
+
+```
+git reset HEAD staged_file
+```
+
+or:
+
+```
+git restore --staged file
+```
+
+#### Reset a Modified File
+
+```
+git checkout -- modified_file
+```
+
+## Working with Remote
+
+Remote repositories are versions of projects that are hosted on remote network.
+
+### Show Remote
+
+- `git remote`. `origin` is the default name Git gives to the server
+- show remote with URL: `git remote -v`
+
+### Add Remote Repositories
+
+- `git remote add shortname url`
+- fetch all from a specific remote: `git fetch shortname`
 

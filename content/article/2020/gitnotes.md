@@ -499,3 +499,118 @@ git reset HEAD fileA
 this makes it easy to see last commit:
 
 `git last`
+
+## Git Branching
+
+Branching is when you diverge from the main development line and continue to work without touching the main line.
+
+- Git stores a commit object that contains a pointer to the snapshot of staged content
+- also includes author and message, zero or more pointers to the commit or direct parent commits
+- first commit has no parent
+- normal commit has one parent
+- a merge commit of two or more branches has multiple parents
+
+- a branch in Git is a lightweight movable pointer to one of these commits
+- the default branch name in Git is master
+- every time you commit, master moves forward automatically pointing to the last commit made
+- Git knows the **current branch** by keeping a special pointer called HEAD
+- a branch in Git is a simple file that contains the 40-characters SHA-1 checksum of the commit it points to
+
+Single Commit Diagram
+
+```
+C1 (tree, author, committer, messsage, etc)
+|
++- tree (blob -> file/size)
+    |
+    +- blob1 (file content)
+    +- blob2 (file content)
+    +- blob3 (file content)
+```
+
+Multiple Commits Diagram
+
+```
+master
+|
+C3 -> C2 -> C1
+|
+testing
+|
+HEAD
+```
+
+After commiting in `testing` branch:
+
+```
+       master
+       |
+C4 ->  C3 -> C2 -> C1
+|
+testing
+|
+HEAD
+```
+
+After checking out `master`:
+
+```
+       HEAD
+       |
+       master
+       |
+C4 ->  C3 -> C2 -> C1
+|
+testing
+```
+
+After adding commit to `master`:
+
+```
+HEAD
+|
+master
+|
+C5
+  \
+   C3 -> C2 -> C1
+  /
+C4  
+|
+testing
+```
+
+### Basic Branching and Merging
+
+#### Create Branch
+
+```
+git checkout -b feature
+```
+
+is the same as:
+
+```
+git branch feature
+git checkout feature
+```
+
+- Git doesn't let you switch branch without a clean working state
+
+Switching to `master` branch and merge `feature` branch in:
+
+```
+git checkout master
+git merge feature
+Updating <hash>..<hash>
+Fast forward
+ file | 1 -
+ X file changed, Y insertions(+), Z deletions(-)
+```
+
+- _Fast forward_ means the commit pointed to by `feature` is directly upstream of `master`
+- Git simplifies things by moving the pointer forward when merging commit A with commit B where B can be reached by following A's history
+
+To delete branch:
+
+`git branch -d feature`

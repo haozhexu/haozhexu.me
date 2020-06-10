@@ -1,7 +1,7 @@
 ---
 title: "Git Notes"
 date: 2020-05-08T11:36:00+11:00
-draft: true
+draft: false
 ads: true
 categories:
   - Article
@@ -20,11 +20,13 @@ Data in Git is like a set of snapshots of a mini filesystem, every _commit_ is a
 ## Three States
 
 Git has three main states for files:
+
 - committed: data is stored in local database
 - modified: data has been changed but not yet committed to database
 - staged: modified file in current version has been marked to go into next commit snapshot
 
 Above states are reflected as three main sections of a Git project
+
 - the Git directory: where Git stores the metadata and object database, clone a repository copies this
 - the working directory: single checkout of one version of the project
 - the staging area: a file that stores information about what goes into next commit
@@ -41,7 +43,7 @@ Configuration at each level overrides values in the previous level.
 
 Setting username and e-mail address:
 
-```
+```bash
 git config --global user.name "Name"
 git config --global user.email "test@email.com"
 ```
@@ -72,7 +74,7 @@ Track existing project in Git:
 
 Adding files to version control:
 
-```
+```bash
 git add *.swift
 git add README.md
 git commit -m "Initial commit"
@@ -105,7 +107,7 @@ It's a multipurpose command for tracking new files, staging files and other thin
 
 Ignore all files with suffix `.o` or `.a`, all files that end with a tilde:
 
-```
+```bash
 cat .gitignore
 *.[oa]
 *~
@@ -180,29 +182,21 @@ git add to_file
 
 ### Viewing the Commit History
 
-```
-git log
-```
+`git log`
 
 - by default without arguments, `git log` lists the commits in reverse chronological order
 
-```
-git log -p -2
-```
+`git log -p -2`
 
 - displays the same information but with a diff following each entry
 - limit result to 2 entries
 
-```
-git log --stat
-```
+`git log --stat`
 
 - prints a list of modified files below each entry
 - how many files were changed and how many lines in those files were added and/or removed
 
-```
-git log --pretty=oneline
-```
+`git log --pretty=oneline`
 
 - specifies output format with a few prebuilt options available to use
 - `oneline` prints each commit on a single line
@@ -230,9 +224,7 @@ git log --pretty="%h:%s" --author=someone --since="2020-01-01" --before="2020-04
 
 ### Undoing Things
 
-```
-git commit --amend
-```
+`git commit --amend`
 
 - `--amend` takes staging area and use it for the commit
 - without change since last commit, the snapshot will look the same and only change commit message
@@ -240,7 +232,7 @@ git commit --amend
 
 #### Forgot Changes
 
-```
+```bash
 git commit -m "my commit"
 git add forgotten.txt
 git commit --amend
@@ -250,21 +242,15 @@ git commit --amend
 
 #### Unstage a Staged File
 
-```
-git reset HEAD staged_file
-```
+`git reset HEAD staged_file`
 
 or:
 
-```
-git restore --staged file
-```
+`git restore --staged file`
 
 #### Reset a Modified File
 
-```
-git checkout -- modified_file
-```
+`git checkout -- modified_file`
 
 ## Working with Remote
 
@@ -308,7 +294,7 @@ e.g.
 
 `git remote show origin`
 
-```
+```bash
 * remote origin
   URL: git://github.com/account/repo.git
   Remote branch merged with 'git pull' while on branch master
@@ -320,7 +306,7 @@ e.g.
 
 More complex example:
 
-```
+```bash
 $ git remote show origin
 * remote origin
   URL: git@github.com:account/repo.git
@@ -340,6 +326,7 @@ $ git remote show origin
 ```
 
 Above information shows:
+
 - which branch is pushed when you run git push on certain branches
 - which remote branches on the server you don't yet have
 - which remote branches you have that have been removed from the server
@@ -379,7 +366,7 @@ You can also search tags:
 
 `git tag -a v1.1 -m "release version 1.1"
 
-```
+```bash
 git show v1.1
 tag v1.1
 Tagger: Full Name <someone@test.com>
@@ -395,13 +382,13 @@ Date: <date>
 
 #### Signed Tags
 
-```
+```bash
 git tag -s v1.2 -m "signed release 1.2 tag"
 You need a passphrase to unlock the secret key for user: "User Name <username@test.com>"
 1024-bit DSA key, ID F12C123, created 2020-02-01
 ```
 
-```
+```bash
 git show v1.2
 tag v1.2
 Tagger: User Name <username@test.com>
@@ -425,13 +412,13 @@ Date: <Date>
 
 Lightweight tags are basically commit checksums stored in a file without other information.
 
-```
+```bash
 git tag v2.0
 git tag
 v2.0
 ```
 
-```
+```bash
 git show v2.0
 commit <commit hash>
 Merge: <commit hashes>
@@ -477,19 +464,20 @@ To set up auto-completion for all users, copy the script to `/opt/local/etc/bash
 
 Set up alias for commands using git config, for example:
 
-```
+```bash
 git config --global alias.co checkout
 git config --global alias.br branch
 git config --global alias.ci commit
 git config --global alias.st status
 ```
+
 (instead of `git commit`, you can use `git ci`, etc)
 
 `git config --global alias.unstage 'reset HEAD --'`
 
 is equivalent to:
 
-```
+```bash
 git unstage fileA
 git reset HEAD fileA
 ```
@@ -518,7 +506,7 @@ Branching is when you diverge from the main development line and continue to wor
 
 Single Commit Diagram
 
-```
+```bash
 C1 (tree, author, committer, messsage, etc)
 |
 +- tree (blob -> file/size)
@@ -530,7 +518,7 @@ C1 (tree, author, committer, messsage, etc)
 
 Multiple Commits Diagram
 
-```
+```bash
 master
 |
 C3 -> C2 -> C1
@@ -542,7 +530,7 @@ HEAD
 
 After commiting in `testing` branch:
 
-```
+```bash
        master
        |
 C4 ->  C3 -> C2 -> C1
@@ -554,7 +542,7 @@ HEAD
 
 After checking out `master`:
 
-```
+```bash
        HEAD
        |
        master
@@ -566,7 +554,7 @@ testing
 
 After adding commit to `master`:
 
-```
+```bash
 HEAD
 |
 master
@@ -584,13 +572,11 @@ testing
 
 #### Create Branch
 
-```
-git checkout -b feature
-```
+`git checkout -b feature`
 
 is the same as:
 
-```
+```bash
 git branch feature
 git checkout feature
 ```
@@ -599,7 +585,7 @@ git checkout feature
 
 Switching to `master` branch and merge `feature` branch in:
 
-```
+```bash
 git checkout master
 git merge feature
 Updating <hash>..<hash>
@@ -614,3 +600,104 @@ Fast forward
 To delete branch:
 
 `git branch -d feature`
+
+When development history has diverged from some older point:
+
+```bash
+feature
+       \
+       C5 -> C3
+               \
+                C2 -> C1 -> C0
+               /
+   master -> C4
+```
+
+```bash
+git checkout master
+git merge feature
+```
+
+- When the commit you are on isn't a direct ancestor of the branch you're merging into, Git does a simple three way merge
+- It uses the two snapshots pointed to by the branch tips and their common ancestor
+- Instead of moving branch pointer forward, Git creates a new snapshots as a result of three-way merge and a new commit pointing to the snapshot
+- Such commit is called _merge commit_
+- Git determines the best common ancestor to use for its merge base
+
+```bash
+feature
+       \
+       C5 -> C3
+               \
+                C2 -> C1 -> C0
+               /
+   master -> C4
+
+Snapshot to merge into: master (C4)
+Snapshot to merge in: feature (C5)
+
+    feature
+           \
+          C5 -> C3
+          / \     \
+           |       C2 -> C1 -> C0
+           |       /
+master --- C6 -> C4
+```
+
+- If the same file has changes in two branches, Git sometimes cannot merge them automatically
+- Git doesn't create a merge commit in this case, it only pauses the process
+- Check which files are unmerged using `git status`
+
+```bash
+git merge feature
+Auto-merging file.txt
+CONFLICT (content): Merge conflict in file.txt
+Automerge failed; fix conflicts and then commit the result.
+```
+
+Git adds standard conflict-resolution markers to the files that have conflicts:
+
+```bash
+<<<<<<< HEAD:file.txt
+Support email: support@test.com
+=======
+Support email: support@support.com
+>>>>>>> feature:file.txt
+```
+
+- the version in `HEAD` (ie. `master`) is the top part above =======
+- the version in `feature` is the bottom part
+- after resolving the conflicts, run `git add` on each file to mark it as resolved
+- run `git mergetool` for graphical merge tool
+
+#### Branch Management
+
+See a simple list of current branches:
+
+```bash
+$ git branch
+  feature
+* master
+```
+
+- the branch with a star * prefix indicates currently checked out
+
+See last commit on each branch:
+
+```bash
+$ git branch -v
+  feature <hash> message
+* master <hash> Merge branch 'feature'
+```
+
+See the list of merged branches:
+`git branch --merged`
+
+- branches listed by `--merged` without a * prefix are generally fine to delete with `git branch -d`
+
+See the list of branches that haven't been merged:
+`git branch --no-merged`
+
+- deleting unmerged branch would fail by `git branch -d`
+- you can force delete with `-D`

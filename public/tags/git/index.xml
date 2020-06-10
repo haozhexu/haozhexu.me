@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on Haozhe XU</title>
+    <link>https://www.haozhexu.me/tags/git/</link>
+    <description>Recent content in git on Haozhe XU</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 08 May 2020 11:36:00 +1100</lastBuildDate>
+    
+	<atom:link href="https://www.haozhexu.me/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git Notes</title>
+      <link>https://www.haozhexu.me/article/2020/gitnotes/</link>
+      <pubDate>Fri, 08 May 2020 11:36:00 +1100</pubDate>
+      
+      <guid>https://www.haozhexu.me/article/2020/gitnotes/</guid>
+      <description>Git Notes Data in Git is like a set of snapshots of a mini filesystem, every commit is a snapshot of all the files at the moment, with reference stored for that snapsthot; Files that have not changed aren&amp;rsquo;t stored - instead just a link to the previous identical file that has been stored already.
+ nearly every operation is local everything is check-summed (SHA-1) to ensure integrity most operations only add data to Git database  Three States Git has three main states for files:</description>
+    </item>
+    
+  </channel>
+</rss>

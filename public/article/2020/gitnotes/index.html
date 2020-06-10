@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Git Notes | Haozhe XU</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/apps/">Apps</a></li>
+      
+      <li><a href="/poems/">Poem / 诗词</a></li>
+      
+      <li><a href="/article">Article</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/cn/">简体中文</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Git Notes</span></h1>
+
+<h2 class="date">2020/05/08</h2>
+</div>
+
+<main>
+<h1 id="git-notes">Git Notes</h1>
+<p>Data in Git is like a set of snapshots of a mini filesystem, every <em>commit</em> is a snapshot of all the files at the moment, with reference stored for that snapsthot; Files that have not changed aren&rsquo;t stored - instead just a link to the previous identical file that has been stored already.</p>
+<ul>
+<li>nearly every operation is local</li>
+<li>everything is check-summed (SHA-1) to ensure integrity</li>
+<li>most operations only add data to Git database</li>
+</ul>
+<h2 id="three-states">Three States</h2>
+<p>Git has three main states for files:</p>
+<ul>
+<li>committed: data is stored in local database</li>
+<li>modified: data has been changed but not yet committed to database</li>
+<li>staged: modified file in current version has been marked to go into next commit snapshot</li>
+</ul>
+<p>Above states are reflected as three main sections of a Git project</p>
+<ul>
+<li>the Git directory: where Git stores the metadata and object database, clone a repository copies this</li>
+<li>the working directory: single checkout of one version of the project</li>
+<li>the staging area: a file that stores information about what goes into next commit</li>
+</ul>
+<h2 id="configuration">Configuration</h2>
+<p>Configuration at each level overrides values in the previous level.</p>
+<ul>
+<li><strong>/etc/gitconfig</strong>: contains settings for all users and all repositories, passing <code>--system</code> to git config to use this</li>
+<li><strong>~/.gitconfig</strong>: user specific configuration file, passing <code>--global</code> to use this</li>
+<li><strong>.git/config</strong>: configuration specific to a single repository</li>
+</ul>
+<h3 id="set-identity">Set Identity</h3>
+<p>Setting username and e-mail address:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global user.name <span style="color:#e6db74">&#34;Name&#34;</span>
+git config --global user.email <span style="color:#e6db74">&#34;test@email.com&#34;</span>
+</code></pre></div><h3 id="editor">Editor</h3>
+<p><code>git config --global core.editor vim</code></p>
+<h3 id="diff-tool">Diff Tool</h3>
+<p><code>git config --global merge.tool vimdiff</code></p>
+<h3 id="check-settings">Check Settings</h3>
+<p><code>git config --list</code></p>
+<p>Same keys in the config list may appear more than once because Git reads configurations from different files, the last value is used for each unique key.</p>
+<p>Check the value for a particular key:</p>
+<p><code>git config user.name</code></p>
+<h2 id="basics">Basics</h2>
+<p>Track existing project in Git:</p>
+<p><code>git init</code></p>
+<p>Adding files to version control:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git add *.swift
+git add README.md
+git commit -m <span style="color:#e6db74">&#34;Initial commit&#34;</span>
+</code></pre></div><p>Clone existing repository:</p>
+<p><code>git clone [REPO URL]</code></p>
+<p>Which clones the project into a direcotry with repository name by default, to clone to a different directory:</p>
+<p><code>git clone [REPO URL] [DIRECTORY]</code></p>
+<p>Each file in working directory can be:</p>
+<ul>
+<li><em>tracked</em>: files that were in the last snapshot, can be unmodified, modified or staged</li>
+<li><em>untracked</em>: files in working directory that weren&rsquo;t in last snapshot or staging area</li>
+</ul>
+<p>Checking status:</p>
+<p><code>git status</code></p>
+<p>Track file:</p>
+<p><code>git add file</code></p>
+<p>It&rsquo;s a multipurpose command for tracking new files, staging files and other things like marking merge-conflicted files as resolved. If a file is modified after <code>git add</code>, it has to be added again to stage the latest version of the file.</p>
+<h3 id="ignoring-files">Ignoring Files</h3>
+<p>Ignore all files with suffix <code>.o</code> or <code>.a</code>, all files that end with a tilde:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">cat .gitignore
+*.<span style="color:#f92672">[</span>oa<span style="color:#f92672">]</span>
+*~
+!lib.a  <span style="color:#75715e"># do track lib.a, even though it&#39;s ignored before</span>
+build/  <span style="color:#75715e"># everything inside build directory are ignored</span>
+</code></pre></div><ul>
+<li>blank lines or lines starting with # are ignored</li>
+<li>standard glob patterns work</li>
+<li>you can end patterns with a forward slash / to specify a dictionary</li>
+<li>you can negate a pattern by starting it with an exclamation point (!)</li>
+</ul>
+<p>Glob pattern:</p>
+<ul>
+<li>asterisk (*) matches zero or more characters</li>
+<li><code>[]</code> matches any character inside the brackets</li>
+<li>questio mark (?) matches a single character</li>
+<li>brackets enclosing characters separated by a hyphen (e.g. <code>[0-9]</code>) matches any character between them</li>
+</ul>
+<h3 id="viewing-exact-changes">Viewing Exact Changes</h3>
+<p><code>git diff</code> compares what is in working directory with what is in staging area, showing the changes that haven&rsquo;t been staged yet. If all changes are staged, <code>git diff</code> shows no output.</p>
+<p><code>git diff --cached</code> or <code>git diff --staged</code> (for Git 1.6.1 or later) compares staged changes to last commit.</p>
+<h3 id="committing-changes">Committing Changes</h3>
+<p>To commit staged changes:</p>
+<p><code>git commit</code></p>
+<p>This would launch pre-specified editor. To type commit message inline:</p>
+<p><code>git commit -m &quot;message&quot;</code></p>
+<p>To stage every file that is already tracked without <code>git add</code>:</p>
+<p><code>git commit -a</code></p>
+<h3 id="remove-files">Remove Files</h3>
+<p>To remove a file from Git, remove it from tracked files (staging area) and then commit. Removing the file (ie. <code>rm file</code>) would show up as &ldquo;Changed but not updated&rdquo;, then <code>git rm file</code> makes it &ldquo;Changes to be committed&rdquo;.</p>
+<p>If a file has been modified and added to the index (ie. staged), Git need a force removal (-f) to remove the file, this is a feature to prevent accidental removal of data.</p>
+<p>To keep the file in working tree but remove it from staging area:</p>
+<p><code>git rm --cached file</code></p>
+<p>It supports files, directories and file-glob patterns.</p>
+<p>e.g. remove all .log files in log directory:</p>
+<p><code>git rm log/\*.log</code>
+(the backslash is necessary because Git does its own filename expansion in addition to shell&rsquo;s filename expansion)</p>
+<h3 id="moving-files">Moving Files</h3>
+<p>Git doesn&rsquo;t track file movments, if a file is renamed, no metadata is stored for this fact but Git is smart enough to figure out.</p>
+<p>Git has a <code>mv</code> command:</p>
+<p><code>git mv from_file to_file</code></p>
+<p>Git treats this as a rename, and this is equivalent to:</p>
+<pre><code>mv from_file to_file
+git rm from_file
+git add to_file
+</code></pre><h3 id="viewing-the-commit-history">Viewing the Commit History</h3>
+<p><code>git log</code></p>
+<ul>
+<li>by default without arguments, <code>git log</code> lists the commits in reverse chronological order</li>
+</ul>
+<p><code>git log -p -2</code></p>
+<ul>
+<li>displays the same information but with a diff following each entry</li>
+<li>limit result to 2 entries</li>
+</ul>
+<p><code>git log --stat</code></p>
+<ul>
+<li>prints a list of modified files below each entry</li>
+<li>how many files were changed and how many lines in those files were added and/or removed</li>
+</ul>
+<p><code>git log --pretty=oneline</code></p>
+<ul>
+<li>specifies output format with a few prebuilt options available to use</li>
+<li><code>oneline</code> prints each commit on a single line</li>
+<li><code>format</code> lets you specify your own format, usually used for generating output for machine parsing</li>
+<li>above options are useful with <code>--graph</code> for ASCII graph history</li>
+</ul>
+<p><strong>author</strong> vs <strong>committer</strong></p>
+<ul>
+<li><em>author</em> is the person who originally wrote the work</li>
+<li><em>committer</em> is the person who last applied the work</li>
+</ul>
+<h4 id="limiting-log-output">Limiting Log Output</h4>
+<ul>
+<li><code>--since</code> lets you specify specific or relative date</li>
+<li><code>--author</code> allows you filter on specific author</li>
+<li><code>--grep</code> lets you search for keywords in the commit message</li>
+<li>path can be passed to <code>git log</code>, limiting log output to commits introduced changes to those files</li>
+<li><code>--no-merges</code> exclude merge commits</li>
+</ul>
+<p>e.g.</p>
+<pre><code>git log --pretty=&quot;%h:%s&quot; --author=someone --since=&quot;2020-01-01&quot; --before=&quot;2020-04-01&quot; --no-merges -- sources/
+</code></pre><h3 id="undoing-things">Undoing Things</h3>
+<p><code>git commit --amend</code></p>
+<ul>
+<li><code>--amend</code> takes staging area and use it for the commit</li>
+<li>without change since last commit, the snapshot will look the same and only change commit message</li>
+<li>commit message editor pops up with existing message, edit the message to overwrite previous commit</li>
+</ul>
+<h4 id="forgot-changes">Forgot Changes</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git commit -m <span style="color:#e6db74">&#34;my commit&#34;</span>
+git add forgotten.txt
+git commit --amend
+</code></pre></div><ul>
+<li>the second command replaces the results of the first with a single commit</li>
+</ul>
+<h4 id="unstage-a-staged-file">Unstage a Staged File</h4>
+<p><code>git reset HEAD staged_file</code></p>
+<p>or:</p>
+<p><code>git restore --staged file</code></p>
+<h4 id="reset-a-modified-file">Reset a Modified File</h4>
+<p><code>git checkout -- modified_file</code></p>
+<h2 id="working-with-remote">Working with Remote</h2>
+<p>Remote repositories are versions of projects that are hosted on remote network.</p>
+<h3 id="show-remote">Show Remote</h3>
+<ul>
+<li><code>git remote</code>. <code>origin</code> is the default name Git gives to the server</li>
+<li>show remote with URL: <code>git remote -v</code></li>
+</ul>
+<h3 id="add-remote-repositories">Add Remote Repositories</h3>
+<p><code>git remote add shortname url</code></p>
+<h3 id="fetching-and-pulling">Fetching and Pulling</h3>
+<p><code>git fetch shortname</code></p>
+<ul>
+<li>fetch command pulls the data to local repository</li>
+<li>fetch doesn&rsquo;t automatically merge anything with current work</li>
+</ul>
+<p><code>git pull</code></p>
+<ul>
+<li>fetch and merge a remote branch into local branch</li>
+<li>pre-requisite: local brach set up to track a remote branch</li>
+<li>by default, <code>git clone</code> automatically sets up local master to track remote master</li>
+</ul>
+<h3 id="pushing-to-remotes">Pushing to Remotes</h3>
+<p><code>git push [remote-name] [branch-name]</code></p>
+<p>e.g.</p>
+<p><code>git push origin master</code></p>
+<ul>
+<li>only works if cloned from a server to which you have write access and nobody has pushed at the same time</li>
+<li>push is rejected if someone else pushed upstream</li>
+<li>you have to pull down their work first in incorporate it into your work</li>
+</ul>
+<h3 id="inspecting-a-remote">Inspecting a Remote</h3>
+<p><code>git remote show origin</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">* remote origin
+  URL: git://github.com/account/repo.git
+  Remote branch merged with <span style="color:#e6db74">&#39;git pull&#39;</span> <span style="color:#66d9ef">while</span> on branch master
+    master
+  Tracked remote branches
+    master
+    test
+</code></pre></div><p>More complex example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git remote show origin
+* remote origin
+  URL: git@github.com:account/repo.git
+  Remote branch merged with <span style="color:#e6db74">&#39;git pull&#39;</span> <span style="color:#66d9ef">while</span> on branch issues
+    issues
+  Remote branch merged with <span style="color:#e6db74">&#39;git pull&#39;</span> <span style="color:#66d9ef">while</span> on branch master
+    master
+  New remote branches <span style="color:#f92672">(</span>next fetch will store in remote/origin<span style="color:#f92672">)</span>
+    caching
+  Stale tracking branches <span style="color:#f92672">(</span>use <span style="color:#e6db74">&#39;git remote prune&#39;</span><span style="color:#f92672">)</span>
+    legacy
+  Tracked remote branches
+    apiv2
+    master
+  Local branch pushed with <span style="color:#e6db74">&#39;git push&#39;</span>
+    master:master
+</code></pre></div><p>Above information shows:</p>
+<ul>
+<li>which branch is pushed when you run git push on certain branches</li>
+<li>which remote branches on the server you don&rsquo;t yet have</li>
+<li>which remote branches you have that have been removed from the server</li>
+<li>multiple branches that are automatically merged when you run git pull</li>
+</ul>
+<h3 id="removing-and-renaming-remotes">Removing and Renaming Remotes</h3>
+<p><code>git remote rename old_name new_name</code></p>
+<ul>
+<li>this would change remote branch names as well, e.g. <code>old_name/master</code> becomes <code>new_name/master</code></li>
+</ul>
+<p><code>git remote rm name</code></p>
+<ul>
+<li>remote a reference</li>
+</ul>
+<h2 id="tagging">Tagging</h2>
+<ul>
+<li>git has the ability to tag specific points in history</li>
+<li>this is often used to mark release points (e.g. v1.0)</li>
+</ul>
+<h3 id="listing-tags">Listing Tags</h3>
+<p><code>git tag</code></p>
+<ul>
+<li>list tags in alphabetical order</li>
+</ul>
+<p>You can also search tags:</p>
+<p><code>git tag -l v1.2.*</code></p>
+<h3 id="createing-tags">Createing Tags</h3>
+<ul>
+<li>lightweight: like a branch that doesn&rsquo;t change, a pointer to a specific commit</li>
+<li>annotated: stored as full objects in Git database, check-summed, contains tagger name, e-mail and date, have a tagging message and can be signed and verified with GNU Privacy Guard (GPG)</li>
+</ul>
+<h4 id="annotated-tags">Annotated Tags</h4>
+<p>`git tag -a v1.1 -m &ldquo;release version 1.1&rdquo;</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git show v1.1
+tag v1.1
+Tagger: Full Name &lt;someone@test.com&gt;
+Date: xxx
+release version 1.1
+commit &lt;commit hash&gt;
+Merge: merge hashes
+Author: Developer Name &lt;developer@test.com&gt;
+Date: &lt;date&gt;
+
+  Merge branch <span style="color:#e6db74">&#39;test&#39;</span>
+</code></pre></div><h4 id="signed-tags">Signed Tags</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git tag -s v1.2 -m <span style="color:#e6db74">&#34;signed release 1.2 tag&#34;</span>
+You need a passphrase to unlock the secret key <span style="color:#66d9ef">for</span> user: <span style="color:#e6db74">&#34;User Name &lt;username@test.com&gt;&#34;</span>
+1024-bit DSA key, ID F12C123, created 2020-02-01
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git show v1.2
+tag v1.2
+Tagger: User Name &lt;username@test.com&gt;
+Date: &lt;Date&gt;
+
+signed release 1.2 tag
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.8 <span style="color:#f92672">(</span>Darwin<span style="color:#f92672">)</span>
+
+&lt;long signature here&gt;
+-----END PGP SIGNATURE---
+commit &lt;commit hash&gt;
+Merge &lt;commit hashes&gt;
+Author: Developer Name &lt;developer@test.com&gt;
+Date: &lt;Date&gt;
+
+  Merge branch <span style="color:#e6db74">&#39;test&#39;</span>
+</code></pre></div><h4 id="lightweight-tags">Lightweight Tags</h4>
+<p>Lightweight tags are basically commit checksums stored in a file without other information.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git tag v2.0
+git tag
+v2.0
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git show v2.0
+commit &lt;commit hash&gt;
+Merge: &lt;commit hashes&gt;
+Author: Developer Name &lt;developer@test.com&gt;
+Date: &lt;date&gt;
+
+  Merge branch <span style="color:#e6db74">&#39;test&#39;</span>
+</code></pre></div><h4 id="verifying-tags">Verifying Tags</h4>
+<p>Use GPG to verify the signature:</p>
+<p><code>git tag -v [tag-name]</code></p>
+<h4 id="tagging-commits-in-the-past">Tagging Commits in the Past</h4>
+<p><code>git tag -a v2.1 &lt;commit hash&gt;</code></p>
+<h4 id="sharing-tags">Sharing Tags</h4>
+<ul>
+<li><code>git push</code> by default doesn&rsquo;t transfer tags to remote servers</li>
+<li>have to explicitly push tags after creating them</li>
+<li>the process is like sharing remote branches</li>
+</ul>
+<p><code>git push origin v2.1</code></p>
+<p>To push all tags:</p>
+<p><code>it push origin --tags</code></p>
+<h3 id="tips-and-tricks">Tips and Tricks</h3>
+<h4 id="auto-completion">Auto-Completion</h4>
+<p>Git comes with auto-completion script in its source <code>contrib/completion</code> directory, copy it to home directory and add below to <code>.bashrc</code> file:</p>
+<p><code>source ~/.git-completion.bash</code></p>
+<p>To set up auto-completion for all users, copy the script to <code>/opt/local/etc/bash_completion</code> on Mac or <code>/etc/bash_completion.d/</code> on Linux.</p>
+<h4 id="git-aliases">Git Aliases</h4>
+<p>Set up alias for commands using git config, for example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
+</code></pre></div><p>(instead of <code>git commit</code>, you can use <code>git ci</code>, etc)</p>
+<p><code>git config --global alias.unstage 'reset HEAD --'</code></p>
+<p>is equivalent to:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git unstage fileA
+git reset HEAD fileA
+</code></pre></div><p><code>git config --global alias.last 'log -1 HEAD'</code></p>
+<p>this makes it easy to see last commit:</p>
+<p><code>git last</code></p>
+<h2 id="git-branching">Git Branching</h2>
+<p>Branching is when you diverge from the main development line and continue to work without touching the main line.</p>
+<ul>
+<li>
+<p>Git stores a commit object that contains a pointer to the snapshot of staged content</p>
+</li>
+<li>
+<p>also includes author and message, zero or more pointers to the commit or direct parent commits</p>
+</li>
+<li>
+<p>first commit has no parent</p>
+</li>
+<li>
+<p>normal commit has one parent</p>
+</li>
+<li>
+<p>a merge commit of two or more branches has multiple parents</p>
+</li>
+<li>
+<p>a branch in Git is a lightweight movable pointer to one of these commits</p>
+</li>
+<li>
+<p>the default branch name in Git is master</p>
+</li>
+<li>
+<p>every time you commit, master moves forward automatically pointing to the last commit made</p>
+</li>
+<li>
+<p>Git knows the <strong>current branch</strong> by keeping a special pointer called HEAD</p>
+</li>
+<li>
+<p>a branch in Git is a simple file that contains the 40-characters SHA-1 checksum of the commit it points to</p>
+</li>
+</ul>
+<p>Single Commit Diagram</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">C1 <span style="color:#f92672">(</span>tree, author, committer, messsage, etc<span style="color:#f92672">)</span>
+|
++- tree <span style="color:#f92672">(</span>blob -&gt; file/size<span style="color:#f92672">)</span>
+    |
+    +- blob1 <span style="color:#f92672">(</span>file content<span style="color:#f92672">)</span>
+    +- blob2 <span style="color:#f92672">(</span>file content<span style="color:#f92672">)</span>
+    +- blob3 <span style="color:#f92672">(</span>file content<span style="color:#f92672">)</span>
+</code></pre></div><p>Multiple Commits Diagram</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">master
+|
+C3 -&gt; C2 -&gt; C1
+|
+testing
+|
+HEAD
+</code></pre></div><p>After commiting in <code>testing</code> branch:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">       master
+       |
+C4 -&gt;  C3 -&gt; C2 -&gt; C1
+|
+testing
+|
+HEAD
+</code></pre></div><p>After checking out <code>master</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">       HEAD
+       |
+       master
+       |
+C4 -&gt;  C3 -&gt; C2 -&gt; C1
+|
+testing
+</code></pre></div><p>After adding commit to <code>master</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">HEAD
+|
+master
+|
+C5
+  <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>   C3 -&gt; C2 -&gt; C1
+  /
+C4  
+|
+testing
+</code></pre></div><h3 id="basic-branching-and-merging">Basic Branching and Merging</h3>
+<h4 id="create-branch">Create Branch</h4>
+<p><code>git checkout -b feature</code></p>
+<p>is the same as:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git branch feature
+git checkout feature
+</code></pre></div><ul>
+<li>Git doesn&rsquo;t let you switch branch without a clean working state</li>
+</ul>
+<p>Switching to <code>master</code> branch and merge <code>feature</code> branch in:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout master
+git merge feature
+Updating &lt;hash&gt;..&lt;hash&gt;
+Fast forward
+ file | <span style="color:#ae81ff">1</span> -
+ X file changed, Y insertions<span style="color:#f92672">(</span>+<span style="color:#f92672">)</span>, Z deletions<span style="color:#f92672">(</span>-<span style="color:#f92672">)</span>
+</code></pre></div><ul>
+<li><em>Fast forward</em> means the commit pointed to by <code>feature</code> is directly upstream of <code>master</code></li>
+<li>Git simplifies things by moving the pointer forward when merging commit A with commit B where B can be reached by following A&rsquo;s history</li>
+</ul>
+<p>To delete branch:</p>
+<p><code>git branch -d feature</code></p>
+<p>When development history has diverged from some older point:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">feature
+       <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>       C5 -&gt; C3
+               <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                C2 -&gt; C1 -&gt; C0
+               /
+   master -&gt; C4
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git checkout master
+git merge feature
+</code></pre></div><ul>
+<li>When the commit you are on isn&rsquo;t a direct ancestor of the branch you&rsquo;re merging into, Git does a simple three way merge</li>
+<li>It uses the two snapshots pointed to by the branch tips and their common ancestor</li>
+<li>Instead of moving branch pointer forward, Git creates a new snapshots as a result of three-way merge and a new commit pointing to the snapshot</li>
+<li>Such commit is called <em>merge commit</em></li>
+<li>Git determines the best common ancestor to use for its merge base</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">feature
+       <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>       C5 -&gt; C3
+               <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>                C2 -&gt; C1 -&gt; C0
+               /
+   master -&gt; C4
+
+Snapshot to merge into: master <span style="color:#f92672">(</span>C4<span style="color:#f92672">)</span>
+Snapshot to merge in: feature <span style="color:#f92672">(</span>C5<span style="color:#f92672">)</span>
+
+    feature
+           <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>          C5 -&gt; C3
+          / <span style="color:#ae81ff">\ </span>    <span style="color:#ae81ff">\
+</span><span style="color:#ae81ff"></span>           |       C2 -&gt; C1 -&gt; C0
+           |       /
+master --- C6 -&gt; C4
+</code></pre></div><ul>
+<li>If the same file has changes in two branches, Git sometimes cannot merge them automatically</li>
+<li>Git doesn&rsquo;t create a merge commit in this case, it only pauses the process</li>
+<li>Check which files are unmerged using <code>git status</code></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">git merge feature
+Auto-merging file.txt
+CONFLICT <span style="color:#f92672">(</span>content<span style="color:#f92672">)</span>: Merge conflict in file.txt
+Automerge failed; fix conflicts and <span style="color:#66d9ef">then</span> commit the result.
+</code></pre></div><p>Git adds standard conflict-resolution markers to the files that have conflicts:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">&lt;&lt;&lt;&lt;&lt;&lt;</span>&lt; HEAD:file.txt
+Support email: support@test.com
+<span style="color:#f92672">=======</span>
+Support email: support@support.com
+&gt;&gt;&gt;&gt;&gt;&gt;&gt; feature:file.txt
+</code></pre></div><ul>
+<li>the version in <code>HEAD</code> (ie. <code>master</code>) is the top part above =======</li>
+<li>the version in <code>feature</code> is the bottom part</li>
+<li>after resolving the conflicts, run <code>git add</code> on each file to mark it as resolved</li>
+<li>run <code>git mergetool</code> for graphical merge tool</li>
+</ul>
+<h4 id="branch-management">Branch Management</h4>
+<p>See a simple list of current branches:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git branch
+  feature
+* master
+</code></pre></div><ul>
+<li>the branch with a star * prefix indicates currently checked out</li>
+</ul>
+<p>See last commit on each branch:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ git branch -v
+  feature &lt;hash&gt; message
+* master &lt;hash&gt; Merge branch <span style="color:#e6db74">&#39;feature&#39;</span>
+</code></pre></div><p>See the list of merged branches:
+<code>git branch --merged</code></p>
+<ul>
+<li>branches listed by <code>--merged</code> without a * prefix are generally fine to delete with <code>git branch -d</code></li>
+</ul>
+<p>See the list of branches that haven&rsquo;t been merged:
+<code>git branch --no-merged</code></p>
+<ul>
+<li>deleting unmerged branch would fail by <code>git branch -d</code></li>
+<li>you can force delete with <code>-D</code></li>
+</ul>
+
+</main>
+
+<footer>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5504633517481956"
+     data-ad-slot="4142928173"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+<div id="disqus_thread"></div>
+<script>
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/www.haozhexu.me\/article\/2020\/gitnotes\/";  
+this.page.identifier = "https:\/\/www.haozhexu.me\/article\/2020\/gitnotes\/"; 
+};
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://haozhexu.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+<hr/>
+© <a href="https://www.haozhexu.me">Haozhe XU</a> 2017
+
+</footer>
+</body>
+</html>

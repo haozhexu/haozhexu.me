@@ -3,23 +3,8 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.haozhexu.me/article/2019/lottery/</loc>
-    <lastmod>2019-09-15T15:39:00+11:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://www.haozhexu.me/cn/article/2019/lottery/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.haozhexu.me/article/2019/lottery/"
-                />
-  </url>
-  
-  <url>
     <loc>https://www.haozhexu.me/categories/article/</loc>
-    <lastmod>2019-09-15T15:39:00+11:00</lastmod>
+    <lastmod>2020-05-08T11:36:00+11:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
@@ -34,7 +19,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/article/</loc>
-    <lastmod>2019-09-15T15:39:00+11:00</lastmod>
+    <lastmod>2020-05-08T11:36:00+11:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
@@ -49,7 +34,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/categories/</loc>
-    <lastmod>2019-09-15T15:39:00+11:00</lastmod>
+    <lastmod>2020-05-08T11:36:00+11:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="cn"
@@ -59,6 +44,51 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.haozhexu.me/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/tags/git/</loc>
+    <lastmod>2020-05-08T11:36:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/article/2020/gitnotes/</loc>
+    <lastmod>2020-05-08T11:36:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/tags/</loc>
+    <lastmod>2020-05-08T11:36:00+11:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/tags/versioncontrol/</loc>
+    <lastmod>2020-05-08T11:36:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/article/2019/lottery/</loc>
+    <lastmod>2019-09-15T15:39:00+11:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/article/2019/lottery/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/article/2019/lottery/"
                 />
   </url>
   
@@ -119,21 +149,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://www.haozhexu.me/tags/powerball/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://www.haozhexu.me/tags/</loc>
-    <lastmod>2019-09-15T15:39:00+11:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://www.haozhexu.me/cn/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.haozhexu.me/tags/"
                 />
   </url>
   

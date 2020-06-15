@@ -3,6 +3,116 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.haozhexu.me/cn/book/</loc>
+    <lastmod>2020-06-14T22:30:12+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/cn/categories/</loc>
+    <lastmod>2020-06-14T22:30:12+11:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/cn/tags/</loc>
+    <lastmod>2020-06-14T22:30:12+11:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/cn/tags/%E5%B0%8F%E8%AF%B4/</loc>
+    <lastmod>2020-06-14T22:30:12+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/cn/book/karma/karma12/</loc>
+    <lastmod>2020-06-14T22:30:12+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/cn/categories/%E6%96%87%E7%AB%A0/</loc>
+    <lastmod>2020-06-14T22:30:12+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/cn/book/karma/karma11/</loc>
+    <lastmod>2020-06-14T21:30:12+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/cn/book/karma/karma10/</loc>
+    <lastmod>2020-06-14T20:30:12+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/cn/book/karma/karma9/</loc>
+    <lastmod>2020-06-14T19:30:12+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/cn/book/karma/karma8/</loc>
+    <lastmod>2020-06-14T18:30:12+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/cn/book/karma/karma7/</loc>
+    <lastmod>2020-06-14T17:30:12+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/cn/book/karma/karma6/</loc>
+    <lastmod>2020-06-14T16:30:12+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/cn/book/karma/karma5/</loc>
+    <lastmod>2020-06-14T15:30:12+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/cn/book/karma/karma4/</loc>
+    <lastmod>2020-06-14T14:30:12+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/cn/book/karma/karma3/</loc>
+    <lastmod>2020-06-14T13:30:12+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/cn/book/karma/karma2/</loc>
+    <lastmod>2020-06-14T12:30:12+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/cn/book/karma/karma1/</loc>
+    <lastmod>2020-06-14T11:30:12+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/cn/book/karma/karma0/</loc>
+    <lastmod>2020-06-14T10:30:12+11:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.haozhexu.me/cn/categories/article/</loc>
     <lastmod>2019-09-15T15:39:00+11:00</lastmod>
     <xhtml:link
@@ -29,21 +139,6 @@
                 rel="alternate"
                 hreflang="cn"
                 href="https://www.haozhexu.me/cn/article/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://www.haozhexu.me/cn/categories/</loc>
-    <lastmod>2019-09-15T15:39:00+11:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.haozhexu.me/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://www.haozhexu.me/cn/categories/"
                 />
   </url>
   
@@ -104,21 +199,6 @@
                 rel="alternate"
                 hreflang="cn"
                 href="https://www.haozhexu.me/cn/tags/powerball/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://www.haozhexu.me/cn/tags/</loc>
-    <lastmod>2019-09-15T15:39:00+11:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.haozhexu.me/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://www.haozhexu.me/cn/tags/"
                 />
   </url>
   
@@ -304,16 +384,6 @@
   
   <url>
     <loc>https://www.haozhexu.me/cn/article/afterriversandlakes/prologue/</loc>
-    <lastmod>2018-09-12T22:00:12+11:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.haozhexu.me/cn/tags/%E5%B0%8F%E8%AF%B4/</loc>
-    <lastmod>2018-09-12T22:00:12+11:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.haozhexu.me/cn/categories/%E6%96%87%E7%AB%A0/</loc>
     <lastmod>2018-09-12T22:00:12+11:00</lastmod>
   </url>
   

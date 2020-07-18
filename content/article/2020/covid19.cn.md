@@ -100,12 +100,18 @@ TODO: 五行与器官
 
 天干和地支的组合方式，是第一个天干和第一个地支并列为甲子，第二个天干和第二个地支并列为乙丑，一只延续循环，直到并列的天干地支为癸亥，之后再从甲子开始。每一个并列组合对应一年。
 
-### Stages and Ways
+### 运与气
 
-Just like we have "season" which divides a year into four climatic categories, on top of sexagenary cycle (ie. ancient concept of "year"), there is also a complex system that divides a year into different stages, in different ways (elemental and climatic):
+就像我们有“季节”一样，人们在天干地支（即古老的“年”）的基础上，结合五行以及环境特征将一年分为不同的阶段：
 
-1. (elemental) Each year in sexagenary cycle has an _element of the year_ which is from the Five Elements, for example, the year 2020 (G1) is mostly Metal.
-2. (elemental) Within every year there are five __elemental stages__, each corresponds to an element, in the order of Wood, Fire, Earth, Metal and Water, this is a five season pattern which is very similar to our "four seasons": Spring (warm) - Wood, Summer (hot/dry) - Fire, Summer (wet) - Earth, Autumn (cool) - Metal, Winter (cold) - Water.
+1. 岁运：又称大运，统管全年五运之气，可反映全年的气候特征及发病规律。十天干对应五运关系为甲己属土，乙庚属金，丙辛属水，丁壬属木，戊癸属火。例如2020年天干地支为庚子，岁运则为金。
+2. 主运：主运把一年分为五个阶段，一般说五时，每年固定从木运开始，继而火、土、金、水，按五行相生顺序，年年如此。根据不同的地支，每年的五时开始和结束的日期略有不同，这里不做详述。有没有注意到，主运有些类似一年四季的划分，如果要对应四季的话，可以理解为：春暖对应木，夏热/干对应火，夏潮/湿对应土，秋凉对应金，冬冷对应水。
+3. 客运：以当年岁运为初运，依五行太少相生顺序，分作五步，行于主运之上，逐年变迁，十年一周期。
+
+即便是在同一阶段，气候也有各种不同的特征，正如前文所说，同样是夏天，有时会多雨，有时则会干旱，同样是冬天，有时会偏冷而有时却偏暖，古人从长期生活经验里总结出一套气候规律，以风、热、火、湿、燥、寒六种气来归纳，简称六气。十二地支对应六气关系为子午少阴君火、丑未太阴湿土、寅申少阳相火、卯酉阳明燥金、辰戌太阳寒水、巳亥厥阴风木。这些名词听起来也许难懂，然而其中却有着一定的模式。
+
+1. 
+
 3. (climatic) On top of __elemental stages__, each year also has six __primary climatic stages__: wind, fire, heat, moisture, dryness and cold. (note, "fire" and "heat" may sound overlapping but they represent two differing manifestations, with "fire" being an internal process and "heat" being an external influence)
 4. (climatic) Besides __primary climatic stages__ that repeats and stays the same every year (like the four seasons), throughout a year there is also the __secondary climatic influence__, it varies from year to year, it is a more detailed climatic feature, it can explain why some years have colder winters, some years have hotter summer, in some years winter comes ealier or later, etc.
 

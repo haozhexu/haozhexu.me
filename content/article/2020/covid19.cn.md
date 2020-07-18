@@ -108,20 +108,39 @@ TODO: 五行与器官
 2. 主运：主运把一年分为五个阶段，一般说五时，每年固定从木运开始，继而火、土、金、水，按五行相生顺序，年年如此。根据不同的地支，每年的五时开始和结束的日期略有不同，这里不做详述。有没有注意到，主运有些类似一年四季的划分，如果要对应四季的话，可以理解为：春暖对应木，夏热/干对应火，夏潮/湿对应土，秋凉对应金，冬冷对应水。
 3. 客运：以当年岁运为初运，依五行太少相生顺序，分作五步，行于主运之上，逐年变迁，十年一周期。
 
-即便是在同一阶段，气候也有各种不同的特征，正如前文所说，同样是夏天，有时会多雨，有时则会干旱，同样是冬天，有时会偏冷而有时却偏暖，古人从长期生活经验里总结出一套气候规律，以风、热、火、湿、燥、寒六种气来归纳，简称六气。十二地支对应六气关系为子午少阴君火、丑未太阴湿土、寅申少阳相火、卯酉阳明燥金、辰戌太阳寒水、巳亥厥阴风木。这些名词听起来也许难懂，然而其中却有着一定的模式。
+即便是在同一阶段，气候也有各种不同的特征，正如前文所说，同样是夏天，有时会多雨，有时则会干旱，同样是冬天，有时会偏冷而有时却偏暖，古人从长期生活经验里总结出一套气候规律，以风、热、火、湿、燥、寒六种气来归纳，简称六气。十二地支对应六气关系为子午少阴君火、丑未太阴湿土、寅申少阳相火、卯酉阳明燥金、辰戌太阳寒水、巳亥厥阴风木。这些名词听起来也许难懂，然而我们看，每组四个字的对气的描述，其模式为程度+特征。
 
-1. 
+这里的“程度”以阴阳表示，古时有三阴三阳的说法，按阴阳气的多少将阴和阳各分为三。三阴之中厥阴阴气最少，少阴其次，太阴最盛；三阳之中少阳阳气最少，阳明其次，太阳最盛。因此客气六气顺序为厥阴风木(一阴)、少阴君火(二阴)、太阴湿土(三阴)、少阳相火(一阳)、阳明燥金(二阳)、太阳寒水(三阳)。我们只看每组气的前两个字，从厥阴到太阴，再到少阳，最后到太阳，然后回到厥阴，对应了阴阳的循环往复。而后两个字则是气与运，如湿土、燥金。就好像我们常说的小雨、大雨，温热、酷热。
 
-3. (climatic) On top of __elemental stages__, each year also has six __primary climatic stages__: wind, fire, heat, moisture, dryness and cold. (note, "fire" and "heat" may sound overlapping but they represent two differing manifestations, with "fire" being an internal process and "heat" being an external influence)
-4. (climatic) Besides __primary climatic stages__ that repeats and stays the same every year (like the four seasons), throughout a year there is also the __secondary climatic influence__, it varies from year to year, it is a more detailed climatic feature, it can explain why some years have colder winters, some years have hotter summer, in some years winter comes ealier or later, etc.
+正如每年的运分主运客运，每年的气也有主客之分，主气主治一年六个季节的正常气候变化，年年如此：
 
-The full system is way more complex than the four points above, I won't go into the details, but just need to explain a bit more on the elemental stages and influences because it's directly related to our topic - the virus. The ancients believed that changes in nature, such as plant growth, flowering, fruiting, migratory birds, snow, thunder, river freezing, etc, all reflect the process of the transformation of Five Elements, which then manifest in reality one or several climatic characteristics (wind, fire, heat, moisture, dryness and cold) that would influence human body, these characteristics are often called as "six climatic influence". Modern science also agrees that weather or climate can influence human body which more or less aligns with the traditional thinking that the atmosphere can have more health effects. For us to understand, we only need to know that both modern and traditional thinking believes that extreme weather or climate can do harm (ie. influence human body): if the climate is normal, the "six influences" in human body is also balanced; When the climate is abnormal, the balance in the body is also disordered. Using the pattern of "six influences" in each sexagenary year, and how they appear at different times within a particular year, we can infer the occurrence of diseases and take preventive measures early. Furthermore, the unbalance of the "six climatic influences" can affect the incidence of diseases and the prognosis of transmission, due to the disease is biased to a certain pathogenesis in the year, such as more moisture/wetness, so that certain types of diseases have a higher chance of onset. If we have fully understanding of the pattern, we should be able to figure out drugs that get better results. The book Advanced Textbook of Traditional Chinese Medicine and Pharmacology (1) states:
+| 六步 | 六气 | 二十四节气 |
+| ----- | ------ | ---- |
+| 初之气 | 厥阴风木 | 大寒到春分 |
+| 二之气 | 少阴君火 | 春分到小满 |
+| 三之气 | 少阳相火 | 小满到大暑 |
+| 四之气 | 太阴湿土 | 大暑到秋分 |
+| 五之气 | 阳明燥金 | 秋分到小雪 |
+| 终之气 | 太阳寒水 | 小雪到大寒 |
 
-> Wind, cold, summer-heat, damp, dryness, and fire are the six climatic factors which correspond to normal seasonal changes. Normally, they are known as the “six qi”. The growth of all living things depends on the existence of the six qi. They should not be harmful, rather, they should be helpful to human beings. Human beings have learned the laws of nature through the changing features of the seasons and have adapted themselves to these changes. Thus, the six qi normally will not cause diseases. However, if and when the six qi become abnormal or excessive, as happens in abrupt changes in environmental conditions, and if the body’s resistance is too weak to adapt to these variations, the six qi may become the six excesses: pathogenic factors that cause diseases. Because the six excesses are abnormal qi, they are known as the six unhealthy qi, or the six exogenous pathogenic factors.
+看看每年的气所对应的风火湿燥寒，木火土金水，是不是和我们的四季很相似呢？
 
-In other words, if we can figure out which climatic factor or factors have supportive effect on Covid-19 virus, we can probably get some clue for curing the virus from the opposite of that factor.
+正如运分主客，气也分主客，主气每年固定，正如四季，而客气则分上半年（司天之气）与下半年（在泉之气），根据地支而变：
 
-## A Possible Cure
+| 岁支 | 司天之气 | 在泉之气 |
+| ----- | -------- | ------ |
+| 子午年 | 少阴君火 | 阳明燥金 |
+| 丑未年 | 太阴湿土 | 太阳寒水 |
+| 寅申年 | 少阳相火 | 厥阴风木 |
+| 卯酉年 | 阳明燥金 | 少阴君火 |
+| 辰戌年 | 太阳寒水 | 太阴湿土 |
+| 巳亥年 | 厥阴风木 | 少阳相火 |
+
+古人认为，自然的变化，例如植物的生长，开花，结果，候鸟，雪，雷声，河冻等，都反映了五行中五种元素转化的过程，并且再现实中表现出一种或几种会影响身体健康的气候特征（风，火，热，湿气，干燥和寒冷）。现代科学也同意天气或气候会影响人体，这多少与传统的认为气会影响健康的思想相吻合。我们不需要太深入的了解这其中的细节，只需要知道现代和传统思维都认为极端天气或气候会造成危害（即影响人体）：如果气候正常，则人体中的六种气也是平衡的；当气候异常时，体内的平衡也会紊乱。通过天干地支纪年对应的运与气，以及它们在特定年份的不同时间出现的方式，我们可以推断出疾病的发生并及早采取预防措施。此外，“六种气候影响”的不平衡会影响疾病的发生和传播的预后，因为该疾病在一年中偏向某种发病机理，例如更多的水分/湿润，从而导致某些类型的疾病有更高的发病机会。如果我们对这种模式有充​​分的了解，那么我们应该能够找出效果更好的药物。
+
+换句话说，如果我们找出对Covid-19病毒有利的气候因素，也许可以从与该因素相反的方面获得一些治愈病毒的线索。这里的气候因素并不是简单的四季，而是在四季之上，可以在任何时间存在的气。
+
+## 五运六气与病症
 
 Let's start by first examing some of the well-known diseases in human history, from the perspective of all we discussed before.
 

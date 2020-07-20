@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ruby on Haozhe XU</title>
+    <link>https://www.haozhexu.me/tags/ruby/</link>
+    <description>Recent content in ruby on Haozhe XU</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 19 Jul 2020 18:00:00 +1100</lastBuildDate>
+    
+	<atom:link href="https://www.haozhexu.me/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ruby Notes</title>
+      <link>https://www.haozhexu.me/article/2020/ruby/</link>
+      <pubDate>Sun, 19 Jul 2020 18:00:00 +1100</pubDate>
+      
+      <guid>https://www.haozhexu.me/article/2020/ruby/</guid>
+      <description>Ruby Notes This is the notes I&amp;rsquo;ve taken while reading the book &amp;ldquo;The Well-Grounded Rubyist&amp;rdquo;, I tried to make it useful as a reference but do not expect this to be a well-written tutorial for beginners.
+Basics
+Objects, methods and local variables
+Classes
+Basics Basic operations:  arithmetic: +, -, *, /, mixing integers and floating-point numbers would proce floating-point result. assignment: x = 3, text = &amp;quot;Hi&amp;quot; comparison: x == y conversion: x = &amp;quot;100&amp;quot;.</description>
+    </item>
+    
+  </channel>
+</rss>

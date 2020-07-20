@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Notes on Haozhe XU</title>
+    <link>https://www.haozhexu.me/categories/notes/</link>
+    <description>Recent content in Notes on Haozhe XU</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 19 Jul 2020 18:00:00 +1100</lastBuildDate>
+    
+	<atom:link href="https://www.haozhexu.me/categories/notes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ruby Notes</title>
+      <link>https://www.haozhexu.me/article/2020/ruby/</link>
+      <pubDate>Sun, 19 Jul 2020 18:00:00 +1100</pubDate>
+      
+      <guid>https://www.haozhexu.me/article/2020/ruby/</guid>
+      <description>Ruby Notes This is the notes I&amp;rsquo;ve taken while reading the book &amp;ldquo;The Well-Grounded Rubyist&amp;rdquo;, I tried to make it useful as a reference but do not expect this to be a well-written tutorial for beginners.
+Basics
+Objects, methods and local variables
+Classes
+Basics Basic operations:  arithmetic: +, -, *, /, mixing integers and floating-point numbers would proce floating-point result. assignment: x = 3, text = &amp;quot;Hi&amp;quot; comparison: x == y conversion: x = &amp;quot;100&amp;quot;.</description>
+    </item>
+    
+    <item>
+      <title>Git Notes</title>
+      <link>https://www.haozhexu.me/article/2020/gitnotes/</link>
+      <pubDate>Fri, 08 May 2020 11:36:00 +1100</pubDate>
+      
+      <guid>https://www.haozhexu.me/article/2020/gitnotes/</guid>
+      <description>Git Notes Data in Git is like a set of snapshots of a mini filesystem, every commit is a snapshot of all the files at the moment, with reference stored for that snapsthot; Files that have not changed aren&amp;rsquo;t stored - instead just a link to the previous identical file that has been stored already.
+ nearly every operation is local everything is check-summed (SHA-1) to ensure integrity most operations only add data to Git database  Three States Git has three main states for files:</description>
+    </item>
+    
+  </channel>
+</rss>

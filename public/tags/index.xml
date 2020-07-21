@@ -5,7 +5,7 @@
     <link>https://www.haozhexu.me/tags/</link>
     <description>Recent content in Tags on Haozhe XU</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 21 Jul 2020 11:00:00 +1100</lastBuildDate>
+    <lastBuildDate>Tue, 21 Jul 2020 14:00:00 +1100</lastBuildDate>
     
 	<atom:link href="https://www.haozhexu.me/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,9 +13,18 @@
     <item>
       <title>cheatsheet</title>
       <link>https://www.haozhexu.me/tags/cheatsheet/</link>
-      <pubDate>Tue, 21 Jul 2020 11:00:00 +1100</pubDate>
+      <pubDate>Tue, 21 Jul 2020 14:00:00 +1100</pubDate>
       
       <guid>https://www.haozhexu.me/tags/cheatsheet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>javascript</title>
+      <link>https://www.haozhexu.me/tags/javascript/</link>
+      <pubDate>Tue, 21 Jul 2020 14:00:00 +1100</pubDate>
+      
+      <guid>https://www.haozhexu.me/tags/javascript/</guid>
       <description></description>
     </item>
     

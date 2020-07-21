@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JavaScript Notes | Haozhe XU</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/apps/">Apps</a></li>
+      
+      <li><a href="/poems/">Poem / 诗词</a></li>
+      
+      <li><a href="/article">Article</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/cn/">简体中文</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">JavaScript Notes</span></h1>
+
+<h2 class="date">2020/07/21</h2>
+</div>
+
+<main>
+<h1 id="javascript-notes">JavaScript Notes</h1>
+<p>There are three ways of using JavaScript in HTML document.</p>
+<p>External:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">head</span>&gt;
+  <span style="color:#75715e">&lt;!-- import JavaScript in head --&gt;</span>
+  &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;index.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+  <span style="color:#75715e">&lt;!-- import JavaScript in body --&gt;</span>
+  &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;index.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+</code></pre></div><p>Internal:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">body</span>&gt;
+  &lt;<span style="color:#f92672">script</span>&gt; <span style="color:#75715e">// full form: &lt;script type=&#34;text/javascript&#34;&gt;
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">&lt;!--</span> <span style="color:#a6e22e">JavaScript</span> <span style="color:#a6e22e">code</span> <span style="color:#a6e22e">here</span> <span style="color:#f92672">--&gt;</span>
+  &lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+</code></pre></div><p>Inline:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">script</span>&gt;
+    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">showAlert</span>()
+    {
+        <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Clicked on a button!&#34;</span>)
+    }
+  &lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;
+  <span style="color:#75715e">&lt;!-- display an alert on button click --&gt;</span>
+  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;aButton&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alert(&#39;Whats up?&#39;)&#34;</span> /&gt;
+
+  <span style="color:#75715e">&lt;!-- call another function --&gt;</span>
+  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anotherButton&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;showAlert()&#34;</span> /&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+</code></pre></div><h2 id="basics">Basics</h2>
+<ul>
+<li>JavaScript has a list of keywords and reserved words</li>
+<li>a line of code in JavaScript usually ends with semicolon</li>
+<li><code>// single line comment</code></li>
+<li><code>/* multiline comments */</code></li>
+</ul>
+<h3 id="variables-and-constants">Variables and Constants</h3>
+<ul>
+<li>variables in JavaScript consists of letters, underscores, dollar sign or digits</li>
+<li>first letter of variable name must be either letter, underscore or dollar sign</li>
+<li>variable names cannot be keyword or reserved word</li>
+<li>variable names are case sensitive</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span>;
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">b</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">20</span>, <span style="color:#a6e22e">c</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">30</span>;
+<span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+
+<span style="color:#75715e">// constants:
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">DEBUG</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>;
+</code></pre></div><h3 id="data-types">Data Types</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">number</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span>;
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">string1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;Single can be wrapped by single quote.&#39;</span>
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">string2</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;String can also be wrapped by double quote.&#34;</span>
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">string3</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;String can have escape value like \&#34; or \&#39;.&#34;</span>
+<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">number</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">200</span>) <span style="color:#75715e">// boolean condition
+</span><span style="color:#75715e"></span>{
+    document.<span style="color:#a6e22e">write</span>(<span style="color:#e6db74">&#34;number is less than 200.&#34;</span>)
+}
+<span style="color:#75715e">// undefined:
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n</span>;
+document.<span style="color:#a6e22e">write</span>(<span style="color:#a6e22e">n</span>)
+<span style="color:#75715e">// null value
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">m</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+</code></pre></div><h3 id="operations">Operations</h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td>addition</td>
+</tr>
+<tr>
+<td>-</td>
+<td>subtraction</td>
+</tr>
+<tr>
+<td>*</td>
+<td>multiplication</td>
+</tr>
+<tr>
+<td>/</td>
+<td>division</td>
+</tr>
+<tr>
+<td>%</td>
+<td>remainder</td>
+</tr>
+<tr>
+<td>++</td>
+<td>add one</td>
+</tr>
+<tr>
+<td>&ndash;</td>
+<td>minus one</td>
+</tr>
+<tr>
+<td>=</td>
+<td>plain assignment</td>
+</tr>
+<tr>
+<td>-=</td>
+<td>subtraction assignment</td>
+</tr>
+<tr>
+<td>+=</td>
+<td>addition assignment</td>
+</tr>
+<tr>
+<td>*=</td>
+<td>multiplication assignment</td>
+</tr>
+<tr>
+<td>/=</td>
+<td>division assignment</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>addition operation applies for numbers and string
+<ul>
+<li>number + number = number</li>
+<li>string + string = string (concatenation)</li>
+<li>string + number = string</li>
+</ul>
+</li>
+</ul>
+<h3 id="comparison">Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&gt;</td>
+<td>greater than</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>less than</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>greater than or equal to</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>less than or equal to</td>
+</tr>
+<tr>
+<td>==</td>
+<td>equal to</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>not equal to</td>
+</tr>
+</tbody>
+</table>
+<h3 id="logic-operation">Logic Operation</h3>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&amp;&amp;</td>
+<td>AND</td>
+</tr>
+<tr>
+<td>||</td>
+<td>OR</td>
+</tr>
+<tr>
+<td>!</td>
+<td>NOT</td>
+</tr>
+</tbody>
+</table>
+<h3 id="condition-operation">Condition Operation</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">condition</span> <span style="color:#f92672">?</span> <span style="color:#a6e22e">expression1</span> <span style="color:#f92672">:</span> <span style="color:#a6e22e">expression2</span>;
+</code></pre></div><h3 id="type-conversion">Type Conversion</h3>
+<ul>
+<li>use <code>Number()</code> to convert string to number
+<ul>
+<li><code>Number(&quot;123&quot;)</code>: 123</li>
+<li><code>Number(&quot;3.14&quot;)</code>: 3.14</li>
+<li><code>Number(&quot;hao123&quot;)</code>: <code>NaN</code> (Not a Number)</li>
+<li><code>Number(&quot;100px&quot;)</code>: <code>NaN</code> (Not a Number)</li>
+</ul>
+</li>
+<li>use <code>parseInt()</code> to convert a string to integer
+<ul>
+<li><code>parseInt(&quot;+123&quot;)</code>: 123</li>
+<li><code>parseInt(&quot;3.14&quot;)</code>: 3</li>
+<li><code>parseInt(&quot;hao123&quot;)</code>: <code>NaN</code></li>
+<li><code>parseInt(&quot;100px&quot;)</code>: 100</li>
+</ul>
+</li>
+<li>use <code>parseFloat()</code> to convert a string to floating point number</li>
+<li>use <code>toString()</code> to convert a number to a string</li>
+</ul>
+<h2 id="flow-control">Flow Control</h2>
+<h3 id="ifelse">if…else…</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">condition</span>) {
+    <span style="color:#75715e">// statement
+</span><span style="color:#75715e"></span>}
+
+<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">condition</span>) {
+    <span style="color:#75715e">// statement1
+</span><span style="color:#75715e"></span>} <span style="color:#66d9ef">else</span> {
+    <span style="color:#75715e">// statement2
+</span><span style="color:#75715e"></span>}
+
+<span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">condition1</span>) {
+    <span style="color:#75715e">// statement1
+</span><span style="color:#75715e"></span>} <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">condition2</span>) {
+    <span style="color:#75715e">// statement2
+</span><span style="color:#75715e"></span>} <span style="color:#66d9ef">else</span> {
+    <span style="color:#75715e">// statement3
+</span><span style="color:#75715e"></span>}
+</code></pre></div><h3 id="switch">switch</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">day</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span>;
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">week</span>;
+
+<span style="color:#66d9ef">switch</span> (<span style="color:#a6e22e">day</span>)
+{
+    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">:</span>
+        <span style="color:#a6e22e">week</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Monday&#34;</span>; <span style="color:#66d9ef">break</span>;
+    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">2</span><span style="color:#f92672">:</span>
+        <span style="color:#a6e22e">week</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Tuesday&#34;</span>; <span style="color:#66d9ef">break</span>;
+    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">:</span>
+        <span style="color:#a6e22e">week</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Wednesday&#34;</span>; <span style="color:#66d9ef">break</span>;
+    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">4</span><span style="color:#f92672">:</span>
+        <span style="color:#a6e22e">week</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Thursday&#34;</span>; <span style="color:#66d9ef">break</span>;
+    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">5</span><span style="color:#f92672">:</span>
+        <span style="color:#a6e22e">week</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Friday&#34;</span>; <span style="color:#66d9ef">break</span>;
+    <span style="color:#66d9ef">case</span> <span style="color:#ae81ff">6</span><span style="color:#f92672">:</span>
+        <span style="color:#a6e22e">week</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Saturday&#34;</span>; <span style="color:#66d9ef">break</span>;
+    <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+        <span style="color:#a6e22e">week</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Sunday&#34;</span>;
+}
+</code></pre></div><h3 id="loops">loops</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">while</span> (<span style="color:#a6e22e">condition</span>)
+{
+    <span style="color:#75715e">// statement executed when condition is true
+</span><span style="color:#75715e"></span>}
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">do</span>
+{
+    <span style="color:#75715e">// statement
+</span><span style="color:#75715e"></span>} <span style="color:#66d9ef">while</span>(<span style="color:#a6e22e">condition</span>);
+</code></pre></div><ul>
+<li>the body of <code>while</code> must be enclosed by braces</li>
+<li>inside the loop there must be a way to make the condition no longer true, in order to prevent dead loop</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">for</span> (<span style="color:#a6e22e">initial</span> <span style="color:#a6e22e">expression</span>; <span style="color:#a6e22e">condition</span>; <span style="color:#a6e22e">post</span><span style="color:#f92672">-</span><span style="color:#a6e22e">loop</span> <span style="color:#a6e22e">expression</span>)
+{
+    <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>}
+
+<span style="color:#75715e">// e.g.
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">i</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span> ; <span style="color:#a6e22e">i</span> <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">5</span> ; <span style="color:#a6e22e">i</span><span style="color:#f92672">++</span>)
+{
+    <span style="color:#75715e">// ...
+</span><span style="color:#75715e"></span>}
+</code></pre></div><h2 id="function">Function</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">name</span>(<span style="color:#a6e22e">argument1</span>, <span style="color:#a6e22e">argument2</span>, <span style="color:#960050;background-color:#1e0010">…</span>, <span style="color:#a6e22e">argumentN</span>)
+{
+    <span style="color:#75715e">// function body
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">value</span>; <span style="color:#75715e">// return a value if the function does have one
+</span><span style="color:#75715e"></span>}
+</code></pre></div><ul>
+<li>function in JavaScript can either return a value or without return value</li>
+<li>variables defined inside a function is called local variable, which has a scope of the defining function</li>
+<li>function can be invoked directly, as part of an expression, as a hyperlink, or as an event</li>
+<li>a function can be embedded inside another function</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span>&gt;
+  <span style="color:#75715e">// function that doesn&#39;t return
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">showMessage</span>(<span style="color:#a6e22e">msg</span>)
+  {
+      document.<span style="color:#a6e22e">write</span>(<span style="color:#a6e22e">msg</span>)
+  }
+  <span style="color:#a6e22e">showMessage</span>(<span style="color:#e6db74">&#34;Hi&#34;</span>) <span style="color:#75715e">// direct invocation
+</span><span style="color:#75715e"></span>
+  <span style="color:#75715e">// function that returns
+</span><span style="color:#75715e"></span>  <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">addSum</span>(<span style="color:#a6e22e">a</span>, <span style="color:#a6e22e">b</span>)
+  {
+      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">sum</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">b</span>;
+      <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">sum</span>;
+  }
+  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">n</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">addSum</span>(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">100</span>; <span style="color:#75715e">// function call as part of expression
+</span><span style="color:#75715e"></span>  document.<span style="color:#a6e22e">write</span>(<span style="color:#a6e22e">n</span>);
+&lt;/<span style="color:#f92672">script</span>&gt;
+
+<span style="color:#75715e">&lt;!-- function call as hyperlink --&gt;</span>
+&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;javascript:showMessage(&#39;Hello, world!&#39;)&#34;</span>&gt;Click Me&lt;/<span style="color:#f92672">a</span>&gt;
+
+&lt;<span style="color:#f92672">body</span>&gt;
+  <span style="color:#75715e">&lt;!-- function call as an event --&gt;</span>
+  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;showMessage(&#39;Submitted&#39;)&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Submit&#34;</span> /&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+</code></pre></div><h2 id="string-operation">String Operation</h2>
+<p>Please look for more detailed documents on this top, below are just a few operations for string.</p>
+<ul>
+<li>use <code>string.function</code> to call a function on <code>string</code></li>
+<li><code>length</code>: get length of string</li>
+<li><code>toUpperCase()</code>, <code>toLowerCase()</code>: case conversion</li>
+<li><code>charAt(n)</code>: returns the (n+1)th character in the string (index starts with 0)</li>
+<li><code>substring(start, end)</code>: returns a substring from index <code>start</code> to <code>end</code> (not including the character at <code>end</code>)</li>
+<li><code>substring(start)</code>: returns a substring from <code>start</code> to end of the string</li>
+<li><code>replace(string, replacement)</code>: returns a new string replacing first occurence of <code>string</code> by <code>replacement</code></li>
+<li><code>replace(RegEx, replacement)</code>: returns a new string replacing substrings matching <code>RegEx</code> with <code>replacement</code></li>
+<li><code>split(separator)</code> splits a string by <code>separator</code> into an array of string components</li>
+<li><code>indexOf(substring)</code>, <code>lastIndexOf(substring)</code>: return index of first or last occurrence of <code>substring</code></li>
+</ul>
+<h2 id="array">Array</h2>
+<p>To create an array in JavaScript:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">arrayName</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Array(<span style="color:#a6e22e">element1</span>, <span style="color:#a6e22e">element2</span>, <span style="color:#960050;background-color:#1e0010">…</span>, <span style="color:#a6e22e">elementN</span>); <span style="color:#75715e">// full form
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">arrayName</span> <span style="color:#f92672">=</span> [<span style="color:#a6e22e">element1</span>, <span style="color:#a6e22e">element2</span>, <span style="color:#960050;background-color:#1e0010">…</span>, <span style="color:#a6e22e">elementN</span>]; <span style="color:#75715e">// short form
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">emptyArray</span> <span style="color:#f92672">=</span> []; <span style="color:#75715e">// empty array
+</span><span style="color:#75715e"></span>
+<span style="color:#a6e22e">arrayName</span>[<span style="color:#a6e22e">i</span>] <span style="color:#f92672">=</span> <span style="color:#a6e22e">value</span>; <span style="color:#75715e">// value assignment to index i
+</span></code></pre></div><ul>
+<li><code>array.length</code> gives you the number of elements in <code>array</code></li>
+<li><code>array.slice(start, end)</code> returns a subarray from index <code>start</code> to (but not include) <code>end</code></li>
+<li><code>array.unshift(new element1, new element2, …)</code> appends new elements to the head of <code>array</code></li>
+<li><code>array.push(new element1, new element2, …)</code> appends new elements to the end of <code>array</code></li>
+<li><code>array.shift()</code> removes the first element in <code>array</code></li>
+<li><code>array.pop()</code> removes the last element in <code>array</code></li>
+<li><code>array.sort(functionName)</code> sorts the array using the <code>functionName</code> as a comparator</li>
+<li><code>array.reverse()</code> reverses the order of elements in <code>array</code></li>
+<li><code>array.join(separator)</code> joins elements in <code>array</code> into a string using <code>separator</code>
+<ul>
+<li>by default, comma is used as separator</li>
+</ul>
+</li>
+</ul>
+<h2 id="date-and-time">Date and Time</h2>
+<p>Create a new <code>Date</code> object:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">date</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Date();
+</code></pre></div><p>Please refer to JavaScript documentation for functions of <code>Date</code>, basically it has a list of <code>getXxx</code> and <code>setXxx</code> for retrieving and setting details of the date.</p>
+<h3 id="mathmatics">Mathmatics</h3>
+<p>In JavaScript we can use <code>Math</code> object to perform a list of mathematical calculations. It has constants commonly used in Maths like <code>PI</code>, and functions like <code>abs(x)</code>, <code>floor(x)</code>, <code>ceil(x)</code> and <code>random()</code>.</p>
+<h2 id="dom">DOM</h2>
+<p>DOM stands for Document Object Model, the document structure is modeled as an object, different parts of the document can be read and manipulated through the concept of &ldquo;node&rdquo;, with three commonly used nodes:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;wrapper&#34;</span>&gt;text&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><ul>
+<li>element (nodeType = 1): the whole line above</li>
+<li>attribute (nodeType = 2): <code>id=&quot;wrapper&quot;</code></li>
+<li>text (nodeType = 3): <code>text</code></li>
+</ul>
+<h3 id="element-node">Element Node</h3>
+<ul>
+<li><code>getElementById(idName)</code> used on <code>document</code>, cannot operate on dynamic DOM object
+<ul>
+<li><code>var div = document.getElementById(&quot;div1&quot;);</code>: return a single element with ID <code>div1</code></li>
+<li>change color: <code>div.style.color = &quot;red&quot;;</code></li>
+</ul>
+</li>
+<li><code>getElementByTagName(tagName)</code> used on <code>document</code> or other DOM object
+<ul>
+<li><code>var list = document.getElementById(&quot;list&quot;);</code>: get single element with ID <code>list</code></li>
+<li><code>var items = list.getElementsByTagName(&quot;li&quot;);</code>: get all items under <code>list</code></li>
+<li><code>items[1].style.color = &quot;yellow&quot;</code>: update color of 2nd item</li>
+</ul>
+</li>
+<li><code>getElementsByClassName(className)</code>: returns elements by class name</li>
+<li><code>querySelector(selector)</code>: return first element matching <code>selector</code></li>
+<li><code>querySelectorAll(selector)</code>: return all elements matching <code>selector</code>
+<ul>
+<li><code>document.querySelectorAll(&quot;.test&quot;)</code> returns all elements whose <code>class</code> is <code>test</code></li>
+<li><code>document.querySelector(&quot;#list li:nth-child(3)&quot;)</code> returns third element under element <code>list</code>, see following example</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;list&#34;</span>&gt;
+  &lt;<span style="color:#f92672">li</span>&gt;HTML&lt;/<span style="color:#f92672">li</span>&gt;
+  &lt;<span style="color:#f92672">li</span>&gt;CSS&lt;/<span style="color:#f92672">li</span>&gt;
+  &lt;<span style="color:#f92672">li</span>&gt;JavaScript&lt;/<span style="color:#f92672">li</span>&gt;
+  &lt;<span style="color:#f92672">li</span>&gt;jQuery&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;/<span style="color:#f92672">ul</span>&gt;
+</code></pre></div><ul>
+<li><code>getElementsByName(name)</code> returns all elements by name
+<ul>
+<li><code>document.getElementsByName(&quot;fruit&quot;);</code> see sample below</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">body</span>&gt;
+  Favourite Fruit:
+  &lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fruit&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Apple&#34;</span> /&gt;Apple&lt;/<span style="color:#f92672">label</span>&gt;
+  &lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fruit&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Orange&#34;</span> /&gt;Orange&lt;/<span style="color:#f92672">label</span>&gt;
+  &lt;<span style="color:#f92672">label</span>&gt;&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fruit&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Banana&#34;</span> /&gt;Banana&lt;/<span style="color:#f92672">label</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+</code></pre></div><h4 id="documenttitle-and-documentbody">document.title and document.body</h4>
+<p>JavaScript provides an easy way to access the title and body of <code>document</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+&lt;<span style="color:#f92672">head</span>&gt;
+  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span> /&gt;
+  &lt;<span style="color:#f92672">title</span>&gt;&lt;/<span style="color:#f92672">title</span>&gt;
+  &lt;<span style="color:#f92672">script</span>&gt;
+    window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>()
+    {
+        document.<span style="color:#a6e22e">title</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Title&#34;</span>;
+        document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">innerHTML</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&lt;p&gt;A paragraph of text.&lt;/p&gt;&#34;</span>;
+    }
+  &lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+&lt;<span style="color:#f92672">body</span>&gt;&lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><h3 id="create-element">Create Element</h3>
+<p>In JavaScript we can dynamically create new elements and modify existings elements, this is called &ldquo;Dynamic DOM Operation&rdquo;.</p>
+<ul>
+<li><code>createElement(elementName)</code> creates new element node</li>
+<li><code>createTextNode(text)</code> creates new text node</li>
+<li><code>appendChild(element)</code> appends a new element to parent node</li>
+<li><code>insertBefore(newElement, refElement)</code> inserts <code>newElement</code> before <code>refElement</code></li>
+<li><code>removeChild(element)</code> removes <code>element</code></li>
+<li><code>node.cloneNode(bool)</code> make a clone of <code>node</code>, boolean argument indicates whether sub-elements are cloned as well</li>
+<li><code>replaceChild(new, old);</code> replaces <code>old</code> from its parent element by <code>new</code></li>
+</ul>
+<p>Sample (add a <code>strong</code> text):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>()
+{
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">oDiv</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;content&#34;</span>);
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">oStrong</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;strong&#34;</span>);
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">oText</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createTextNode</span>(<span style="color:#e6db74">&#34;Text&#34;</span>);
+
+    <span style="color:#a6e22e">oStrong</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">oText</span>);
+    <span style="color:#a6e22e">oDiv</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">oStrong</span>);
+}
+</code></pre></div><p>Another sample, creating an image equivalent to HTML:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pic&#34;</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;images/photo.png&#34;</span> <span style="color:#a6e22e">style</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;border:1px solid silver&#34;</span> /&gt;
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>()
+{
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">oImg</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;img&#34;</span>);
+    <span style="color:#a6e22e">oImg</span>.<span style="color:#a6e22e">className</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;pic&#34;</span>; <span style="color:#75715e">// className is used instead of class because class is a keyword
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">oImg</span>.<span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;images/photo.png&#34;</span>;
+    <span style="color:#a6e22e">oImg</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">border</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;1px solid silver&#34;</span>;
+    document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">oImg</span>);
+}
+</code></pre></div><h2 id="dom-advanced">DOM Advanced</h2>
+<h3 id="html-attributes">HTML Attributes</h3>
+<p>Access attribute of object via: <code>obj.attr</code>, consider the following HTML code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Submit&#34;</span> /&gt;
+</code></pre></div><p>To retrieve the button:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">// get the button and assign it `onclick` function
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">button</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;btn&#34;</span>)
+<span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>()
+{
+    <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">id</span>);
+};
+</code></pre></div><p>To create the button dynamically:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">input</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">documenmt</span>.<span style="color:#a6e22e">createElement</span>(<span style="color:#e6db74">&#34;input&#34;</span>);
+<span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">id</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;submit&#34;</span>;
+<span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">type</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;button&#34;</span>;
+<span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">value</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Submit&#34;</span>;
+document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">appendChild</span>(<span style="color:#a6e22e">input</span>);
+
+<span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">onclick</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>()
+{
+    <span style="color:#a6e22e">alert</span>(<span style="color:#a6e22e">input</span>.<span style="color:#a6e22e">id</span>);
+};
+</code></pre></div><p>For custom attribute we have to use <code>getAttribute(name)</code> and <code>setAttribute(value, name)</code>, consider this code with custom attribute <code>data</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Insert&#34;</span> <span style="color:#a6e22e">data</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;JavaScript&#34;</span> /&gt;
+</code></pre></div><p>To retrieve <code>data</code> attribute:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">button</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;btn&#34;</span>);
+<span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">getAttribute</span>(<span style="color:#e6db74">&#34;data&#34;</span>);
+<span style="color:#75715e">// button.data is undefined
+</span></code></pre></div><ul>
+<li>there&rsquo;s also <code>removeAttribute(name)</code> and <code>hasAttribute(name)</code></li>
+<li>to get CSS attributes, use <code>getComputedStyle(object).attr</code>
+<ul>
+<li><code>var box = document.getElementById(&quot;box&quot;)</code></li>
+<li><code>getComputedStyle(box).backgroundColor</code></li>
+</ul>
+</li>
+<li>to set CSS attributes, use <code>obj.style.attr</code>
+<ul>
+<li><code>box.style.backgroundColor = &quot;blue&quot;;</code></li>
+</ul>
+</li>
+<li>to set multiple CSS attributes, use <code>obj.style.cssText</code>
+<ul>
+<li><code>div.style.cssText = &quot;width:100px;height:100px;border:1px solid gray;&quot;;</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="dom-traversal">DOM Traversal</h3>
+<ul>
+<li>look for parent element: <code>obj.parentNode</code></li>
+<li>look for child elements: <code>childNodes</code>, <code>firstChild</code>, <code>lastChild</code>
+<ul>
+<li><code>children</code>, <code>firstElementChild</code>, <code>lastElementChild</code></li>
+</ul>
+</li>
+<li>look for sibling elements
+<ul>
+<li><code>previousSibling</code>, <code>nextSibling</code></li>
+<li><code>previousElementSibling</code>, <code>nextElementSibling</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="events">Events</h2>
+<p>In JavaScript, an event consists of three parts: Subject, Type and Action. Please refer to JavaScript documentation for list of events for different elements.</p>
+<h3 id="event-invocation">Event Invocation</h3>
+<p>Trigger event in script tag:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">object</span>.<span style="color:#a6e22e">eventName</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>()
+{
+    <span style="color:#75715e">// event body
+</span><span style="color:#75715e"></span>};
+</code></pre></div><p>e.g.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>()
+{
+    <span style="color:#75715e">// event body
+</span><span style="color:#75715e"></span>};
+</code></pre></div><p>Trigger event in element:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">onclick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;showAlert()&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Alert&#34;</span> /&gt;
+</code></pre></div><h3 id="event-listener">Event Listener</h3>
+<ul>
+<li>To add event listener to (or remove from) an object <code>obj</code>:</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#a6e22e">type</span>, <span style="color:#66d9ef">function</span>, <span style="color:#66d9ef">false</span>);
+<span style="color:#a6e22e">obj</span>.<span style="color:#a6e22e">removeEventListener</span>(<span style="color:#a6e22e">type</span>, <span style="color:#66d9ef">function</span>, <span style="color:#66d9ef">false</span>);
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">window.<span style="color:#a6e22e">onload</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>()
+{
+    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">button</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;btn&#34;</span>);
+    <span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>, <span style="color:#66d9ef">function</span>(){
+        <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;First Click&#34;</span>);
+    }, <span style="color:#66d9ef">false</span>);
+    <span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>, <span style="color:#66d9ef">function</span>(){
+        <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Second Click&#34;</span>);
+    }, <span style="color:#66d9ef">false</span>);
+    <span style="color:#a6e22e">button</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>, <span style="color:#66d9ef">function</span>(){
+        <span style="color:#a6e22e">alert</span>(<span style="color:#e6db74">&#34;Third Click&#34;</span>);
+    }, <span style="color:#66d9ef">false</span>);
+}
+</code></pre></div><h3 id="event-object">event object</h3>
+<p>An object for event is passed to event function.</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>type</td>
+<td>type of event</td>
+</tr>
+<tr>
+<td>keyCode</td>
+<td>code of key stroke</td>
+</tr>
+<tr>
+<td>shiftKey</td>
+<td>if Shift key is pressed</td>
+</tr>
+<tr>
+<td>ctrlKey</td>
+<td>if Ctrl key is pressed</td>
+</tr>
+<tr>
+<td>altKey</td>
+<td>if Alt key is pressed</td>
+</tr>
+</tbody>
+</table>
+<h2 id="window-object">window object</h2>
+<p>In JavaScript, every browser window/tab is a <code>window</code> object, each <code>window</code> object has a list of sub-objects and methods. Please refer to JavaScript documentation for detailed explanation of children objects and methods.</p>
+<p>Child objects of <code>window</code>:</p>
+<table>
+<thead>
+<tr>
+<th>sub object</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>document</td>
+<td>document model of the page</td>
+</tr>
+<tr>
+<td>location</td>
+<td>URL related object</td>
+</tr>
+<tr>
+<td>navigator</td>
+<td>browser related object</td>
+</tr>
+<tr>
+<td>history</td>
+<td>browsing history</td>
+</tr>
+<tr>
+<td>screen</td>
+<td>screen related object</td>
+</tr>
+</tbody>
+</table>
+<p>Methods of <code>window</code>:</p>
+<table>
+<thead>
+<tr>
+<th>method</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>alert()</td>
+<td>show an alert dialog</td>
+</tr>
+<tr>
+<td>confirm()</td>
+<td>show a confirmation dialog</td>
+</tr>
+<tr>
+<td>prompt()</td>
+<td>show a prompt dialog</td>
+</tr>
+<tr>
+<td>open()</td>
+<td>open a new window</td>
+</tr>
+<tr>
+<td>close()</td>
+<td>close the window</td>
+</tr>
+<tr>
+<td>setTimeout()</td>
+<td>turn on &ldquo;once off&rdquo; timer</td>
+</tr>
+<tr>
+<td>clearTimeout()</td>
+<td>turn off &ldquo;once off&rdquo; timer</td>
+</tr>
+<tr>
+<td>setInterval()</td>
+<td>turn on repeating timer</td>
+</tr>
+<tr>
+<td>clearInterval()</td>
+<td>turn off repeating time</td>
+</tr>
+</tbody>
+</table>
+
+</main>
+
+<footer>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5504633517481956"
+     data-ad-slot="4142928173"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+<div id="disqus_thread"></div>
+<script>
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/www.haozhexu.me\/article\/2020\/javascript\/";  
+this.page.identifier = "https:\/\/www.haozhexu.me\/article\/2020\/javascript\/"; 
+};
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://haozhexu.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+<hr/>
+© <a href="https://www.haozhexu.me">Haozhe XU</a> 2017
+
+</footer>
+</body>
+</html>

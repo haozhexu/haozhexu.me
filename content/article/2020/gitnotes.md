@@ -4,7 +4,7 @@ date: 2020-05-08T11:36:00+11:00
 draft: false
 ads: true
 categories:
-  - Article
+  - Notes
 tags:
   - git
   - versioncontrol

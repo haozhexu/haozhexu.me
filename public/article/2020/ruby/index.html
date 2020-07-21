@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ruby Notes | Haozhe XU</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/apps/">Apps</a></li>
+      
+      <li><a href="/poems/">Poem / 诗词</a></li>
+      
+      <li><a href="/article">Article</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/cn/">简体中文</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">Ruby Notes</span></h1>
+
+<h2 class="date">2020/07/19</h2>
+</div>
+
+<main>
+<h1 id="ruby-notes">Ruby Notes</h1>
+<p>This is the notes I&rsquo;ve taken while reading the book &ldquo;The Well-Grounded Rubyist&rdquo;, I tried to make it useful as a reference but do not expect this to be a well-written tutorial for beginners.</p>
+<p><a href="#basics">Basics</a><br>
+<a href="#objects-methods-and-local-variables">Objects, methods and local variables</a><br>
+<a href="#classes">Classes</a></p>
+<h2 id="basics">Basics</h2>
+<h3 id="basic-operations">Basic operations:</h3>
+<ul>
+<li>arithmetic: <code>+, -, *, /</code>, mixing integers and floating-point numbers would proce floating-point result.</li>
+<li>assignment: <code>x = 3</code>, <code>text = &quot;Hi&quot;</code></li>
+<li>comparison: <code>x == y</code></li>
+<li>conversion: <code>x = &quot;100&quot;.to_i</code>, <code>x = s.to_i</code></li>
+</ul>
+<h3 id="basic-io">Basic I/O:</h3>
+<ul>
+<li><code>print &quot;Hi&quot;</code>: prints the text and leaves the cursor at the end</li>
+<li><code>puts &quot;Hi&quot;</code>: prints the text and adds a new line if there isn&rsquo;t one</li>
+<li><code>x = &quot;Hi&quot;</code>, <code>p x</code>: outputs an <em>inspect</em> string which may contain extra information</li>
+<li><code>gets</code>, <code>text = gets</code>: get a line of keyboard input</li>
+</ul>
+<h3 id="special-objects">Special Objects</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">true</span>
+<span style="color:#66d9ef">false</span>
+<span style="color:#66d9ef">nil</span>
+self
+</code></pre></div><p>For conditional expression, both <code>false</code> and <code>nil</code> is evaluated as <code>false</code>.</p>
+<p>Comments are ignored by the interpreter:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e"># a line of comment</span>
+x <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span> <span style="color:#75715e"># inline comment</span>
+</code></pre></div><h3 id="convention">Convention</h3>
+<p>Note: I&rsquo;ve seen coding conventions that are different from below, so either agree to a convention from the beginning, or use whatever convention that&rsquo;s already been adopted in existing code.</p>
+<ul>
+<li><em>Local Variables</em>: start with a lowercase letter or an underscore, consists of letters, underscores and/or digits. <code>x</code>, <code>first_name</code></li>
+<li><em>Instance Variables</em>: stores information within individual objects, always start with a single at-sign (@) and consist of the same character set as local variable. <code>@age</code>, <code>@level</code></li>
+<li><em>Class Variables</em>: store information per class, follow the same rule as instance variable except that they start with two at-signs. <code>@@total_score</code></li>
+<li><em>Global Variables</em>: start with a dollar sign. <code>$FILE_PATH</code></li>
+<li><em>Constants</em>: begin with an uppercase letter. e.g. <code>FirstName</code>, <code>LOAD_PATH</code></li>
+<li><em>Method Names</em>: they follow the same rule as local variables, and this is on purpose so that the concept of methods is the same as variables as expression that provide a value</li>
+</ul>
+<h3 id="objects">Objects</h3>
+<p>If you know what OO is, the idea of <em>Objects</em> in Ruby is very straightforward:</p>
+<ul>
+<li><em>almost</em> everything in Ruby are objects</li>
+<li>every object is capable of receiving a certain set of <em>messages</em></li>
+<li>each <em>message</em> correspond to a <em>method</em></li>
+</ul>
+<p>e.g.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">x <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;100&#34;</span><span style="color:#f92672">.</span>to_i
+y <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;120&#34;</span><span style="color:#f92672">.</span>to_i(<span style="color:#ae81ff">9</span>)
+puts <span style="color:#e6db74">&#34;Hi&#34;</span> <span style="color:#75715e"># bareword-style invocation</span>
+</code></pre></div><h2 id="installation-package-version">Installation, Package, Version</h2>
+<p>Sometimes it&rsquo;s useful to have multiple Ruby version installed, to check current configuration, load a library package called <code>rbconfig</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">irb <span style="color:#f92672">--</span>simple<span style="color:#f92672">-</span>prompt <span style="color:#f92672">-</span>r rbconfig
+<span style="color:#f92672">&gt;&gt;</span> <span style="color:#66d9ef">RbConfig</span><span style="color:#f92672">::</span><span style="color:#66d9ef">CONFIG</span><span style="color:#f92672">[</span>term<span style="color:#f92672">]</span>
+</code></pre></div><p>Directories lookup for <em>term</em>:</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Directory contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rubylibdir</td>
+<td>Ruby standard library</td>
+</tr>
+<tr>
+<td>bindir</td>
+<td>Ruby command-line tools</td>
+</tr>
+<tr>
+<td>archdir</td>
+<td>Architecture-specific extensions and libraries</td>
+</tr>
+<tr>
+<td>sitedir</td>
+<td>Your own or third-party extensions and libraries</td>
+</tr>
+<tr>
+<td>vendordir</td>
+<td>Third-party extensions and libraries (in Ruby)</td>
+</tr>
+<tr>
+<td>sitelibdir</td>
+<td>Your own Ruby language extensions (in Ruby)</td>
+</tr>
+<tr>
+<td>sitearchdir</td>
+<td>Your own Ruby language extensions (in C)</td>
+</tr>
+</tbody>
+</table>
+<p>Check default load paths:</p>
+<p><code>ruby -e 'puts $:'</code></p>
+<p><code>-e</code> means inline script to the interpreter</p>
+<ul>
+<li><code>load</code> is a command for loading library. <code>load &quot;../extras.rb&quot;</code></li>
+<li><code>require</code> a <em>feature</em> only load it once, unlike <code>load</code>. <code>require &quot;../extras&quot;</code></li>
+<li><code>require_relative</code> loads features by searching relative to the running directory</li>
+</ul>
+<h3 id="ruby-tools-and-applications">Ruby tools and applications</h3>
+<ul>
+<li>ruby - interpreter</li>
+<li>irb - interactive Ruby interpreter</li>
+<li>rdoc and ri - Ruby documentation tools</li>
+<li>rake - Ruby make, a task-management utility</li>
+<li>gem - a Ruby library and application package-management utility</li>
+<li>erb - a templating system</li>
+</ul>
+<h4 id="interpreter-command-line-arguments">Interpreter command-line arguments</h4>
+<table>
+<thead>
+<tr>
+<th>Switch</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>-c</code></td>
+<td>checks the syntax of a program file without executing it, usually used in conjunction with <code>-w</code></td>
+</tr>
+<tr>
+<td><code>-w</code></td>
+<td>gives warning messages during program execution</td>
+</tr>
+<tr>
+<td><code>-e</code></td>
+<td>executes the code provided in quotation marks on the command line, for multiple lines use literal line breaks (ie. Enter) or semicolons</td>
+</tr>
+<tr>
+<td><code>-l</code></td>
+<td>line mode: prints a newline after every line of output</td>
+</tr>
+<tr>
+<td><code>rname</code></td>
+<td>requires the named feature, <code>ruby -rscanf</code></td>
+</tr>
+<tr>
+<td><code>-v</code></td>
+<td>shows Ruby version and executes the program in verbose mode</td>
+</tr>
+<tr>
+<td><code>--version</code></td>
+<td>shows Ruby version information</td>
+</tr>
+<tr>
+<td><code>-h</code></td>
+<td>shows information about all command-line switches for the interpreter</td>
+</tr>
+</tbody>
+</table>
+<h4 id="rake">rake</h4>
+<p><code>rake</code> provides functionalities similar to <code>make</code>, it reads and executes tasks defined in file, <code>Rakefile</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Ruby" data-lang="Ruby">namespace <span style="color:#e6db74">:project</span> <span style="color:#66d9ef">do</span>
+  desc <span style="color:#e6db74">&#34;Clean files temporarily generated during building&#34;</span>
+  task <span style="color:#e6db74">:clean</span> <span style="color:#66d9ef">do</span>
+    <span style="color:#75715e"># cleaning</span>
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><ul>
+<li>perform the task: <code>rake project:clean</code></li>
+<li>list all defined tasks: <code>rake --tasks</code></li>
+<li>namespace can have any depth: <code>rake project:build:prod</code></li>
+</ul>
+<h4 id="gem">gem</h4>
+<p><code>gem install library</code></p>
+<ul>
+<li><code>gem</code> downloads gem files as needed from rubygems.org</li>
+<li>files in <code>.gem</code> format saved in cache subdirectory of gems directory</li>
+<li>you can also install a gem on your hard disk: <code>gem install /home/me/mygems/something.gem</code></li>
+<li>providing a gem without full filename would look for it in current directory and local cache, also searches remotely for dependencies unless providing <code>-l</code> command-line flag</li>
+<li>to uninstall a gem, use <code>gem uninstall gemname</code></li>
+<li>once a gem is installed, you can <code>require</code> it</li>
+</ul>
+<h2 id="objects-methods-and-local-variables">Objects, methods and local variables</h2>
+<h3 id="generic-object">Generic Object</h3>
+<ul>
+<li>Generic object doesn&rsquo;t represent or model anything specific</li>
+<li>Created by <code>Object.new</code></li>
+<li>There&rsquo;s also <code>BasicObject</code> which is more basic</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">robot <span style="color:#f92672">=</span> <span style="color:#66d9ef">Object</span><span style="color:#f92672">.</span>new
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">robot</span><span style="color:#f92672">.</span><span style="color:#a6e22e">talk</span>
+  puts <span style="color:#e6db74">&#34;I am a robot&#34;</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><ul>
+<li>now we can send <em>message</em> to the object: <code>robot.talk</code></li>
+</ul>
+<h4 id="methods-that-take-arguments">Methods that take arguments</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">robot</span><span style="color:#f92672">.</span><span style="color:#a6e22e">c2f</span>(c)
+  c <span style="color:#f92672">*</span> <span style="color:#ae81ff">9</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0</span> <span style="color:#f92672">/</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">+</span> <span style="color:#ae81ff">32</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><ul>
+<li>now we can ask <code>robot</code> to convert celsius to fahrenheit: <code>puts robot.c2f(100)</code></li>
+<li>parentheses are optional when there&rsquo;s a direct correspondence between parameters and method</li>
+<li>define: <code>def robot.c2f c</code></li>
+<li>call: <code>robot.c2f 100</code></li>
+<li>keyword <code>return</code> is optional but sometimes necessary, e.g. <code>return a, b, c</code> would wrap the values in an array, equivalent to <code>[a, b, c]</code> without <code>return</code></li>
+</ul>
+<h4 id="another-example-product">Another Example: Product</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">product <span style="color:#f92672">=</span> <span style="color:#66d9ef">Object</span><span style="color:#f92672">.</span>new
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">product</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span>
+  <span style="color:#e6db74">&#34;A Robot&#34;</span>
+<span style="color:#66d9ef">end</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">product</span><span style="color:#f92672">.</span><span style="color:#a6e22e">full_description</span>
+  <span style="color:#e6db74">&#34;A Robot that can Talk&#34;</span>
+<span style="color:#66d9ef">end</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">product</span><span style="color:#f92672">.</span><span style="color:#a6e22e">is_complete?</span>
+  <span style="color:#66d9ef">false</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><ul>
+<li>a method of a boolean value ends with a question mark so it can be used as a condition like asking a question</li>
+<li>everything in Ruby has a Boolean value, and sometimes it&rsquo;s not what you might expect</li>
+</ul>
+<h4 id="built-in-methods-of-an-object">Built-in Methods of an Object</h4>
+<p>To see a list of innate methods of object:</p>
+<p><code>p Object.new.methods.sort</code></p>
+<ul>
+<li><code>object_id</code> can be used to uniquely identify objects, it&rsquo;s like a reference to object</li>
+<li><code>respond_to?</code> can be used to check if object can respond to a message. <code>robot.respond_to?(&quot;talk&quot;)</code></li>
+<li><code>send</code> can be used to send message to an object. <code>robot.send(&quot;talk&quot;)</code></li>
+<li><code>__send__</code> is an alternative way to call <code>send</code>, it avoid conflict with dev defined <code>send</code></li>
+<li>there&rsquo;s also the <code>public_send</code> which cannot call the object&rsquo;s private methods</li>
+</ul>
+<h3 id="method-arguments">Method Arguments</h3>
+<ul>
+<li>providing wrong numbers of arguments yields: <code>ArgumentError</code></li>
+<li>optional argument starts with a star: <code>def multi_args(*x)</code></li>
+<li>arguments can have default values <code>def default_args(a,b,c=1)</code></li>
+<li>Ruby tries to assign values to as many variables as possible</li>
+<li>you can&rsquo;t put the argument sponge to the left of any default-valued arguments</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">mixed_args</span>(a,b,<span style="color:#f92672">*</span>c,d)
+  puts <span style="color:#e6db74">&#34;Arguments:&#34;</span>
+  p a,b,c,d
+<span style="color:#66d9ef">end</span>
+
+mixed_args(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>)
+<span style="color:#75715e"># Arguments:</span>
+<span style="color:#75715e"># 1</span>
+<span style="color:#75715e"># 2</span>
+<span style="color:#75715e"># [3, 4]</span>
+<span style="color:#75715e"># 5</span>
+
+mixed_args(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>)
+<span style="color:#75715e"># 1</span>
+<span style="color:#75715e"># 2</span>
+<span style="color:#75715e"># []</span>
+<span style="color:#75715e"># 3</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">args_unleashed</span>(a,b<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>,<span style="color:#f92672">*</span>c,d,e)
+  p a,b,c,d,e
+<span style="color:#66d9ef">end</span>
+
+args_unleashed(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>)
+<span style="color:#75715e"># 1</span>
+<span style="color:#75715e"># 2</span>
+<span style="color:#75715e"># [3]</span>
+<span style="color:#75715e"># 4</span>
+<span style="color:#75715e"># 5</span>
+
+args_unleashed(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>)
+<span style="color:#75715e"># 1</span>
+<span style="color:#75715e"># 1</span>
+<span style="color:#75715e"># []</span>
+<span style="color:#75715e"># 2</span>
+<span style="color:#75715e"># 3</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">broken_args</span>(x,<span style="color:#f92672">*</span>y,z<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+<span style="color:#66d9ef">end</span>
+</code></pre></div><ul>
+<li>once given x its argument and sponged up all the remaining arguments in y, nothing can be left for z</li>
+<li>if z gets the right-hand argument, leaving the rest for y, it makes no sense to describe z as &ldquo;optional&rdquo; or &ldquo;default-valued&rdquo;</li>
+</ul>
+<h3 id="local-variables-and-assignment">Local variables and assignment</h3>
+<ul>
+<li>local variables have limited <em>scope</em></li>
+<li>most variables in Ruby hold <em>references</em> to objects</li>
+<li>immediate values: integers, <code>true</code>, <code>false</code> and <code>nil</code></li>
+<li>you can&rsquo;t do this: <code>x = 1; x++</code></li>
+<li><code>dup</code> method duplicates an object, preventing original object from being changed inside methods</li>
+<li><code>freeze</code> method freezes an object, prevents it from being changed at all</li>
+<li>there is no way to unfreeze</li>
+<li><code>clone</code> is similar to <code>dup</code>, except the <code>clone</code> of a frozen object will also be frozen, but not the case with <code>dup</code></li>
+</ul>
+<h2 id="classes">Classes</h2>
+<ul>
+<li>classes usually exist for the purpose of being <em>instantiated</em></li>
+<li>classes are objects, the <code>new</code> method is a <em>constructor</em> whose purpose is to create and return a new instance of the class</li>
+<li>classes are defined with <code>class</code> keyword, named with <em>constants</em></li>
+<li><em>instance methods</em> will be shared by all instances</li>
+<li>define the same method multiple times would <em>override</em></li>
+<li>reopen a class by <code>class [ClassName]</code> with additions or changes</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Robot</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">name</span>
+    <span style="color:#e6db74">&#34;A Robot&#34;</span>
+  <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">name</span>
+    <span style="color:#e6db74">&#34;B Robot&#34;</span>
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+
+robot <span style="color:#f92672">=</span> <span style="color:#66d9ef">Robot</span><span style="color:#f92672">.</span>new
+puts robot<span style="color:#f92672">.</span>name
+
+<span style="color:#75715e"># reopen class</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Robot</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">age</span>
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">10</span>
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><h3 id="instance-variables">Instance Variables</h3>
+<ul>
+<li>you can have constructor <code>initialize</code> with arguments</li>
+<li>Ruby allows you to define methods that end with an equal sign</li>
+<li>with syntactic sugar, method call is like assignment</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Robot</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">initialize</span>(name,age)
+    @name <span style="color:#f92672">=</span> name
+    @age <span style="color:#f92672">=</span> age
+  <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">name</span>
+    @name
+  <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">age</span>
+    @age
+  <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">get_older</span>
+    @age <span style="color:#f92672">=</span> @age <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+  <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">cost</span><span style="color:#f92672">=</span>(amount)
+    @cost <span style="color:#f92672">=</span> amount
+  <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">cost</span>
+    @cost
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+
+robot <span style="color:#f92672">=</span> <span style="color:#66d9ef">Robot</span><span style="color:#f92672">.</span>new(<span style="color:#e6db74">&#34;A Robot&#34;</span>, <span style="color:#ae81ff">11</span>)
+robot<span style="color:#f92672">.</span>cost<span style="color:#f92672">=</span>(<span style="color:#ae81ff">100</span><span style="color:#f92672">.</span><span style="color:#ae81ff">00</span>)
+<span style="color:#75715e"># syntactic sugar</span>
+robot<span style="color:#f92672">.</span>cost <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span><span style="color:#f92672">.</span><span style="color:#ae81ff">00</span>
+</code></pre></div><ul>
+<li>Ruby provides shortcuts for writing getters and setters</li>
+<li>an <em>attribute</em> is a property of an object whose value can be read and/or written through the object</li>
+<li>Ruby offers <code>attr_reader</code> and <code>attr_writer</code> for defining readable and writable attributes.</li>
+<li>for read-write attributes, use <code>attr_accessor</code></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Robot</span>
+  <span style="color:#66d9ef">attr_reader</span> <span style="color:#e6db74">:name</span>, <span style="color:#e6db74">:age</span>, <span style="color:#e6db74">:cost</span>
+  <span style="color:#66d9ef">attr_writer</span> <span style="color:#e6db74">:cost</span>
+  <span style="color:#75715e"># same as:</span>
+  <span style="color:#66d9ef">attr_reader</span> <span style="color:#e6db74">:name</span>, <span style="color:#e6db74">:age</span>
+  <span style="color:#66d9ef">attr_accessor</span> <span style="color:#e6db74">:cost</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><h3 id="inheritance">Inheritance</h3>
+<ul>
+<li><em>single inheritance</em>: every Ruby class can have only one superclass</li>
+<li>every class is either a subclass of <code>Object</code>, or a sub-subclass of <code>Object</code></li>
+<li>classes are special objects which have the power to create new instances</li>
+<li>class can be created the same we as other objects: <code>Class.new</code></li>
+<li>you can add instance methods to a class when it&rsquo;s created</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">SmartRobot</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">Robot</span>
+  <span style="color:#66d9ef">attr_accessor</span> <span style="color:#e6db74">:ai</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">c <span style="color:#f92672">=</span> <span style="color:#66d9ef">Class</span><span style="color:#f92672">.</span>new <span style="color:#66d9ef">do</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">say_hi</span>
+    puts <span style="color:#e6db74">&#34;Hi!&#34;</span>
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+
+c<span style="color:#f92672">.</span>new<span style="color:#f92672">.</span>say_hi
+</code></pre></div><h3 id="singleton-method-class-method">Singleton Method, Class Method</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">Robot</span><span style="color:#f92672">.</span><span style="color:#a6e22e">most_expensive</span>(<span style="color:#f92672">*</span>robots)
+  robots<span style="color:#f92672">.</span>max_by(<span style="color:#f92672">&amp;</span><span style="color:#e6db74">:cost</span>)
+<span style="color:#66d9ef">end</span>
+</code></pre></div><ul>
+<li><code>&amp;:</code> is often used with the map method</li>
+</ul>
+<h3 id="constants">Constants</h3>
+<ul>
+<li>name of constants begins with a capital letter</li>
+<li>constant lookup notation: a double colon (<code>::</code>), <code>Robot::MODELS</code></li>
+</ul>
+
+</main>
+
+<footer>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5504633517481956"
+     data-ad-slot="4142928173"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+<div id="disqus_thread"></div>
+<script>
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/www.haozhexu.me\/article\/2020\/ruby\/";  
+this.page.identifier = "https:\/\/www.haozhexu.me\/article\/2020\/ruby\/"; 
+};
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://haozhexu.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+<hr/>
+© <a href="https://www.haozhexu.me">Haozhe XU</a> 2017
+
+</footer>
+</body>
+</html>

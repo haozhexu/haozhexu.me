@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Notes on Haozhe XU</title>
-    <link>https://www.haozhexu.me/categories/notes/</link>
-    <description>Recent content in Notes on Haozhe XU</description>
+    <title>html on Haozhe XU</title>
+    <link>https://www.haozhexu.me/tags/html/</link>
+    <description>Recent content in html on Haozhe XU</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 21 Jul 2020 11:00:00 +1100</lastBuildDate>
     
-	<atom:link href="https://www.haozhexu.me/categories/notes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.haozhexu.me/tags/html/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,29 +20,6 @@
 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; Specify W3C XHTML standard:
 &amp;lt;html xmlns=&amp;#34;http://www.w3.org/1999/xhtml&amp;#34;&amp;gt; Comments:
 &amp;lt;!-- comments --&amp;gt; Inside head meta  &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;: name of the page, displayed on title bar, also used for bookmark &amp;lt;meta&amp;gt;&amp;lt;/meta&amp;gt;: provide extra information of this page, commonly used:  &amp;lt;meta name=&amp;quot;keywords&amp;quot; content=&amp;quot;key, word, tag&amp;quot;&amp;gt;: keyword tags of the page &amp;lt;meta name=&amp;quot;description&amp;quot; content=&amp;quot;&amp;quot;&amp;gt;: description &amp;lt;meta name=&amp;quot;author&amp;quot; content=&amp;quot;Author Name&amp;quot;&amp;gt;: author &amp;lt;meta name=&amp;quot;copyright&amp;quot; content=&amp;quot;Copyright Info&amp;quot;&amp;gt;: copyright information &amp;lt;meta http_equiv=&amp;quot;Content-Type&amp;quot; content=&amp;quot;text/html; charset=&amp;quot;utf-8&amp;quot;/&amp;gt;: encoding of the page &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;: short form in HTML5 &amp;lt;meta http-equiv=&amp;quot;refresh&amp;quot; content=&amp;quot;5;url=URL&amp;quot;&amp;gt;: redirect to URL after 5 seconds   note: &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt; has to be put before title or other meta tags  style, script and link  style: used to define CSS style script: wrapping JavaScript code or import external JavaScript file link: import external CSS file  &amp;lt;head&amp;gt; &amp;lt;style type=&amp;#34;text/css&amp;#34;&amp;gt; &amp;lt;/style&amp;gt; &amp;lt;script&amp;gt; &amp;lt;/script&amp;gt; &amp;lt;link type=&amp;#34;text/css&amp;#34; rel=&amp;#34;stylesheet&amp;#34; href=&amp;#34;css/index.</description>
-    </item>
-    
-    <item>
-      <title>Ruby Notes</title>
-      <link>https://www.haozhexu.me/article/2020/ruby/</link>
-      <pubDate>Sun, 19 Jul 2020 18:00:00 +1100</pubDate>
-      
-      <guid>https://www.haozhexu.me/article/2020/ruby/</guid>
-      <description>Ruby Notes This is the notes I&amp;rsquo;ve taken while reading the book &amp;ldquo;The Well-Grounded Rubyist&amp;rdquo;, I tried to make it useful as a reference but do not expect this to be a well-written tutorial for beginners.
-Basics
-Objects, methods and local variables
-Classes
-Basics Basic operations:  arithmetic: +, -, *, /, mixing integers and floating-point numbers would proce floating-point result. assignment: x = 3, text = &amp;quot;Hi&amp;quot; comparison: x == y conversion: x = &amp;quot;100&amp;quot;.</description>
-    </item>
-    
-    <item>
-      <title>Git Notes</title>
-      <link>https://www.haozhexu.me/article/2020/gitnotes/</link>
-      <pubDate>Fri, 08 May 2020 11:36:00 +1100</pubDate>
-      
-      <guid>https://www.haozhexu.me/article/2020/gitnotes/</guid>
-      <description>Git Notes Data in Git is like a set of snapshots of a mini filesystem, every commit is a snapshot of all the files at the moment, with reference stored for that snapsthot; Files that have not changed aren&amp;rsquo;t stored - instead just a link to the previous identical file that has been stored already.
- nearly every operation is local everything is check-summed (SHA-1) to ensure integrity most operations only add data to Git database  Three States Git has three main states for files:</description>
     </item>
     
   </channel>

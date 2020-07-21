@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Cheatsheet | Haozhe XU</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/apps/">Apps</a></li>
+      
+      <li><a href="/poems/">Poem / 诗词</a></li>
+      
+      <li><a href="/article">Article</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/cn/">简体中文</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">HTML Cheatsheet</span></h1>
+
+<h2 class="date">2020/07/21</h2>
+</div>
+
+<main>
+<h1 id="html-cheatsheet">HTML Cheatsheet</h1>
+<p>Basic components of HTML document:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!DOCTYPE html&gt;</span>
+&lt;<span style="color:#f92672">html</span>&gt;
+    &lt;<span style="color:#f92672">head</span>&gt;&lt;/<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">body</span>&gt;
+    &lt;/<span style="color:#f92672">body</span>&gt;
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>Specify W3C XHTML standard:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">xmlns</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://www.w3.org/1999/xhtml&#34;</span>&gt;
+</code></pre></div><p>Comments:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#75715e">&lt;!-- comments --&gt;</span>
+</code></pre></div><h2 id="inside-head">Inside head</h2>
+<h3 id="meta">meta</h3>
+<ul>
+<li><code>&lt;title&gt;&lt;/title&gt;</code>: name of the page, displayed on title bar, also used for bookmark</li>
+<li><code>&lt;meta&gt;&lt;/meta&gt;</code>: provide extra information of this page, commonly used:
+<ul>
+<li><code>&lt;meta name=&quot;keywords&quot; content=&quot;key, word, tag&quot;&gt;</code>: keyword tags of the page</li>
+<li><code>&lt;meta name=&quot;description&quot; content=&quot;&quot;&gt;</code>: description</li>
+<li><code>&lt;meta name=&quot;author&quot; content=&quot;Author Name&quot;&gt;</code>: author</li>
+<li><code>&lt;meta name=&quot;copyright&quot; content=&quot;Copyright Info&quot;&gt;</code>: copyright information</li>
+<li><code>&lt;meta http_equiv=&quot;Content-Type&quot; content=&quot;text/html; charset=&quot;utf-8&quot;/&gt;</code>: encoding of the page</li>
+<li><code>&lt;meta charset=&quot;utf-8&quot;&gt;</code>: short form in HTML5</li>
+<li><code>&lt;meta http-equiv=&quot;refresh&quot; content=&quot;5;url=URL&quot;&gt;</code>: redirect to URL after 5 seconds</li>
+</ul>
+</li>
+<li><strong>note:</strong> <code>&lt;meta charset=&quot;utf-8&quot;&gt;</code> has to be put before <code>title</code> or other <code>meta</code> tags</li>
+</ul>
+<h3 id="style-script-and-link">style, script and link</h3>
+<ul>
+<li><code>style</code>: used to define CSS style</li>
+<li><code>script</code>: wrapping JavaScript code or import external JavaScript file</li>
+<li><code>link</code>: import external CSS file</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">style</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span>&gt;
+    &lt;/<span style="color:#f92672">style</span>&gt;
+    &lt;<span style="color:#f92672">script</span>&gt;
+    &lt;/<span style="color:#f92672">script</span>&gt;
+    &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text/css&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;css/index.css&#34;</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+</code></pre></div><h2 id="text">Text</h2>
+<ul>
+<li><code>&lt;h1&gt;&lt;/h1&gt;</code> &ndash;&gt; <code>&lt;h6&gt;&lt;/h6&gt;</code>: headlines, 6 levels from largest to smallest</li>
+<li><code>&lt;p&gt;&lt;/p&gt;</code>: paragraph, multiple paragraphs have default spacing between paragraphs</li>
+<li><code>&lt;br/&gt;</code>: line break, not the same as paragraph spacing</li>
+</ul>
+<h3 id="text-tags">Text Tags</h3>
+<ul>
+<li><code>&lt;strong&gt;&lt;/strong&gt;</code> and <code>&lt;b&gt;&lt;/b&gt;</code>: bold text</li>
+<li><code>&lt;em&gt;&lt;/em&gt;</code> and <code>&lt;i&gt;&lt;/i&gt;</code>: italic text</li>
+<li><code>&lt;cite&gt;&lt;/cite&gt;</code>: citation, usually the same as italic</li>
+<li><code>&lt;sup&gt;&lt;/sup&gt;</code>: superscripted, e.g. <code>a&lt;sup&gt;2&lt;/sup&gt;</code> is a to the power of 2</li>
+<li><code>&lt;sub&gt;&lt;/sub&gt;</code>: subscripted, e.g. <code>H&lt;sub&gt;2&lt;/sub&gt;O</code> hydro-oxygen</li>
+<li><code>&lt;s&gt;&lt;/s&gt;</code>: stike through line</li>
+<li><code>&lt;u&gt;&lt;/u&gt;</code>: underline, usually replaced by CSS</li>
+<li><code>&lt;big&gt;&lt;/big&gt;</code> and <code>&lt;small&gt;&lt;/small&gt;</code>: big and small font, usually replaced by CSS</li>
+<li><code>&lt;hr/&gt;</code>: horizontal line</li>
+<li><code>&lt;div&gt;&lt;/div&gt;</code>: division of HTML body, used to format content with CSS</li>
+</ul>
+<p>Self-closing tags can have opening tag without closing tag, a few examples:</p>
+<ul>
+<li><code>&lt;meta/&gt;</code></li>
+<li><code>&lt;link/&gt;</code></li>
+<li><code>&lt;br/&gt;</code></li>
+<li><code>&lt;hr/&gt;</code></li>
+<li><code>&lt;img/&gt;</code></li>
+<li><code>&lt;input/&gt;</code></li>
+</ul>
+<h3 id="block-and-inline-element">Block and Inline Element</h3>
+<p>In HTML, block elements occupy at least a whole line and don&rsquo;t co-exist next to other elements on the same line. Inside block elements there can be other block or inline elements.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">h3</span>&gt;Title 3&lt;/<span style="color:#f92672">h3</span>&gt;
+        &lt;<span style="color:#f92672">p</span>&gt;A paragraph of &lt;<span style="color:#f92672">em</span>&gt;text&lt;/<span style="color:#f92672">em</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+        &lt;<span style="color:#f92672">p</span>&gt;Another paragraph of &lt;<span style="color:#f92672">i</span>&gt;text&lt;/<span style="color:#f92672">i</span>&gt;&lt;/<span style="color:#f92672">p</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+</code></pre></div><h3 id="special-symbols">Special Symbols</h3>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Description</th>
+<th>Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&quot;</td>
+<td>double quote</td>
+<td>&quot;</td>
+</tr>
+<tr>
+<td>‘</td>
+<td>left single quote</td>
+<td>‘</td>
+</tr>
+<tr>
+<td>’</td>
+<td>right single quote</td>
+<td>’</td>
+</tr>
+<tr>
+<td>x</td>
+<td>multiply</td>
+<td>×</td>
+</tr>
+<tr>
+<td>÷</td>
+<td>division</td>
+<td>÷</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>greater than</td>
+<td>&gt;</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>less than</td>
+<td>&lt;</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>ampersand</td>
+<td>&amp;</td>
+</tr>
+<tr>
+<td>—</td>
+<td>long dash</td>
+<td>—</td>
+</tr>
+<tr>
+<td>|</td>
+<td>pipe</td>
+<td>|</td>
+</tr>
+<tr>
+<td>§</td>
+<td>section</td>
+<td>§</td>
+</tr>
+<tr>
+<td>©</td>
+<td>copyright</td>
+<td>©</td>
+</tr>
+<tr>
+<td>®</td>
+<td>registration</td>
+<td>®</td>
+</tr>
+<tr>
+<td>™</td>
+<td>trademark</td>
+<td>™</td>
+</tr>
+<tr>
+<td>€</td>
+<td>euro</td>
+<td>€</td>
+</tr>
+<tr>
+<td>£</td>
+<td>pound</td>
+<td>£</td>
+</tr>
+<tr>
+<td>¥</td>
+<td>Yen</td>
+<td>¥</td>
+</tr>
+<tr>
+<td>°</td>
+<td>Degree</td>
+<td>°</td>
+</tr>
+<tr>
+<td></td>
+<td>Space</td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<h2 id="list">List</h2>
+<h3 id="ordered-list">Ordered List</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ol</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;attribute&#34;</span>&gt;
+    &lt;<span style="color:#f92672">li</span>&gt;Item 1&lt;/<span style="color:#f92672">li</span>&gt;
+    &lt;<span style="color:#f92672">li</span>&gt;Item 2&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;/<span style="color:#f92672">ol</span>&gt;
+</code></pre></div><ul>
+<li><code>type</code> is optional, specifying order prefix, default is digit</li>
+<li><code>1</code>: digit</li>
+<li><code>a</code>: lower case alphabets</li>
+<li><code>A</code>: upper case alphabets</li>
+<li><code>i</code>: lower case Rome characters</li>
+<li><code>I</code>: upper case Rome characters</li>
+</ul>
+<h3 id="unordered-list">Unordered List</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">ul</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;attribute&#34;</span>&gt;
+    &lt;<span style="color:#f92672">li</span>&gt;Item 1&lt;/<span style="color:#f92672">li</span>&gt;
+    &lt;<span style="color:#f92672">li</span>&gt;Item 2&lt;/<span style="color:#f92672">li</span>&gt;
+&lt;/<span style="color:#f92672">ol</span>&gt;
+</code></pre></div><ul>
+<li><code>type</code> is also optional, default is solid dot</li>
+<li><code>disc</code>: solid dot</li>
+<li><code>circle</code>: circle</li>
+<li><code>square</code>: solid square</li>
+</ul>
+<h3 id="definition-list">Definition List</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">dl</span>&gt;
+    &lt;<span style="color:#f92672">dt</span>&gt;Term&lt;/<span style="color:#f92672">dt</span>&gt;
+    &lt;<span style="color:#f92672">dd</span>&gt;Description&lt;/<span style="color:#f92672">dd</span>&gt;
+&lt;/<span style="color:#f92672">dl</span>&gt;
+</code></pre></div><h2 id="table">Table</h2>
+<ul>
+<li>an HTML table usually consists of <code>table</code>, <code>tr</code> for row and <code>td</code> for data cell.</li>
+<li><code>&lt;th&gt;</code> stands for table header</li>
+<li><code>&lt;thead&gt;</code>, <code>&lt;tbody&gt;</code> and <code>&lt;tfoot&gt;</code> isn&rsquo;t required but can make code more organized</li>
+<li><code>&lt;colspan&gt;</code> and <code>&lt;rowspan&gt;</code> stand for column span and row span</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">table</span>&gt;
+    &lt;<span style="color:#f92672">caption</span>&gt;Table Title&lt;/<span style="color:#f92672">caption</span>&gt;
+    <span style="color:#75715e">&lt;!-- table head --&gt;</span>
+    &lt;<span style="color:#f92672">thead</span>&gt;
+        &lt;<span style="color:#f92672">tr</span>&gt;
+            &lt;<span style="color:#f92672">th</span>&gt;head title 1&lt;/<span style="color:#f92672">th</span>&gt;
+            &lt;<span style="color:#f92672">th</span>&gt;head title 2&lt;/<span style="color:#f92672">th</span>&gt;
+        &lt;/<span style="color:#f92672">tr</span>&gt;
+    &lt;/<span style="color:#f92672">thead</span>&gt;
+    <span style="color:#75715e">&lt;!-- table body --&gt;</span>
+    &lt;<span style="color:#f92672">tbody</span>&gt;
+        &lt;<span style="color:#f92672">tr</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;data 1&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;data 2&lt;/<span style="color:#f92672">td</span>&gt;
+        &lt;/<span style="color:#f92672">tr</span>&gt;
+        &lt;<span style="color:#f92672">tr</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;data 3&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;data 4&lt;/<span style="color:#f92672">td</span>&gt;
+        &lt;/<span style="color:#f92672">tr</span>&gt;
+    &lt;/<span style="color:#f92672">tbody</span>&gt;
+    <span style="color:#75715e">&lt;!-- table footer --&gt;</span>
+    &lt;<span style="color:#f92672">tfoot</span>&gt;
+        &lt;<span style="color:#f92672">tr</span>&gt;
+            &lt;<span style="color:#f92672">td</span> <span style="color:#a6e22e">colspan</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2&#34;</span>&gt;footer&lt;/<span style="color:#f92672">td</span>&gt;
+        &lt;/<span style="color:#f92672">tr</span>&gt;
+    &lt;/<span style="color:#f92672">tfoot</span>&gt;
+&lt;/<span style="color:#f92672">table</span>&gt;
+</code></pre></div><h2 id="image">Image</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">img</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;path/image.png&#34;</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Title&#34;</span> <span style="color:#a6e22e">alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alternative text&#34;</span> <span style="color:#a6e22e">align</span><span style="color:#f92672">=</span><span style="color:#e6db74">?</span> <span style="color:#a6e22e">border</span><span style="color:#f92672">=</span><span style="color:#e6db74">?</span> <span style="color:#a6e22e">width</span><span style="color:#f92672">=</span><span style="color:#e6db74">?</span> <span style="color:#a6e22e">height</span><span style="color:#f92672">=</span><span style="color:#e6db74">?</span> /&gt;
+</code></pre></div><ul>
+<li><code>src</code>: source of image</li>
+<li><code>title</code>: title of image for viewer, on mouse cursor</li>
+<li><code>alt</code>: alternative text, displayed when image not found, also for search engine</li>
+<li><code>align</code>: alignment for CSS</li>
+<li><code>border</code>: size of border</li>
+<li><code>width</code>, <code>height</code>: dimension of image</li>
+</ul>
+<h2 id="hyperlink">Hyperlink</h2>
+<ul>
+<li><code>&lt;a href=&quot;URL&quot;&gt;clickable text&lt;/a&gt;</code>: hyperlink to URL</li>
+<li><code>&lt;a href=&quot;mailto:EMAIL@ADDRESS&quot;&gt;clickable email&lt;/a&gt;</code>: hyperlink to email address</li>
+<li><code>&lt;a name=&quot;Name&quot;&gt;</code>: an anchor location within a document</li>
+<li><code>&lt;a href=&quot;#Name&quot;&gt;clickable text&lt;/a&gt;</code>: a link to an anchor within text</li>
+<li><code>&lt;div id=&quot;Name&quot;&gt;</code> also creates a target anchor</li>
+</ul>
+<h3 id="target">target</h3>
+<p><code>target</code> specifies how a links should be opened.</p>
+<p><code>&lt;a href=&quot;URL&quot; target=&quot;target&quot;&gt;Clickable Text&lt;/a&gt;</code></p>
+<ul>
+<li><code>_self</code>: default, open within the same window</li>
+<li><code>_blank</code>: open in a new window</li>
+<li><code>_parent</code>: open in a parent window</li>
+<li><code>_top</code>: open in top window</li>
+</ul>
+<h2 id="form">Form</h2>
+<p>Commonly used attributes for <code>&lt;form&gt;</code>:</p>
+<ul>
+<li><code>name</code>: name of the form
+<ul>
+<li><code>&lt;form name=&quot;Form&quot;&gt;&lt;/form&gt;</code></li>
+</ul>
+</li>
+<li><code>method</code>: HTTP method, e.g. <code>&quot;get&quot;</code>, <code>&quot;post&quot;</code>
+<ul>
+<li><code>&lt;form method=&quot;post&quot;&gt;&lt;/form&gt;</code></li>
+</ul>
+</li>
+<li><code>action</code>: where should the form be submitted to
+<ul>
+<li><code>&lt;form action=&quot;index.php&quot;&gt;&lt;/form&gt;</code></li>
+</ul>
+</li>
+<li><code>target</code>: how the window should be opened
+<ul>
+<li><code>&lt;form target=&quot;_blank&quot;&gt;&lt;/form&gt;</code></li>
+</ul>
+</li>
+<li><code>enctype</code>: type of encoding, used for uploading files</li>
+</ul>
+<h3 id="input">input</h3>
+<p><code>&lt;input type=&quot;TYPE&quot; /&gt;</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post&#34;</span>&gt;
+  Name: &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> /&gt;
+  Password: &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">maxlength</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;20&#34;</span> /&gt;
+  Gender:
+  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;gender&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Male&#34;</span> <span style="color:#a6e22e">checked</span> /&gt;Male
+  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;radio&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;gender&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Female&#34;</span> /&gt;Female
+  Favourite Fruits:
+  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fruit&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Apple&#34;</span> /&gt;Apple
+  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fruit&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Orange&#34;</span> /&gt;Orange
+  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;checkbox&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;fruit&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Banana&#34;</span> /&gt;Banana
+  Basic Information:&lt;<span style="color:#f92672">br</span>/&gt;
+  &lt;<span style="color:#f92672">textarea</span> <span style="color:#a6e22e">rows</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;5&#34;</span> <span style="color:#a6e22e">cols</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;20&#34;</span>&gt;Personal information&lt;/<span style="color:#f92672">textarea</span>&gt;
+  Skills:&lt;<span style="color:#f92672">br</span>/&gt;
+  &lt;<span style="color:#f92672">select</span>&gt;
+    &lt;<span style="color:#f92672">option</span> <span style="color:#a6e22e">selected</span>&gt;HTML&lt;/<span style="color:#f92672">option</span>&gt;
+    &lt;<span style="color:#f92672">option</span>&gt;CSS&lt;/<span style="color:#f92672">option</span>&gt;
+  &lt;/<span style="color:#f92672">select</span>&gt;
+&lt;/<span style="color:#f92672">form</span>&gt;
+</code></pre></div><ul>
+<li><code>text</code>: single line text field
+<ul>
+<li><code>value</code>: default value of the text field</li>
+<li><code>size</code>: size of the text field</li>
+<li><code>maxlength</code>: the limit of characters for input</li>
+</ul>
+</li>
+<li><code>password</code>: password text field
+<ul>
+<li><code>password</code> field has same attributes as <code>text</code></li>
+</ul>
+</li>
+<li><code>radio</code>: single selection radio box
+<ul>
+<li><code>name</code> and <code>value</code> are mandatory attributes</li>
+<li><code>name</code> the group name the radio belongs to</li>
+<li><code>value</code> value of the radio</li>
+<li>use <code>checked</code> for default selection</li>
+</ul>
+</li>
+<li><code>checkbox</code>: multiple selection checkbox
+<ul>
+<li><code>checkbox</code> has same attributes as <code>radio</code></li>
+</ul>
+</li>
+<li><code>button</code>, <code>submit</code>, <code>reset</code>: button
+<ul>
+<li><code>&lt;input type=&quot;button&quot; value=&quot;Value&quot; /&gt;</code></li>
+<li><code>&lt;input type=&quot;submit&quot; value=&quot;Value&quot; /&gt;</code></li>
+<li><code>&lt;input type=&quot;reset&quot; value=&quot;Value&quot; /&gt;</code></li>
+</ul>
+</li>
+<li><code>file</code>: file upload
+<ul>
+<li><code>&lt;input type=&quot;file&quot; /&gt;</code></li>
+</ul>
+</li>
+<li><code>textarea</code>: multi-line text input
+<ul>
+<li><code>value</code>: value of the text input</li>
+<li><code>rows</code>: number of rows</li>
+<li><code>cols</code>: number of columns</li>
+</ul>
+</li>
+<li><code>select</code>: droplist
+<ul>
+<li><code>&lt;option&gt;&lt;/option&gt;</code>: item in the droplist
+<ul>
+<li><code>selected</code>: indicates the option is selected by default</li>
+<li><code>value</code>: value of the option</li>
+</ul>
+</li>
+<li><code>multiple</code>: allow multiple selection</li>
+<li><code>size</code>: the number of options displayed at a time</li>
+</ul>
+</li>
+</ul>
+<h2 id="frame">Frame</h2>
+<p><code>iframe</code> tag is used to embed another web inside a web.</p>
+<p><code>&lt;iframe src=&quot;URL&quot; width=&quot;WIDTH&quot; height=&quot;HEIGHT&quot;&gt;&lt;/iframe&gt;</code></p>
+
+</main>
+
+<footer>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5504633517481956"
+     data-ad-slot="4142928173"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+<div id="disqus_thread"></div>
+<script>
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/www.haozhexu.me\/article\/2020\/html\/";  
+this.page.identifier = "https:\/\/www.haozhexu.me\/article\/2020\/html\/"; 
+};
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://haozhexu.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+<hr/>
+© <a href="https://www.haozhexu.me">Haozhe XU</a> 2017
+
+</footer>
+</body>
+</html>

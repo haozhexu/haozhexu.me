@@ -1,5 +1,5 @@
 ---
-title: "JavaScript Cheatsheet"
+title: "JavaScript Notes"
 date: 2020-07-21T14:00:00+11:00
 draft: false
 ads: true
@@ -9,7 +9,7 @@ tags:
   - javascript
   - cheatsheet
 ---
-# JavaScript Cheatsheet
+# JavaScript Notes
 
 There are three ways of using JavaScript in HTML document.
 
@@ -584,4 +584,29 @@ An object for event is passed to event function.
 
 ## window object
 
-In JavaScript, every browser window/tab is a `window` object.
+In JavaScript, every browser window/tab is a `window` object, each `window` object has a list of sub-objects and methods. Please refer to JavaScript documentation for detailed explanation of children objects and methods.
+
+Child objects of `window`:
+
+| sub object | meaning                    |
+|------------|----------------------------|
+| document   | document model of the page |
+| location   | URL related object         |
+| navigator  | browser related object     |
+| history    | browsing history           |
+| screen     | screen related object      |
+
+Methods of `window`:
+
+| method          | meaning                    |
+|-----------------|----------------------------|
+| alert()         | show an alert dialog       |
+| confirm()       | show a confirmation dialog |
+| prompt()        | show a prompt dialog       |
+| open()          | open a new window          |
+| close()         | close the window           |
+| setTimeout()    | turn on "once off" timer   |
+| clearTimeout()  | turn off "once off" timer  |
+| setInterval()   | turn on repeating timer    |
+| clearInterval() | turn off repeating time    |
+

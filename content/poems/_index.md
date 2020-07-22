@@ -19,6 +19,25 @@ Here is a collection of the poems I’ve composed over last few years, they foll
 
 （詩詞按時間順序）
 
+**【舊游】**
+
+綠藻浮扁舟  
+白鶴漾清流  
+雪似塵  
+風滿西樓  
+彈指半生何所望  
+傷殘月  
+臨晚秋  
+初雪映白頭  
+歸鄉尋故步  
+柴扉前  
+抬手又躊  
+忽見籬外花還在  
+紛爛熳  
+昔共游  
+
+_- 22/07/2020_
+
 **【別夢寒】**
 
 油盡燈花曳動  

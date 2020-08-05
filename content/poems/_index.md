@@ -31,7 +31,7 @@ Here is a collection of the poems I’ve composed over last few years, they foll
 初雪映白頭  
 歸鄉尋故步  
 柴扉前  
-欲叩先躊  
+抬手又躊  
 忽見籬外花還在  
 空爛熳  
 昔共游   

@@ -1,7 +1,7 @@
 ---
 title: "A Metaphysical Study of COVID-19 and a Possible Cure"
 date: 2020-02-16T19:03:36+11:00
-draft: false
+draft: true
 ads: true
 categories:
   - Article

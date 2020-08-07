@@ -13,7 +13,7 @@ auto_ads: true
 
 非苹果用户可以直接下载ePub电子书文件：
 
-[ePub格式电子书](/epubs/ImSucker.epub)
+[ePub格式电子书](/epubs/ImSucker_sim.epub)
 
 (诗词按时间顺序)
 
@@ -917,4 +917,4 @@ _- 13/05/2013_
 
 _- 28/04/2013_
 
-[AppleBookstoreLink]: https://books.apple.com/book/%E9%A8%B7%E5%AE%A2%E9%9B%86/id1491907575
+[AppleBookstoreLink]: https://books.apple.com/book/%E9%AA%9A%E5%AE%A2%E9%9B%86-%E7%AE%80%E4%BD%93%E7%89%88/id1526759838

@@ -15,7 +15,7 @@ Here is a collection of the poems I’ve composed over last few years, they foll
 
 非蘋果用戶可以直接下載ePub電子書文件：
 
-[ePub格式電子書](/epubs/ImSucker.epub)
+[ePub格式電子書](/epubs/ImSucker_tra.epub)
 
 （詩詞按時間順序）
 

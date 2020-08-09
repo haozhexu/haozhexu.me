@@ -663,3 +663,318 @@ puts "There are #{Leica.total_count} Leicas!"
 
 ### Conditional
 
+The `if`, `elsif` and `else` together evaluate to an object, the value is whatever is represented by the code in the successful branch, if the `if` statement doesn't succeed anywhere its value is `nil`.
+
+```ruby
+if condition
+  # code executed if condition is true
+end
+
+# in one line:
+if condition then code end
+
+# semicolons as line breaks
+if condition; code; end
+
+if condition
+  # code executed if condition is true
+else
+  # code executed if condition is false
+end
+
+if condition1
+  # code
+elsif condition2
+  # code
+else condition3
+  # code
+end
+```
+
+Negate a codition using not, ! or `unless`:
+
+```ruby
+# negate a condition usually have parentheses
+if not condition
+if !condition
+
+# alternative way for negating a condition
+unless condition
+
+unless x > 100
+  puts "Small number!"
+else
+  puts "Big number!"
+end
+```
+
+Conditional modifiers are usually used for simple condition, without `else` or `elsif` branching.
+
+```ruby
+puts "Big numbers!" if x > 100
+puts "Pass!" unless x < 50
+```
+
+When Ruby parser sees sequence _identifier_, _equal-sign_, and _value_, it allocates space for local variable without assignment of a value:
+
+```ruby
+if false
+  x = 1
+end
+# the value of x is nil since parser allocates space for x without a value
+```
+
+Assignment in a conditional test evaluates to the value of the assignment, some times it's needed:
+
+```ruby
+if name = /ha/.match(name)
+  puts "Found a match!"
+  puts m
+else
+  puts "No match"
+end
+```
+
+#### case
+
+A `case` statement starts with an expression and goes through a list of possible matches, each possible match is contained in a `when` statement consisting of one or more possible matching objects and a segment of code.
+
+```ruby
+answer = gets.chomp
+case answer
+when "yes"
+  puts "Good-bye!"
+  exit
+when "no"
+  puts "Good!"
+else
+  puts "Unknown answer"
+end
+```
+
+It's possible to have more than one possible match in a single `when`:
+
+```ruby
+case answer
+when "y", "yes"
+  puts "Bye!"
+  exit
+```
+
+It's also possible to start a `case` statement without test expression, this is an alternative way of `if` statement:
+
+```ruby
+case
+when camera.model == "Leica"
+  puts "You got a Leica!"
+when camera.manufactured_year < 2000
+  puts "Your camera is old!"
+end
+```
+
+- every Ruby object has a `case equality` method `===`
+- three equal signs, _case subsumption_, _threequal operator_
+- outcome of === determins whether a `when` has matched
+- each `case` statement evaluates to a single object
+- the value of entire `case` statement is the code in matching `when` clause
+- if no matching `when` clause the entire statement evaluates to `nil`
+
+```ruby
+# equivalent
+when "yes"
+if "yes" === answer
+if "yes".===(answer)
+
+# override ===
+class Camera
+  def ===(other_camera)
+    self.model == other_camera.model
+  end
+end
+```
+
+### Loops
+
+Ruby allows looping repeatedly through code with conditional logic:
+
+- `while` a given condition is true
+- `until` a given condition is true
+- `unconditionally` break out of a loop
+
+```ruby
+loop { code }
+loop do
+  code
+end
+```
+
+Terminates the loop:
+
+```ruby
+n = 1
+loop do
+  n += 1
+  break if n > 9
+end
+```
+
+Skip to the next iteration without finishing current iteration:
+
+```ruby
+n = 1
+loop do
+  n += 1
+  next unless n == 10
+  break
+end
+```
+
+Conditional looping with `while` and `until`:
+
+```ruby
+while condition
+  # code executed when condition is true
+end
+```
+
+`while` can also work with `begin` / `end`:
+
+```ruby
+begin
+  # code executed
+end while condition
+```
+
+Like `if` and `unless`, `while` has also a pair `until`:
+
+```ruby
+until condition
+  # code executed if condition is false
+end
+
+begin
+  # code executed
+end until condition
+```
+
+There's also a shorter way to use `while` and `until`:
+
+```ruby
+n = n + 1 until n == 10
+n = n + 1 while n < 10
+```
+
+Looping through a list of values using `for`:
+
+```ruby
+scores = [30, 50, 70, 38, 48, 41]
+PASS = 50
+for score in scores
+  if score >= PASS
+    puts "Pass!"
+  else
+    puts "Fail!"
+  end
+end
+```
+
+- loop is an _iterator_ which is a Ruby method that expects a _code block_
+
+### Iterators and code blocks
+
+- an iterator is a Ruby method that expects a _code block_
+- inside an iterator the method can _call_ the code block using `yield`
+- a code block isn't an argument
+- every method has the following syntax:
+  - a receiver object or variable (defaulting to `self`)
+  - a dot
+  - a method name
+  - a list of arguments (optional, defaults to `()`)
+  - a clode block (optional)
+
+`String#split` for example, splits its receiver on the delimiter argument and returns an array of splitted components, with a block, `split` also yields the split components to the block, one at a time.
+
+```ruby
+array = [1, 2, 3]
+array.map { |n| n * 10 }
+array.map do |n| n * 10 end
+```
+
+Implementing different types of loops using `yield`:
+
+```ruby
+def my_loop
+  while true
+    yield
+  end
+end
+
+def my_simpler_loop
+  yield while true
+end
+```
+
+```ruby
+class Integer
+  def my_times
+    c = 0
+    until c == self
+      yield c
+      c += 1
+    end
+    self # return the value itself
+  end
+end
+
+rtn = 3.my_times { |i| puts "I'm on iteration #{i}" }
+```
+
+```ruby
+class Array
+  def my_each
+    c = 0
+    until c == size
+      yield self[c]
+      c += 1
+    end
+    self
+  end
+end
+
+array = [1, 2, 3, 4, 5]
+array.my_each { |e| puts "I got #{e}" }
+```
+
+```ruby
+class Array
+  def my_map
+    c = 0
+    acc = []
+    until c == size
+      acc << yield self[c]
+      c += 1
+    end
+    acc
+  end
+end
+
+names = ["Tom", "Bill"]
+names.my_map { |name| name.upcase }
+```
+
+A simpler `my_map` using `my_each`:
+
+```ruby
+class Array
+  def my_map
+    acc = []
+    my_each { |e| acc << yield e }
+    acc
+  end
+end
+```
+
+### Block parameters and variable scopes
+
+- blocks have direct access to variables that already exist
+- block parameters are different from non-parameter variables even if they have the same name

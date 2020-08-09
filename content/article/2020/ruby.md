@@ -15,6 +15,8 @@ This is the notes I've taken while reading the book "The Well-Grounded Rubyist",
 [Basics](#basics)  
 [Objects, methods and local variables](#objects-methods-and-local-variables)  
 [Classes](#classes)
+[Modules](#modules)
+[Default object, scope and visibility](#default-object-scope-and-visibility)
 
 ## Basics
 
@@ -406,3 +408,258 @@ end
 
 - name of constants begins with a capital letter
 - constant lookup notation: a double colon (`::`), `Robot::MODELS`
+
+## Modules
+
+- `Class` class is a subclass of the `Module` class, every class object is also a module object
+- `Kernel` module contains majority of the methods common to all objects
+- modules don't have instances, they get _mixed in_ to classes using `include` or `prepend`
+- more than one module can be mixed in, no class can inherit from more than one class
+
+```ruby
+module MyModule
+  def ruby_version
+    system("ruby -v")
+  end
+end
+
+class MyClass
+  include MyModule
+end
+obj = MyClass.new
+obj.ruby_version
+```
+
+e.g. a simple FILO stack module
+
+```ruby
+module Stacklike
+  def stack
+    @stack ||= []
+  end
+  def add(obj)
+    stack.push(obj)
+  end
+  def take
+    stack.pop
+  end
+end
+```
+
+```ruby
+require_relative "stacklike"
+class Stack
+  include Stacklike
+end
+```
+
+- `require` and `load` take strings as their arguments
+- `include` takes the name of a module in the form of a constant
+- `require` and `load` are locating and loading disk files
+- `include`, `extend` and `prepend` perform a program-space, in-memory operation
+- a common sequence is to `require` a file then `include` a module defined in the file
+- convention: class name is a noun whereas module's name is an adjective, e.g. `Stack` objects are `stacklike`
+- by mixin a module into a class, class can define domain language appropriate for the class
+
+### Method Lookup
+
+When an object is sent a message:
+
+- does the object's class have such method?
+- does the object's class mixin any modules that have such method?
+- does the object's class' superclass define such method?
+- does the object's class' superclass mixin any module that define such method?
+- if not found, a special method `method_missing` is called
+- if method-lookup path includes two or more same-named method, the first one encountered is executed
+- if a class mixes in two or more modules with duplicated methods, the one in most recently mixed-in module is used
+- mixin a module more than once is ignored, and has no effect in term of the order of method-lookup
+- `include` vs `prepend`: method lookup searches the module first if module is `prepend`
+- `include` vs `extend`: `extend` makes a module's method available as class methods
+- use `super` to jump up to the next-highest definition in the method lookup path
+
+```ruby
+module M
+  def report
+    puts "'report' method in module M"
+  end
+end
+class C
+  include M
+  def report
+    puts "'report' method in class C"
+    super
+  end
+end
+```
+
+How `super` handles arguments:
+
+- without argument list, `super` automatically forwards the arguments passed to the method from which `super` is called
+- with empty argument list, ie. `super()`, sends no arguments to the higher-up method
+- with specific arguments, e.g. `super(a, b, c)`, sends exactly those arguments
+- the method `method` returns an instance of the methods, e.g. `obj.method(:method)`
+- `super_method` returns an instance of the super method, e.g. `obj.method(:method).super_method`
+- `Kernel` module provides an instance method `method_missing(m, *args)`
+
+Module can be used to organize code:
+
+```ruby
+module Tools
+  class Hammer
+  end
+end
+
+h = Tools::Hammer.new
+```
+
+## Default object, scope and visibility
+
+- `self` at the top level is the default default object, `main`
+- `self` inside a class definition is the class object itself
+- `self` inside any method is the object to which the message was sent
+- `self` inside a class method is the class object
+- `self` inside an instance method is the instance of the class
+
+Alternative ways of defining class methods:
+
+```ruby
+class C
+  def self.x
+  end
+end
+
+class C
+  class << self
+    def x
+    end
+  end
+end
+```
+
+### Scope and Variables
+
+#### Global
+
+- _global scope_ covers the entire program, global variables are recognizable by initial dollar-sign
+- Ruby has a large number of global variables initialized on start
+  - `$:` contains the directories that make up the path Ruby searches external file
+  - `$0` contains the name of the startup file for the currently running program
+  - `$$` contains the process ID
+  - `require "English"` has the list of human readable names for global variables
+
+#### Local
+
+- _local scope_ is the basic layer of every Ruby program
+- the top level has its own local scope
+- every class or module-definition block has its own local scope, same for nested
+- every method definition has its own local scope
+- every call to a method generates a new local scope with all local variables reset to an undefined state
+
+#### Constants
+
+```ruby
+module M
+  class C
+    class D
+      module N
+        X = 1
+      end
+    end
+    puts D::N::X # 1
+  end
+end
+
+## refer to X
+M::C::D::N::X
+```
+
+- constants have a kind of global visibility, as long as you know the path to a constant through classes and/or modules
+- constant lookup is similar to searching a file in a directory
+- sometimes it's useful to state constant-lookup at top level to avoid confusion with built-in class or module, e.g. custom `Violin::String` vs native `::String`
+- double colon at the beginning means start searching at top level
+
+#### Class variables
+
+- class variables begin with two at-signs, e.g. `@@var`
+- class variables are visible to a class and its instances
+- class variables are class-hierarchy-scoped
+- since Ruby classes are instances of `Class`, instance variables also work on classes
+
+```ruby
+class Camera
+  @@models = []
+  @@cameras = {}
+  @@total_count = 0
+  attr_reader :model
+  def self.total_count
+    @total_count ||= 0
+  end
+  def self.total_count=(n)
+    @total_count = n
+  end
+  def self.add_model(model)
+    unless @@models.include?(model)
+      @@models << model
+      @@cameras[model] = 0
+    end
+  end
+  def initialize(model)
+    if @@models.include?(model)
+      puts "Creating a new #{model}!"
+      @model = model
+      @@cameras[model] += 1
+      self.class.total_count += 1
+    else
+      raise "No such model: #{model}."
+    end
+  end
+  def model_count
+    @@cameras[self.model]
+  end
+end
+
+class Leica < Camera
+end
+
+Camera.add_model("M9")
+Camera.add_model("M10")
+Camera.add_model("X-Pro3")
+f1 = Camera.new("X-Pro3")
+l1 = Leica.new("M9")
+l2 = Leica.new("M10")
+puts "There are #{Camera.total_count} Cameras!"
+puts "There are #{Leica.total_count} Leicas!"
+# Leica would have its own total count
+# Output:
+# Creating a new X-Pro3!
+# Creating a new M9!
+# Creating a new M10!
+# There are 1 Cameras!
+# There are 2 Leicas!
+```
+
+### Method-access rules
+
+- instance methods defined below `private` are private
+- use `public` or `protected` to reverse the effect
+- `private` can also take as arguments a list of the methods:
+  - `private :method1, :method2`
+- `private` method cannot be called with explicit receiver
+- private setter can be called with receiver `self`
+  - `def manufacture_year=(years)`
+- `protected` methods can be called on object `x` as long as the default object (`self`) is an instance of the same class as `x` or an ancestor or descendant class of `x`'s class
+- subclasses inherit the method-access rules of their superclasses
+- top-level method is stored as a private instance method of `Object` class
+- top-level methods must be called in bareword style due to `private` forbidding explicit receiver
+- private instance methods of `Object` is available anywhere in the code because `Object` lies in the method-lookup path of every class
+- Ruby has a list of built-in private instance methods like `puts` and `print`
+
+## Control Flow
+
+- conditional: execution depends on the truth of an expression
+- loop: a single piece of code is executed repeatedly
+- iteration: a call to a method is supplemented with a segment of code that the method can call one or more times during its own execution
+- exception: error conditions
+
+### Conditional
+

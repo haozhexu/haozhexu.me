@@ -14,9 +14,10 @@ This is the notes I've taken while reading the book "The Well-Grounded Rubyist",
 
 [Basics](#basics)  
 [Objects, methods and local variables](#objects-methods-and-local-variables)  
-[Classes](#classes)
-[Modules](#modules)
-[Default object, scope and visibility](#default-object-scope-and-visibility)
+[Classes](#classes)  
+[Modules](#modules)  
+[Default object, scope and visibility](#default-object-scope-and-visibility)  
+[Control Flow](#control-flow)
 
 ## Basics
 

@@ -1047,3 +1047,57 @@ def load_camera_profile
   file.close
 end
 ```
+
+For `NoMethodError` when calling a method on `nil`, save navigation is allowed using `&.` instead of `.`:
+
+```ruby
+if collection.cameras&.first&.model == "Leica"
+  puts "Your first camera is a Leica!"
+end
+```
+
+#### binding.irb
+
+- Ruby provides a way to debug by opening an `irb` session from anywhere using `binding.irb`
+- put `binding.irb` would cause execution pause at that line with an `irb` session
+- the `irb` session has the context of any code executed to this point for inspection
+
+#### Raising exceptions
+
+- exceptions can be raised by `raise exception, message`, e.g. `raise ArgumentError, "invalid input"`
+- without exception after `raise`, `RuntimeError` is default
+- to assign the exception object to a variable, use `=>` along with `rescue`
+  - the object has useful information about the exception, such like `backtrace` and `message`
+  - e.g. `rescue ArgumentError => e`
+- exception raising is classed based, `raise ZeroDivisionError` instead of `raise ZeroDivisionError.new`
+- use `ensure` to execute code before the method finishes
+- custom exception can be created by subclassing `Exception` class (or its subclasses)
+  - e.g. `class MyException < Exception; end`
+
+Re-raise catched exception:
+
+```ruby
+begin
+  file = File.open(filename)
+rescue => e
+  puts "Cannot open file #{filename}"
+  # Ruby is smart enough to figure out it's the same exception to raise
+  raise
+end
+```
+
+```ruby
+def line_from_file(filename, substring)
+  file = File.open(filename)
+  begin
+    line = file.gets
+    raise ArgumentError unless line.include?(substring)
+  rescue ArgumentError
+    puts "Invalid line!"
+    raise
+  ensure
+    file.close
+  end
+  return line
+end
+```

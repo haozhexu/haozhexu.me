@@ -44,7 +44,10 @@
 <p>This is the notes I&rsquo;ve taken while reading the book &ldquo;The Well-Grounded Rubyist&rdquo;, I tried to make it useful as a reference but do not expect this to be a well-written tutorial for beginners.</p>
 <p><a href="#basics">Basics</a><br>
 <a href="#objects-methods-and-local-variables">Objects, methods and local variables</a><br>
-<a href="#classes">Classes</a></p>
+<a href="#classes">Classes</a><br>
+<a href="#modules">Modules</a><br>
+<a href="#default-object-scope-and-visibility">Default object, scope and visibility</a><br>
+<a href="#control-flow">Control Flow</a></p>
 <h2 id="basics">Basics</h2>
 <h3 id="basic-operations">Basic operations:</h3>
 <ul>
@@ -432,7 +435,580 @@ c<span style="color:#f92672">.</span>new<span style="color:#f92672">.</span>say_
 <li>name of constants begins with a capital letter</li>
 <li>constant lookup notation: a double colon (<code>::</code>), <code>Robot::MODELS</code></li>
 </ul>
+<h2 id="modules">Modules</h2>
+<ul>
+<li><code>Class</code> class is a subclass of the <code>Module</code> class, every class object is also a module object</li>
+<li><code>Kernel</code> module contains majority of the methods common to all objects</li>
+<li>modules don&rsquo;t have instances, they get <em>mixed in</em> to classes using <code>include</code> or <code>prepend</code></li>
+<li>more than one module can be mixed in, no class can inherit from more than one class</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">module</span> MyModule
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">ruby_version</span>
+    system(<span style="color:#e6db74">&#34;ruby -v&#34;</span>)
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
 
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyClass</span>
+  <span style="color:#66d9ef">include</span> <span style="color:#66d9ef">MyModule</span>
+<span style="color:#66d9ef">end</span>
+obj <span style="color:#f92672">=</span> <span style="color:#66d9ef">MyClass</span><span style="color:#f92672">.</span>new
+obj<span style="color:#f92672">.</span>ruby_version
+</code></pre></div><p>e.g. a simple FILO stack module</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">module</span> Stacklike
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">stack</span>
+    @stack <span style="color:#f92672">||=</span> <span style="color:#f92672">[]</span>
+  <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add</span>(obj)
+    stack<span style="color:#f92672">.</span>push(obj)
+  <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">take</span>
+    stack<span style="color:#f92672">.</span>pop
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">require_relative <span style="color:#e6db74">&#34;stacklike&#34;</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Stack</span>
+  <span style="color:#66d9ef">include</span> <span style="color:#66d9ef">Stacklike</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><ul>
+<li><code>require</code> and <code>load</code> take strings as their arguments</li>
+<li><code>include</code> takes the name of a module in the form of a constant</li>
+<li><code>require</code> and <code>load</code> are locating and loading disk files</li>
+<li><code>include</code>, <code>extend</code> and <code>prepend</code> perform a program-space, in-memory operation</li>
+<li>a common sequence is to <code>require</code> a file then <code>include</code> a module defined in the file</li>
+<li>convention: class name is a noun whereas module&rsquo;s name is an adjective, e.g. <code>Stack</code> objects are <code>stacklike</code></li>
+<li>by mixin a module into a class, class can define domain language appropriate for the class</li>
+</ul>
+<h3 id="method-lookup">Method Lookup</h3>
+<p>When an object is sent a message:</p>
+<ul>
+<li>does the object&rsquo;s class have such method?</li>
+<li>does the object&rsquo;s class mixin any modules that have such method?</li>
+<li>does the object&rsquo;s class&rsquo; superclass define such method?</li>
+<li>does the object&rsquo;s class&rsquo; superclass mixin any module that define such method?</li>
+<li>if not found, a special method <code>method_missing</code> is called</li>
+<li>if method-lookup path includes two or more same-named method, the first one encountered is executed</li>
+<li>if a class mixes in two or more modules with duplicated methods, the one in most recently mixed-in module is used</li>
+<li>mixin a module more than once is ignored, and has no effect in term of the order of method-lookup</li>
+<li><code>include</code> vs <code>prepend</code>: method lookup searches the module first if module is <code>prepend</code></li>
+<li><code>include</code> vs <code>extend</code>: <code>extend</code> makes a module&rsquo;s method available as class methods</li>
+<li>use <code>super</code> to jump up to the next-highest definition in the method lookup path</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">module</span> M
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">report</span>
+    puts <span style="color:#e6db74">&#34;&#39;report&#39; method in module M&#34;</span>
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">C</span>
+  <span style="color:#66d9ef">include</span> M
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">report</span>
+    puts <span style="color:#e6db74">&#34;&#39;report&#39; method in class C&#34;</span>
+    <span style="color:#66d9ef">super</span>
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>How <code>super</code> handles arguments:</p>
+<ul>
+<li>without argument list, <code>super</code> automatically forwards the arguments passed to the method from which <code>super</code> is called</li>
+<li>with empty argument list, ie. <code>super()</code>, sends no arguments to the higher-up method</li>
+<li>with specific arguments, e.g. <code>super(a, b, c)</code>, sends exactly those arguments</li>
+<li>the method <code>method</code> returns an instance of the methods, e.g. <code>obj.method(:method)</code></li>
+<li><code>super_method</code> returns an instance of the super method, e.g. <code>obj.method(:method).super_method</code></li>
+<li><code>Kernel</code> module provides an instance method <code>method_missing(m, *args)</code></li>
+</ul>
+<p>Module can be used to organize code:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">module</span> Tools
+  <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Hammer</span>
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+
+h <span style="color:#f92672">=</span> <span style="color:#66d9ef">Tools</span><span style="color:#f92672">::</span><span style="color:#66d9ef">Hammer</span><span style="color:#f92672">.</span>new
+</code></pre></div><h2 id="default-object-scope-and-visibility">Default object, scope and visibility</h2>
+<ul>
+<li><code>self</code> at the top level is the default default object, <code>main</code></li>
+<li><code>self</code> inside a class definition is the class object itself</li>
+<li><code>self</code> inside any method is the object to which the message was sent</li>
+<li><code>self</code> inside a class method is the class object</li>
+<li><code>self</code> inside an instance method is the instance of the class</li>
+</ul>
+<p>Alternative ways of defining class methods:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">C</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">self</span><span style="color:#f92672">.</span><span style="color:#a6e22e">x</span>
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">C</span>
+  <span style="color:#66d9ef">class</span> <span style="color:#f92672">&lt;&lt;</span> self
+    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">x</span>
+    <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><h3 id="scope-and-variables">Scope and Variables</h3>
+<h4 id="global">Global</h4>
+<ul>
+<li><em>global scope</em> covers the entire program, global variables are recognizable by initial dollar-sign</li>
+<li>Ruby has a large number of global variables initialized on start
+<ul>
+<li><code>$:</code> contains the directories that make up the path Ruby searches external file</li>
+<li><code>$0</code> contains the name of the startup file for the currently running program</li>
+<li><code>$$</code> contains the process ID</li>
+<li><code>require &quot;English&quot;</code> has the list of human readable names for global variables</li>
+</ul>
+</li>
+</ul>
+<h4 id="local">Local</h4>
+<ul>
+<li><em>local scope</em> is the basic layer of every Ruby program</li>
+<li>the top level has its own local scope</li>
+<li>every class or module-definition block has its own local scope, same for nested</li>
+<li>every method definition has its own local scope</li>
+<li>every call to a method generates a new local scope with all local variables reset to an undefined state</li>
+</ul>
+<h4 id="constants-1">Constants</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">module</span> M
+  <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">C</span>
+    <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">D</span>
+      <span style="color:#66d9ef">module</span> N
+        X <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+      <span style="color:#66d9ef">end</span>
+    <span style="color:#66d9ef">end</span>
+    puts D<span style="color:#f92672">::</span>N<span style="color:#f92672">::</span>X <span style="color:#75715e"># 1</span>
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+
+<span style="color:#75715e">## refer to X</span>
+M<span style="color:#f92672">::</span>C<span style="color:#f92672">::</span>D<span style="color:#f92672">::</span>N<span style="color:#f92672">::</span>X
+</code></pre></div><ul>
+<li>constants have a kind of global visibility, as long as you know the path to a constant through classes and/or modules</li>
+<li>constant lookup is similar to searching a file in a directory</li>
+<li>sometimes it&rsquo;s useful to state constant-lookup at top level to avoid confusion with built-in class or module, e.g. custom <code>Violin::String</code> vs native <code>::String</code></li>
+<li>double colon at the beginning means start searching at top level</li>
+</ul>
+<h4 id="class-variables">Class variables</h4>
+<ul>
+<li>class variables begin with two at-signs, e.g. <code>@@var</code></li>
+<li>class variables are visible to a class and its instances</li>
+<li>class variables are class-hierarchy-scoped</li>
+<li>since Ruby classes are instances of <code>Class</code>, instance variables also work on classes</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Camera</span>
+  @@models <span style="color:#f92672">=</span> <span style="color:#f92672">[]</span>
+  @@cameras <span style="color:#f92672">=</span> {}
+  @@total_count <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+  <span style="color:#66d9ef">attr_reader</span> <span style="color:#e6db74">:model</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">self</span><span style="color:#f92672">.</span><span style="color:#a6e22e">total_count</span>
+    @total_count <span style="color:#f92672">||=</span> <span style="color:#ae81ff">0</span>
+  <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">self</span><span style="color:#f92672">.</span><span style="color:#a6e22e">total_count</span><span style="color:#f92672">=</span>(n)
+    @total_count <span style="color:#f92672">=</span> n
+  <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">self</span><span style="color:#f92672">.</span><span style="color:#a6e22e">add_model</span>(model)
+    <span style="color:#66d9ef">unless</span> @@models<span style="color:#f92672">.</span>include?(model)
+      @@models <span style="color:#f92672">&lt;&lt;</span> model
+      @@cameras<span style="color:#f92672">[</span>model<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">initialize</span>(model)
+    <span style="color:#66d9ef">if</span> @@models<span style="color:#f92672">.</span>include?(model)
+      puts <span style="color:#e6db74">&#34;Creating a new </span><span style="color:#e6db74">#{</span>model<span style="color:#e6db74">}</span><span style="color:#e6db74">!&#34;</span>
+      @model <span style="color:#f92672">=</span> model
+      @@cameras<span style="color:#f92672">[</span>model<span style="color:#f92672">]</span> <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+      self<span style="color:#f92672">.</span>class<span style="color:#f92672">.</span>total_count <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">else</span>
+      <span style="color:#66d9ef">raise</span> <span style="color:#e6db74">&#34;No such model: </span><span style="color:#e6db74">#{</span>model<span style="color:#e6db74">}</span><span style="color:#e6db74">.&#34;</span>
+    <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">model_count</span>
+    @@cameras<span style="color:#f92672">[</span>self<span style="color:#f92672">.</span>model<span style="color:#f92672">]</span>
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Leica</span> <span style="color:#f92672">&lt;</span> <span style="color:#66d9ef">Camera</span>
+<span style="color:#66d9ef">end</span>
+
+<span style="color:#66d9ef">Camera</span><span style="color:#f92672">.</span>add_model(<span style="color:#e6db74">&#34;M9&#34;</span>)
+<span style="color:#66d9ef">Camera</span><span style="color:#f92672">.</span>add_model(<span style="color:#e6db74">&#34;M10&#34;</span>)
+<span style="color:#66d9ef">Camera</span><span style="color:#f92672">.</span>add_model(<span style="color:#e6db74">&#34;X-Pro3&#34;</span>)
+f1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">Camera</span><span style="color:#f92672">.</span>new(<span style="color:#e6db74">&#34;X-Pro3&#34;</span>)
+l1 <span style="color:#f92672">=</span> <span style="color:#66d9ef">Leica</span><span style="color:#f92672">.</span>new(<span style="color:#e6db74">&#34;M9&#34;</span>)
+l2 <span style="color:#f92672">=</span> <span style="color:#66d9ef">Leica</span><span style="color:#f92672">.</span>new(<span style="color:#e6db74">&#34;M10&#34;</span>)
+puts <span style="color:#e6db74">&#34;There are </span><span style="color:#e6db74">#{</span><span style="color:#66d9ef">Camera</span><span style="color:#f92672">.</span>total_count<span style="color:#e6db74">}</span><span style="color:#e6db74"> Cameras!&#34;</span>
+puts <span style="color:#e6db74">&#34;There are </span><span style="color:#e6db74">#{</span><span style="color:#66d9ef">Leica</span><span style="color:#f92672">.</span>total_count<span style="color:#e6db74">}</span><span style="color:#e6db74"> Leicas!&#34;</span>
+<span style="color:#75715e"># Leica would have its own total count</span>
+<span style="color:#75715e"># Output:</span>
+<span style="color:#75715e"># Creating a new X-Pro3!</span>
+<span style="color:#75715e"># Creating a new M9!</span>
+<span style="color:#75715e"># Creating a new M10!</span>
+<span style="color:#75715e"># There are 1 Cameras!</span>
+<span style="color:#75715e"># There are 2 Leicas!</span>
+</code></pre></div><h3 id="method-access-rules">Method-access rules</h3>
+<ul>
+<li>instance methods defined below <code>private</code> are private</li>
+<li>use <code>public</code> or <code>protected</code> to reverse the effect</li>
+<li><code>private</code> can also take as arguments a list of the methods:
+<ul>
+<li><code>private :method1, :method2</code></li>
+</ul>
+</li>
+<li><code>private</code> method cannot be called with explicit receiver</li>
+<li>private setter can be called with receiver <code>self</code>
+<ul>
+<li><code>def manufacture_year=(years)</code></li>
+</ul>
+</li>
+<li><code>protected</code> methods can be called on object <code>x</code> as long as the default object (<code>self</code>) is an instance of the same class as <code>x</code> or an ancestor or descendant class of <code>x</code>'s class</li>
+<li>subclasses inherit the method-access rules of their superclasses</li>
+<li>top-level method is stored as a private instance method of <code>Object</code> class</li>
+<li>top-level methods must be called in bareword style due to <code>private</code> forbidding explicit receiver</li>
+<li>private instance methods of <code>Object</code> is available anywhere in the code because <code>Object</code> lies in the method-lookup path of every class</li>
+<li>Ruby has a list of built-in private instance methods like <code>puts</code> and <code>print</code></li>
+</ul>
+<h2 id="control-flow">Control Flow</h2>
+<ul>
+<li>conditional: execution depends on the truth of an expression</li>
+<li>loop: a single piece of code is executed repeatedly</li>
+<li>iteration: a call to a method is supplemented with a segment of code that the method can call one or more times during its own execution</li>
+<li>exception: error conditions</li>
+</ul>
+<h3 id="conditional">Conditional</h3>
+<p>The <code>if</code>, <code>elsif</code> and <code>else</code> together evaluate to an object, the value is whatever is represented by the code in the successful branch, if the <code>if</code> statement doesn&rsquo;t succeed anywhere its value is <code>nil</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">if</span> condition
+  <span style="color:#75715e"># code executed if condition is true</span>
+<span style="color:#66d9ef">end</span>
+
+<span style="color:#75715e"># in one line:</span>
+<span style="color:#66d9ef">if</span> condition <span style="color:#66d9ef">then</span> code <span style="color:#66d9ef">end</span>
+
+<span style="color:#75715e"># semicolons as line breaks</span>
+<span style="color:#66d9ef">if</span> condition; code; <span style="color:#66d9ef">end</span>
+
+<span style="color:#66d9ef">if</span> condition
+  <span style="color:#75715e"># code executed if condition is true</span>
+<span style="color:#66d9ef">else</span>
+  <span style="color:#75715e"># code executed if condition is false</span>
+<span style="color:#66d9ef">end</span>
+
+<span style="color:#66d9ef">if</span> condition1
+  <span style="color:#75715e"># code</span>
+<span style="color:#66d9ef">elsif</span> condition2
+  <span style="color:#75715e"># code</span>
+<span style="color:#66d9ef">else</span> condition3
+  <span style="color:#75715e"># code</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>Negate a codition using not, ! or <code>unless</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e"># negate a condition usually have parentheses</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">not</span> condition
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">!</span>condition
+
+<span style="color:#75715e"># alternative way for negating a condition</span>
+<span style="color:#66d9ef">unless</span> condition
+
+<span style="color:#66d9ef">unless</span> x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">100</span>
+  puts <span style="color:#e6db74">&#34;Small number!&#34;</span>
+<span style="color:#66d9ef">else</span>
+  puts <span style="color:#e6db74">&#34;Big number!&#34;</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>Conditional modifiers are usually used for simple condition, without <code>else</code> or <code>elsif</code> branching.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">puts <span style="color:#e6db74">&#34;Big numbers!&#34;</span> <span style="color:#66d9ef">if</span> x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">100</span>
+puts <span style="color:#e6db74">&#34;Pass!&#34;</span> <span style="color:#66d9ef">unless</span> x <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">50</span>
+</code></pre></div><p>When Ruby parser sees sequence <em>identifier</em>, <em>equal-sign</em>, and <em>value</em>, it allocates space for local variable without assignment of a value:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">if</span> <span style="color:#66d9ef">false</span>
+  x <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+<span style="color:#66d9ef">end</span>
+<span style="color:#75715e"># the value of x is nil since parser allocates space for x without a value</span>
+</code></pre></div><p>Assignment in a conditional test evaluates to the value of the assignment, some times it&rsquo;s needed:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">if</span> name <span style="color:#f92672">=</span> <span style="color:#e6db74">/ha/</span><span style="color:#f92672">.</span>match(name)
+  puts <span style="color:#e6db74">&#34;Found a match!&#34;</span>
+  puts m
+<span style="color:#66d9ef">else</span>
+  puts <span style="color:#e6db74">&#34;No match&#34;</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><h4 id="case">case</h4>
+<p>A <code>case</code> statement starts with an expression and goes through a list of possible matches, each possible match is contained in a <code>when</code> statement consisting of one or more possible matching objects and a segment of code.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">answer <span style="color:#f92672">=</span> gets<span style="color:#f92672">.</span>chomp
+<span style="color:#66d9ef">case</span> answer
+<span style="color:#66d9ef">when</span> <span style="color:#e6db74">&#34;yes&#34;</span>
+  puts <span style="color:#e6db74">&#34;Good-bye!&#34;</span>
+  exit
+<span style="color:#66d9ef">when</span> <span style="color:#e6db74">&#34;no&#34;</span>
+  puts <span style="color:#e6db74">&#34;Good!&#34;</span>
+<span style="color:#66d9ef">else</span>
+  puts <span style="color:#e6db74">&#34;Unknown answer&#34;</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>It&rsquo;s possible to have more than one possible match in a single <code>when</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">case</span> answer
+<span style="color:#66d9ef">when</span> <span style="color:#e6db74">&#34;y&#34;</span>, <span style="color:#e6db74">&#34;yes&#34;</span>
+  puts <span style="color:#e6db74">&#34;Bye!&#34;</span>
+  exit
+</code></pre></div><p>It&rsquo;s also possible to start a <code>case</code> statement without test expression, this is an alternative way of <code>if</code> statement:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">case</span>
+<span style="color:#66d9ef">when</span> camera<span style="color:#f92672">.</span>model <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Leica&#34;</span>
+  puts <span style="color:#e6db74">&#34;You got a Leica!&#34;</span>
+<span style="color:#66d9ef">when</span> camera<span style="color:#f92672">.</span>manufactured_year <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">2000</span>
+  puts <span style="color:#e6db74">&#34;Your camera is old!&#34;</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><ul>
+<li>every Ruby object has a <code>case equality</code> method <code>===</code></li>
+<li>three equal signs, <em>case subsumption</em>, <em>threequal operator</em></li>
+<li>outcome of === determins whether a <code>when</code> has matched</li>
+<li>each <code>case</code> statement evaluates to a single object</li>
+<li>the value of entire <code>case</code> statement is the code in matching <code>when</code> clause</li>
+<li>if no matching <code>when</code> clause the entire statement evaluates to <code>nil</code></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e"># equivalent</span>
+<span style="color:#66d9ef">when</span> <span style="color:#e6db74">&#34;yes&#34;</span>
+<span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#34;yes&#34;</span> <span style="color:#f92672">===</span> answer
+<span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#34;yes&#34;</span><span style="color:#f92672">.</span>==<span style="color:#f92672">=</span>(answer)
+
+<span style="color:#75715e"># override ===</span>
+<span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Camera</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">===</span>(other_camera)
+    self<span style="color:#f92672">.</span>model <span style="color:#f92672">==</span> other_camera<span style="color:#f92672">.</span>model
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><h3 id="loops">Loops</h3>
+<p>Ruby allows looping repeatedly through code with conditional logic:</p>
+<ul>
+<li><code>while</code> a given condition is true</li>
+<li><code>until</code> a given condition is true</li>
+<li><code>unconditionally</code> break out of a loop</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">loop</span> { code }
+<span style="color:#66d9ef">loop</span> <span style="color:#66d9ef">do</span>
+  code
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>Terminates the loop:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">n <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+<span style="color:#66d9ef">loop</span> <span style="color:#66d9ef">do</span>
+  n <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+  <span style="color:#66d9ef">break</span> <span style="color:#66d9ef">if</span> n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">9</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>Skip to the next iteration without finishing current iteration:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">n <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span>
+<span style="color:#66d9ef">loop</span> <span style="color:#66d9ef">do</span>
+  n <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+  <span style="color:#66d9ef">next</span> <span style="color:#66d9ef">unless</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">10</span>
+  <span style="color:#66d9ef">break</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>Conditional looping with <code>while</code> and <code>until</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">while</span> condition
+  <span style="color:#75715e"># code executed when condition is true</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p><code>while</code> can also work with <code>begin</code> / <code>end</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">begin</span>
+  <span style="color:#75715e"># code executed</span>
+<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">while</span> condition
+</code></pre></div><p>Like <code>if</code> and <code>unless</code>, <code>while</code> has also a pair <code>until</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">until</span> condition
+  <span style="color:#75715e"># code executed if condition is false</span>
+<span style="color:#66d9ef">end</span>
+
+<span style="color:#66d9ef">begin</span>
+  <span style="color:#75715e"># code executed</span>
+<span style="color:#66d9ef">end</span> <span style="color:#66d9ef">until</span> condition
+</code></pre></div><p>There&rsquo;s also a shorter way to use <code>while</code> and <code>until</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">n <span style="color:#f92672">=</span> n <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">until</span> n <span style="color:#f92672">==</span> <span style="color:#ae81ff">10</span>
+n <span style="color:#f92672">=</span> n <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span> <span style="color:#66d9ef">while</span> n <span style="color:#f92672">&lt;</span> <span style="color:#ae81ff">10</span>
+</code></pre></div><p>Looping through a list of values using <code>for</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">scores <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">30</span>, <span style="color:#ae81ff">50</span>, <span style="color:#ae81ff">70</span>, <span style="color:#ae81ff">38</span>, <span style="color:#ae81ff">48</span>, <span style="color:#ae81ff">41</span><span style="color:#f92672">]</span>
+<span style="color:#66d9ef">PASS</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">50</span>
+<span style="color:#66d9ef">for</span> score <span style="color:#66d9ef">in</span> scores
+  <span style="color:#66d9ef">if</span> score <span style="color:#f92672">&gt;=</span> <span style="color:#66d9ef">PASS</span>
+    puts <span style="color:#e6db74">&#34;Pass!&#34;</span>
+  <span style="color:#66d9ef">else</span>
+    puts <span style="color:#e6db74">&#34;Fail!&#34;</span>
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><ul>
+<li>loop is an <em>iterator</em> which is a Ruby method that expects a <em>code block</em></li>
+</ul>
+<h3 id="iterators-and-code-blocks">Iterators and code blocks</h3>
+<ul>
+<li>an iterator is a Ruby method that expects a <em>code block</em></li>
+<li>inside an iterator the method can <em>call</em> the code block using <code>yield</code></li>
+<li>a code block isn&rsquo;t an argument</li>
+<li>every method has the following syntax:
+<ul>
+<li>a receiver object or variable (defaulting to <code>self</code>)</li>
+<li>a dot</li>
+<li>a method name</li>
+<li>a list of arguments (optional, defaults to <code>()</code>)</li>
+<li>a clode block (optional)</li>
+</ul>
+</li>
+</ul>
+<p><code>String#split</code> for example, splits its receiver on the delimiter argument and returns an array of splitted components, with a block, <code>split</code> also yields the split components to the block, one at a time.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">array <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span><span style="color:#f92672">]</span>
+array<span style="color:#f92672">.</span>map { <span style="color:#f92672">|</span>n<span style="color:#f92672">|</span> n <span style="color:#f92672">*</span> <span style="color:#ae81ff">10</span> }
+array<span style="color:#f92672">.</span>map <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>n<span style="color:#f92672">|</span> n <span style="color:#f92672">*</span> <span style="color:#ae81ff">10</span> <span style="color:#66d9ef">end</span>
+</code></pre></div><p>Implementing different types of loops using <code>yield</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">my_loop</span>
+  <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">true</span>
+    <span style="color:#66d9ef">yield</span>
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">my_simpler_loop</span>
+  <span style="color:#66d9ef">yield</span> <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">true</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Integer</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">my_times</span>
+    c <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">until</span> c <span style="color:#f92672">==</span> self
+      <span style="color:#66d9ef">yield</span> c
+      c <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">end</span>
+    self <span style="color:#75715e"># return the value itself</span>
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+
+rtn <span style="color:#f92672">=</span> <span style="color:#ae81ff">3</span><span style="color:#f92672">.</span>my_times { <span style="color:#f92672">|</span>i<span style="color:#f92672">|</span> puts <span style="color:#e6db74">&#34;I&#39;m on iteration </span><span style="color:#e6db74">#{</span>i<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> }
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Array</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">my_each</span>
+    c <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">until</span> c <span style="color:#f92672">==</span> size
+      <span style="color:#66d9ef">yield</span> self<span style="color:#f92672">[</span>c<span style="color:#f92672">]</span>
+      c <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">end</span>
+    self
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+
+array <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span><span style="color:#f92672">]</span>
+array<span style="color:#f92672">.</span>my_each { <span style="color:#f92672">|</span>e<span style="color:#f92672">|</span> puts <span style="color:#e6db74">&#34;I got </span><span style="color:#e6db74">#{</span>e<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> }
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Array</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">my_map</span>
+    c <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+    acc <span style="color:#f92672">=</span> <span style="color:#f92672">[]</span>
+    <span style="color:#66d9ef">until</span> c <span style="color:#f92672">==</span> size
+      acc <span style="color:#f92672">&lt;&lt;</span> <span style="color:#66d9ef">yield</span> self<span style="color:#f92672">[</span>c<span style="color:#f92672">]</span>
+      c <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">end</span>
+    acc
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+
+names <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;Tom&#34;</span>, <span style="color:#e6db74">&#34;Bill&#34;</span><span style="color:#f92672">]</span>
+names<span style="color:#f92672">.</span>my_map { <span style="color:#f92672">|</span>name<span style="color:#f92672">|</span> name<span style="color:#f92672">.</span>upcase }
+</code></pre></div><p>A simpler <code>my_map</code> using <code>my_each</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Array</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">my_map</span>
+    acc <span style="color:#f92672">=</span> <span style="color:#f92672">[]</span>
+    my_each { <span style="color:#f92672">|</span>e<span style="color:#f92672">|</span> acc <span style="color:#f92672">&lt;&lt;</span> <span style="color:#66d9ef">yield</span> e }
+    acc
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><h3 id="block-parameters-and-variable-scopes">Block parameters and variable scopes</h3>
+<ul>
+<li>blocks have direct access to variables that already exist</li>
+<li>block parameters are different from non-parameter variables even if they have the same name</li>
+<li>to preserve existing variables, define a block-local variable
+<ul>
+<li><code>array.each do |e;local|</code></li>
+<li>semicolon followed by a variable name indicates the variable is block-local</li>
+<li>changing such variable won&rsquo;t affect existing one that has the same name</li>
+<li>block-variables are not considered block parameters and don&rsquo;t get bound to anything when the block is called</li>
+<li>they are <em>reserved names</em></li>
+</ul>
+</li>
+</ul>
+<h3 id="error-handling-and-exceptions">Error handling and exceptions</h3>
+<p>Common exceptions:</p>
+<ul>
+<li>runtime error: raised by <code>raise</code></li>
+<li>NoMethodError: sending a message to an object which cannot resolve the message to a method name, raised by default <code>method_missing</code></li>
+<li>NameError: an identifier cannot be resolved as a variable or method name by interpreter</li>
+<li>IOError: reading a closed stream, writing to a readonly stream and similar operations</li>
+<li>Errno::error: errors relates to file I/O</li>
+<li>TypeError: a method receives an argument it cannot handle</li>
+<li>Argument-Error: using wrong number of arguments</li>
+</ul>
+<p>Use <code>rescue</code> to catch and handle exception:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">n <span style="color:#f92672">=</span> gets<span style="color:#f92672">.</span>to_i
+<span style="color:#66d9ef">begin</span>
+  result <span style="color:#f92672">=</span> <span style="color:#ae81ff">100</span> <span style="color:#f92672">/</span> n
+<span style="color:#66d9ef">rescue</span>
+  puts <span style="color:#e6db74">&#34;Invalid number for division 100/</span><span style="color:#e6db74">#{</span>n<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+  exit
+<span style="color:#66d9ef">end</span>
+puts <span style="color:#e6db74">&#34;100/</span><span style="color:#e6db74">#{</span>n<span style="color:#e6db74">}</span><span style="color:#e6db74"> is </span><span style="color:#e6db74">#{</span>result<span style="color:#e6db74">}</span><span style="color:#e6db74">.&#34;</span>
+</code></pre></div><p>It&rsquo;s a good practice to specify what exceptions you want to handle, to catch specific exception:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">rescue</span> <span style="color:#66d9ef">ZeroDivisionError</span>
+</code></pre></div><p>The beginning of a method or code block provides an implicit <code>begin</code>/<code>end</code> context, as a result, using <code>rescue</code> inside a method or code block won&rsquo;t need <code>begin</code>:</p>
+<ul>
+<li><code>rescue</code> applies to any failing statement preceding it within the block</li>
+<li>to get more fine grained control for <code>rescue</code>, explicit <code>begin</code>/<code>end</code> wrapper is still needed</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">load_camera_profile</span>
+  filename <span style="color:#f92672">=</span> gets<span style="color:#f92672">.</span>chomp
+  file <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>open(filename)
+  <span style="color:#66d9ef">yield</span> file
+  file<span style="color:#f92672">.</span>close
+  <span style="color:#66d9ef">rescue</span>
+    puts <span style="color:#e6db74">&#34;Cannot open camera profile </span><span style="color:#e6db74">#{</span>filename<span style="color:#e6db74">}</span><span style="color:#e6db74">!&#34;</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><ul>
+<li>it&rsquo;s necessary to have a <code>return</code> inside rescue otherwise the method continues to execute</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">load_camera_profile</span>
+  filename <span style="color:#f92672">=</span> gets<span style="color:#f92672">.</span>chomp
+  <span style="color:#66d9ef">begin</span>
+    file <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>open(filename)
+  <span style="color:#66d9ef">rescue</span>
+    puts <span style="color:#e6db74">&#34;Cannot open camera profile </span><span style="color:#e6db74">#{</span>filename<span style="color:#e6db74">}</span><span style="color:#e6db74">!&#34;</span>
+    <span style="color:#66d9ef">return</span>
+  <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">yield</span> file
+  file<span style="color:#f92672">.</span>close
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>For <code>NoMethodError</code> when calling a method on <code>nil</code>, save navigation is allowed using <code>&amp;.</code> instead of <code>.</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">if</span> collection<span style="color:#f92672">.</span>cameras<span style="color:#f92672">&amp;.</span>first<span style="color:#f92672">&amp;.</span>model <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;Leica&#34;</span>
+  puts <span style="color:#e6db74">&#34;Your first camera is a Leica!&#34;</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><h4 id="bindingirb">binding.irb</h4>
+<ul>
+<li>Ruby provides a way to debug by opening an <code>irb</code> session from anywhere using <code>binding.irb</code></li>
+<li>put <code>binding.irb</code> would cause execution pause at that line with an <code>irb</code> session</li>
+<li>the <code>irb</code> session has the context of any code executed to this point for inspection</li>
+</ul>
+<h4 id="raising-exceptions">Raising exceptions</h4>
+<ul>
+<li>exceptions can be raised by <code>raise exception, message</code>, e.g. <code>raise ArgumentError, &quot;invalid input&quot;</code></li>
+<li>without exception after <code>raise</code>, <code>RuntimeError</code> is default</li>
+<li>to assign the exception object to a variable, use <code>=&gt;</code> along with <code>rescue</code>
+<ul>
+<li>the object has useful information about the exception, such like <code>backtrace</code> and <code>message</code></li>
+<li>e.g. <code>rescue ArgumentError =&gt; e</code></li>
+</ul>
+</li>
+<li>exception raising is classed based, <code>raise ZeroDivisionError</code> instead of <code>raise ZeroDivisionError.new</code></li>
+<li>use <code>ensure</code> to execute code before the method finishes</li>
+<li>custom exception can be created by subclassing <code>Exception</code> class (or its subclasses)
+<ul>
+<li>e.g. <code>class MyException &lt; Exception; end</code></li>
+</ul>
+</li>
+</ul>
+<p>Re-raise catched exception:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">begin</span>
+  file <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>open(filename)
+<span style="color:#66d9ef">rescue</span> <span style="color:#f92672">=&gt;</span> e
+  puts <span style="color:#e6db74">&#34;Cannot open file </span><span style="color:#e6db74">#{</span>filename<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+  <span style="color:#75715e"># Ruby is smart enough to figure out it&#39;s the same exception to raise</span>
+  <span style="color:#66d9ef">raise</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">line_from_file</span>(filename, substring)
+  file <span style="color:#f92672">=</span> <span style="color:#66d9ef">File</span><span style="color:#f92672">.</span>open(filename)
+  <span style="color:#66d9ef">begin</span>
+    line <span style="color:#f92672">=</span> file<span style="color:#f92672">.</span>gets
+    <span style="color:#66d9ef">raise</span> <span style="color:#66d9ef">ArgumentError</span> <span style="color:#66d9ef">unless</span> line<span style="color:#f92672">.</span>include?(substring)
+  <span style="color:#66d9ef">rescue</span> <span style="color:#66d9ef">ArgumentError</span>
+    puts <span style="color:#e6db74">&#34;Invalid line!&#34;</span>
+    <span style="color:#66d9ef">raise</span>
+  <span style="color:#66d9ef">ensure</span>
+    file<span style="color:#f92672">.</span>close
+  <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">return</span> line
+<span style="color:#66d9ef">end</span>
+</code></pre></div>
 </main>
 
 <footer>

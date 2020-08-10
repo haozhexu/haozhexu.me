@@ -978,3 +978,72 @@ end
 
 - blocks have direct access to variables that already exist
 - block parameters are different from non-parameter variables even if they have the same name
+- to preserve existing variables, define a block-local variable
+  - `array.each do |e;local|`
+  - semicolon followed by a variable name indicates the variable is block-local
+  - changing such variable won't affect existing one that has the same name
+  - block-variables are not considered block parameters and don't get bound to anything when the block is called
+  - they are _reserved names_
+
+### Error handling and exceptions
+
+Common exceptions:
+
+- runtime error: raised by `raise`
+- NoMethodError: sending a message to an object which cannot resolve the message to a method name, raised by default `method_missing`
+- NameError: an identifier cannot be resolved as a variable or method name by interpreter
+- IOError: reading a closed stream, writing to a readonly stream and similar operations
+- Errno::error: errors relates to file I/O
+- TypeError: a method receives an argument it cannot handle
+- Argument-Error: using wrong number of arguments
+
+Use `rescue` to catch and handle exception:
+
+```ruby
+n = gets.to_i
+begin
+  result = 100 / n
+rescue
+  puts "Invalid number for division 100/#{n}"
+  exit
+end
+puts "100/#{n} is #{result}."
+```
+
+It's a good practice to specify what exceptions you want to handle, to catch specific exception:
+
+```ruby
+rescue ZeroDivisionError
+```
+
+The beginning of a method or code block provides an implicit `begin`/`end` context, as a result, using `rescue` inside a method or code block won't need `begin`:
+
+- `rescue` applies to any failing statement preceding it within the block
+- to get more fine grained control for `rescue`, explicit `begin`/`end` wrapper is still needed
+
+```ruby
+def load_camera_profile
+  filename = gets.chomp
+  file = File.open(filename)
+  yield file
+  file.close
+  rescue
+    puts "Cannot open camera profile #{filename}!"
+end
+```
+
+- it's necessary to have a `return` inside rescue otherwise the method continues to execute
+
+```ruby
+def load_camera_profile
+  filename = gets.chomp
+  begin
+    file = File.open(filename)
+  rescue
+    puts "Cannot open camera profile #{filename}!"
+    return
+  end
+  yield file
+  file.close
+end
+```

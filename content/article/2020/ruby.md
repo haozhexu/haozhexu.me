@@ -1102,3 +1102,103 @@ def line_from_file(filename, substring)
   return line
 end
 ```
+
+## Built-in basics
+
+### Literal constructors
+
+| Class       | Literal constructor              | e.g.                               |
+|-------------|----------------------------------|------------------------------------|
+| `String`    | Quotation marks                  | "new string", `new string`         |
+| Symbol      | Leading colon                    | `:symbol`, `:"symbol with spaces"` |
+| Array       | Square brackets                  | [1, 2, 3, 4, 5]                    |
+| Hash        | Curly braces                     | {"Name": "Tom"}                    |
+| Range       | Two or three dots                | 0..9, 0...12                       |
+| Regexp      | Forward slashes                  | /([a-z]+)/                         |
+| Proc lambda | Dash, arrow, parentheses, braces | `->(x, y) { x*y}`                  |
+
+### Syntactic sugar
+
+- Ruby provides syntax sugar for certain operations like method-calling
+- the operators can be overridden
+
+```ruby
+class Meter
+  attr_accessor :exposure
+  def initialize(start_exposure=0)
+    self.exposure = start_exposure
+  end
+  def +(e)
+    self.exposure += e
+  end
+  def -(x)
+    self.exposure -= e
+  end
+  def to_s
+    exposure.to_s
+  end
+end
+
+meter = Meter.new(1)
+meter += 1
+meter -= 2
+```
+
+### Overriding unary operators
+
+- unary operators `+` and `-` can be overridden by defining the method `+@` and `-@`
+- logical not (!) operator can also be defined
+
+```ruby
+class Saturation
+  def initialize(s=0)
+    @sat = s
+  end
+  def to_s
+    @sat.to_s
+  end
+  def +@
+    @sat + 1
+  end
+  def -@
+    @sat - 1
+  end
+  def !
+    -@sat
+  end
+end
+
+saturation = Saturation.new
+puts +saturation
+puts !saturation
+puts (not saturation) # not saturation
+```
+
+### Bang (!) methods
+
+- Ruby methods canend with an exclamation point (!)
+- there's no significance to Ruby internall
+- only conventional for marking a method "dangerous"
+- e.g. _permanently_ modifies receiver, _mutates_ the state of caller
+- advice: only use ! when there's a method of the same name without !
+
+### Built-in and custom `to_*` methods
+
+Ruby offers a number of built-in methods whose name consist of `to_` plus an indicator of a class to which method method converts an object.
+
+- `to_s` to string
+- `to_sym` to symbol
+- `to_a` to array
+- `to_i` to integer
+- `to_f` to float
+
+- `puts` calls `to_s` on its arguments
+- `puts` on array gives a representation based on calling `to_s` on each of the elements
+- `to_s` called on array returns only a single string representation
+- every object except `BasicObject` has method `inspect` which prints memory dump of calling object
+- `display` takes an argument of a writable output stream, default is `STDOUT`
+
+### Array conversion
+
+- `to_a` provides an array-like representation of objects
+- `to_a` is defined on `Array`, not on `Object`

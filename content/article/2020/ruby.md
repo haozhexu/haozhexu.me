@@ -21,6 +21,7 @@ This is the notes I've taken while reading the book "The Well-Grounded Rubyist",
 [Built-in basics](#built-in-basics)  
 [Strings, symbols and other scalar objects](#strings-symbols-and-other-scalar-objects)  
 [Collection and container objects](#collection-and-container-objects)  
+[Enumerable and Enumerator](#enumerable-and-enumerator)
 
 ## Basics
 
@@ -1835,3 +1836,405 @@ h = Hash.new {|hash,key| hash[key] = 0}
 - `select` and `reject` have in-place equivalents `select!` and `reject!`
   - return `nil` if the hash doesn't change
   - to make in-place operation return original hash, use `keep_if` and `delete_if`
+- `Hash#invert` flips the keys and the values
+- be careful since values may not be unique, only one survives with duplicate values
+- `Hash#clear` empties the hash
+- `compact` works similarly for hashes as it does for array, eliminating keys whose value is `nil`
+- `compact!` makes its change in place
+- `replace` replaces the content of hash with another hash, in place
+
+```ruby
+h = Hash[1,2,3,4,5,6] # {1=>2, 3=>4, 5=>6}
+h.select {|k,v| k > 1} # {3=>4, 5=>6}
+h.reject {|k,v| k > 1} # {1=>2}
+{name: "Tom", address: nil}.compact # {name: "Tom"}
+```
+
+#### Hash querying
+
+| method                  | meaning                                 |
+|-------------------------|-----------------------------------------|
+| `h.has_key?(1)`         | `true` if `h` has the key `1`           |
+| `h.include?(1)`         | synonym for `has_key?`                  |
+| `h.key?(1)`             | synonym for `has_key?`                  |
+| `h.member?(1)`          | synonym for `has_key?`                  |
+| `h.has_value?("three")` | `true` if any value in `h` is `"three"` |
+| `h.value?("three")`     | synonym for `has_value?`                |
+| `h.empty?`              | `true` if `h` has no key/value pairs    |
+| `h.size`                | number of key/value pairs in `h`        |
+
+#### Hashes as final method arguments
+
+Ruby allows hash without curly braces when calling a method whose last argument is a hash; If hash is first argument, not only the curly braces are needed, but also the entire arguemnt list need to be in parentheses.
+
+```ruby
+def add_to_camera_database(owner, info)
+  camera = Camera.new
+  camera.owner = owner
+  camera.year_made = info[:year_made]
+  camera.model = info[:model]
+end
+
+add_to_camera_database("Tom",
+  year_made: 1991,
+  model: "Leica M")
+```
+
+#### Named arguments
+
+```ruby
+def m(a:, b:)
+  p a, b
+end
+
+m(a: 1, b: 2) # Ruby matches a and b which are required arguments
+
+def m(a: 1, b: 2) # default values make arguments optional
+end
+```
+
+If the method's parameter list includes a double-starred name, calling a method using keyword arguments not declared by the method will end up sponging up all unknown keyword arguments into a hash:
+
+```ruby
+def m(a: 1, b: 2, **c)
+  p a, b, c
+end
+
+m(x:1, y:2)
+# 1
+# 2
+# {:x=>1, :y=>2}
+```
+
+### Ranges
+
+A _range_ is an object with a start point and an end point.
+
+- _inclusion_: does a given value fall inside the range
+- _enumeration_: the range is treated as a traversable collection of individual items
+
+Create a range with `Range.new` or literal constructor.
+
+- ranges with two dots are inclusive
+- ranges with three dots are exclusive
+
+```ruby
+r = Range.new(1, 100) # 1..100
+r = 1..100 # literal range construction 1..100
+r = 1...100 # exclusive range
+r = Range.new(1, 100, true) # exclusive range 1...100
+```
+
+#### Range logic
+
+- ranges can report back their starting and ending points using `begin` and `end`
+- a range also knows whether it's an exclusive range by `exclude_end?`
+- `cover?` checks whether the argument is within the range using boolean comparison test
+- `include?` treats range as a collection of values
+- if the range can't be interpreted as a finite collection, `include?` falls back on numerical order and comparison
+- backward range is used usually as index
+
+```ruby
+r = 1..10
+r.begin # 1
+r.end # 10
+r.exclude_end? # false
+r = "a".."z"
+r.cover?("a") # true
+r.cover?("abc") # true
+r.cover?("A") # false
+r.cover?([]) # false
+r.include?("a") # true
+r.include?("abc") # false
+r = 1.0..2.0
+r.include?(1.5) # true
+"This is a sample string"[10..-5] # sample st
+```
+
+### Sets
+
+- `Set` is a standard library class, need `require 'set'`
+- a _set_ is a unique collection of objects
+- internally hash is used, a new key is added to the hash when an element is added to set
+
+Create a new `Set` by providing a collection object, can also provide a code block which every item in the collection object is passed through.
+
+```ruby
+cameras = ["Leica M", "X-Pro3", "GX9", "Leica M"]
+unique_cameras = Set.new(cameras) # #<Set: {"Leica M", "X-Pro3", "GX9"}>
+unique_cameras = Set.new(cameras) {|c| c.upcase} # #<Set: {"LEICA M", "X-PRO3", "GX9"}>
+```
+
+- use `<<` to add a single object to a set, nothing happens if adding a duplicated object
+- use `delete` to delete an object from a set, nothing happens if the object doesn't exist
+- `<<` is also available as `add`
+- `add?` returns `nil` if set is unchagned after adding an object
+  - this is usually used to determine whether the object already exists
+
+#### Set operations
+
+- `intersection`, aliased as `&`
+- `union`, aliased as `+` and `|`
+- `difference`, aliased as `-`
+- `^` exclusive or, a set consisting of elements that occur in either set but not all
+- merging another object into a set depends on how the object iterates over itself
+  - merging a hash into a set results in the addition of two-element, key/value arrays to the set
+
+```ruby
+camera_brands = Set.new(["Leica", "Fujifilm", "Olympus"])
+closed_brands = Set.new(["Olympus"])
+optics_brands = Set.new(["Zeiss", "Leica"])
+camera_brands - closed_brands # <Set: {"Leica", "Fujifilm"}>
+camera_brands + optics_brands # <Set: {"Leica", "Fujifilm", "Olympus", "Zeiss"}>
+camera_brands & optics_brands # <Set: {"Leica"}>
+```
+
+#### Subset and superset
+
+- `subset?` and `superset?` exist to check subset and superset relation
+- `proper_subset?` and `proper_superset?` also make sure superset is bigger and subset is smaller than the original set
+
+## Enumerable and Enumerator
+
+Collection objects in Ruby typically include the `Enumerable` module for common functionalities.
+
+- each class that uses `Enumerable` has to define the instance method `each`
+
+```ruby
+class C
+  include Enumerable
+  def each
+    # code
+  end
+end
+```
+
+The job of `each` is to yield items to a supplied code block, one at a time.
+
+```ruby
+class Gender
+  include Enumerable
+  def each
+    yield "boy"
+    yield "girl"
+  end
+end
+
+g = Gender.new
+g.each do |gender|
+  puts "Gender: #{gender}"
+end
+
+# output:
+# Gender: boy
+# Gender: girl
+```
+
+`find` works by calling `each`:
+
+```ruby
+g = Gender.new
+g.find {|gender| g.start_with?('b') }
+# output: boy
+```
+
+### Enumerable Boolean queries
+
+A number of `Enumerable` methods return true or false depending on whether one or more elements matching certain criteria.
+
+| method     | meaning                                          |
+|------------|--------------------------------------------------|
+| `include?` | whether the enumerable includes specified object |
+| `all?`     | whether ALL elements match query                 |
+| `any?`     | whether ANY element matches query                |
+| `one?`     | is there one and only one element matching query |
+| `none?`    | is there NO element matching query               |
+
+- above methods work also for hashes
+- `Hash#each` yields both a key and a value each time
+- you can also capture the key/value pair in a single block parameter
+  - `hash.each {|pair| …}` with `pair[0]` for key and `pair[1]` for value
+- set works naturally with `Enumerable`
+- ranges works only if the range can be expressed as a list of discrete elements
+
+### Enumerable searching and selecting
+
+`find` locates the first element in an array for which the code block returns true, failing to find any element that passes code block test would return `nil`.
+
+```ruby
+[1,2,3,4,5,6,7,8,9].find {|n| n > 3}
+# output: 4
+```
+
+As a result, if the array has `nil` as an element, looking for `nil` would always return `nil`. Use `include?` as a work around to check whether the array has `nil` as an element. Alternatively, provide a `Proc` object as an argument to find, the function will be called if `find` fails.
+
+```ruby
+failure = lambda { 11 }
+over_ten = [1,2,3,4,5,6].find(failure) {|n| n > 10 }
+# output: 11
+```
+
+`find_all` (the same as `select`) returns a new collection containing all the elements of the original collection that match the criteria in the code block, empty collection is returned if none is found.
+
+`select` generally returns an array, include using `Enumerable` in your own class, but for hashes and sets, `select` returns a hash or set, respectively.
+
+```ruby
+a = [1,2,3,4,5,6,7,8,9,10]
+a.find_all {|item| item > 5 } # [6, 7, 8, 9, 10]
+a.select {|item| item > 100 } # []
+```
+
+Arrays, hashes and sets have a bang version `select!` that reduces the collection permanently to only those elements that passed the selection test.
+
+`reject` finds out which elements do not return a true value when yielded to the code block:
+
+```ruby
+a.reject {|item| item > 5} # [1, 2, 3, 4, 5]
+```
+
+There's also the bang version `reject!`
+
+#### Selecting on threequal matches with grep
+
+`Enumerable#grep` selects from an enumerable object based on case-equality operator `===`.
+
+```ruby
+misc = [12, "hi", 10..20, "bye"]
+misc.grep(String) # ["hi", "bye"]
+misc.grep(10..20) # [12]
+```
+
+`enumerable.grep(expression)` is equivalent to:
+
+```ruby
+enumerable.select {|element| expression === element }
+```
+
+- `grep` can also take a block, it yields each element of its result set to the block
+
+#### Organizing selection results with group_by and partition
+
+- `group_by` on enumerable object takes a block and returns a hash
+- the block is executed for each object
+- result hash gets a key for each unique block return value
+- value for the key is an array of all elements that the block returned that value
+
+```ruby
+colors = %w(red orange yellow green blue indigo violet)
+colors.group_by {|color| color.size }
+# output:
+# {3=>["red"], 6=>["orange", "yellow", "indigo", "violet"], 5=>["green"], 4=>["blue"]}
+```
+
+- `partition` splits the elements into two arrays based on whether the code block returns true for the element
+
+```ruby
+class Camera
+  attr_accessor :price
+  def initialize(options)
+    self.price = options[:price]
+  end
+  def below(limit)
+    (0...limit) === price
+  end
+end
+
+cameras = 900.step(1200, 50).map {|p| Camera.new(:price => p) }
+
+cameras.partition { |camera| camera.below(1000) }
+# output:
+# [[#<Camera:0x00007feb871e48b0 @price=900>, #<Camera:0x00007feb871e4838 @price=950>], [#<Camera:0x00007feb871e4798 @price=1000>, #<Camera:0x00007feb871e46f8 @price=1050>, #<Camera:0x00007feb871e4680 @price=1100>, #<Camera:0x00007feb871e4608 @price=1150>, #<Camera:0x00007feb871e4590 @price=1200>]]
+```
+
+### Element-wise operations
+
+- `Enumerable#first` returns the first item when iterating over the enumerable
+- there is no `Enumerable#last` as not all enumerables have end
+- some enumerable classes do have `last` method: `Array` and `Range`
+- `take(n)` gets n elements, `drop(n)` gets original collection without the n elements
+- use `take_while` and `drop_while` with a code block to constrain the size of "take" by the truth value of the code block
+- `min` and `max` returns the minimum and maximum element
+  - determined by `<=>` logic
+  - can provide a code block to perform non-default criteria
+- `minmax` and `minmax_by` returns a pair of values for minimum and maximum
+- `min` and `max` for hashes use the keys to determine ordering
+  - use `*_by` if you want to use values
+
+```ruby
+class Die
+  include Enumerable
+  def each
+    loop do
+      yield rand(6) + 1
+    end
+  end
+end
+
+d = Die.new
+d.each do |roll|
+  if roll == 6
+    puts "Start"
+  end
+end
+
+cameras
+# [#<Camera:0x00007feb871e48b0 @price=900>, #<Camera:0x00007feb871e4838 @price=950>, #<Camera:0x00007feb871e4798 @price=1000>, #<Camera:0x00007feb871e46f8 @price=1050>, #<Camera:0x00007feb871e4680 @price=1100>, #<Camera:0x00007feb871e4608 @price=1150>, #<Camera:0x00007feb871e4590 @price=1200>]
+
+cameras.take_while {|c| c.below(1000) }
+# [#<Camera:0x00007feb871e48b0 @price=900>, #<Camera:0x00007feb871e4838 @price=950>]
+
+cameras.drop_while {|c| c.below(1000) }
+# [#<Camera:0x00007feb871e4798 @price=1000>, #<Camera:0x00007feb871e46f8 @price=1050>, #<Camera:0x00007feb871e4680 @price=1100>, #<Camera:0x00007feb871e4608 @price=1150>, #<Camera:0x00007feb871e4590 @price=1200>]
+
+cameras.min {|a,b| a.price <=> b.price}
+# <Camera:0x00007feb871e48b0 @price=900>
+
+cameras.max {|a,b| a.price <=> b.price}
+# <Camera:0x00007feb871e4590 @price=1200>
+```
+
+- `reverse_each` is `each` but reversely
+  - do not use it on infinite iterator
+- `Enumerable#each_with_index` yields an extra integer representing the ordinal position of the item
+  - `each_with_index` is deprected, use `each.with_index` instead
+- provide an argument to `each.with_index` as the first index value, avoiding the need to add one to the index which by default starts from 0
+- `each_slice` and `each_cons` walk through a collection a certain number of elements at a time
+- `each_slice` handles each element only once
+- `each_cons` takes a new grouping at each element with overlapping yielded arrays
+
+```ruby
+a = Array(1..10)
+
+a.each_slice(3) {|slice| p slice }
+# [1, 2, 3]
+# [4, 5, 6]
+# [7, 8, 9]
+# [10]
+
+a.each_cons(3) {|slice| p slice }
+# [1, 2, 3]
+# [2, 3, 4]
+# [3, 4, 5]
+# [4, 5, 6]
+# [5, 6, 7]
+# [6, 7, 8]
+# [7, 8, 9]
+# [8, 9, 10]
+```
+
+There's a family of `slice_` methods.
+
+- `slice_before` split a collection at the point at which a given criterion is matched
+- `slice_after` complements `slice_before`, split a collection after the pattern or Boolean test is found
+- `slice_when` tests two elements at a time
+
+```ruby
+(1..10).slice_before { |num| num % 2 == 0 }.to_a
+# [[1], [2, 3], [4, 5], [6, 7], [8, 9], [10]]
+
+[1,2,3,3,4,5,6,6,7,8,8,8,9,10].slice_when { |i,j| i == j }.to_a
+# [[1, 2, 3], [3, 4, 5, 6], [6, 7, 8], [8], [8, 9, 10]]
+```
+
+`Enumerable#cycle` yields all the elements in the object again and again in a loop, providing an integer argument asks the loop to run that many times.
+

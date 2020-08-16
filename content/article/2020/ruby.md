@@ -2238,3 +2238,138 @@ There's a family of `slice_` methods.
 
 `Enumerable#cycle` yields all the elements in the object again and again in a loop, providing an integer argument asks the loop to run that many times.
 
+#### Enumerable reduction with inject
+
+`inject` works by initializing an accumulator oject and iterating through a collection, performing a calculation on each iteration and resetting the acumulator for purposes of the next iteration, to the result of that calculation.
+
+- without an argument to inject it uses the first element in the enumerable object as the initial value
+
+```ruby
+[1,2,3,4].inject(0) {|acc,n| acc + n } # 10
+[1,2,3,4].inject(:+)
+```
+
+#### Map
+
+- `map` (also callable as `collect`) always returns an array of the same size as the original enumerable
+- the elements of returned array consist of the accumulated result of calling the code block on each element in the original object
+- `each` exists purely for the side effects from the execution of the block
+- `map` on the other hand maintains an accumulator array of the results from the block
+- `map` has a in-place `map!`, defined in `Array` and `Set`
+
+```ruby
+cameras = %w(Leica Fujifilm Olympus)
+cameras.map {|camera| camera.upcase} # ["LEICA", "FUJIFILM", "OLYMPUS"]
+
+# use a symbol argument as a block
+cameras.map(&:upcase)
+```
+
+Be careful with block evaluation, `map` only cares about return value of `puts` which is always `nil`:
+
+```ruby
+array = [1,2,3,4,5]
+result = array.map {|n| puts n * 100 } # [nil, nil, nil, nil, nil]
+```
+
+#### Strings as enumerables
+
+- `String` has `each_byte`, `each_character` and `each_codepoint`
+- `String` has `each_line` that splits the string at the end of each occurrence of global variable `$/`
+- `$/` is linebreak by default, can be changed
+- drop the `each_` and pluralize the method name give array of all data instead of enumerator
+
+#### Sorting enumerables
+
+In order to make a class instance sortable:
+
+1. define `<=>` for the class
+2. place multiple instances in a container, e.g. array
+3. sort the container
+
+In cases where no `<=>` is defined for objects, a block can be supplied on the fly to indicate how they should be sorted.
+
+```ruby
+sorted_camera = cameras.sort do |a, b|
+  a.price <=> b.price
+end
+```
+
+- `sort_by` always takes a block that requires a treatment of one item in the collection.
+- `clamp` takes two argument, returns 1st argument if receiver is less, returns 2nd argument is receiver is greater, otherwise returns the receiver itself
+
+```ruby
+cameras.sort_by {|c| c.price }
+cameras.sort_by(&:price)
+```
+
+### Enumeraors
+
+- an `iterator` is a method that yields one or more values to a code block
+- an enumerator is an object
+- at heart, an enumerator is a simple enumerable object with an `each` and employs the `Enumerable` module
+- an enumerator isn't a container object, the `each` logic has to be explicitly specified
+
+```ruby
+e = Enumerator.new do |y|
+  y << 1
+  y << 2
+  y << 3
+end
+
+e = Enumerator.new do |y|
+  (1..3).each { |i| y << i }
+end
+
+e.to_a # [1, 2, 3]
+e.map {|x| x * 10} # [10, 20, 30]
+e.select {|x| x > 1} # [2, 3]
+e.take(2) # [1, 2]
+```
+
+- `y` is a _yielder_, an instance of `Enumerator::Yielder` passed to your block
+- upon `each`, 1, 2 and 3 are yielded, can also be `y.yield(1)`
+- every time the iterator method on the enumerator is called, the code block gets executed once
+- it's also possible to involve other objects in the code block
+
+```ruby
+a = [1, 2, 3, 4, 5]
+e = Enumerator.new do |y|
+  total = 0
+  until a.empty?
+    total += a.pop
+    y << total
+  end
+end
+
+e.take(2) # [5, 9], popping and adding last two
+a # [1, 2, 3]
+e.to_a # [3, 5, 6], each would pop and add to total until empty
+```
+
+#### Attaching enumerators to other objects
+
+When the enumerator need to yield something, it gets the necessary value by triggering the next yield from the object to which it is attached via the designated method.
+
+```ruby
+cameras = %w(Leica Olympus Canon Nikon)
+e = cameras.enum_for(:select)
+e.each {|c| c.include?('o')} # ["Canon", "Nikon"]
+```
+
+Any further arguments provided to `enum_for` are passed through to the method to which the enumerator is being attached.
+
+```ruby
+e = cameras.enum_for(:inject, "Names: ")
+e.each {|string, name| string << "#{name}..." }
+# "Names: Leica...Olympus...Canon...Nikon..."
+```
+
+- the starting string "Names: " is still alive inside the enumerator
+- most built-in iterators return an enumerator when they're called without a block
+- the main use for this is _chaining_: calling another method imeediately on the enumerator
+
+```ruby
+e = cameras.map
+e.each {|camera| camera.capitalize}
+```

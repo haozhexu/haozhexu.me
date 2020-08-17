@@ -120,76 +120,26 @@
   <url>
     <loc>https://www.haozhexu.me/categories/article/</loc>
     <lastmod>2019-09-15T15:39:00+11:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://www.haozhexu.me/cn/categories/article/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.haozhexu.me/categories/article/"
-                />
   </url>
   
   <url>
     <loc>https://www.haozhexu.me/tags/lottery/</loc>
     <lastmod>2019-09-15T15:39:00+11:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://www.haozhexu.me/cn/tags/lottery/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.haozhexu.me/tags/lottery/"
-                />
   </url>
   
   <url>
     <loc>https://www.haozhexu.me/tags/mathematics/</loc>
     <lastmod>2019-09-15T15:39:00+11:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://www.haozhexu.me/cn/tags/mathematics/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.haozhexu.me/tags/mathematics/"
-                />
   </url>
   
   <url>
     <loc>https://www.haozhexu.me/tags/numbers/</loc>
     <lastmod>2019-09-15T15:39:00+11:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://www.haozhexu.me/cn/tags/numbers/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.haozhexu.me/tags/numbers/"
-                />
   </url>
   
   <url>
     <loc>https://www.haozhexu.me/tags/powerball/</loc>
     <lastmod>2019-09-15T15:39:00+11:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://www.haozhexu.me/cn/tags/powerball/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.haozhexu.me/tags/powerball/"
-                />
   </url>
   
   <url>
@@ -225,46 +175,21 @@
   <url>
     <loc>https://www.haozhexu.me/tags/fujifilm/</loc>
     <lastmod>2019-01-16T21:09:00+11:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://www.haozhexu.me/cn/tags/fujifilm/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.haozhexu.me/tags/fujifilm/"
-                />
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/categories/photography/</loc>
+    <lastmod>2019-01-16T21:09:00+11:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.haozhexu.me/tags/photography/</loc>
     <lastmod>2019-01-16T21:09:00+11:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://www.haozhexu.me/cn/tags/photography/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.haozhexu.me/tags/photography/"
-                />
   </url>
   
   <url>
     <loc>https://www.haozhexu.me/tags/review/</loc>
     <lastmod>2019-01-16T21:09:00+11:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://www.haozhexu.me/cn/tags/review/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.haozhexu.me/tags/review/"
-                />
   </url>
   
   <url>
@@ -380,16 +305,6 @@
   <url>
     <loc>https://www.haozhexu.me/tags/camerareview/</loc>
     <lastmod>2018-09-15T08:00:00+11:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://www.haozhexu.me/cn/tags/camerareview/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.haozhexu.me/tags/camerareview/"
-                />
   </url>
   
   <url>
@@ -410,16 +325,6 @@
   <url>
     <loc>https://www.haozhexu.me/tags/leica/</loc>
     <lastmod>2018-09-15T08:00:00+11:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://www.haozhexu.me/cn/tags/leica/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.haozhexu.me/tags/leica/"
-                />
   </url>
   
   <url>
@@ -470,16 +375,6 @@
   <url>
     <loc>https://www.haozhexu.me/tags/streetphotography/</loc>
     <lastmod>2018-09-04T21:00:00+11:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://www.haozhexu.me/cn/tags/streetphotography/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.haozhexu.me/tags/streetphotography/"
-                />
   </url>
   
   <url>
@@ -515,16 +410,6 @@
   <url>
     <loc>https://www.haozhexu.me/tags/panasonic/</loc>
     <lastmod>2018-08-24T10:00:00+11:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://www.haozhexu.me/cn/tags/panasonic/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.haozhexu.me/tags/panasonic/"
-                />
   </url>
   
   <url>
@@ -583,12 +468,12 @@
   </url>
   
   <url>
-    <loc>https://www.haozhexu.me/tags/travel/</loc>
+    <loc>https://www.haozhexu.me/categories/travel/</loc>
     <lastmod>2018-01-09T20:27:58+11:00</lastmod>
   </url>
   
   <url>
-    <loc>https://www.haozhexu.me/categories/travelphotography/</loc>
+    <loc>https://www.haozhexu.me/tags/travel/</loc>
     <lastmod>2018-01-09T20:27:58+11:00</lastmod>
   </url>
   

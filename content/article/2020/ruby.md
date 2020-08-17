@@ -17,7 +17,11 @@ This is the notes I've taken while reading the book "The Well-Grounded Rubyist",
 [Classes](#classes)  
 [Modules](#modules)  
 [Default object, scope and visibility](#default-object-scope-and-visibility)  
-[Control Flow](#control-flow)
+[Control Flow](#control-flow)  
+[Built-in basics](#built-in-basics)  
+[Strings, symbols and other scalar objects](#strings-symbols-and-other-scalar-objects)  
+[Collection and container objects](#collection-and-container-objects)  
+[Enumerable and Enumerator](#enumerable-and-enumerator)
 
 ## Basics
 
@@ -1101,4 +1105,1271 @@ def line_from_file(filename, substring)
   end
   return line
 end
+```
+
+## Built-in basics
+
+### Literal constructors
+
+| Class       | Literal constructor              | e.g.                               |
+|-------------|----------------------------------|------------------------------------|
+| `String`    | Quotation marks                  | "new string", `new string`         |
+| Symbol      | Leading colon                    | `:symbol`, `:"symbol with spaces"` |
+| Array       | Square brackets                  | [1, 2, 3, 4, 5]                    |
+| Hash        | Curly braces                     | {"Name": "Tom"}                    |
+| Range       | Two or three dots                | 0..9, 0...12                       |
+| Regexp      | Forward slashes                  | /([a-z]+)/                         |
+| Proc lambda | Dash, arrow, parentheses, braces | `->(x, y) { x*y}`                  |
+
+### Syntactic sugar
+
+- Ruby provides syntax sugar for certain operations like method-calling
+- the operators can be overridden
+
+```ruby
+class Meter
+  attr_accessor :exposure
+  def initialize(start_exposure=0)
+    self.exposure = start_exposure
+  end
+  def +(e)
+    self.exposure += e
+  end
+  def -(x)
+    self.exposure -= e
+  end
+  def to_s
+    exposure.to_s
+  end
+end
+
+meter = Meter.new(1)
+meter += 1
+meter -= 2
+```
+
+### Overriding unary operators
+
+- unary operators `+` and `-` can be overridden by defining the method `+@` and `-@`
+- logical not (!) operator can also be defined
+
+```ruby
+class Saturation
+  def initialize(s=0)
+    @sat = s
+  end
+  def to_s
+    @sat.to_s
+  end
+  def +@
+    @sat + 1
+  end
+  def -@
+    @sat - 1
+  end
+  def !
+    -@sat
+  end
+end
+
+saturation = Saturation.new
+puts +saturation
+puts !saturation
+puts (not saturation) # not saturation
+```
+
+### Bang (!) methods
+
+- Ruby methods canend with an exclamation point (!)
+- there's no significance to Ruby internall
+- only conventional for marking a method "dangerous"
+- e.g. _permanently_ modifies receiver, _mutates_ the state of caller
+- advice: only use ! when there's a method of the same name without !
+
+### Built-in and custom `to_*` methods
+
+Ruby offers a number of built-in methods whose name consist of `to_` plus an indicator of a class to which method method converts an object.
+
+- `to_s` to string
+- `to_sym` to symbol
+- `to_a` to array
+- `to_i` to integer
+- `to_f` to float
+
+- `puts` calls `to_s` on its arguments
+- `puts` on array gives a representation based on calling `to_s` on each of the elements
+- `to_s` called on array returns only a single string representation
+- every object except `BasicObject` has method `inspect` which prints memory dump of calling object
+- `display` takes an argument of a writable output stream, default is `STDOUT`
+
+### Array conversion
+
+- `to_a` provides an array-like representation of objects
+- `to_a` is defined on `Array`, not on `Object`
+- _bare list_ means several identifiers or literal objects separated by commas
+  - `[1, 2, 3, 4, 5]` is an array of the bare list `1, 2, 3, 4, 5`
+- _bare list_ can be used for method arguments
+  - `def method(arg1, arg2)`
+  - `arguments = [1, 2]; method(*arguments)`
+- objects can be used as arrays if implementing `to_ary`
+- `to_ary` is called where array and only array will work. e.g. array concatenation
+
+### Number conversion
+
+- `to_i` converts the object to an integer
+- strings that have no reasonable integer equivalent (e.g. "Hello") converts to 0
+- strings that start with digits but also include non-digits, the non-digits part is ignored for `to_i`
+- `to_f` converts the objects to floating-point
+- methods `Integer` and `Float` exist but are stricter than `to_i` and `to_f`
+- objects that respond to `to_str` will have `to_str` representation used as the argument to `String#+`
+- `to_str` is also used on arguments to the `<<` (append to string) method
+
+### Boolean
+
+- every expression in Ruby evaluates to an object
+- every object has a Boolean value of either `true` or `false`
+- `true` and `false` are both objects
+
+Some expressions' values:
+
+- `class MyClass; end` evaluates to `nil`
+- `class MyClass; 1; end` evaluates to `1`
+- `def m; return false; end` evaluates to `:m`
+- `"Hello, world!"` evaluates to `"Hello, world!"`
+- `100 > 50` evaluates to `true`
+- the only objects that have a Boolean value of false are `false` and `nil`
+
+### The special object nil
+
+- `nil` is the only instance of the class `NilClass`
+- the Boolean value of `nil` is false
+- `nil` denotes an absence of anything
+  - `["one", "two"][3]` evaluates to `nil`
+- `nil.to_s` is empty string
+- the integer representation of `nil` is 0
+- `nil`'s object ID is 8
+
+### Objects comparison
+
+- Ruby's built-in module `Comparable` provides ways to compare objects
+- equality tests: `Object` class defines `==`, `eql?` and `equal?`
+- redefine `==` for comparison
+  - `String` compares if the value of strings are identical
+  - `Numeric` (a super class of `Integer` and `Float`) redefines `==` for comparing number values with type conversion
+  - `Numeric`'s `eql?` doesn't do type conversion
+
+To make an object `Comparable`:
+
+- mix-in the module `Comparable`
+- define a comparison method with the name `<=>` as an instance method of the object
+- `<=>` is usually called the _spaceship operator_ or _spaceship method_
+- inside the method you define what is _less than_, _equal to_ and _greater than_
+
+```ruby
+class Camera
+  include Comparable
+  attr_accessor :rating
+  def <=>(other_camera)
+    # the following can also be simplified as:
+    # self.rating <=> other_camera.rating
+    if self.rating < other_camera.rating
+      -1
+    elsif self.rating > other_camera.rating
+      1
+    else
+      0
+    end
+  end
+end
+```
+
+### Inspecting objects
+
+- `methods` shows what the object, class or module responds to
+- `instance_methods` on class shows all the instance methods that the instances of the class has
+- `instance_methods(false)` shows without the methods from ancestors
+
+## Strings, symbols and other scalar objects
+
+- string interpolation doesn't work with single-quoted strings
+  - `"One plus one is #{1 + 1}"`: "One plus one is 2"
+  - `'One plus one is #{1 + 1}'`: "One plus one is #{1 + 1}"
+- escape interpolation mechanism in double-quoted string using backslashes
+  - `"One plus one is \"\#{1 + 1}\"."`
+- alternative quoting mechanisms take the form `%char{text}`
+  - `%q{this is a single quoted string}`
+  - `%Q{this is a double quoted string}`
+  - curly braces are most commonly used but it can be anything
+  - opening delimiter has to match closing one
+  - `%q-a string-`
+  - `%Q/Another string/`
+- including unmatched brace of the same type must be escaped
+  - `%Q{this () is fine. }`
+  - `q(This \( has to be escaped.)`
+- _heredoc_ is a string, usually a multiline string defined through `<<` operator
+  - `<<EOM` means the text that follows, up to but not including the next occurrence of "EOM"
+  - `SQL` is also common for SQL query
+  - delimiter must be flush left and be the only thing on the line where it occurs
+  - swiching off the flush-left requirement by putting a hyphen before `<<` operator
+  - squiggly heredoc `<<~` strips leading whitespace from output
+  - by default heredocs are read in as double-quoted strings, thus can include string interpolation
+  - to have single-quoted heredoc, enclose the marker with single quote
+  - `<<EOM` or any open delimiter doesn't have to be the last thing on its line
+    - it's just a placeholder for upcoming heredoc
+
+```ruby
+text = << EOM
+First line
+Second line
+EOM
+
+another_text = <<-EOM
+The EOM doesn't have to be flush left!
+  EOM
+
+single_quoted = <<-`EOM`
+this is a
+single quoted line
+EOM
+
+a = <<EOM.to_i * 10
+5
+EOM
+puts a # output is 50
+```
+
+### Basic string manipulation
+
+Use `[]` operator/method to retrieve the nth character in a string, negative numbers index from the end of the string:
+
+```ruby
+"Ruby is cool"[5] # "i"
+"Ruby is cool"[-1] # "l"
+```
+
+A second integer argument `m` gets a substring of `m` characters:
+
+```ruby
+"Ruby is cool"[1, 2] # "ub"
+```
+
+A single _range_ object can be provided as argument, two dots are inclusive, three dots means exclusive, the second index must always be closer to the end of the string than the first index:
+
+```ruby
+'Ruby is cool'[1..3] # "uby"
+'Ruby is cool'[1...3] # "ub"
+```
+
+Get substring return `nil` if substring isn't found, regular expressions can be used as well for matching.
+
+```ruby
+"ruby is cool"["is cool"] # "is cool"
+"ruby is cool"["something"] # nil
+```
+
+`slice` removes the characters from the string; `slice!` removes permanently
+
+```ruby
+string = "ruby is cool"
+string.slice!("is ")
+string # "ruby cool"
+```
+
+Use `[]=` to set part of a string to a new value, integers, ranges, strings and regular expressions all work, if the part isn't found, or nothing matches, `IndexError` is raised:
+
+```ruby
+string = "A quick brown fox jumps over a lazy dog."
+string["quick"] = "slow"
+string[-1] = "!"
+string # "A slow brown fox jumps over a lazy dog!"
+```
+
+Use `+` for string concatenation, use `<<` to append second string permanently to an existing string, use `#{}` for string interpolation.
+
+```ruby
+"Hi" + "there" # "Hi there"
+string = "Hi "
+string << "there" # "Hi there"
+"#{string}there." # "Hi there"
+```
+
+### Querying strings
+
+- use `include?` to check if a string includes a substring
+- use `start_with?`, `end_with?` to check if string has prefix, suffix
+  - `start_with?` also supports regular expression
+- use `empty?` to test if a string is empty
+- use `size` and `length` to get the size or length of the string
+- use `count` to check how many time a given string or letter occurs
+- use hyphen-separated range to count how many of a range of letters there are in the string
+- `count` with a string checks the number of characters in the string that are in the character set
+- to negate the search put a `^` (caret) at the beginning of specification
+- `count` can have multiple arguments
+- use `index` and `rindex` to get index of substring
+- `ord` returns the ordinal code of a character
+  - `ord` sent to a string returns ordinal code of the first character
+- `chr` returns the character represented by the integer
+  - sending `chr` to a number that doesn't represent a character causes a fatal error
+
+```ruby
+string = "A quick brown fox jumps over a lazy dog."
+string.include?("quick") # true
+string.include?("slow") # false
+string.start_with?("A") # true
+string.end_with?("B") # false
+string.start_with?(/[A-Z]/) # true
+string.empty? # false
+"".empty? # true
+string.size # 40
+string.count("a") # 2
+string.count("g-m") # 6
+string.count("aey. ") # 13
+string.count("^a-z") # 9 for 8 spaces and one fullstop
+string.index("o") # 10
+string.rindex("o") # 37
+string.ord # 97
+"a".ord # 97
+97.chr # a
+```
+
+### String comparison and transformation
+
+- the `String` class mixes in `Comparable` and defines `<=>`
+- `==` is used to test sring content equality
+- `String#equal?` checks whether two strings are the same object
+- `upcase`, `downcase`, `swapcase`, `capitalize` and `capitalize!`
+- `rjust` and `ljust` expand the size of string with space padding
+  - second argument provides padding string
+  - padding pattern is repeated as many times as it will fit, truncating if necessary
+- `center` puts the characters of the string in the center
+  - Odd-numbered padding are right-heavy
+- use `strip`, `lstrip` and `rstrip` to strip whitespace from either or both sides
+- `chop` removes a character unconditionally from end of string
+- `chomp` removes a target substring if the string has that suffix
+- both `chop` and `chomp` have bang equivalents that change the string in place
+- `clear` empties the string
+- `replace` replaces string content with specified string in place
+- `delete` removes part of the string
+- `crypt` performs aDES encryption on the string
+- `succ` gets the next-highest string, `"z".succ` is `aa`, `"bzz".succ` is `caa`
+- `to_i` converts a string to an integer
+  - optional argument specifies the base
+  - `"100".to_i(17)` is `289` (base 17 number)
+- `oct` converts the string to base 8 number
+- `hex` converts the string to base 16 number, `"A".hex` is 10
+
+### Symbols
+
+_Symbols_ are instances of the built-in class `Symbol`, the literal constructor is the leading colon.
+
+- create a symbol programatically by calling `to_sym` or `intern`
+- symbol can be converted to a string using `to_s`
+- symbols are immutable
+- symbols are unique, the same symbol is always the same object
+
+```ruby
+"a".to_sym # :a
+"hello".intern # :"hello"
+:a.to_s # "a"
+:xyz.object_id # same as below
+:xyz.object_id # same as above
+Symbol.all_symbols # return all the symbols
+
+# use grep instead of include?
+# include? would first put the symbol to the table
+# which makes the result be always true
+Symbol.all_symbols.grep(/abc/)
+```
+
+Most common uses of symbols are method arguments and hash keys.
+
+- Ruby processes symbols faster
+- symbols look good as hash keys
+
+```ruby
+atr_accessor :name
+
+# the "send" method also takes symbol as argument
+"abc".send(:upcase)
+
+# this also works
+some_object.send(method_name.to_sym)
+
+person = { :name => "Tom", :age => 18 }
+person[:name] # "Tom"
+
+# simplified hash keys:
+person = { name: "Tom", age: 36 }
+```
+
+### Numericals
+
+- In Ruby, numbers are objects.
+- `Numeric` is the class from which `Float` and `Integer` inherit
+- `Numeric` includes useful modules such as `Comparable`
+
+### Times and dates
+
+Three classes exist for times and dates: `Time`, `Date` and `DateTime`.
+
+- `require 'date'` for `Date` and `DateTime`
+- `require 'time'` for `Time`
+
+#### Creating date objects
+
+```ruby
+Date.today
+
+# send year, month and day
+# without parameter, month and day default to 1, year defaults to -4712
+Date.new(2020, 8, 14)
+
+# parse a date string
+# assumes order of year/month/day
+Date.parse("2020/8/14")
+```
+
+- Ruby by default expands the century if providing only a one- or two-digit number
+- for number equals to or greater than 69, the offset added is 1900
+  - `Date.parse("77/8/14")` is 1977-08-14
+- for number between 0 and 68 the offset is 2000
+  - `Date.parse("03/8/14")` is 2003-08-14
+- `Date.parse` tries to understand different formats
+  - `"November 2 2013"`
+  - `"Aug 14 2020"`
+  - `"14 Aug 2020"`
+- create Monday-based day-of-week counting `Date` object using `jd` and `commercial` methods
+- scan a string against a format spec and generate a `Date` object using `strptime`
+
+#### Creating time objects
+
+```ruby
+Time.new # a.k.a now
+Time.at(100000000) # number of seconds since the epoch (midnight on 1st Jan, 1970, GMT)
+Time.mktime(2020,8,14,6,31,3) # year, month, day, hour, minute and seconds, with reasonable defaults
+require 'time'
+Time.parse("August 14, 2020, 6:32 am")
+```
+
+#### Creating date/time objects
+
+- `DateTime` is a subclass of `Date`
+- most common constructors are `new`, `now` and `parse`
+- also features the specialized `jd` (Julian date), `commercial` and `strptime` constructors
+
+#### Date/time query methods
+
+The time and date objects have methods that represents themselves.
+
+```ruby
+dt = DateTime.now
+dt.year
+dt.hour
+dt.minute
+dt.second # DateTime objects have second and sec
+t = Time.now
+t.month
+t.sec # Time objects have only sec
+d = Date.today
+d.day
+
+t.sunday?
+d.saturday?
+dt.friday?
+
+d.leap?
+dt.leap?
+t.dst? # daylight saving time available to Time only
+```
+
+#### Date/time formatting methods
+
+```ruby
+t = Time.now # 2020-08-14 06:49:19 +1000
+t.strftime("%m-%d-%y") # "08-14-20"
+Date.today.rfc2822
+DateTime.now.httpdate
+```
+
+| Specifier | Description                                |
+|-----------|--------------------------------------------|
+| %Y        | Year (four digits)                         |
+| %y        | Year (last two digits)                     |
+| %b, %B    | Short month, full month                    |
+| %m        | Day of month (left-padded with zeros)      |
+| %e        | Day of month (left-padded with blanks)     |
+| %a, %A    | Short day name, full day name              |
+| %H, %I    | Hour (24-hour clock), hour (12-hour clock) |
+| %M        | Minute                                     |
+| %S        | Second                                     |
+| %c        | "%a %b %d %H:%M:%S %Y"                     |
+| %x        | "%m/%d/%y"                                 |
+
+- the `%c` and `%x` specifier may differ from one locale to another
+- all of the date/time classes allow for conversion to each other
+- in case where target class has more information than source class, missing fields are set to 0
+
+#### Date/time arithmetic
+
+- `Time` objects let you add and subtract seconds, returning a new time object
+  - `Time.now - 10`, `Time.now + 30`
+- `Date` and date/time objects interpret + and - as day-wise operations
+- use `<<` and `>>` for month-wise conversions
+- a whole family of `next_`_unit_ and `prev_`_unit_ methods let you move back and forth by days, months or years
+
+```ruby
+dt = DateTime.now # 2020-08-14T07:01:01+10:00
+puts dt + 10 # add 10 days: 2020-08-24T07:01:01+10:00
+puts dt >> 3 # 3 months after: 2020-11-14T07:01:01+10:00
+puts dt.next # 2020-08-15T07:01:01+10:00
+puts dt.next_year # 2021-08-14T07:01:01+10:00
+puts dt.next_month(2) # 2020-10-14T07:01:01+10:00
+puts dt.prev_day(10) # 2020-08-04T07:01:01+10:00
+
+d = Date.today # 2020-08-14
+next_week = d + 7 # 2020-08-21
+d.upto(next_week) { |date| puts "#{date} is a #{date.strftime("%A")}" }
+# 2020-08-14 is a Friday
+# 2020-08-15 is a Saturday
+# 2020-08-16 is a Sunday
+# 2020-08-17 is a Monday
+# 2020-08-18 is a Tuesday
+# 2020-08-19 is a Wednesday
+# 2020-08-20 is a Thursday
+# 2020-08-21 is a Friday
+```
+
+## Collection and container objects
+
+- an _array_ is an ordered collection of objects
+- _hashes_ are also ordered collections with objects in pairs
+- each pair consists of a _key_ and a _value_
+
+### Array
+
+- array creation using `Array.new`
+- `Array` is a method that creates an array with an argument
+- if the argument has `to_ary` defined, `Array` calls it to generate an array
+- if no `to_ary` defined, `Array` tries to call `to_a`
+- otherwise `Array` wraps the argument in an array
+
+```ruby
+a = Array.new
+Array.new(3) # [nil, nil, nil]
+Array.new(2, "ab") # ["ab", "ab"]
+Array.new(3) { |i| 10 * (i + 1) } # [10, 20, 30]
+
+Array.new(3, "ef") # uses the same object "ef"
+a[0] << "g" # so this would cause each of the three "ef" become "efg"
+
+Array.new(3) { "abc" } # different object "abc"
+
+# literal constructor
+a = [1, 2, "three", 4, []]
+
+string = "text"
+Array(string) # ["text"]
+
+def string.to_a
+  split(//)
+end
+
+Array(string) # ["t", "e", "s", "t"]
+```
+
+- array can be created also with the `%w` and `%W` constructor
+- create array of symbols using `%i` and `%I`
+- each of several built-in classes has a class method `try_convert`
+  - it takes one argument, looks for a conversion method
+  - call the conversion method if exists, or return `nil`
+
+```ruby
+# parsing as single quoted string
+%w(Tom Jack) # ["Tom", "Jack"]
+
+# parsing as double quoted string
+%W{Tom is #{10-2} years old} # ["Tom", "is", "8", "years", "old"]
+
+# space neeed to be escaped
+%w(Black\ Smith is a nice person) # ["Black Smith", "is", "a", "nice", "person"]
+
+%i(a b c) # [:a, :b, :c]
+```
+
+
+#### Array manipulation
+
+Simple getter and setter: `[]` and `[]=`
+
+```ruby
+a = []
+a[0] = "first" # a.[]=(0, "first")
+a = [1,2,3,4,5]
+a[2] # 3
+```
+
+The getter and setter take a second argument as length:
+
+```ruby
+a = %w(a quick brown fox jumps over a lazy dog)
+a[3,2] # ["fox", "jump"]
+a[3, 2] = ["chicken", "run"]
+# a is now ["a", "quick", "brown", "chicken", "run", "over", "a", "lazy", "dog"]
+a.values_at(3, 8) # ["chicken", "dog"]
+```
+
+- the `[]` has a synonym: `slice`
+- there's also `slice!` that removes sliced items permanently from the array
+- `values_at` takes one or more arguments representing indexes
+- elements deep in multi-dimensional array can be retrieved by `dig`
+- `dig` takes as arguments the index positions of each nested element
+- `unshift` adds an object to the beginning of an array
+- `push` adds one or more object to the end of an array
+- `<<` adds one object to the end of an array
+- `shift` and `pop` are the opposite of `unshift` and `push`
+  - also takes argument for number of elements
+
+```ruby
+a = [1, 2, 3, 4]
+a.unshift(0) # [0,1,2,3,4]
+a.push(5) # [0,1,2,3,4,5]
+a << 6 # [0,1,2,3,4,5,6]
+a.push(7, 8) # [0,1,2,3,4,5,6,7,8]
+```
+
+- arrays concatenation using `concat`
+- `concat` permanently changes the receiver
+- to concatenate and create a new array, use `+`
+- `replace` replaces array with another
+- `replace` keeps the object but assignment changes the object
+- flatten nested array using `flatten`
+  - in-place method exists: `flatten!`
+- `reverse` reverses an array, also comes with bang version
+- `join` returns a string representation of all elements together
+- `join` takes an optional argument for the separator
+- `uniq` returns an array with duplicates removed
+
+#### Array querying
+
+| Method name                     | Meaning                                          |
+|---------------------------------|--------------------------------------------------|
+| `a.size(synonym: length, count) | Number of elemnents in the array                 |
+| a.empty?                        | whether the array is empty                       |
+| a.include?(item)                | true if the array includes item, false otherwise |
+| a.count(item)                   | number of occurrences of item in array           |
+| a.first(n=1)                    | First `n` elements of array                      |
+| a.last(n=1)                     | Last `n` elements of array                       |
+| a.sample(n=1)                   | `n` random elements from array                   |
+
+### Hashes
+
+Hash is a colection of objects consisting of key/value pairs, the `=>` operator connects a key on the left with the value corresponding to it on the right.
+
+A hash can be created via:
+
+1. literal constructor (curly braces)
+   - `h = {}`
+2. `Hash.new` method
+   - argument to `Hash.new` is treated as default value for nonexistent hash keys
+3. `Hash.[]` method
+   - takes a comma separated list of items
+   - even number of arguments are treated as alternating keys and values
+   - odd number of argument will raise a fatal error
+   - also can pass an array of arrays, each subarray has two elements
+   - `Hash[ [[1, 2], [3,4]] ] # {1=>2, 3=>4}`
+4. top-level method `Hash`
+   - empty hash created when called with empty array or `nil`
+   - otherwise `to_hash` is called on its single argument
+
+```ruby
+weekdays = { "Monday" => "Mon",
+             "Tusday" => "Tue",
+             "Wednesday" => "Wed",
+             "Thursday" => "Thur",
+             "Friday" => "Fri",
+             "Saturday" => "Sat",
+             "Sunday" => "Sun"}
+weekdays["Monday"] # "Mon"
+```
+
+Adding a key/value pair to a hash:
+
+```ruby
+country_names["US"] = "United States"
+country_names.[]=("US", "United States")
+country_names.store("US", "United States")
+```
+
+Retrieving values from a hash:
+
+```ruby
+country = country_names["US"] # "United States"
+country = country_names.fetch("US")
+```
+
+When looking up a nonexistent key:
+
+- `fetch` raises and exception
+- `[]` gives either `nil` or the default you specified
+- a second argument to `fetch` will be used as default when the key isn't found
+- `values_at` also works on hashes, it returns an array of values for specified keys
+- `fetch_values` is similar, but raises `KeyError` if the key isn't found
+- pass a block to `fetch` or `fetch_values` for default behaviour
+- hashes can be nested within other hashes
+- similar to `Array`, `dig` also exists for hashes
+- supply a code block to `Hash.new` to be executed every time a nonexistent key is referenced
+
+```ruby
+h = Hash.new {|hash,key| hash[key] = 0}
+```
+
+#### Combining hashes with other hashes
+
+- `update` add the key-value pairs from second hash to the first, overwrite existing keys
+- `merge` creates a new hash
+- `merge!` is a synonym for `update`
+
+#### Selecting and rejecting elements from a hash
+
+- `select` with a code block to determine if each key-value pair is included in a new array
+- `reject` with a code block to determine if each key-value pair should not be included in a new array
+- `select` and `reject` have in-place equivalents `select!` and `reject!`
+  - return `nil` if the hash doesn't change
+  - to make in-place operation return original hash, use `keep_if` and `delete_if`
+- `Hash#invert` flips the keys and the values
+- be careful since values may not be unique, only one survives with duplicate values
+- `Hash#clear` empties the hash
+- `compact` works similarly for hashes as it does for array, eliminating keys whose value is `nil`
+- `compact!` makes its change in place
+- `replace` replaces the content of hash with another hash, in place
+
+```ruby
+h = Hash[1,2,3,4,5,6] # {1=>2, 3=>4, 5=>6}
+h.select {|k,v| k > 1} # {3=>4, 5=>6}
+h.reject {|k,v| k > 1} # {1=>2}
+{name: "Tom", address: nil}.compact # {name: "Tom"}
+```
+
+#### Hash querying
+
+| method                  | meaning                                 |
+|-------------------------|-----------------------------------------|
+| `h.has_key?(1)`         | `true` if `h` has the key `1`           |
+| `h.include?(1)`         | synonym for `has_key?`                  |
+| `h.key?(1)`             | synonym for `has_key?`                  |
+| `h.member?(1)`          | synonym for `has_key?`                  |
+| `h.has_value?("three")` | `true` if any value in `h` is `"three"` |
+| `h.value?("three")`     | synonym for `has_value?`                |
+| `h.empty?`              | `true` if `h` has no key/value pairs    |
+| `h.size`                | number of key/value pairs in `h`        |
+
+#### Hashes as final method arguments
+
+Ruby allows hash without curly braces when calling a method whose last argument is a hash; If hash is first argument, not only the curly braces are needed, but also the entire arguemnt list need to be in parentheses.
+
+```ruby
+def add_to_camera_database(owner, info)
+  camera = Camera.new
+  camera.owner = owner
+  camera.year_made = info[:year_made]
+  camera.model = info[:model]
+end
+
+add_to_camera_database("Tom",
+  year_made: 1991,
+  model: "Leica M")
+```
+
+#### Named arguments
+
+```ruby
+def m(a:, b:)
+  p a, b
+end
+
+m(a: 1, b: 2) # Ruby matches a and b which are required arguments
+
+def m(a: 1, b: 2) # default values make arguments optional
+end
+```
+
+If the method's parameter list includes a double-starred name, calling a method using keyword arguments not declared by the method will end up sponging up all unknown keyword arguments into a hash:
+
+```ruby
+def m(a: 1, b: 2, **c)
+  p a, b, c
+end
+
+m(x:1, y:2)
+# 1
+# 2
+# {:x=>1, :y=>2}
+```
+
+### Ranges
+
+A _range_ is an object with a start point and an end point.
+
+- _inclusion_: does a given value fall inside the range
+- _enumeration_: the range is treated as a traversable collection of individual items
+
+Create a range with `Range.new` or literal constructor.
+
+- ranges with two dots are inclusive
+- ranges with three dots are exclusive
+
+```ruby
+r = Range.new(1, 100) # 1..100
+r = 1..100 # literal range construction 1..100
+r = 1...100 # exclusive range
+r = Range.new(1, 100, true) # exclusive range 1...100
+```
+
+#### Range logic
+
+- ranges can report back their starting and ending points using `begin` and `end`
+- a range also knows whether it's an exclusive range by `exclude_end?`
+- `cover?` checks whether the argument is within the range using boolean comparison test
+- `include?` treats range as a collection of values
+- if the range can't be interpreted as a finite collection, `include?` falls back on numerical order and comparison
+- backward range is used usually as index
+
+```ruby
+r = 1..10
+r.begin # 1
+r.end # 10
+r.exclude_end? # false
+r = "a".."z"
+r.cover?("a") # true
+r.cover?("abc") # true
+r.cover?("A") # false
+r.cover?([]) # false
+r.include?("a") # true
+r.include?("abc") # false
+r = 1.0..2.0
+r.include?(1.5) # true
+"This is a sample string"[10..-5] # sample st
+```
+
+### Sets
+
+- `Set` is a standard library class, need `require 'set'`
+- a _set_ is a unique collection of objects
+- internally hash is used, a new key is added to the hash when an element is added to set
+
+Create a new `Set` by providing a collection object, can also provide a code block which every item in the collection object is passed through.
+
+```ruby
+cameras = ["Leica M", "X-Pro3", "GX9", "Leica M"]
+unique_cameras = Set.new(cameras) # #<Set: {"Leica M", "X-Pro3", "GX9"}>
+unique_cameras = Set.new(cameras) {|c| c.upcase} # #<Set: {"LEICA M", "X-PRO3", "GX9"}>
+```
+
+- use `<<` to add a single object to a set, nothing happens if adding a duplicated object
+- use `delete` to delete an object from a set, nothing happens if the object doesn't exist
+- `<<` is also available as `add`
+- `add?` returns `nil` if set is unchagned after adding an object
+  - this is usually used to determine whether the object already exists
+
+#### Set operations
+
+- `intersection`, aliased as `&`
+- `union`, aliased as `+` and `|`
+- `difference`, aliased as `-`
+- `^` exclusive or, a set consisting of elements that occur in either set but not all
+- merging another object into a set depends on how the object iterates over itself
+  - merging a hash into a set results in the addition of two-element, key/value arrays to the set
+
+```ruby
+camera_brands = Set.new(["Leica", "Fujifilm", "Olympus"])
+closed_brands = Set.new(["Olympus"])
+optics_brands = Set.new(["Zeiss", "Leica"])
+camera_brands - closed_brands # <Set: {"Leica", "Fujifilm"}>
+camera_brands + optics_brands # <Set: {"Leica", "Fujifilm", "Olympus", "Zeiss"}>
+camera_brands & optics_brands # <Set: {"Leica"}>
+```
+
+#### Subset and superset
+
+- `subset?` and `superset?` exist to check subset and superset relation
+- `proper_subset?` and `proper_superset?` also make sure superset is bigger and subset is smaller than the original set
+
+## Enumerable and Enumerator
+
+Collection objects in Ruby typically include the `Enumerable` module for common functionalities.
+
+- each class that uses `Enumerable` has to define the instance method `each`
+
+```ruby
+class C
+  include Enumerable
+  def each
+    # code
+  end
+end
+```
+
+The job of `each` is to yield items to a supplied code block, one at a time.
+
+```ruby
+class Gender
+  include Enumerable
+  def each
+    yield "boy"
+    yield "girl"
+  end
+end
+
+g = Gender.new
+g.each do |gender|
+  puts "Gender: #{gender}"
+end
+
+# output:
+# Gender: boy
+# Gender: girl
+```
+
+`find` works by calling `each`:
+
+```ruby
+g = Gender.new
+g.find {|gender| g.start_with?('b') }
+# output: boy
+```
+
+### Enumerable Boolean queries
+
+A number of `Enumerable` methods return true or false depending on whether one or more elements matching certain criteria.
+
+| method     | meaning                                          |
+|------------|--------------------------------------------------|
+| `include?` | whether the enumerable includes specified object |
+| `all?`     | whether ALL elements match query                 |
+| `any?`     | whether ANY element matches query                |
+| `one?`     | is there one and only one element matching query |
+| `none?`    | is there NO element matching query               |
+
+- above methods work also for hashes
+- `Hash#each` yields both a key and a value each time
+- you can also capture the key/value pair in a single block parameter
+  - `hash.each {|pair| …}` with `pair[0]` for key and `pair[1]` for value
+- set works naturally with `Enumerable`
+- ranges works only if the range can be expressed as a list of discrete elements
+
+### Enumerable searching and selecting
+
+`find` locates the first element in an array for which the code block returns true, failing to find any element that passes code block test would return `nil`.
+
+```ruby
+[1,2,3,4,5,6,7,8,9].find {|n| n > 3}
+# output: 4
+```
+
+As a result, if the array has `nil` as an element, looking for `nil` would always return `nil`. Use `include?` as a work around to check whether the array has `nil` as an element. Alternatively, provide a `Proc` object as an argument to find, the function will be called if `find` fails.
+
+```ruby
+failure = lambda { 11 }
+over_ten = [1,2,3,4,5,6].find(failure) {|n| n > 10 }
+# output: 11
+```
+
+`find_all` (the same as `select`) returns a new collection containing all the elements of the original collection that match the criteria in the code block, empty collection is returned if none is found.
+
+`select` generally returns an array, include using `Enumerable` in your own class, but for hashes and sets, `select` returns a hash or set, respectively.
+
+```ruby
+a = [1,2,3,4,5,6,7,8,9,10]
+a.find_all {|item| item > 5 } # [6, 7, 8, 9, 10]
+a.select {|item| item > 100 } # []
+```
+
+Arrays, hashes and sets have a bang version `select!` that reduces the collection permanently to only those elements that passed the selection test.
+
+`reject` finds out which elements do not return a true value when yielded to the code block:
+
+```ruby
+a.reject {|item| item > 5} # [1, 2, 3, 4, 5]
+```
+
+There's also the bang version `reject!`
+
+#### Selecting on threequal matches with grep
+
+`Enumerable#grep` selects from an enumerable object based on case-equality operator `===`.
+
+```ruby
+misc = [12, "hi", 10..20, "bye"]
+misc.grep(String) # ["hi", "bye"]
+misc.grep(10..20) # [12]
+```
+
+`enumerable.grep(expression)` is equivalent to:
+
+```ruby
+enumerable.select {|element| expression === element }
+```
+
+- `grep` can also take a block, it yields each element of its result set to the block
+
+#### Organizing selection results with group_by and partition
+
+- `group_by` on enumerable object takes a block and returns a hash
+- the block is executed for each object
+- result hash gets a key for each unique block return value
+- value for the key is an array of all elements that the block returned that value
+
+```ruby
+colors = %w(red orange yellow green blue indigo violet)
+colors.group_by {|color| color.size }
+# output:
+# {3=>["red"], 6=>["orange", "yellow", "indigo", "violet"], 5=>["green"], 4=>["blue"]}
+```
+
+- `partition` splits the elements into two arrays based on whether the code block returns true for the element
+
+```ruby
+class Camera
+  attr_accessor :price
+  def initialize(options)
+    self.price = options[:price]
+  end
+  def below(limit)
+    (0...limit) === price
+  end
+end
+
+cameras = 900.step(1200, 50).map {|p| Camera.new(:price => p) }
+
+cameras.partition { |camera| camera.below(1000) }
+# output:
+# [[#<Camera:0x00007feb871e48b0 @price=900>, #<Camera:0x00007feb871e4838 @price=950>], [#<Camera:0x00007feb871e4798 @price=1000>, #<Camera:0x00007feb871e46f8 @price=1050>, #<Camera:0x00007feb871e4680 @price=1100>, #<Camera:0x00007feb871e4608 @price=1150>, #<Camera:0x00007feb871e4590 @price=1200>]]
+```
+
+### Element-wise operations
+
+- `Enumerable#first` returns the first item when iterating over the enumerable
+- there is no `Enumerable#last` as not all enumerables have end
+- some enumerable classes do have `last` method: `Array` and `Range`
+- `take(n)` gets n elements, `drop(n)` gets original collection without the n elements
+- use `take_while` and `drop_while` with a code block to constrain the size of "take" by the truth value of the code block
+- `min` and `max` returns the minimum and maximum element
+  - determined by `<=>` logic
+  - can provide a code block to perform non-default criteria
+- `minmax` and `minmax_by` returns a pair of values for minimum and maximum
+- `min` and `max` for hashes use the keys to determine ordering
+  - use `*_by` if you want to use values
+
+```ruby
+class Die
+  include Enumerable
+  def each
+    loop do
+      yield rand(6) + 1
+    end
+  end
+end
+
+d = Die.new
+d.each do |roll|
+  if roll == 6
+    puts "Start"
+  end
+end
+
+cameras
+# [#<Camera:0x00007feb871e48b0 @price=900>, #<Camera:0x00007feb871e4838 @price=950>, #<Camera:0x00007feb871e4798 @price=1000>, #<Camera:0x00007feb871e46f8 @price=1050>, #<Camera:0x00007feb871e4680 @price=1100>, #<Camera:0x00007feb871e4608 @price=1150>, #<Camera:0x00007feb871e4590 @price=1200>]
+
+cameras.take_while {|c| c.below(1000) }
+# [#<Camera:0x00007feb871e48b0 @price=900>, #<Camera:0x00007feb871e4838 @price=950>]
+
+cameras.drop_while {|c| c.below(1000) }
+# [#<Camera:0x00007feb871e4798 @price=1000>, #<Camera:0x00007feb871e46f8 @price=1050>, #<Camera:0x00007feb871e4680 @price=1100>, #<Camera:0x00007feb871e4608 @price=1150>, #<Camera:0x00007feb871e4590 @price=1200>]
+
+cameras.min {|a,b| a.price <=> b.price}
+# <Camera:0x00007feb871e48b0 @price=900>
+
+cameras.max {|a,b| a.price <=> b.price}
+# <Camera:0x00007feb871e4590 @price=1200>
+```
+
+- `reverse_each` is `each` but reversely
+  - do not use it on infinite iterator
+- `Enumerable#each_with_index` yields an extra integer representing the ordinal position of the item
+  - `each_with_index` is deprected, use `each.with_index` instead
+- provide an argument to `each.with_index` as the first index value, avoiding the need to add one to the index which by default starts from 0
+- `each_slice` and `each_cons` walk through a collection a certain number of elements at a time
+- `each_slice` handles each element only once
+- `each_cons` takes a new grouping at each element with overlapping yielded arrays
+
+```ruby
+a = Array(1..10)
+
+a.each_slice(3) {|slice| p slice }
+# [1, 2, 3]
+# [4, 5, 6]
+# [7, 8, 9]
+# [10]
+
+a.each_cons(3) {|slice| p slice }
+# [1, 2, 3]
+# [2, 3, 4]
+# [3, 4, 5]
+# [4, 5, 6]
+# [5, 6, 7]
+# [6, 7, 8]
+# [7, 8, 9]
+# [8, 9, 10]
+```
+
+There's a family of `slice_` methods.
+
+- `slice_before` split a collection at the point at which a given criterion is matched
+- `slice_after` complements `slice_before`, split a collection after the pattern or Boolean test is found
+- `slice_when` tests two elements at a time
+
+```ruby
+(1..10).slice_before { |num| num % 2 == 0 }.to_a
+# [[1], [2, 3], [4, 5], [6, 7], [8, 9], [10]]
+
+[1,2,3,3,4,5,6,6,7,8,8,8,9,10].slice_when { |i,j| i == j }.to_a
+# [[1, 2, 3], [3, 4, 5, 6], [6, 7, 8], [8], [8, 9, 10]]
+```
+
+`Enumerable#cycle` yields all the elements in the object again and again in a loop, providing an integer argument asks the loop to run that many times.
+
+#### Enumerable reduction with inject
+
+`inject` works by initializing an accumulator oject and iterating through a collection, performing a calculation on each iteration and resetting the acumulator for purposes of the next iteration, to the result of that calculation.
+
+- without an argument to inject it uses the first element in the enumerable object as the initial value
+
+```ruby
+[1,2,3,4].inject(0) {|acc,n| acc + n } # 10
+[1,2,3,4].inject(:+)
+```
+
+#### Map
+
+- `map` (also callable as `collect`) always returns an array of the same size as the original enumerable
+- the elements of returned array consist of the accumulated result of calling the code block on each element in the original object
+- `each` exists purely for the side effects from the execution of the block
+- `map` on the other hand maintains an accumulator array of the results from the block
+- `map` has a in-place `map!`, defined in `Array` and `Set`
+
+```ruby
+cameras = %w(Leica Fujifilm Olympus)
+cameras.map {|camera| camera.upcase} # ["LEICA", "FUJIFILM", "OLYMPUS"]
+
+# use a symbol argument as a block
+cameras.map(&:upcase)
+```
+
+Be careful with block evaluation, `map` only cares about return value of `puts` which is always `nil`:
+
+```ruby
+array = [1,2,3,4,5]
+result = array.map {|n| puts n * 100 } # [nil, nil, nil, nil, nil]
+```
+
+#### Strings as enumerables
+
+- `String` has `each_byte`, `each_character` and `each_codepoint`
+- `String` has `each_line` that splits the string at the end of each occurrence of global variable `$/`
+- `$/` is linebreak by default, can be changed
+- drop the `each_` and pluralize the method name give array of all data instead of enumerator
+
+#### Sorting enumerables
+
+In order to make a class instance sortable:
+
+1. define `<=>` for the class
+2. place multiple instances in a container, e.g. array
+3. sort the container
+
+In cases where no `<=>` is defined for objects, a block can be supplied on the fly to indicate how they should be sorted.
+
+```ruby
+sorted_camera = cameras.sort do |a, b|
+  a.price <=> b.price
+end
+```
+
+- `sort_by` always takes a block that requires a treatment of one item in the collection.
+- `clamp` takes two argument, returns 1st argument if receiver is less, returns 2nd argument is receiver is greater, otherwise returns the receiver itself
+
+```ruby
+cameras.sort_by {|c| c.price }
+cameras.sort_by(&:price)
+```
+
+### Enumeraors
+
+- an `iterator` is a method that yields one or more values to a code block
+- an enumerator is an object
+- at heart, an enumerator is a simple enumerable object with an `each` and employs the `Enumerable` module
+- an enumerator isn't a container object, the `each` logic has to be explicitly specified
+
+```ruby
+e = Enumerator.new do |y|
+  y << 1
+  y << 2
+  y << 3
+end
+
+e = Enumerator.new do |y|
+  (1..3).each { |i| y << i }
+end
+
+e.to_a # [1, 2, 3]
+e.map {|x| x * 10} # [10, 20, 30]
+e.select {|x| x > 1} # [2, 3]
+e.take(2) # [1, 2]
+```
+
+- `y` is a _yielder_, an instance of `Enumerator::Yielder` passed to your block
+- upon `each`, 1, 2 and 3 are yielded, can also be `y.yield(1)`
+- every time the iterator method on the enumerator is called, the code block gets executed once
+- it's also possible to involve other objects in the code block
+
+```ruby
+a = [1, 2, 3, 4, 5]
+e = Enumerator.new do |y|
+  total = 0
+  until a.empty?
+    total += a.pop
+    y << total
+  end
+end
+
+e.take(2) # [5, 9], popping and adding last two
+a # [1, 2, 3]
+e.to_a # [3, 5, 6], each would pop and add to total until empty
+```
+
+#### Attaching enumerators to other objects
+
+When the enumerator need to yield something, it gets the necessary value by triggering the next yield from the object to which it is attached via the designated method.
+
+```ruby
+cameras = %w(Leica Olympus Canon Nikon)
+e = cameras.enum_for(:select)
+e.each {|c| c.include?('o')} # ["Canon", "Nikon"]
+```
+
+Any further arguments provided to `enum_for` are passed through to the method to which the enumerator is being attached.
+
+```ruby
+e = cameras.enum_for(:inject, "Names: ")
+e.each {|string, name| string << "#{name}..." }
+# "Names: Leica...Olympus...Canon...Nikon..."
+```
+
+- the starting string "Names: " is still alive inside the enumerator
+- most built-in iterators return an enumerator when they're called without a block
+- the main use for this is _chaining_: calling another method imeediately on the enumerator
+
+```ruby
+e = cameras.map
+e.each {|camera| camera.capitalize}
 ```

@@ -47,7 +47,11 @@
 <a href="#classes">Classes</a><br>
 <a href="#modules">Modules</a><br>
 <a href="#default-object-scope-and-visibility">Default object, scope and visibility</a><br>
-<a href="#control-flow">Control Flow</a></p>
+<a href="#control-flow">Control Flow</a><br>
+<a href="#built-in-basics">Built-in basics</a><br>
+<a href="#strings-symbols-and-other-scalar-objects">Strings, symbols and other scalar objects</a><br>
+<a href="#collection-and-container-objects">Collection and container objects</a><br>
+<a href="#enumerable-and-enumerator">Enumerable and Enumerator</a></p>
 <h2 id="basics">Basics</h2>
 <h3 id="basic-operations">Basic operations:</h3>
 <ul>
@@ -1008,6 +1012,1329 @@ puts <span style="color:#e6db74">&#34;100/</span><span style="color:#e6db74">#{<
   <span style="color:#66d9ef">end</span>
   <span style="color:#66d9ef">return</span> line
 <span style="color:#66d9ef">end</span>
+</code></pre></div><h2 id="built-in-basics">Built-in basics</h2>
+<h3 id="literal-constructors">Literal constructors</h3>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Literal constructor</th>
+<th>e.g.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>String</code></td>
+<td>Quotation marks</td>
+<td>&ldquo;new string&rdquo;, <code>new string</code></td>
+</tr>
+<tr>
+<td>Symbol</td>
+<td>Leading colon</td>
+<td><code>:symbol</code>, <code>:&quot;symbol with spaces&quot;</code></td>
+</tr>
+<tr>
+<td>Array</td>
+<td>Square brackets</td>
+<td>[1, 2, 3, 4, 5]</td>
+</tr>
+<tr>
+<td>Hash</td>
+<td>Curly braces</td>
+<td>{&ldquo;Name&rdquo;: &ldquo;Tom&rdquo;}</td>
+</tr>
+<tr>
+<td>Range</td>
+<td>Two or three dots</td>
+<td>0..9, 0&hellip;12</td>
+</tr>
+<tr>
+<td>Regexp</td>
+<td>Forward slashes</td>
+<td>/([a-z]+)/</td>
+</tr>
+<tr>
+<td>Proc lambda</td>
+<td>Dash, arrow, parentheses, braces</td>
+<td><code>-&gt;(x, y) { x*y}</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="syntactic-sugar">Syntactic sugar</h3>
+<ul>
+<li>Ruby provides syntax sugar for certain operations like method-calling</li>
+<li>the operators can be overridden</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Meter</span>
+  <span style="color:#66d9ef">attr_accessor</span> <span style="color:#e6db74">:exposure</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">initialize</span>(start_exposure<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+    self<span style="color:#f92672">.</span>exposure <span style="color:#f92672">=</span> start_exposure
+  <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">+</span>(e)
+    self<span style="color:#f92672">.</span>exposure <span style="color:#f92672">+=</span> e
+  <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">-</span>(x)
+    self<span style="color:#f92672">.</span>exposure <span style="color:#f92672">-=</span> e
+  <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">to_s</span>
+    exposure<span style="color:#f92672">.</span>to_s
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+
+meter <span style="color:#f92672">=</span> <span style="color:#66d9ef">Meter</span><span style="color:#f92672">.</span>new(<span style="color:#ae81ff">1</span>)
+meter <span style="color:#f92672">+=</span> <span style="color:#ae81ff">1</span>
+meter <span style="color:#f92672">-=</span> <span style="color:#ae81ff">2</span>
+</code></pre></div><h3 id="overriding-unary-operators">Overriding unary operators</h3>
+<ul>
+<li>unary operators <code>+</code> and <code>-</code> can be overridden by defining the method <code>+@</code> and <code>-@</code></li>
+<li>logical not (!) operator can also be defined</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Saturation</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">initialize</span>(s<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>)
+    @sat <span style="color:#f92672">=</span> s
+  <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">to_s</span>
+    @sat<span style="color:#f92672">.</span>to_s
+  <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">+@</span>
+    @sat <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+  <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">-@</span>
+    @sat <span style="color:#f92672">-</span> <span style="color:#ae81ff">1</span>
+  <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#f92672">!</span>
+    <span style="color:#f92672">-</span>@sat
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+
+saturation <span style="color:#f92672">=</span> <span style="color:#66d9ef">Saturation</span><span style="color:#f92672">.</span>new
+puts <span style="color:#f92672">+</span>saturation
+puts <span style="color:#f92672">!</span>saturation
+puts (<span style="color:#f92672">not</span> saturation) <span style="color:#75715e"># not saturation</span>
+</code></pre></div><h3 id="bang--methods">Bang (!) methods</h3>
+<ul>
+<li>Ruby methods canend with an exclamation point (!)</li>
+<li>there&rsquo;s no significance to Ruby internall</li>
+<li>only conventional for marking a method &ldquo;dangerous&rdquo;</li>
+<li>e.g. <em>permanently</em> modifies receiver, <em>mutates</em> the state of caller</li>
+<li>advice: only use ! when there&rsquo;s a method of the same name without !</li>
+</ul>
+<h3 id="built-in-and-custom-to_-methods">Built-in and custom <code>to_*</code> methods</h3>
+<p>Ruby offers a number of built-in methods whose name consist of <code>to_</code> plus an indicator of a class to which method method converts an object.</p>
+<ul>
+<li>
+<p><code>to_s</code> to string</p>
+</li>
+<li>
+<p><code>to_sym</code> to symbol</p>
+</li>
+<li>
+<p><code>to_a</code> to array</p>
+</li>
+<li>
+<p><code>to_i</code> to integer</p>
+</li>
+<li>
+<p><code>to_f</code> to float</p>
+</li>
+<li>
+<p><code>puts</code> calls <code>to_s</code> on its arguments</p>
+</li>
+<li>
+<p><code>puts</code> on array gives a representation based on calling <code>to_s</code> on each of the elements</p>
+</li>
+<li>
+<p><code>to_s</code> called on array returns only a single string representation</p>
+</li>
+<li>
+<p>every object except <code>BasicObject</code> has method <code>inspect</code> which prints memory dump of calling object</p>
+</li>
+<li>
+<p><code>display</code> takes an argument of a writable output stream, default is <code>STDOUT</code></p>
+</li>
+</ul>
+<h3 id="array-conversion">Array conversion</h3>
+<ul>
+<li><code>to_a</code> provides an array-like representation of objects</li>
+<li><code>to_a</code> is defined on <code>Array</code>, not on <code>Object</code></li>
+<li><em>bare list</em> means several identifiers or literal objects separated by commas
+<ul>
+<li><code>[1, 2, 3, 4, 5]</code> is an array of the bare list <code>1, 2, 3, 4, 5</code></li>
+</ul>
+</li>
+<li><em>bare list</em> can be used for method arguments
+<ul>
+<li><code>def method(arg1, arg2)</code></li>
+<li><code>arguments = [1, 2]; method(*arguments)</code></li>
+</ul>
+</li>
+<li>objects can be used as arrays if implementing <code>to_ary</code></li>
+<li><code>to_ary</code> is called where array and only array will work. e.g. array concatenation</li>
+</ul>
+<h3 id="number-conversion">Number conversion</h3>
+<ul>
+<li><code>to_i</code> converts the object to an integer</li>
+<li>strings that have no reasonable integer equivalent (e.g. &ldquo;Hello&rdquo;) converts to 0</li>
+<li>strings that start with digits but also include non-digits, the non-digits part is ignored for <code>to_i</code></li>
+<li><code>to_f</code> converts the objects to floating-point</li>
+<li>methods <code>Integer</code> and <code>Float</code> exist but are stricter than <code>to_i</code> and <code>to_f</code></li>
+<li>objects that respond to <code>to_str</code> will have <code>to_str</code> representation used as the argument to <code>String#+</code></li>
+<li><code>to_str</code> is also used on arguments to the <code>&lt;&lt;</code> (append to string) method</li>
+</ul>
+<h3 id="boolean">Boolean</h3>
+<ul>
+<li>every expression in Ruby evaluates to an object</li>
+<li>every object has a Boolean value of either <code>true</code> or <code>false</code></li>
+<li><code>true</code> and <code>false</code> are both objects</li>
+</ul>
+<p>Some expressions&rsquo; values:</p>
+<ul>
+<li><code>class MyClass; end</code> evaluates to <code>nil</code></li>
+<li><code>class MyClass; 1; end</code> evaluates to <code>1</code></li>
+<li><code>def m; return false; end</code> evaluates to <code>:m</code></li>
+<li><code>&quot;Hello, world!&quot;</code> evaluates to <code>&quot;Hello, world!&quot;</code></li>
+<li><code>100 &gt; 50</code> evaluates to <code>true</code></li>
+<li>the only objects that have a Boolean value of false are <code>false</code> and <code>nil</code></li>
+</ul>
+<h3 id="the-special-object-nil">The special object nil</h3>
+<ul>
+<li><code>nil</code> is the only instance of the class <code>NilClass</code></li>
+<li>the Boolean value of <code>nil</code> is false</li>
+<li><code>nil</code> denotes an absence of anything
+<ul>
+<li><code>[&quot;one&quot;, &quot;two&quot;][3]</code> evaluates to <code>nil</code></li>
+</ul>
+</li>
+<li><code>nil.to_s</code> is empty string</li>
+<li>the integer representation of <code>nil</code> is 0</li>
+<li><code>nil</code>'s object ID is 8</li>
+</ul>
+<h3 id="objects-comparison">Objects comparison</h3>
+<ul>
+<li>Ruby&rsquo;s built-in module <code>Comparable</code> provides ways to compare objects</li>
+<li>equality tests: <code>Object</code> class defines <code>==</code>, <code>eql?</code> and <code>equal?</code></li>
+<li>redefine <code>==</code> for comparison
+<ul>
+<li><code>String</code> compares if the value of strings are identical</li>
+<li><code>Numeric</code> (a super class of <code>Integer</code> and <code>Float</code>) redefines <code>==</code> for comparing number values with type conversion</li>
+<li><code>Numeric</code>'s <code>eql?</code> doesn&rsquo;t do type conversion</li>
+</ul>
+</li>
+</ul>
+<p>To make an object <code>Comparable</code>:</p>
+<ul>
+<li>mix-in the module <code>Comparable</code></li>
+<li>define a comparison method with the name <code>&lt;=&gt;</code> as an instance method of the object</li>
+<li><code>&lt;=&gt;</code> is usually called the <em>spaceship operator</em> or <em>spaceship method</em></li>
+<li>inside the method you define what is <em>less than</em>, <em>equal to</em> and <em>greater than</em></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Camera</span>
+  <span style="color:#66d9ef">include</span> <span style="color:#66d9ef">Comparable</span>
+  <span style="color:#66d9ef">attr_accessor</span> <span style="color:#e6db74">:rating</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">&lt;=&gt;</span>(other_camera)
+    <span style="color:#75715e"># the following can also be simplified as:</span>
+    <span style="color:#75715e"># self.rating &lt;=&gt; other_camera.rating</span>
+    <span style="color:#66d9ef">if</span> self<span style="color:#f92672">.</span>rating <span style="color:#f92672">&lt;</span> other_camera<span style="color:#f92672">.</span>rating
+      <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">elsif</span> self<span style="color:#f92672">.</span>rating <span style="color:#f92672">&gt;</span> other_camera<span style="color:#f92672">.</span>rating
+      <span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">else</span>
+      <span style="color:#ae81ff">0</span>
+    <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><h3 id="inspecting-objects">Inspecting objects</h3>
+<ul>
+<li><code>methods</code> shows what the object, class or module responds to</li>
+<li><code>instance_methods</code> on class shows all the instance methods that the instances of the class has</li>
+<li><code>instance_methods(false)</code> shows without the methods from ancestors</li>
+</ul>
+<h2 id="strings-symbols-and-other-scalar-objects">Strings, symbols and other scalar objects</h2>
+<ul>
+<li>string interpolation doesn&rsquo;t work with single-quoted strings
+<ul>
+<li><code>&quot;One plus one is #{1 + 1}&quot;</code>: &ldquo;One plus one is 2&rdquo;</li>
+<li><code>'One plus one is #{1 + 1}'</code>: &ldquo;One plus one is #{1 + 1}&rdquo;</li>
+</ul>
+</li>
+<li>escape interpolation mechanism in double-quoted string using backslashes
+<ul>
+<li><code>&quot;One plus one is \&quot;\#{1 + 1}\&quot;.&quot;</code></li>
+</ul>
+</li>
+<li>alternative quoting mechanisms take the form <code>%char{text}</code>
+<ul>
+<li><code>%q{this is a single quoted string}</code></li>
+<li><code>%Q{this is a double quoted string}</code></li>
+<li>curly braces are most commonly used but it can be anything</li>
+<li>opening delimiter has to match closing one</li>
+<li><code>%q-a string-</code></li>
+<li><code>%Q/Another string/</code></li>
+</ul>
+</li>
+<li>including unmatched brace of the same type must be escaped
+<ul>
+<li><code>%Q{this () is fine. }</code></li>
+<li><code>q(This \( has to be escaped.)</code></li>
+</ul>
+</li>
+<li><em>heredoc</em> is a string, usually a multiline string defined through <code>&lt;&lt;</code> operator
+<ul>
+<li><code>&lt;&lt;EOM</code> means the text that follows, up to but not including the next occurrence of &ldquo;EOM&rdquo;</li>
+<li><code>SQL</code> is also common for SQL query</li>
+<li>delimiter must be flush left and be the only thing on the line where it occurs</li>
+<li>swiching off the flush-left requirement by putting a hyphen before <code>&lt;&lt;</code> operator</li>
+<li>squiggly heredoc <code>&lt;&lt;~</code> strips leading whitespace from output</li>
+<li>by default heredocs are read in as double-quoted strings, thus can include string interpolation</li>
+<li>to have single-quoted heredoc, enclose the marker with single quote</li>
+<li><code>&lt;&lt;EOM</code> or any open delimiter doesn&rsquo;t have to be the last thing on its line
+<ul>
+<li>it&rsquo;s just a placeholder for upcoming heredoc</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">text <span style="color:#f92672">=</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#66d9ef">EOM</span>
+<span style="color:#66d9ef">First</span> line
+<span style="color:#66d9ef">Second</span> line
+<span style="color:#66d9ef">EOM</span>
+
+another_text <span style="color:#f92672">=</span> <span style="color:#e6db74">&lt;&lt;-EOM
+</span><span style="color:#e6db74"></span><span style="color:#66d9ef">The</span> <span style="color:#66d9ef">EOM</span> doesn<span style="color:#960050;background-color:#1e0010">&#39;</span>t have to be flush left!
+  <span style="color:#66d9ef">EOM</span>
+
+single_quoted <span style="color:#f92672">=</span> <span style="color:#e6db74">&lt;&lt;-`EOM`
+</span><span style="color:#e6db74"></span>this is a
+single quoted line
+<span style="color:#66d9ef">EOM</span>
+
+a <span style="color:#f92672">=</span> <span style="color:#e6db74">&lt;&lt;EOM.to_i * 10
+</span><span style="color:#e6db74"></span><span style="color:#ae81ff">5</span>
+<span style="color:#66d9ef">EOM</span>
+puts a <span style="color:#75715e"># output is 50</span>
+</code></pre></div><h3 id="basic-string-manipulation">Basic string manipulation</h3>
+<p>Use <code>[]</code> operator/method to retrieve the nth character in a string, negative numbers index from the end of the string:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#e6db74">&#34;Ruby is cool&#34;</span><span style="color:#f92672">[</span><span style="color:#ae81ff">5</span><span style="color:#f92672">]</span> <span style="color:#75715e"># &#34;i&#34;</span>
+<span style="color:#e6db74">&#34;Ruby is cool&#34;</span><span style="color:#f92672">[-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">]</span> <span style="color:#75715e"># &#34;l&#34;</span>
+</code></pre></div><p>A second integer argument <code>m</code> gets a substring of <code>m</code> characters:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#e6db74">&#34;Ruby is cool&#34;</span><span style="color:#f92672">[</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span><span style="color:#f92672">]</span> <span style="color:#75715e"># &#34;ub&#34;</span>
+</code></pre></div><p>A single <em>range</em> object can be provided as argument, two dots are inclusive, three dots means exclusive, the second index must always be closer to the end of the string than the first index:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#e6db74">&#39;Ruby is cool&#39;</span><span style="color:#f92672">[</span><span style="color:#ae81ff">1</span><span style="color:#f92672">..</span><span style="color:#ae81ff">3</span><span style="color:#f92672">]</span> <span style="color:#75715e"># &#34;uby&#34;</span>
+<span style="color:#e6db74">&#39;Ruby is cool&#39;</span><span style="color:#f92672">[</span><span style="color:#ae81ff">1</span><span style="color:#f92672">...</span><span style="color:#ae81ff">3</span><span style="color:#f92672">]</span> <span style="color:#75715e"># &#34;ub&#34;</span>
+</code></pre></div><p>Get substring return <code>nil</code> if substring isn&rsquo;t found, regular expressions can be used as well for matching.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#e6db74">&#34;ruby is cool&#34;</span><span style="color:#f92672">[</span><span style="color:#e6db74">&#34;is cool&#34;</span><span style="color:#f92672">]</span> <span style="color:#75715e"># &#34;is cool&#34;</span>
+<span style="color:#e6db74">&#34;ruby is cool&#34;</span><span style="color:#f92672">[</span><span style="color:#e6db74">&#34;something&#34;</span><span style="color:#f92672">]</span> <span style="color:#75715e"># nil</span>
+</code></pre></div><p><code>slice</code> removes the characters from the string; <code>slice!</code> removes permanently</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">string <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;ruby is cool&#34;</span>
+string<span style="color:#f92672">.</span>slice!(<span style="color:#e6db74">&#34;is &#34;</span>)
+string <span style="color:#75715e"># &#34;ruby cool&#34;</span>
+</code></pre></div><p>Use <code>[]=</code> to set part of a string to a new value, integers, ranges, strings and regular expressions all work, if the part isn&rsquo;t found, or nothing matches, <code>IndexError</code> is raised:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">string <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;A quick brown fox jumps over a lazy dog.&#34;</span>
+string<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;quick&#34;</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;slow&#34;</span>
+string<span style="color:#f92672">[-</span><span style="color:#ae81ff">1</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;!&#34;</span>
+string <span style="color:#75715e"># &#34;A slow brown fox jumps over a lazy dog!&#34;</span>
+</code></pre></div><p>Use <code>+</code> for string concatenation, use <code>&lt;&lt;</code> to append second string permanently to an existing string, use <code>#{}</code> for string interpolation.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#e6db74">&#34;Hi&#34;</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;there&#34;</span> <span style="color:#75715e"># &#34;Hi there&#34;</span>
+string <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hi &#34;</span>
+string <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;there&#34;</span> <span style="color:#75715e"># &#34;Hi there&#34;</span>
+<span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span>string<span style="color:#e6db74">}</span><span style="color:#e6db74">there.&#34;</span> <span style="color:#75715e"># &#34;Hi there&#34;</span>
+</code></pre></div><h3 id="querying-strings">Querying strings</h3>
+<ul>
+<li>use <code>include?</code> to check if a string includes a substring</li>
+<li>use <code>start_with?</code>, <code>end_with?</code> to check if string has prefix, suffix
+<ul>
+<li><code>start_with?</code> also supports regular expression</li>
+</ul>
+</li>
+<li>use <code>empty?</code> to test if a string is empty</li>
+<li>use <code>size</code> and <code>length</code> to get the size or length of the string</li>
+<li>use <code>count</code> to check how many time a given string or letter occurs</li>
+<li>use hyphen-separated range to count how many of a range of letters there are in the string</li>
+<li><code>count</code> with a string checks the number of characters in the string that are in the character set</li>
+<li>to negate the search put a <code>^</code> (caret) at the beginning of specification</li>
+<li><code>count</code> can have multiple arguments</li>
+<li>use <code>index</code> and <code>rindex</code> to get index of substring</li>
+<li><code>ord</code> returns the ordinal code of a character
+<ul>
+<li><code>ord</code> sent to a string returns ordinal code of the first character</li>
+</ul>
+</li>
+<li><code>chr</code> returns the character represented by the integer
+<ul>
+<li>sending <code>chr</code> to a number that doesn&rsquo;t represent a character causes a fatal error</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">string <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;A quick brown fox jumps over a lazy dog.&#34;</span>
+string<span style="color:#f92672">.</span>include?(<span style="color:#e6db74">&#34;quick&#34;</span>) <span style="color:#75715e"># true</span>
+string<span style="color:#f92672">.</span>include?(<span style="color:#e6db74">&#34;slow&#34;</span>) <span style="color:#75715e"># false</span>
+string<span style="color:#f92672">.</span>start_with?(<span style="color:#e6db74">&#34;A&#34;</span>) <span style="color:#75715e"># true</span>
+string<span style="color:#f92672">.</span>end_with?(<span style="color:#e6db74">&#34;B&#34;</span>) <span style="color:#75715e"># false</span>
+string<span style="color:#f92672">.</span>start_with?(<span style="color:#e6db74">/[A-Z]/</span>) <span style="color:#75715e"># true</span>
+string<span style="color:#f92672">.</span>empty? <span style="color:#75715e"># false</span>
+<span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">.</span>empty? <span style="color:#75715e"># true</span>
+string<span style="color:#f92672">.</span>size <span style="color:#75715e"># 40</span>
+string<span style="color:#f92672">.</span>count(<span style="color:#e6db74">&#34;a&#34;</span>) <span style="color:#75715e"># 2</span>
+string<span style="color:#f92672">.</span>count(<span style="color:#e6db74">&#34;g-m&#34;</span>) <span style="color:#75715e"># 6</span>
+string<span style="color:#f92672">.</span>count(<span style="color:#e6db74">&#34;aey. &#34;</span>) <span style="color:#75715e"># 13</span>
+string<span style="color:#f92672">.</span>count(<span style="color:#e6db74">&#34;^a-z&#34;</span>) <span style="color:#75715e"># 9 for 8 spaces and one fullstop</span>
+string<span style="color:#f92672">.</span>index(<span style="color:#e6db74">&#34;o&#34;</span>) <span style="color:#75715e"># 10</span>
+string<span style="color:#f92672">.</span>rindex(<span style="color:#e6db74">&#34;o&#34;</span>) <span style="color:#75715e"># 37</span>
+string<span style="color:#f92672">.</span>ord <span style="color:#75715e"># 97</span>
+<span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">.</span>ord <span style="color:#75715e"># 97</span>
+<span style="color:#ae81ff">97</span><span style="color:#f92672">.</span>chr <span style="color:#75715e"># a</span>
+</code></pre></div><h3 id="string-comparison-and-transformation">String comparison and transformation</h3>
+<ul>
+<li>the <code>String</code> class mixes in <code>Comparable</code> and defines <code>&lt;=&gt;</code></li>
+<li><code>==</code> is used to test sring content equality</li>
+<li><code>String#equal?</code> checks whether two strings are the same object</li>
+<li><code>upcase</code>, <code>downcase</code>, <code>swapcase</code>, <code>capitalize</code> and <code>capitalize!</code></li>
+<li><code>rjust</code> and <code>ljust</code> expand the size of string with space padding
+<ul>
+<li>second argument provides padding string</li>
+<li>padding pattern is repeated as many times as it will fit, truncating if necessary</li>
+</ul>
+</li>
+<li><code>center</code> puts the characters of the string in the center
+<ul>
+<li>Odd-numbered padding are right-heavy</li>
+</ul>
+</li>
+<li>use <code>strip</code>, <code>lstrip</code> and <code>rstrip</code> to strip whitespace from either or both sides</li>
+<li><code>chop</code> removes a character unconditionally from end of string</li>
+<li><code>chomp</code> removes a target substring if the string has that suffix</li>
+<li>both <code>chop</code> and <code>chomp</code> have bang equivalents that change the string in place</li>
+<li><code>clear</code> empties the string</li>
+<li><code>replace</code> replaces string content with specified string in place</li>
+<li><code>delete</code> removes part of the string</li>
+<li><code>crypt</code> performs aDES encryption on the string</li>
+<li><code>succ</code> gets the next-highest string, <code>&quot;z&quot;.succ</code> is <code>aa</code>, <code>&quot;bzz&quot;.succ</code> is <code>caa</code></li>
+<li><code>to_i</code> converts a string to an integer
+<ul>
+<li>optional argument specifies the base</li>
+<li><code>&quot;100&quot;.to_i(17)</code> is <code>289</code> (base 17 number)</li>
+</ul>
+</li>
+<li><code>oct</code> converts the string to base 8 number</li>
+<li><code>hex</code> converts the string to base 16 number, <code>&quot;A&quot;.hex</code> is 10</li>
+</ul>
+<h3 id="symbols">Symbols</h3>
+<p><em>Symbols</em> are instances of the built-in class <code>Symbol</code>, the literal constructor is the leading colon.</p>
+<ul>
+<li>create a symbol programatically by calling <code>to_sym</code> or <code>intern</code></li>
+<li>symbol can be converted to a string using <code>to_s</code></li>
+<li>symbols are immutable</li>
+<li>symbols are unique, the same symbol is always the same object</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">.</span>to_sym <span style="color:#75715e"># :a</span>
+<span style="color:#e6db74">&#34;hello&#34;</span><span style="color:#f92672">.</span>intern <span style="color:#75715e"># :&#34;hello&#34;</span>
+<span style="color:#e6db74">:a</span><span style="color:#f92672">.</span>to_s <span style="color:#75715e"># &#34;a&#34;</span>
+<span style="color:#e6db74">:xyz</span><span style="color:#f92672">.</span>object_id <span style="color:#75715e"># same as below</span>
+<span style="color:#e6db74">:xyz</span><span style="color:#f92672">.</span>object_id <span style="color:#75715e"># same as above</span>
+<span style="color:#66d9ef">Symbol</span><span style="color:#f92672">.</span>all_symbols <span style="color:#75715e"># return all the symbols</span>
+
+<span style="color:#75715e"># use grep instead of include?</span>
+<span style="color:#75715e"># include? would first put the symbol to the table</span>
+<span style="color:#75715e"># which makes the result be always true</span>
+<span style="color:#66d9ef">Symbol</span><span style="color:#f92672">.</span>all_symbols<span style="color:#f92672">.</span>grep(<span style="color:#e6db74">/abc/</span>)
+</code></pre></div><p>Most common uses of symbols are method arguments and hash keys.</p>
+<ul>
+<li>Ruby processes symbols faster</li>
+<li>symbols look good as hash keys</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">atr_accessor <span style="color:#e6db74">:name</span>
+
+<span style="color:#75715e"># the &#34;send&#34; method also takes symbol as argument</span>
+<span style="color:#e6db74">&#34;abc&#34;</span><span style="color:#f92672">.</span>send(<span style="color:#e6db74">:upcase</span>)
+
+<span style="color:#75715e"># this also works</span>
+some_object<span style="color:#f92672">.</span>send(method_name<span style="color:#f92672">.</span>to_sym)
+
+person <span style="color:#f92672">=</span> { <span style="color:#e6db74">:name</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#34;Tom&#34;</span>, <span style="color:#e6db74">:age</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">18</span> }
+person<span style="color:#f92672">[</span><span style="color:#e6db74">:name</span><span style="color:#f92672">]</span> <span style="color:#75715e"># &#34;Tom&#34;</span>
+
+<span style="color:#75715e"># simplified hash keys:</span>
+person <span style="color:#f92672">=</span> { name: <span style="color:#e6db74">&#34;Tom&#34;</span>, <span style="color:#e6db74">age</span>: <span style="color:#ae81ff">36</span> }
+</code></pre></div><h3 id="numericals">Numericals</h3>
+<ul>
+<li>In Ruby, numbers are objects.</li>
+<li><code>Numeric</code> is the class from which <code>Float</code> and <code>Integer</code> inherit</li>
+<li><code>Numeric</code> includes useful modules such as <code>Comparable</code></li>
+</ul>
+<h3 id="times-and-dates">Times and dates</h3>
+<p>Three classes exist for times and dates: <code>Time</code>, <code>Date</code> and <code>DateTime</code>.</p>
+<ul>
+<li><code>require 'date'</code> for <code>Date</code> and <code>DateTime</code></li>
+<li><code>require 'time'</code> for <code>Time</code></li>
+</ul>
+<h4 id="creating-date-objects">Creating date objects</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">Date</span><span style="color:#f92672">.</span>today
+
+<span style="color:#75715e"># send year, month and day</span>
+<span style="color:#75715e"># without parameter, month and day default to 1, year defaults to -4712</span>
+<span style="color:#66d9ef">Date</span><span style="color:#f92672">.</span>new(<span style="color:#ae81ff">2020</span>, <span style="color:#ae81ff">8</span>, <span style="color:#ae81ff">14</span>)
+
+<span style="color:#75715e"># parse a date string</span>
+<span style="color:#75715e"># assumes order of year/month/day</span>
+<span style="color:#66d9ef">Date</span><span style="color:#f92672">.</span>parse(<span style="color:#e6db74">&#34;2020/8/14&#34;</span>)
+</code></pre></div><ul>
+<li>Ruby by default expands the century if providing only a one- or two-digit number</li>
+<li>for number equals to or greater than 69, the offset added is 1900
+<ul>
+<li><code>Date.parse(&quot;77/8/14&quot;)</code> is 1977-08-14</li>
+</ul>
+</li>
+<li>for number between 0 and 68 the offset is 2000
+<ul>
+<li><code>Date.parse(&quot;03/8/14&quot;)</code> is 2003-08-14</li>
+</ul>
+</li>
+<li><code>Date.parse</code> tries to understand different formats
+<ul>
+<li><code>&quot;November 2 2013&quot;</code></li>
+<li><code>&quot;Aug 14 2020&quot;</code></li>
+<li><code>&quot;14 Aug 2020&quot;</code></li>
+</ul>
+</li>
+<li>create Monday-based day-of-week counting <code>Date</code> object using <code>jd</code> and <code>commercial</code> methods</li>
+<li>scan a string against a format spec and generate a <code>Date</code> object using <code>strptime</code></li>
+</ul>
+<h4 id="creating-time-objects">Creating time objects</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">Time</span><span style="color:#f92672">.</span>new <span style="color:#75715e"># a.k.a now</span>
+<span style="color:#66d9ef">Time</span><span style="color:#f92672">.</span>at(<span style="color:#ae81ff">100000000</span>) <span style="color:#75715e"># number of seconds since the epoch (midnight on 1st Jan, 1970, GMT)</span>
+<span style="color:#66d9ef">Time</span><span style="color:#f92672">.</span>mktime(<span style="color:#ae81ff">2020</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">14</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">31</span>,<span style="color:#ae81ff">3</span>) <span style="color:#75715e"># year, month, day, hour, minute and seconds, with reasonable defaults</span>
+require <span style="color:#e6db74">&#39;time&#39;</span>
+<span style="color:#66d9ef">Time</span><span style="color:#f92672">.</span>parse(<span style="color:#e6db74">&#34;August 14, 2020, 6:32 am&#34;</span>)
+</code></pre></div><h4 id="creating-datetime-objects">Creating date/time objects</h4>
+<ul>
+<li><code>DateTime</code> is a subclass of <code>Date</code></li>
+<li>most common constructors are <code>new</code>, <code>now</code> and <code>parse</code></li>
+<li>also features the specialized <code>jd</code> (Julian date), <code>commercial</code> and <code>strptime</code> constructors</li>
+</ul>
+<h4 id="datetime-query-methods">Date/time query methods</h4>
+<p>The time and date objects have methods that represents themselves.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">dt <span style="color:#f92672">=</span> <span style="color:#66d9ef">DateTime</span><span style="color:#f92672">.</span>now
+dt<span style="color:#f92672">.</span>year
+dt<span style="color:#f92672">.</span>hour
+dt<span style="color:#f92672">.</span>minute
+dt<span style="color:#f92672">.</span>second <span style="color:#75715e"># DateTime objects have second and sec</span>
+t <span style="color:#f92672">=</span> <span style="color:#66d9ef">Time</span><span style="color:#f92672">.</span>now
+t<span style="color:#f92672">.</span>month
+t<span style="color:#f92672">.</span>sec <span style="color:#75715e"># Time objects have only sec</span>
+d <span style="color:#f92672">=</span> <span style="color:#66d9ef">Date</span><span style="color:#f92672">.</span>today
+d<span style="color:#f92672">.</span>day
+
+t<span style="color:#f92672">.</span>sunday?
+d<span style="color:#f92672">.</span>saturday?
+dt<span style="color:#f92672">.</span>friday?
+
+d<span style="color:#f92672">.</span>leap?
+dt<span style="color:#f92672">.</span>leap?
+t<span style="color:#f92672">.</span>dst? <span style="color:#75715e"># daylight saving time available to Time only</span>
+</code></pre></div><h4 id="datetime-formatting-methods">Date/time formatting methods</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">t <span style="color:#f92672">=</span> <span style="color:#66d9ef">Time</span><span style="color:#f92672">.</span>now <span style="color:#75715e"># 2020-08-14 06:49:19 +1000</span>
+t<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#34;%m-%d-%y&#34;</span>) <span style="color:#75715e"># &#34;08-14-20&#34;</span>
+<span style="color:#66d9ef">Date</span><span style="color:#f92672">.</span>today<span style="color:#f92672">.</span>rfc2822
+<span style="color:#66d9ef">DateTime</span><span style="color:#f92672">.</span>now<span style="color:#f92672">.</span>httpdate
+</code></pre></div><table>
+<thead>
+<tr>
+<th>Specifier</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%Y</td>
+<td>Year (four digits)</td>
+</tr>
+<tr>
+<td>%y</td>
+<td>Year (last two digits)</td>
+</tr>
+<tr>
+<td>%b, %B</td>
+<td>Short month, full month</td>
+</tr>
+<tr>
+<td>%m</td>
+<td>Day of month (left-padded with zeros)</td>
+</tr>
+<tr>
+<td>%e</td>
+<td>Day of month (left-padded with blanks)</td>
+</tr>
+<tr>
+<td>%a, %A</td>
+<td>Short day name, full day name</td>
+</tr>
+<tr>
+<td>%H, %I</td>
+<td>Hour (24-hour clock), hour (12-hour clock)</td>
+</tr>
+<tr>
+<td>%M</td>
+<td>Minute</td>
+</tr>
+<tr>
+<td>%S</td>
+<td>Second</td>
+</tr>
+<tr>
+<td>%c</td>
+<td>&ldquo;%a %b %d %H:%M:%S %Y&rdquo;</td>
+</tr>
+<tr>
+<td>%x</td>
+<td>&ldquo;%m/%d/%y&rdquo;</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>the <code>%c</code> and <code>%x</code> specifier may differ from one locale to another</li>
+<li>all of the date/time classes allow for conversion to each other</li>
+<li>in case where target class has more information than source class, missing fields are set to 0</li>
+</ul>
+<h4 id="datetime-arithmetic">Date/time arithmetic</h4>
+<ul>
+<li><code>Time</code> objects let you add and subtract seconds, returning a new time object
+<ul>
+<li><code>Time.now - 10</code>, <code>Time.now + 30</code></li>
+</ul>
+</li>
+<li><code>Date</code> and date/time objects interpret + and - as day-wise operations</li>
+<li>use <code>&lt;&lt;</code> and <code>&gt;&gt;</code> for month-wise conversions</li>
+<li>a whole family of <code>next_</code>_unit_ and <code>prev_</code>_unit_ methods let you move back and forth by days, months or years</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">dt <span style="color:#f92672">=</span> <span style="color:#66d9ef">DateTime</span><span style="color:#f92672">.</span>now <span style="color:#75715e"># 2020-08-14T07:01:01+10:00</span>
+puts dt <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span> <span style="color:#75715e"># add 10 days: 2020-08-24T07:01:01+10:00</span>
+puts dt <span style="color:#f92672">&gt;&gt;</span> <span style="color:#ae81ff">3</span> <span style="color:#75715e"># 3 months after: 2020-11-14T07:01:01+10:00</span>
+puts dt<span style="color:#f92672">.</span>next <span style="color:#75715e"># 2020-08-15T07:01:01+10:00</span>
+puts dt<span style="color:#f92672">.</span>next_year <span style="color:#75715e"># 2021-08-14T07:01:01+10:00</span>
+puts dt<span style="color:#f92672">.</span>next_month(<span style="color:#ae81ff">2</span>) <span style="color:#75715e"># 2020-10-14T07:01:01+10:00</span>
+puts dt<span style="color:#f92672">.</span>prev_day(<span style="color:#ae81ff">10</span>) <span style="color:#75715e"># 2020-08-04T07:01:01+10:00</span>
+
+d <span style="color:#f92672">=</span> <span style="color:#66d9ef">Date</span><span style="color:#f92672">.</span>today <span style="color:#75715e"># 2020-08-14</span>
+next_week <span style="color:#f92672">=</span> d <span style="color:#f92672">+</span> <span style="color:#ae81ff">7</span> <span style="color:#75715e"># 2020-08-21</span>
+d<span style="color:#f92672">.</span>upto(next_week) { <span style="color:#f92672">|</span>date<span style="color:#f92672">|</span> puts <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span>date<span style="color:#e6db74">}</span><span style="color:#e6db74"> is a </span><span style="color:#e6db74">#{</span>date<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#34;%A&#34;</span>)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span> }
+<span style="color:#75715e"># 2020-08-14 is a Friday</span>
+<span style="color:#75715e"># 2020-08-15 is a Saturday</span>
+<span style="color:#75715e"># 2020-08-16 is a Sunday</span>
+<span style="color:#75715e"># 2020-08-17 is a Monday</span>
+<span style="color:#75715e"># 2020-08-18 is a Tuesday</span>
+<span style="color:#75715e"># 2020-08-19 is a Wednesday</span>
+<span style="color:#75715e"># 2020-08-20 is a Thursday</span>
+<span style="color:#75715e"># 2020-08-21 is a Friday</span>
+</code></pre></div><h2 id="collection-and-container-objects">Collection and container objects</h2>
+<ul>
+<li>an <em>array</em> is an ordered collection of objects</li>
+<li><em>hashes</em> are also ordered collections with objects in pairs</li>
+<li>each pair consists of a <em>key</em> and a <em>value</em></li>
+</ul>
+<h3 id="array">Array</h3>
+<ul>
+<li>array creation using <code>Array.new</code></li>
+<li><code>Array</code> is a method that creates an array with an argument</li>
+<li>if the argument has <code>to_ary</code> defined, <code>Array</code> calls it to generate an array</li>
+<li>if no <code>to_ary</code> defined, <code>Array</code> tries to call <code>to_a</code></li>
+<li>otherwise <code>Array</code> wraps the argument in an array</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">a <span style="color:#f92672">=</span> Array<span style="color:#f92672">.</span>new
+Array<span style="color:#f92672">.</span>new(<span style="color:#ae81ff">3</span>) <span style="color:#75715e"># [nil, nil, nil]</span>
+Array<span style="color:#f92672">.</span>new(<span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#34;ab&#34;</span>) <span style="color:#75715e"># [&#34;ab&#34;, &#34;ab&#34;]</span>
+Array<span style="color:#f92672">.</span>new(<span style="color:#ae81ff">3</span>) { <span style="color:#f92672">|</span>i<span style="color:#f92672">|</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">*</span> (i <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>) } <span style="color:#75715e"># [10, 20, 30]</span>
+
+Array<span style="color:#f92672">.</span>new(<span style="color:#ae81ff">3</span>, <span style="color:#e6db74">&#34;ef&#34;</span>) <span style="color:#75715e"># uses the same object &#34;ef&#34;</span>
+a<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">]</span> <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;g&#34;</span> <span style="color:#75715e"># so this would cause each of the three &#34;ef&#34; become &#34;efg&#34;</span>
+
+Array<span style="color:#f92672">.</span>new(<span style="color:#ae81ff">3</span>) { <span style="color:#e6db74">&#34;abc&#34;</span> } <span style="color:#75715e"># different object &#34;abc&#34;</span>
+
+<span style="color:#75715e"># literal constructor</span>
+a <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#e6db74">&#34;three&#34;</span>, <span style="color:#ae81ff">4</span>, <span style="color:#f92672">[]]</span>
+
+string <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;text&#34;</span>
+Array(string) <span style="color:#75715e"># [&#34;text&#34;]</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">string</span><span style="color:#f92672">.</span><span style="color:#a6e22e">to_a</span>
+  split(<span style="color:#e6db74">//</span>)
+<span style="color:#66d9ef">end</span>
+
+Array(string) <span style="color:#75715e"># [&#34;t&#34;, &#34;e&#34;, &#34;s&#34;, &#34;t&#34;]</span>
+</code></pre></div><ul>
+<li>array can be created also with the <code>%w</code> and <code>%W</code> constructor</li>
+<li>create array of symbols using <code>%i</code> and <code>%I</code></li>
+<li>each of several built-in classes has a class method <code>try_convert</code>
+<ul>
+<li>it takes one argument, looks for a conversion method</li>
+<li>call the conversion method if exists, or return <code>nil</code></li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#75715e"># parsing as single quoted string</span>
+<span style="color:#e6db74">%w(Tom Jack)</span> <span style="color:#75715e"># [&#34;Tom&#34;, &#34;Jack&#34;]</span>
+
+<span style="color:#75715e"># parsing as double quoted string</span>
+<span style="color:#e6db74">%W{Tom is </span><span style="color:#e6db74">#{</span><span style="color:#ae81ff">10</span><span style="color:#f92672">-</span><span style="color:#ae81ff">2</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> years old}</span> <span style="color:#75715e"># [&#34;Tom&#34;, &#34;is&#34;, &#34;8&#34;, &#34;years&#34;, &#34;old&#34;]</span>
+
+<span style="color:#75715e"># space neeed to be escaped</span>
+<span style="color:#e6db74">%w(Black\ Smith is a nice person)</span> <span style="color:#75715e"># [&#34;Black Smith&#34;, &#34;is&#34;, &#34;a&#34;, &#34;nice&#34;, &#34;person&#34;]</span>
+
+<span style="color:#f92672">%</span>i(a b c) <span style="color:#75715e"># [:a, :b, :c]</span>
+</code></pre></div><h4 id="array-manipulation">Array manipulation</h4>
+<p>Simple getter and setter: <code>[]</code> and <code>[]=</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">a <span style="color:#f92672">=</span> <span style="color:#f92672">[]</span>
+a<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;first&#34;</span> <span style="color:#75715e"># a.[]=(0, &#34;first&#34;)</span>
+a <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span><span style="color:#f92672">]</span>
+a<span style="color:#f92672">[</span><span style="color:#ae81ff">2</span><span style="color:#f92672">]</span> <span style="color:#75715e"># 3</span>
+</code></pre></div><p>The getter and setter take a second argument as length:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">a <span style="color:#f92672">=</span> <span style="color:#e6db74">%w(a quick brown fox jumps over a lazy dog)</span>
+a<span style="color:#f92672">[</span><span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span><span style="color:#f92672">]</span> <span style="color:#75715e"># [&#34;fox&#34;, &#34;jump&#34;]</span>
+a<span style="color:#f92672">[</span><span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;chicken&#34;</span>, <span style="color:#e6db74">&#34;run&#34;</span><span style="color:#f92672">]</span>
+<span style="color:#75715e"># a is now [&#34;a&#34;, &#34;quick&#34;, &#34;brown&#34;, &#34;chicken&#34;, &#34;run&#34;, &#34;over&#34;, &#34;a&#34;, &#34;lazy&#34;, &#34;dog&#34;]</span>
+a<span style="color:#f92672">.</span>values_at(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">8</span>) <span style="color:#75715e"># [&#34;chicken&#34;, &#34;dog&#34;]</span>
+</code></pre></div><ul>
+<li>the <code>[]</code> has a synonym: <code>slice</code></li>
+<li>there&rsquo;s also <code>slice!</code> that removes sliced items permanently from the array</li>
+<li><code>values_at</code> takes one or more arguments representing indexes</li>
+<li>elements deep in multi-dimensional array can be retrieved by <code>dig</code></li>
+<li><code>dig</code> takes as arguments the index positions of each nested element</li>
+<li><code>unshift</code> adds an object to the beginning of an array</li>
+<li><code>push</code> adds one or more object to the end of an array</li>
+<li><code>&lt;&lt;</code> adds one object to the end of an array</li>
+<li><code>shift</code> and <code>pop</code> are the opposite of <code>unshift</code> and <code>push</code>
+<ul>
+<li>also takes argument for number of elements</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">a <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span><span style="color:#f92672">]</span>
+a<span style="color:#f92672">.</span>unshift(<span style="color:#ae81ff">0</span>) <span style="color:#75715e"># [0,1,2,3,4]</span>
+a<span style="color:#f92672">.</span>push(<span style="color:#ae81ff">5</span>) <span style="color:#75715e"># [0,1,2,3,4,5]</span>
+a <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">6</span> <span style="color:#75715e"># [0,1,2,3,4,5,6]</span>
+a<span style="color:#f92672">.</span>push(<span style="color:#ae81ff">7</span>, <span style="color:#ae81ff">8</span>) <span style="color:#75715e"># [0,1,2,3,4,5,6,7,8]</span>
+</code></pre></div><ul>
+<li>arrays concatenation using <code>concat</code></li>
+<li><code>concat</code> permanently changes the receiver</li>
+<li>to concatenate and create a new array, use <code>+</code></li>
+<li><code>replace</code> replaces array with another</li>
+<li><code>replace</code> keeps the object but assignment changes the object</li>
+<li>flatten nested array using <code>flatten</code>
+<ul>
+<li>in-place method exists: <code>flatten!</code></li>
+</ul>
+</li>
+<li><code>reverse</code> reverses an array, also comes with bang version</li>
+<li><code>join</code> returns a string representation of all elements together</li>
+<li><code>join</code> takes an optional argument for the separator</li>
+<li><code>uniq</code> returns an array with duplicates removed</li>
+</ul>
+<h4 id="array-querying">Array querying</h4>
+<table>
+<thead>
+<tr>
+<th>Method name</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>`a.size(synonym: length, count) | Number of elemnents in the array                 |</td>
+<td></td>
+</tr>
+<tr>
+<td>a.empty?</td>
+<td>whether the array is empty</td>
+</tr>
+<tr>
+<td>a.include?(item)</td>
+<td>true if the array includes item, false otherwise</td>
+</tr>
+<tr>
+<td>a.count(item)</td>
+<td>number of occurrences of item in array</td>
+</tr>
+<tr>
+<td>a.first(n=1)</td>
+<td>First <code>n</code> elements of array</td>
+</tr>
+<tr>
+<td>a.last(n=1)</td>
+<td>Last <code>n</code> elements of array</td>
+</tr>
+<tr>
+<td>a.sample(n=1)</td>
+<td><code>n</code> random elements from array</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hashes">Hashes</h3>
+<p>Hash is a colection of objects consisting of key/value pairs, the <code>=&gt;</code> operator connects a key on the left with the value corresponding to it on the right.</p>
+<p>A hash can be created via:</p>
+<ol>
+<li>literal constructor (curly braces)
+<ul>
+<li><code>h = {}</code></li>
+</ul>
+</li>
+<li><code>Hash.new</code> method
+<ul>
+<li>argument to <code>Hash.new</code> is treated as default value for nonexistent hash keys</li>
+</ul>
+</li>
+<li><code>Hash.[]</code> method
+<ul>
+<li>takes a comma separated list of items</li>
+<li>even number of arguments are treated as alternating keys and values</li>
+<li>odd number of argument will raise a fatal error</li>
+<li>also can pass an array of arrays, each subarray has two elements</li>
+<li><code>Hash[ [[1, 2], [3,4]] ] # {1=&gt;2, 3=&gt;4}</code></li>
+</ul>
+</li>
+<li>top-level method <code>Hash</code>
+<ul>
+<li>empty hash created when called with empty array or <code>nil</code></li>
+<li>otherwise <code>to_hash</code> is called on its single argument</li>
+</ul>
+</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">weekdays <span style="color:#f92672">=</span> { <span style="color:#e6db74">&#34;Monday&#34;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#34;Mon&#34;</span>,
+             <span style="color:#e6db74">&#34;Tusday&#34;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#34;Tue&#34;</span>,
+             <span style="color:#e6db74">&#34;Wednesday&#34;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#34;Wed&#34;</span>,
+             <span style="color:#e6db74">&#34;Thursday&#34;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#34;Thur&#34;</span>,
+             <span style="color:#e6db74">&#34;Friday&#34;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#34;Fri&#34;</span>,
+             <span style="color:#e6db74">&#34;Saturday&#34;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#34;Sat&#34;</span>,
+             <span style="color:#e6db74">&#34;Sunday&#34;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#34;Sun&#34;</span>}
+weekdays<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;Monday&#34;</span><span style="color:#f92672">]</span> <span style="color:#75715e"># &#34;Mon&#34;</span>
+</code></pre></div><p>Adding a key/value pair to a hash:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">country_names<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;US&#34;</span><span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;United States&#34;</span>
+country_names<span style="color:#f92672">.</span>[]<span style="color:#f92672">=</span>(<span style="color:#e6db74">&#34;US&#34;</span>, <span style="color:#e6db74">&#34;United States&#34;</span>)
+country_names<span style="color:#f92672">.</span>store(<span style="color:#e6db74">&#34;US&#34;</span>, <span style="color:#e6db74">&#34;United States&#34;</span>)
+</code></pre></div><p>Retrieving values from a hash:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">country <span style="color:#f92672">=</span> country_names<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;US&#34;</span><span style="color:#f92672">]</span> <span style="color:#75715e"># &#34;United States&#34;</span>
+country <span style="color:#f92672">=</span> country_names<span style="color:#f92672">.</span>fetch(<span style="color:#e6db74">&#34;US&#34;</span>)
+</code></pre></div><p>When looking up a nonexistent key:</p>
+<ul>
+<li><code>fetch</code> raises and exception</li>
+<li><code>[]</code> gives either <code>nil</code> or the default you specified</li>
+<li>a second argument to <code>fetch</code> will be used as default when the key isn&rsquo;t found</li>
+<li><code>values_at</code> also works on hashes, it returns an array of values for specified keys</li>
+<li><code>fetch_values</code> is similar, but raises <code>KeyError</code> if the key isn&rsquo;t found</li>
+<li>pass a block to <code>fetch</code> or <code>fetch_values</code> for default behaviour</li>
+<li>hashes can be nested within other hashes</li>
+<li>similar to <code>Array</code>, <code>dig</code> also exists for hashes</li>
+<li>supply a code block to <code>Hash.new</code> to be executed every time a nonexistent key is referenced</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">h <span style="color:#f92672">=</span> <span style="color:#66d9ef">Hash</span><span style="color:#f92672">.</span>new {<span style="color:#f92672">|</span>hash,key<span style="color:#f92672">|</span> hash<span style="color:#f92672">[</span>key<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>}
+</code></pre></div><h4 id="combining-hashes-with-other-hashes">Combining hashes with other hashes</h4>
+<ul>
+<li><code>update</code> add the key-value pairs from second hash to the first, overwrite existing keys</li>
+<li><code>merge</code> creates a new hash</li>
+<li><code>merge!</code> is a synonym for <code>update</code></li>
+</ul>
+<h4 id="selecting-and-rejecting-elements-from-a-hash">Selecting and rejecting elements from a hash</h4>
+<ul>
+<li><code>select</code> with a code block to determine if each key-value pair is included in a new array</li>
+<li><code>reject</code> with a code block to determine if each key-value pair should not be included in a new array</li>
+<li><code>select</code> and <code>reject</code> have in-place equivalents <code>select!</code> and <code>reject!</code>
+<ul>
+<li>return <code>nil</code> if the hash doesn&rsquo;t change</li>
+<li>to make in-place operation return original hash, use <code>keep_if</code> and <code>delete_if</code></li>
+</ul>
+</li>
+<li><code>Hash#invert</code> flips the keys and the values</li>
+<li>be careful since values may not be unique, only one survives with duplicate values</li>
+<li><code>Hash#clear</code> empties the hash</li>
+<li><code>compact</code> works similarly for hashes as it does for array, eliminating keys whose value is <code>nil</code></li>
+<li><code>compact!</code> makes its change in place</li>
+<li><code>replace</code> replaces the content of hash with another hash, in place</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">h <span style="color:#f92672">=</span> <span style="color:#66d9ef">Hash</span><span style="color:#f92672">[</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span><span style="color:#f92672">]</span> <span style="color:#75715e"># {1=&gt;2, 3=&gt;4, 5=&gt;6}</span>
+h<span style="color:#f92672">.</span>select {<span style="color:#f92672">|</span>k,v<span style="color:#f92672">|</span> k <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>} <span style="color:#75715e"># {3=&gt;4, 5=&gt;6}</span>
+h<span style="color:#f92672">.</span>reject {<span style="color:#f92672">|</span>k,v<span style="color:#f92672">|</span> k <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>} <span style="color:#75715e"># {1=&gt;2}</span>
+{name: <span style="color:#e6db74">&#34;Tom&#34;</span>, <span style="color:#e6db74">address</span>: <span style="color:#66d9ef">nil</span>}<span style="color:#f92672">.</span>compact <span style="color:#75715e"># {name: &#34;Tom&#34;}</span>
+</code></pre></div><h4 id="hash-querying">Hash querying</h4>
+<table>
+<thead>
+<tr>
+<th>method</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>h.has_key?(1)</code></td>
+<td><code>true</code> if <code>h</code> has the key <code>1</code></td>
+</tr>
+<tr>
+<td><code>h.include?(1)</code></td>
+<td>synonym for <code>has_key?</code></td>
+</tr>
+<tr>
+<td><code>h.key?(1)</code></td>
+<td>synonym for <code>has_key?</code></td>
+</tr>
+<tr>
+<td><code>h.member?(1)</code></td>
+<td>synonym for <code>has_key?</code></td>
+</tr>
+<tr>
+<td><code>h.has_value?(&quot;three&quot;)</code></td>
+<td><code>true</code> if any value in <code>h</code> is <code>&quot;three&quot;</code></td>
+</tr>
+<tr>
+<td><code>h.value?(&quot;three&quot;)</code></td>
+<td>synonym for <code>has_value?</code></td>
+</tr>
+<tr>
+<td><code>h.empty?</code></td>
+<td><code>true</code> if <code>h</code> has no key/value pairs</td>
+</tr>
+<tr>
+<td><code>h.size</code></td>
+<td>number of key/value pairs in <code>h</code></td>
+</tr>
+</tbody>
+</table>
+<h4 id="hashes-as-final-method-arguments">Hashes as final method arguments</h4>
+<p>Ruby allows hash without curly braces when calling a method whose last argument is a hash; If hash is first argument, not only the curly braces are needed, but also the entire arguemnt list need to be in parentheses.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">add_to_camera_database</span>(owner, info)
+  camera <span style="color:#f92672">=</span> <span style="color:#66d9ef">Camera</span><span style="color:#f92672">.</span>new
+  camera<span style="color:#f92672">.</span>owner <span style="color:#f92672">=</span> owner
+  camera<span style="color:#f92672">.</span>year_made <span style="color:#f92672">=</span> info<span style="color:#f92672">[</span><span style="color:#e6db74">:year_made</span><span style="color:#f92672">]</span>
+  camera<span style="color:#f92672">.</span>model <span style="color:#f92672">=</span> info<span style="color:#f92672">[</span><span style="color:#e6db74">:model</span><span style="color:#f92672">]</span>
+<span style="color:#66d9ef">end</span>
+
+add_to_camera_database(<span style="color:#e6db74">&#34;Tom&#34;</span>,
+  <span style="color:#e6db74">year_made</span>: <span style="color:#ae81ff">1991</span>,
+  <span style="color:#e6db74">model</span>: <span style="color:#e6db74">&#34;Leica M&#34;</span>)
+</code></pre></div><h4 id="named-arguments">Named arguments</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">m</span>(<span style="color:#e6db74">a</span>:, <span style="color:#e6db74">b</span>:)
+  p a, b
+<span style="color:#66d9ef">end</span>
+
+m(<span style="color:#e6db74">a</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">b</span>: <span style="color:#ae81ff">2</span>) <span style="color:#75715e"># Ruby matches a and b which are required arguments</span>
+
+<span style="color:#66d9ef">def</span> <span style="color:#a6e22e">m</span>(<span style="color:#e6db74">a</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">b</span>: <span style="color:#ae81ff">2</span>) <span style="color:#75715e"># default values make arguments optional</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>If the method&rsquo;s parameter list includes a double-starred name, calling a method using keyword arguments not declared by the method will end up sponging up all unknown keyword arguments into a hash:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">m</span>(<span style="color:#e6db74">a</span>: <span style="color:#ae81ff">1</span>, <span style="color:#e6db74">b</span>: <span style="color:#ae81ff">2</span>, <span style="color:#f92672">**</span>c)
+  p a, b, c
+<span style="color:#66d9ef">end</span>
+
+m(<span style="color:#e6db74">x</span>:<span style="color:#ae81ff">1</span>, <span style="color:#e6db74">y</span>:<span style="color:#ae81ff">2</span>)
+<span style="color:#75715e"># 1</span>
+<span style="color:#75715e"># 2</span>
+<span style="color:#75715e"># {:x=&gt;1, :y=&gt;2}</span>
+</code></pre></div><h3 id="ranges">Ranges</h3>
+<p>A <em>range</em> is an object with a start point and an end point.</p>
+<ul>
+<li><em>inclusion</em>: does a given value fall inside the range</li>
+<li><em>enumeration</em>: the range is treated as a traversable collection of individual items</li>
+</ul>
+<p>Create a range with <code>Range.new</code> or literal constructor.</p>
+<ul>
+<li>ranges with two dots are inclusive</li>
+<li>ranges with three dots are exclusive</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">r <span style="color:#f92672">=</span> <span style="color:#66d9ef">Range</span><span style="color:#f92672">.</span>new(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">100</span>) <span style="color:#75715e"># 1..100</span>
+r <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">..</span><span style="color:#ae81ff">100</span> <span style="color:#75715e"># literal range construction 1..100</span>
+r <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">...</span><span style="color:#ae81ff">100</span> <span style="color:#75715e"># exclusive range</span>
+r <span style="color:#f92672">=</span> <span style="color:#66d9ef">Range</span><span style="color:#f92672">.</span>new(<span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">100</span>, <span style="color:#66d9ef">true</span>) <span style="color:#75715e"># exclusive range 1...100</span>
+</code></pre></div><h4 id="range-logic">Range logic</h4>
+<ul>
+<li>ranges can report back their starting and ending points using <code>begin</code> and <code>end</code></li>
+<li>a range also knows whether it&rsquo;s an exclusive range by <code>exclude_end?</code></li>
+<li><code>cover?</code> checks whether the argument is within the range using boolean comparison test</li>
+<li><code>include?</code> treats range as a collection of values</li>
+<li>if the range can&rsquo;t be interpreted as a finite collection, <code>include?</code> falls back on numerical order and comparison</li>
+<li>backward range is used usually as index</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">r <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">..</span><span style="color:#ae81ff">10</span>
+r<span style="color:#f92672">.</span>begin <span style="color:#75715e"># 1</span>
+r<span style="color:#f92672">.</span>end <span style="color:#75715e"># 10</span>
+r<span style="color:#f92672">.</span>exclude_end? <span style="color:#75715e"># false</span>
+r <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;a&#34;</span><span style="color:#f92672">..</span><span style="color:#e6db74">&#34;z&#34;</span>
+r<span style="color:#f92672">.</span>cover?(<span style="color:#e6db74">&#34;a&#34;</span>) <span style="color:#75715e"># true</span>
+r<span style="color:#f92672">.</span>cover?(<span style="color:#e6db74">&#34;abc&#34;</span>) <span style="color:#75715e"># true</span>
+r<span style="color:#f92672">.</span>cover?(<span style="color:#e6db74">&#34;A&#34;</span>) <span style="color:#75715e"># false</span>
+r<span style="color:#f92672">.</span>cover?(<span style="color:#f92672">[]</span>) <span style="color:#75715e"># false</span>
+r<span style="color:#f92672">.</span>include?(<span style="color:#e6db74">&#34;a&#34;</span>) <span style="color:#75715e"># true</span>
+r<span style="color:#f92672">.</span>include?(<span style="color:#e6db74">&#34;abc&#34;</span>) <span style="color:#75715e"># false</span>
+r <span style="color:#f92672">=</span> <span style="color:#ae81ff">1</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0</span><span style="color:#f92672">..</span><span style="color:#ae81ff">2</span><span style="color:#f92672">.</span><span style="color:#ae81ff">0</span>
+r<span style="color:#f92672">.</span>include?(<span style="color:#ae81ff">1</span><span style="color:#f92672">.</span><span style="color:#ae81ff">5</span>) <span style="color:#75715e"># true</span>
+<span style="color:#e6db74">&#34;This is a sample string&#34;</span><span style="color:#f92672">[</span><span style="color:#ae81ff">10</span><span style="color:#f92672">..-</span><span style="color:#ae81ff">5</span><span style="color:#f92672">]</span> <span style="color:#75715e"># sample st</span>
+</code></pre></div><h3 id="sets">Sets</h3>
+<ul>
+<li><code>Set</code> is a standard library class, need <code>require 'set'</code></li>
+<li>a <em>set</em> is a unique collection of objects</li>
+<li>internally hash is used, a new key is added to the hash when an element is added to set</li>
+</ul>
+<p>Create a new <code>Set</code> by providing a collection object, can also provide a code block which every item in the collection object is passed through.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">cameras <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;Leica M&#34;</span>, <span style="color:#e6db74">&#34;X-Pro3&#34;</span>, <span style="color:#e6db74">&#34;GX9&#34;</span>, <span style="color:#e6db74">&#34;Leica M&#34;</span><span style="color:#f92672">]</span>
+unique_cameras <span style="color:#f92672">=</span> <span style="color:#66d9ef">Set</span><span style="color:#f92672">.</span>new(cameras) <span style="color:#75715e"># #&lt;Set: {&#34;Leica M&#34;, &#34;X-Pro3&#34;, &#34;GX9&#34;}&gt;</span>
+unique_cameras <span style="color:#f92672">=</span> <span style="color:#66d9ef">Set</span><span style="color:#f92672">.</span>new(cameras) {<span style="color:#f92672">|</span>c<span style="color:#f92672">|</span> c<span style="color:#f92672">.</span>upcase} <span style="color:#75715e"># #&lt;Set: {&#34;LEICA M&#34;, &#34;X-PRO3&#34;, &#34;GX9&#34;}&gt;</span>
+</code></pre></div><ul>
+<li>use <code>&lt;&lt;</code> to add a single object to a set, nothing happens if adding a duplicated object</li>
+<li>use <code>delete</code> to delete an object from a set, nothing happens if the object doesn&rsquo;t exist</li>
+<li><code>&lt;&lt;</code> is also available as <code>add</code></li>
+<li><code>add?</code> returns <code>nil</code> if set is unchagned after adding an object
+<ul>
+<li>this is usually used to determine whether the object already exists</li>
+</ul>
+</li>
+</ul>
+<h4 id="set-operations">Set operations</h4>
+<ul>
+<li><code>intersection</code>, aliased as <code>&amp;</code></li>
+<li><code>union</code>, aliased as <code>+</code> and <code>|</code></li>
+<li><code>difference</code>, aliased as <code>-</code></li>
+<li><code>^</code> exclusive or, a set consisting of elements that occur in either set but not all</li>
+<li>merging another object into a set depends on how the object iterates over itself
+<ul>
+<li>merging a hash into a set results in the addition of two-element, key/value arrays to the set</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">camera_brands <span style="color:#f92672">=</span> <span style="color:#66d9ef">Set</span><span style="color:#f92672">.</span>new(<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;Leica&#34;</span>, <span style="color:#e6db74">&#34;Fujifilm&#34;</span>, <span style="color:#e6db74">&#34;Olympus&#34;</span><span style="color:#f92672">]</span>)
+closed_brands <span style="color:#f92672">=</span> <span style="color:#66d9ef">Set</span><span style="color:#f92672">.</span>new(<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;Olympus&#34;</span><span style="color:#f92672">]</span>)
+optics_brands <span style="color:#f92672">=</span> <span style="color:#66d9ef">Set</span><span style="color:#f92672">.</span>new(<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;Zeiss&#34;</span>, <span style="color:#e6db74">&#34;Leica&#34;</span><span style="color:#f92672">]</span>)
+camera_brands <span style="color:#f92672">-</span> closed_brands <span style="color:#75715e"># &lt;Set: {&#34;Leica&#34;, &#34;Fujifilm&#34;}&gt;</span>
+camera_brands <span style="color:#f92672">+</span> optics_brands <span style="color:#75715e"># &lt;Set: {&#34;Leica&#34;, &#34;Fujifilm&#34;, &#34;Olympus&#34;, &#34;Zeiss&#34;}&gt;</span>
+camera_brands <span style="color:#f92672">&amp;</span> optics_brands <span style="color:#75715e"># &lt;Set: {&#34;Leica&#34;}&gt;</span>
+</code></pre></div><h4 id="subset-and-superset">Subset and superset</h4>
+<ul>
+<li><code>subset?</code> and <code>superset?</code> exist to check subset and superset relation</li>
+<li><code>proper_subset?</code> and <code>proper_superset?</code> also make sure superset is bigger and subset is smaller than the original set</li>
+</ul>
+<h2 id="enumerable-and-enumerator">Enumerable and Enumerator</h2>
+<p>Collection objects in Ruby typically include the <code>Enumerable</code> module for common functionalities.</p>
+<ul>
+<li>each class that uses <code>Enumerable</code> has to define the instance method <code>each</code></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">C</span>
+  <span style="color:#66d9ef">include</span> <span style="color:#66d9ef">Enumerable</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">each</span>
+    <span style="color:#75715e"># code</span>
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+</code></pre></div><p>The job of <code>each</code> is to yield items to a supplied code block, one at a time.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Gender</span>
+  <span style="color:#66d9ef">include</span> <span style="color:#66d9ef">Enumerable</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">each</span>
+    <span style="color:#66d9ef">yield</span> <span style="color:#e6db74">&#34;boy&#34;</span>
+    <span style="color:#66d9ef">yield</span> <span style="color:#e6db74">&#34;girl&#34;</span>
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+
+g <span style="color:#f92672">=</span> <span style="color:#66d9ef">Gender</span><span style="color:#f92672">.</span>new
+g<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>gender<span style="color:#f92672">|</span>
+  puts <span style="color:#e6db74">&#34;Gender: </span><span style="color:#e6db74">#{</span>gender<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+<span style="color:#66d9ef">end</span>
+
+<span style="color:#75715e"># output:</span>
+<span style="color:#75715e"># Gender: boy</span>
+<span style="color:#75715e"># Gender: girl</span>
+</code></pre></div><p><code>find</code> works by calling <code>each</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">g <span style="color:#f92672">=</span> <span style="color:#66d9ef">Gender</span><span style="color:#f92672">.</span>new
+g<span style="color:#f92672">.</span>find {<span style="color:#f92672">|</span>gender<span style="color:#f92672">|</span> g<span style="color:#f92672">.</span>start_with?(<span style="color:#e6db74">&#39;b&#39;</span>) }
+<span style="color:#75715e"># output: boy</span>
+</code></pre></div><h3 id="enumerable-boolean-queries">Enumerable Boolean queries</h3>
+<p>A number of <code>Enumerable</code> methods return true or false depending on whether one or more elements matching certain criteria.</p>
+<table>
+<thead>
+<tr>
+<th>method</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>include?</code></td>
+<td>whether the enumerable includes specified object</td>
+</tr>
+<tr>
+<td><code>all?</code></td>
+<td>whether ALL elements match query</td>
+</tr>
+<tr>
+<td><code>any?</code></td>
+<td>whether ANY element matches query</td>
+</tr>
+<tr>
+<td><code>one?</code></td>
+<td>is there one and only one element matching query</td>
+</tr>
+<tr>
+<td><code>none?</code></td>
+<td>is there NO element matching query</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>above methods work also for hashes</li>
+<li><code>Hash#each</code> yields both a key and a value each time</li>
+<li>you can also capture the key/value pair in a single block parameter
+<ul>
+<li><code>hash.each {|pair| …}</code> with <code>pair[0]</code> for key and <code>pair[1]</code> for value</li>
+</ul>
+</li>
+<li>set works naturally with <code>Enumerable</code></li>
+<li>ranges works only if the range can be expressed as a list of discrete elements</li>
+</ul>
+<h3 id="enumerable-searching-and-selecting">Enumerable searching and selecting</h3>
+<p><code>find</code> locates the first element in an array for which the code block returns true, failing to find any element that passes code block test would return <code>nil</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#f92672">[</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">9</span><span style="color:#f92672">].</span>find {<span style="color:#f92672">|</span>n<span style="color:#f92672">|</span> n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">3</span>}
+<span style="color:#75715e"># output: 4</span>
+</code></pre></div><p>As a result, if the array has <code>nil</code> as an element, looking for <code>nil</code> would always return <code>nil</code>. Use <code>include?</code> as a work around to check whether the array has <code>nil</code> as an element. Alternatively, provide a <code>Proc</code> object as an argument to find, the function will be called if <code>find</code> fails.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">failure <span style="color:#f92672">=</span> lambda { <span style="color:#ae81ff">11</span> }
+over_ten <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span><span style="color:#f92672">].</span>find(failure) {<span style="color:#f92672">|</span>n<span style="color:#f92672">|</span> n <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">10</span> }
+<span style="color:#75715e"># output: 11</span>
+</code></pre></div><p><code>find_all</code> (the same as <code>select</code>) returns a new collection containing all the elements of the original collection that match the criteria in the code block, empty collection is returned if none is found.</p>
+<p><code>select</code> generally returns an array, include using <code>Enumerable</code> in your own class, but for hashes and sets, <code>select</code> returns a hash or set, respectively.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">a <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">10</span><span style="color:#f92672">]</span>
+a<span style="color:#f92672">.</span>find_all {<span style="color:#f92672">|</span>item<span style="color:#f92672">|</span> item <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">5</span> } <span style="color:#75715e"># [6, 7, 8, 9, 10]</span>
+a<span style="color:#f92672">.</span>select {<span style="color:#f92672">|</span>item<span style="color:#f92672">|</span> item <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">100</span> } <span style="color:#75715e"># []</span>
+</code></pre></div><p>Arrays, hashes and sets have a bang version <code>select!</code> that reduces the collection permanently to only those elements that passed the selection test.</p>
+<p><code>reject</code> finds out which elements do not return a true value when yielded to the code block:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">a<span style="color:#f92672">.</span>reject {<span style="color:#f92672">|</span>item<span style="color:#f92672">|</span> item <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">5</span>} <span style="color:#75715e"># [1, 2, 3, 4, 5]</span>
+</code></pre></div><p>There&rsquo;s also the bang version <code>reject!</code></p>
+<h4 id="selecting-on-threequal-matches-with-grep">Selecting on threequal matches with grep</h4>
+<p><code>Enumerable#grep</code> selects from an enumerable object based on case-equality operator <code>===</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">misc <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">12</span>, <span style="color:#e6db74">&#34;hi&#34;</span>, <span style="color:#ae81ff">10</span><span style="color:#f92672">..</span><span style="color:#ae81ff">20</span>, <span style="color:#e6db74">&#34;bye&#34;</span><span style="color:#f92672">]</span>
+misc<span style="color:#f92672">.</span>grep(String) <span style="color:#75715e"># [&#34;hi&#34;, &#34;bye&#34;]</span>
+misc<span style="color:#f92672">.</span>grep(<span style="color:#ae81ff">10</span><span style="color:#f92672">..</span><span style="color:#ae81ff">20</span>) <span style="color:#75715e"># [12]</span>
+</code></pre></div><p><code>enumerable.grep(expression)</code> is equivalent to:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">enumerable<span style="color:#f92672">.</span>select {<span style="color:#f92672">|</span>element<span style="color:#f92672">|</span> expression <span style="color:#f92672">===</span> element }
+</code></pre></div><ul>
+<li><code>grep</code> can also take a block, it yields each element of its result set to the block</li>
+</ul>
+<h4 id="organizing-selection-results-with-group_by-and-partition">Organizing selection results with group_by and partition</h4>
+<ul>
+<li><code>group_by</code> on enumerable object takes a block and returns a hash</li>
+<li>the block is executed for each object</li>
+<li>result hash gets a key for each unique block return value</li>
+<li>value for the key is an array of all elements that the block returned that value</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">colors <span style="color:#f92672">=</span> <span style="color:#e6db74">%w(red orange yellow green blue indigo violet)</span>
+colors<span style="color:#f92672">.</span>group_by {<span style="color:#f92672">|</span>color<span style="color:#f92672">|</span> color<span style="color:#f92672">.</span>size }
+<span style="color:#75715e"># output:</span>
+<span style="color:#75715e"># {3=&gt;[&#34;red&#34;], 6=&gt;[&#34;orange&#34;, &#34;yellow&#34;, &#34;indigo&#34;, &#34;violet&#34;], 5=&gt;[&#34;green&#34;], 4=&gt;[&#34;blue&#34;]}</span>
+</code></pre></div><ul>
+<li><code>partition</code> splits the elements into two arrays based on whether the code block returns true for the element</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Camera</span>
+  <span style="color:#66d9ef">attr_accessor</span> <span style="color:#e6db74">:price</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">initialize</span>(options)
+    self<span style="color:#f92672">.</span>price <span style="color:#f92672">=</span> options<span style="color:#f92672">[</span><span style="color:#e6db74">:price</span><span style="color:#f92672">]</span>
+  <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">below</span>(limit)
+    (<span style="color:#ae81ff">0</span><span style="color:#f92672">...</span>limit) <span style="color:#f92672">===</span> price
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+
+cameras <span style="color:#f92672">=</span> <span style="color:#ae81ff">900</span><span style="color:#f92672">.</span>step(<span style="color:#ae81ff">1200</span>, <span style="color:#ae81ff">50</span>)<span style="color:#f92672">.</span>map {<span style="color:#f92672">|</span>p<span style="color:#f92672">|</span> <span style="color:#66d9ef">Camera</span><span style="color:#f92672">.</span>new(<span style="color:#e6db74">:price</span> <span style="color:#f92672">=&gt;</span> p) }
+
+cameras<span style="color:#f92672">.</span>partition { <span style="color:#f92672">|</span>camera<span style="color:#f92672">|</span> camera<span style="color:#f92672">.</span>below(<span style="color:#ae81ff">1000</span>) }
+<span style="color:#75715e"># output:</span>
+<span style="color:#75715e"># [[#&lt;Camera:0x00007feb871e48b0 @price=900&gt;, #&lt;Camera:0x00007feb871e4838 @price=950&gt;], [#&lt;Camera:0x00007feb871e4798 @price=1000&gt;, #&lt;Camera:0x00007feb871e46f8 @price=1050&gt;, #&lt;Camera:0x00007feb871e4680 @price=1100&gt;, #&lt;Camera:0x00007feb871e4608 @price=1150&gt;, #&lt;Camera:0x00007feb871e4590 @price=1200&gt;]]</span>
+</code></pre></div><h3 id="element-wise-operations">Element-wise operations</h3>
+<ul>
+<li><code>Enumerable#first</code> returns the first item when iterating over the enumerable</li>
+<li>there is no <code>Enumerable#last</code> as not all enumerables have end</li>
+<li>some enumerable classes do have <code>last</code> method: <code>Array</code> and <code>Range</code></li>
+<li><code>take(n)</code> gets n elements, <code>drop(n)</code> gets original collection without the n elements</li>
+<li>use <code>take_while</code> and <code>drop_while</code> with a code block to constrain the size of &ldquo;take&rdquo; by the truth value of the code block</li>
+<li><code>min</code> and <code>max</code> returns the minimum and maximum element
+<ul>
+<li>determined by <code>&lt;=&gt;</code> logic</li>
+<li>can provide a code block to perform non-default criteria</li>
+</ul>
+</li>
+<li><code>minmax</code> and <code>minmax_by</code> returns a pair of values for minimum and maximum</li>
+<li><code>min</code> and <code>max</code> for hashes use the keys to determine ordering
+<ul>
+<li>use <code>*_by</code> if you want to use values</li>
+</ul>
+</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Die</span>
+  <span style="color:#66d9ef">include</span> <span style="color:#66d9ef">Enumerable</span>
+  <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">each</span>
+    <span style="color:#66d9ef">loop</span> <span style="color:#66d9ef">do</span>
+      <span style="color:#66d9ef">yield</span> rand(<span style="color:#ae81ff">6</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">1</span>
+    <span style="color:#66d9ef">end</span>
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+
+d <span style="color:#f92672">=</span> <span style="color:#66d9ef">Die</span><span style="color:#f92672">.</span>new
+d<span style="color:#f92672">.</span>each <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>roll<span style="color:#f92672">|</span>
+  <span style="color:#66d9ef">if</span> roll <span style="color:#f92672">==</span> <span style="color:#ae81ff">6</span>
+    puts <span style="color:#e6db74">&#34;Start&#34;</span>
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+
+cameras
+<span style="color:#75715e"># [#&lt;Camera:0x00007feb871e48b0 @price=900&gt;, #&lt;Camera:0x00007feb871e4838 @price=950&gt;, #&lt;Camera:0x00007feb871e4798 @price=1000&gt;, #&lt;Camera:0x00007feb871e46f8 @price=1050&gt;, #&lt;Camera:0x00007feb871e4680 @price=1100&gt;, #&lt;Camera:0x00007feb871e4608 @price=1150&gt;, #&lt;Camera:0x00007feb871e4590 @price=1200&gt;]</span>
+
+cameras<span style="color:#f92672">.</span>take_while {<span style="color:#f92672">|</span>c<span style="color:#f92672">|</span> c<span style="color:#f92672">.</span>below(<span style="color:#ae81ff">1000</span>) }
+<span style="color:#75715e"># [#&lt;Camera:0x00007feb871e48b0 @price=900&gt;, #&lt;Camera:0x00007feb871e4838 @price=950&gt;]</span>
+
+cameras<span style="color:#f92672">.</span>drop_while {<span style="color:#f92672">|</span>c<span style="color:#f92672">|</span> c<span style="color:#f92672">.</span>below(<span style="color:#ae81ff">1000</span>) }
+<span style="color:#75715e"># [#&lt;Camera:0x00007feb871e4798 @price=1000&gt;, #&lt;Camera:0x00007feb871e46f8 @price=1050&gt;, #&lt;Camera:0x00007feb871e4680 @price=1100&gt;, #&lt;Camera:0x00007feb871e4608 @price=1150&gt;, #&lt;Camera:0x00007feb871e4590 @price=1200&gt;]</span>
+
+cameras<span style="color:#f92672">.</span>min {<span style="color:#f92672">|</span>a,b<span style="color:#f92672">|</span> a<span style="color:#f92672">.</span>price <span style="color:#f92672">&lt;=&gt;</span> b<span style="color:#f92672">.</span>price}
+<span style="color:#75715e"># &lt;Camera:0x00007feb871e48b0 @price=900&gt;</span>
+
+cameras<span style="color:#f92672">.</span>max {<span style="color:#f92672">|</span>a,b<span style="color:#f92672">|</span> a<span style="color:#f92672">.</span>price <span style="color:#f92672">&lt;=&gt;</span> b<span style="color:#f92672">.</span>price}
+<span style="color:#75715e"># &lt;Camera:0x00007feb871e4590 @price=1200&gt;</span>
+</code></pre></div><ul>
+<li><code>reverse_each</code> is <code>each</code> but reversely
+<ul>
+<li>do not use it on infinite iterator</li>
+</ul>
+</li>
+<li><code>Enumerable#each_with_index</code> yields an extra integer representing the ordinal position of the item
+<ul>
+<li><code>each_with_index</code> is deprected, use <code>each.with_index</code> instead</li>
+</ul>
+</li>
+<li>provide an argument to <code>each.with_index</code> as the first index value, avoiding the need to add one to the index which by default starts from 0</li>
+<li><code>each_slice</code> and <code>each_cons</code> walk through a collection a certain number of elements at a time</li>
+<li><code>each_slice</code> handles each element only once</li>
+<li><code>each_cons</code> takes a new grouping at each element with overlapping yielded arrays</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">a <span style="color:#f92672">=</span> Array(<span style="color:#ae81ff">1</span><span style="color:#f92672">..</span><span style="color:#ae81ff">10</span>)
+
+a<span style="color:#f92672">.</span>each_slice(<span style="color:#ae81ff">3</span>) {<span style="color:#f92672">|</span>slice<span style="color:#f92672">|</span> p slice }
+<span style="color:#75715e"># [1, 2, 3]</span>
+<span style="color:#75715e"># [4, 5, 6]</span>
+<span style="color:#75715e"># [7, 8, 9]</span>
+<span style="color:#75715e"># [10]</span>
+
+a<span style="color:#f92672">.</span>each_cons(<span style="color:#ae81ff">3</span>) {<span style="color:#f92672">|</span>slice<span style="color:#f92672">|</span> p slice }
+<span style="color:#75715e"># [1, 2, 3]</span>
+<span style="color:#75715e"># [2, 3, 4]</span>
+<span style="color:#75715e"># [3, 4, 5]</span>
+<span style="color:#75715e"># [4, 5, 6]</span>
+<span style="color:#75715e"># [5, 6, 7]</span>
+<span style="color:#75715e"># [6, 7, 8]</span>
+<span style="color:#75715e"># [7, 8, 9]</span>
+<span style="color:#75715e"># [8, 9, 10]</span>
+</code></pre></div><p>There&rsquo;s a family of <code>slice_</code> methods.</p>
+<ul>
+<li><code>slice_before</code> split a collection at the point at which a given criterion is matched</li>
+<li><code>slice_after</code> complements <code>slice_before</code>, split a collection after the pattern or Boolean test is found</li>
+<li><code>slice_when</code> tests two elements at a time</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">(<span style="color:#ae81ff">1</span><span style="color:#f92672">..</span><span style="color:#ae81ff">10</span>)<span style="color:#f92672">.</span>slice_before { <span style="color:#f92672">|</span>num<span style="color:#f92672">|</span> num <span style="color:#f92672">%</span> <span style="color:#ae81ff">2</span> <span style="color:#f92672">==</span> <span style="color:#ae81ff">0</span> }<span style="color:#f92672">.</span>to_a
+<span style="color:#75715e"># [[1], [2, 3], [4, 5], [6, 7], [8, 9], [10]]</span>
+
+<span style="color:#f92672">[</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">6</span>,<span style="color:#ae81ff">7</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">8</span>,<span style="color:#ae81ff">9</span>,<span style="color:#ae81ff">10</span><span style="color:#f92672">].</span>slice_when { <span style="color:#f92672">|</span>i,j<span style="color:#f92672">|</span> i <span style="color:#f92672">==</span> j }<span style="color:#f92672">.</span>to_a
+<span style="color:#75715e"># [[1, 2, 3], [3, 4, 5, 6], [6, 7, 8], [8], [8, 9, 10]]</span>
+</code></pre></div><p><code>Enumerable#cycle</code> yields all the elements in the object again and again in a loop, providing an integer argument asks the loop to run that many times.</p>
+<h4 id="enumerable-reduction-with-inject">Enumerable reduction with inject</h4>
+<p><code>inject</code> works by initializing an accumulator oject and iterating through a collection, performing a calculation on each iteration and resetting the acumulator for purposes of the next iteration, to the result of that calculation.</p>
+<ul>
+<li>without an argument to inject it uses the first element in the enumerable object as the initial value</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#f92672">[</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span><span style="color:#f92672">].</span>inject(<span style="color:#ae81ff">0</span>) {<span style="color:#f92672">|</span>acc,n<span style="color:#f92672">|</span> acc <span style="color:#f92672">+</span> n } <span style="color:#75715e"># 10</span>
+<span style="color:#f92672">[</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span><span style="color:#f92672">].</span>inject(<span style="color:#e6db74">:+</span>)
+</code></pre></div><h4 id="map">Map</h4>
+<ul>
+<li><code>map</code> (also callable as <code>collect</code>) always returns an array of the same size as the original enumerable</li>
+<li>the elements of returned array consist of the accumulated result of calling the code block on each element in the original object</li>
+<li><code>each</code> exists purely for the side effects from the execution of the block</li>
+<li><code>map</code> on the other hand maintains an accumulator array of the results from the block</li>
+<li><code>map</code> has a in-place <code>map!</code>, defined in <code>Array</code> and <code>Set</code></li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">cameras <span style="color:#f92672">=</span> <span style="color:#e6db74">%w(Leica Fujifilm Olympus)</span>
+cameras<span style="color:#f92672">.</span>map {<span style="color:#f92672">|</span>camera<span style="color:#f92672">|</span> camera<span style="color:#f92672">.</span>upcase} <span style="color:#75715e"># [&#34;LEICA&#34;, &#34;FUJIFILM&#34;, &#34;OLYMPUS&#34;]</span>
+
+<span style="color:#75715e"># use a symbol argument as a block</span>
+cameras<span style="color:#f92672">.</span>map(<span style="color:#f92672">&amp;</span><span style="color:#e6db74">:upcase</span>)
+</code></pre></div><p>Be careful with block evaluation, <code>map</code> only cares about return value of <code>puts</code> which is always <code>nil</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">array <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span><span style="color:#f92672">]</span>
+result <span style="color:#f92672">=</span> array<span style="color:#f92672">.</span>map {<span style="color:#f92672">|</span>n<span style="color:#f92672">|</span> puts n <span style="color:#f92672">*</span> <span style="color:#ae81ff">100</span> } <span style="color:#75715e"># [nil, nil, nil, nil, nil]</span>
+</code></pre></div><h4 id="strings-as-enumerables">Strings as enumerables</h4>
+<ul>
+<li><code>String</code> has <code>each_byte</code>, <code>each_character</code> and <code>each_codepoint</code></li>
+<li><code>String</code> has <code>each_line</code> that splits the string at the end of each occurrence of global variable <code>$/</code></li>
+<li><code>$/</code> is linebreak by default, can be changed</li>
+<li>drop the <code>each_</code> and pluralize the method name give array of all data instead of enumerator</li>
+</ul>
+<h4 id="sorting-enumerables">Sorting enumerables</h4>
+<p>In order to make a class instance sortable:</p>
+<ol>
+<li>define <code>&lt;=&gt;</code> for the class</li>
+<li>place multiple instances in a container, e.g. array</li>
+<li>sort the container</li>
+</ol>
+<p>In cases where no <code>&lt;=&gt;</code> is defined for objects, a block can be supplied on the fly to indicate how they should be sorted.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">sorted_camera <span style="color:#f92672">=</span> cameras<span style="color:#f92672">.</span>sort <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>a, b<span style="color:#f92672">|</span>
+  a<span style="color:#f92672">.</span>price <span style="color:#f92672">&lt;=&gt;</span> b<span style="color:#f92672">.</span>price
+<span style="color:#66d9ef">end</span>
+</code></pre></div><ul>
+<li><code>sort_by</code> always takes a block that requires a treatment of one item in the collection.</li>
+<li><code>clamp</code> takes two argument, returns 1st argument if receiver is less, returns 2nd argument is receiver is greater, otherwise returns the receiver itself</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">cameras<span style="color:#f92672">.</span>sort_by {<span style="color:#f92672">|</span>c<span style="color:#f92672">|</span> c<span style="color:#f92672">.</span>price }
+cameras<span style="color:#f92672">.</span>sort_by(<span style="color:#f92672">&amp;</span><span style="color:#e6db74">:price</span>)
+</code></pre></div><h3 id="enumeraors">Enumeraors</h3>
+<ul>
+<li>an <code>iterator</code> is a method that yields one or more values to a code block</li>
+<li>an enumerator is an object</li>
+<li>at heart, an enumerator is a simple enumerable object with an <code>each</code> and employs the <code>Enumerable</code> module</li>
+<li>an enumerator isn&rsquo;t a container object, the <code>each</code> logic has to be explicitly specified</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">e <span style="color:#f92672">=</span> <span style="color:#66d9ef">Enumerator</span><span style="color:#f92672">.</span>new <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>y<span style="color:#f92672">|</span>
+  y <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">1</span>
+  y <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">2</span>
+  y <span style="color:#f92672">&lt;&lt;</span> <span style="color:#ae81ff">3</span>
+<span style="color:#66d9ef">end</span>
+
+e <span style="color:#f92672">=</span> <span style="color:#66d9ef">Enumerator</span><span style="color:#f92672">.</span>new <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>y<span style="color:#f92672">|</span>
+  (<span style="color:#ae81ff">1</span><span style="color:#f92672">..</span><span style="color:#ae81ff">3</span>)<span style="color:#f92672">.</span>each { <span style="color:#f92672">|</span>i<span style="color:#f92672">|</span> y <span style="color:#f92672">&lt;&lt;</span> i }
+<span style="color:#66d9ef">end</span>
+
+e<span style="color:#f92672">.</span>to_a <span style="color:#75715e"># [1, 2, 3]</span>
+e<span style="color:#f92672">.</span>map {<span style="color:#f92672">|</span>x<span style="color:#f92672">|</span> x <span style="color:#f92672">*</span> <span style="color:#ae81ff">10</span>} <span style="color:#75715e"># [10, 20, 30]</span>
+e<span style="color:#f92672">.</span>select {<span style="color:#f92672">|</span>x<span style="color:#f92672">|</span> x <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">1</span>} <span style="color:#75715e"># [2, 3]</span>
+e<span style="color:#f92672">.</span>take(<span style="color:#ae81ff">2</span>) <span style="color:#75715e"># [1, 2]</span>
+</code></pre></div><ul>
+<li><code>y</code> is a <em>yielder</em>, an instance of <code>Enumerator::Yielder</code> passed to your block</li>
+<li>upon <code>each</code>, 1, 2 and 3 are yielded, can also be <code>y.yield(1)</code></li>
+<li>every time the iterator method on the enumerator is called, the code block gets executed once</li>
+<li>it&rsquo;s also possible to involve other objects in the code block</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">a <span style="color:#f92672">=</span> <span style="color:#f92672">[</span><span style="color:#ae81ff">1</span>, <span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">4</span>, <span style="color:#ae81ff">5</span><span style="color:#f92672">]</span>
+e <span style="color:#f92672">=</span> <span style="color:#66d9ef">Enumerator</span><span style="color:#f92672">.</span>new <span style="color:#66d9ef">do</span> <span style="color:#f92672">|</span>y<span style="color:#f92672">|</span>
+  total <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+  <span style="color:#66d9ef">until</span> a<span style="color:#f92672">.</span>empty?
+    total <span style="color:#f92672">+=</span> a<span style="color:#f92672">.</span>pop
+    y <span style="color:#f92672">&lt;&lt;</span> total
+  <span style="color:#66d9ef">end</span>
+<span style="color:#66d9ef">end</span>
+
+e<span style="color:#f92672">.</span>take(<span style="color:#ae81ff">2</span>) <span style="color:#75715e"># [5, 9], popping and adding last two</span>
+a <span style="color:#75715e"># [1, 2, 3]</span>
+e<span style="color:#f92672">.</span>to_a <span style="color:#75715e"># [3, 5, 6], each would pop and add to total until empty</span>
+</code></pre></div><h4 id="attaching-enumerators-to-other-objects">Attaching enumerators to other objects</h4>
+<p>When the enumerator need to yield something, it gets the necessary value by triggering the next yield from the object to which it is attached via the designated method.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">cameras <span style="color:#f92672">=</span> <span style="color:#e6db74">%w(Leica Olympus Canon Nikon)</span>
+e <span style="color:#f92672">=</span> cameras<span style="color:#f92672">.</span>enum_for(<span style="color:#e6db74">:select</span>)
+e<span style="color:#f92672">.</span>each {<span style="color:#f92672">|</span>c<span style="color:#f92672">|</span> c<span style="color:#f92672">.</span>include?(<span style="color:#e6db74">&#39;o&#39;</span>)} <span style="color:#75715e"># [&#34;Canon&#34;, &#34;Nikon&#34;]</span>
+</code></pre></div><p>Any further arguments provided to <code>enum_for</code> are passed through to the method to which the enumerator is being attached.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">e <span style="color:#f92672">=</span> cameras<span style="color:#f92672">.</span>enum_for(<span style="color:#e6db74">:inject</span>, <span style="color:#e6db74">&#34;Names: &#34;</span>)
+e<span style="color:#f92672">.</span>each {<span style="color:#f92672">|</span>string, name<span style="color:#f92672">|</span> string <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#e6db74">#{</span>name<span style="color:#e6db74">}</span><span style="color:#e6db74">...&#34;</span> }
+<span style="color:#75715e"># &#34;Names: Leica...Olympus...Canon...Nikon...&#34;</span>
+</code></pre></div><ul>
+<li>the starting string &ldquo;Names: &quot; is still alive inside the enumerator</li>
+<li>most built-in iterators return an enumerator when they&rsquo;re called without a block</li>
+<li>the main use for this is <em>chaining</em>: calling another method imeediately on the enumerator</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">e <span style="color:#f92672">=</span> cameras<span style="color:#f92672">.</span>map
+e<span style="color:#f92672">.</span>each {<span style="color:#f92672">|</span>camera<span style="color:#f92672">|</span> camera<span style="color:#f92672">.</span>capitalize}
 </code></pre></div>
 </main>
 

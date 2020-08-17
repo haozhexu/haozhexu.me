@@ -4,7 +4,7 @@ date: 2018-09-12T08:00:00+11:00
 draft: false
 ads: true
 categories:
-  - Article
+  - Photography
 tags:
   - photography
   - leica

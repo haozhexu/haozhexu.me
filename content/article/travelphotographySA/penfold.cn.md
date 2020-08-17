@@ -4,7 +4,8 @@ date: 2018-01-03T22:21:23+11:00
 draft: false
 ads: true
 categories:
-  - 旅行摄影
+  - 旅行
+  - 摄影
 tags:
   - 旅行
   - 摄影

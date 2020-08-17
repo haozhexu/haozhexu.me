@@ -6,10 +6,8 @@ ads: true
 categories:
   - 杂文
 tags:
-  - lottery
-  - powerball
-  - mathematics
-  - numbers
+  - 彩票预测
+  - 数学
 ---
 
 # 简明彩票预测方法

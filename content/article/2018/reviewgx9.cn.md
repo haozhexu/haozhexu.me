@@ -6,11 +6,8 @@ ads: true
 categories:
   - 摄影
 tags:
-  - photography
-  - gx9
-  - panasonic
-  - streetphotography
-  - camerareview
+  - GX9
+  - 松下
 ---
 
 # 街头摄影的执念——松下GX9评测

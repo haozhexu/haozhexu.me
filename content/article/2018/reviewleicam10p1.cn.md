@@ -6,11 +6,9 @@ ads: true
 categories:
   - 摄影
 tags:
-  - photography
-  - leica
+  - 莱卡
   - m10p
-  - streetphotography
-  - camerareview
+  - gx9
 ---
 
 # 一日百年 - 徕卡M10-P评测 (1) 初见

@@ -6,11 +6,10 @@ ads: true
 categories:
   - 摄影
 tags:
-  - photography
-  - fujifilm
+  - 摄影
+  - 富士
   - 24mm
   - xpro2
-  - review
 ---
 
 # 富士最好的街头摄影镜头 - 24mm F8机身盖评测

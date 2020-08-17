@@ -4,7 +4,7 @@ date: 2019-09-15T15:39:00+11:00
 draft: false
 ads: true
 categories:
-  - Article
+  - 杂文
 tags:
   - lottery
   - powerball

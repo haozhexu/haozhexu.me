@@ -4,7 +4,7 @@ date: 2019-01-16T21:09:00+11:00
 draft: false
 ads: true
 categories:
-  - Article
+  - 摄影
 tags:
   - photography
   - fujifilm

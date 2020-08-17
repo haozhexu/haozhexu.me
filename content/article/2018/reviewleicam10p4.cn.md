@@ -4,13 +4,11 @@ date: 2018-09-15T08:00:00+11:00
 draft: false
 ads: true
 categories:
-  - Article
+  - 摄影
 tags:
-  - photography
-  - leica
+  - 莱卡
   - m10p
   - gx9
-  - camerareview
 ---
 
 # 一日百年 - 徕卡M10-P评测 (4) 琐碎

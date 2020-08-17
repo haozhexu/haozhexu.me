@@ -4,7 +4,7 @@ date: 2018-07-18T06:15:36+11:00
 draft: false
 ads: true
 categories:
-  - 玄学
+  - 杂文
 tags:
   - 科学
   - 玄学

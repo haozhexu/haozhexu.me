@@ -4,7 +4,8 @@ date: 2018-01-07T09:26:43+11:00
 draft: false
 ads: true
 categories:
-  - travelphotography
+  - Travel
+  - Photography
 tags:
   - travel
   - photography

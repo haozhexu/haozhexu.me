@@ -4,7 +4,7 @@ date: 2018-09-12T22:30:12+11:00
 draft: true
 auto_ads: true
 categories:
- - 文章
+ - 小说
 tags:
  - 武侠
  - 小说

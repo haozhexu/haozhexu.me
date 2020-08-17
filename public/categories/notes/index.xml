@@ -48,7 +48,11 @@ Classes
 Modules
 Default object, scope and visibility
 Control Flow
-Basics Basic operations:  arithmetic: +, -, *, /, mixing integers and floating-point numbers would proce floating-point result. assignment: x = 3, text = &amp;quot;Hi&amp;quot; comparison: x == y conversion: x = &amp;quot;100&amp;quot;.</description>
+Built-in basics
+Strings, symbols and other scalar objects
+Collection and container objects
+Enumerable and Enumerator
+Basics Basic operations:  arithmetic: +, -, *, /, mixing integers and floating-point numbers would proce floating-point result.</description>
     </item>
     
     <item>

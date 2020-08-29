@@ -51,9 +51,11 @@
 <a href="#built-in-basics">Built-in basics</a><br>
 <a href="#strings-symbols-and-other-scalar-objects">Strings, symbols and other scalar objects</a><br>
 <a href="#collection-and-container-objects">Collection and container objects</a><br>
-<a href="#enumerable-and-enumerator">Enumerable and Enumerator</a></p>
+<a href="#enumerable-and-enumerator">Enumerable and Enumerator</a><br>
+[File and IO][#file-and-io]<br>
+[Regular Expression][#regular-expression]</p>
 <h2 id="basics">Basics</h2>
-<h3 id="basic-operations">Basic operations:</h3>
+<h3 id="basic-operations">Basic operations</h3>
 <ul>
 <li>arithmetic: <code>+, -, *, /</code>, mixing integers and floating-point numbers would proce floating-point result.</li>
 <li>assignment: <code>x = 3</code>, <code>text = &quot;Hi&quot;</code></li>
@@ -2335,7 +2337,199 @@ e<span style="color:#f92672">.</span>each {<span style="color:#f92672">|</span>s
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">e <span style="color:#f92672">=</span> cameras<span style="color:#f92672">.</span>map
 e<span style="color:#f92672">.</span>each {<span style="color:#f92672">|</span>camera<span style="color:#f92672">|</span> camera<span style="color:#f92672">.</span>capitalize}
-</code></pre></div>
+</code></pre></div><h2 id="regular-expression">Regular Expression</h2>
+<ul>
+<li>Regular expressio in Ruby are objects of <code>Regexp</code> class</li>
+<li>its purposes is to specify character patterns determined to match (or not match) strings</li>
+<li>a number of Ruby built-in methods take regular expressions as regular expressions
+<ul>
+<li><code>scan</code>, <code>substitude</code>, <code>split</code></li>
+</ul>
+</li>
+</ul>
+<p>Examples of patterns:</p>
+<ul>
+<li>the letter <code>a</code> followed by a digit</li>
+<li>any uppercase letter followed by at least one lowercase letter</li>
+<li>three digits followed by a hyphen and four digits</li>
+<li>the beginning of a line followed by one or more whitespaces</li>
+<li>a specific character at the end of a string</li>
+</ul>
+<p>Regular expression are instances of <code>Regexp</code> class, which has literal constructor <code>//</code> and <code>%r{}</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#f92672">&gt;&gt;</span> <span style="color:#e6db74">//</span><span style="color:#f92672">.</span>class
+<span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">Regexp</span>
+
+<span style="color:#f92672">&gt;&gt;</span> <span style="color:#e6db74">%r{}</span><span style="color:#f92672">.</span>class
+<span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">Regexp</span>
+</code></pre></div><p>Any pattern matching operation involves a regexp and a string. The simplest way to find out whether there&rsquo;s a match between a pattern and a string is with the <code>match</code> method or its sibling <code>match?</code>. Ruby also features a pattern-matching operator <code>=~</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#e6db74">&#34;A quick brown fox jumps over a lazy dog.&#34;</span><span style="color:#f92672">.</span>match?(<span style="color:#e6db74">/fox/</span>)
+<span style="color:#e6db74">/fox/</span><span style="color:#f92672">.</span>match?(<span style="color:#e6db74">&#34;A quick brown fox jumps over a lazy dog.&#34;</span>)
+
+puts <span style="color:#e6db74">&#34;Match!&#34;</span> <span style="color:#66d9ef">if</span> <span style="color:#e6db74">/Hello/</span> <span style="color:#f92672">=~</span> <span style="color:#e6db74">&#34;Hello world!&#34;</span>
+puts <span style="color:#e6db74">&#34;Match!&#34;</span> <span style="color:#66d9ef">if</span> <span style="color:#e6db74">&#34;Hello world!&#34;</span> <span style="color:#f92672">=~</span> <span style="color:#e6db74">/Hello/</span>
+</code></pre></div><ul>
+<li><code>match?</code> returns a boolean whereas <code>match</code> returns a <code>MatchData</code> or <code>nil</code></li>
+<li><code>=~</code> returns the numerical index of the character in the string where the match starts</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>symbol</th>
+<th>meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>//</code>, <code>%r{}</code></td>
+<td>instance of <code>Regexp</code> class</td>
+</tr>
+<tr>
+<td><code>=~</code></td>
+<td>determines if a match exists</td>
+</tr>
+<tr>
+<td><code>.</code></td>
+<td>matches any character except <code>\n</code></td>
+</tr>
+<tr>
+<td><code>\</code></td>
+<td>escape character, treat next character as literal</td>
+</tr>
+<tr>
+<td><code>[]</code></td>
+<td>surrounds a character class, matches either character between <code>[</code> and <code>]</code></td>
+</tr>
+<tr>
+<td><code>^</code></td>
+<td>1. negates a character or character class, matches anything <em>except</em> what follows <code>^</code></td>
+</tr>
+<tr>
+<td><code>^</code></td>
+<td>2. matches the expression at the start of a line</td>
+</tr>
+<tr>
+<td><code>\d</code></td>
+<td>matches any digit</td>
+</tr>
+<tr>
+<td><code>\D</code></td>
+<td>matches anything except a digit</td>
+</tr>
+<tr>
+<td><code>\w</code></td>
+<td>matches any digit, alphabets or underscore</td>
+</tr>
+<tr>
+<td><code>\W</code></td>
+<td>matches anything except a digit, alphabets or underscore</td>
+</tr>
+<tr>
+<td><code>\s</code></td>
+<td>matches any whitespace characters (space, tab, newline)</td>
+</tr>
+<tr>
+<td><code>\S</code></td>
+<td>matches anything except a white space character</td>
+</tr>
+<tr>
+<td><code>{}</code></td>
+<td>matches a character or character class a specific number of times</td>
+</tr>
+<tr>
+<td><code>$</code></td>
+<td>matches the expression at the end of a line</td>
+</tr>
+<tr>
+<td><code>+</code></td>
+<td>matches one or more occurrences of the character or character class</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td>matches zero or more occurrences of the character or character class</td>
+</tr>
+</tbody>
+</table>
+<p>A regexp includes three possible components:</p>
+<ol>
+<li>literal characters</li>
+<li>the dot wildcard (.), matches any character except <code>\n</code></li>
+<li>character class</li>
+</ol>
+<ul>
+<li>any literal character in a regexp matches itself in the string
+<ul>
+<li>e.g. <code>/b/</code> matches any string containing letter <code>b</code></li>
+</ul>
+</li>
+<li>some non-alphanumeric characters have special meanings and need to be <em>escaped</em> to match
+<ul>
+<li>e.g. <code>/\?/</code></li>
+</ul>
+</li>
+<li>using <code>%r{}</code> syntax doesn&rsquo;t need to escape <code>/</code></li>
+</ul>
+<p>The dot widecard character matches <em>any character</em> at some point in the pattern, except of a newline.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#f92672">&gt;&gt;</span> <span style="color:#e6db74">/.ization/</span><span style="color:#f92672">.</span>match?(<span style="color:#e6db74">&#34;internationalization&#34;</span>)
+<span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>
+</code></pre></div><ul>
+<li>a <em>character class</em> is an explicit list of characters placed inside square brackets</li>
+<li>also can insert a <em>range</em> of characters</li>
+<li><em>negating</em> a character class using caret (^) at the beginning of the class</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">regex <span style="color:#f92672">=</span> <span style="color:#e6db74">%r{[ps]lot}</span>
+regex<span style="color:#f92672">.</span>match?(<span style="color:#e6db74">&#34;slot&#34;</span>) <span style="color:#75715e"># true</span>
+regex<span style="color:#f92672">.</span>match?(<span style="color:#e6db74">&#34;alot&#34;</span>) <span style="color:#75715e"># false</span>
+
+<span style="color:#e6db74">/[a-z]/</span>
+<span style="color:#e6db74">/[A-Fa-f0-9]/</span>
+
+<span style="color:#e6db74">%r{[^A-Fa-f0-9]}</span> <span style="color:#75715e"># not hex number</span>
+</code></pre></div><h3 id="matchdata">MatchData</h3>
+<p>Use parentheses to specify <em>captures</em> in regexp construction.</p>
+<p>e.g. to extract book name from the following line:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">line <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;the old man and the sea, Hemingway, Mr., writer&#39;</span>
+regex <span style="color:#f92672">=</span> <span style="color:#e6db74">/([A-Za-z\s]+),[A-Za-z\s]+,[\s]?(Mrs?\.)/</span>
+m <span style="color:#f92672">=</span> regex<span style="color:#f92672">.</span>match(line)
+m<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">]</span> <span style="color:#75715e"># &#34;the old man and the sea, Hemingway, Mr.&#34;</span>
+</code></pre></div><ul>
+<li>the question mark after <code>s</code> means <em>match zero or one <code>s</code></em></li>
+<li>the result is a <code>MatchData</code> object with access to the submatches</li>
+<li>Ruby populates global variables based on numbers</li>
+<li><code>$1</code> contains the substring matched by the subpattern inside the <em>first set of parentheses from the left</em> in the regexp</li>
+<li><code>$2</code> contains the substring matched by the <em>second</em> subpattern, and so forth</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">line <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;My phone number is (456) 193-8123.&#34;</span>
+regex <span style="color:#f92672">=</span> <span style="color:#e6db74">/\((\d{3})\)\s+(\d{3})-(\d{4})/</span>
+m <span style="color:#f92672">=</span> regex<span style="color:#f92672">.</span>match(line) <span style="color:#75715e"># #&lt;MatchData &#34;(456) 193-8123&#34; 1:&#34;456&#34; 2:&#34;193&#34; 3:&#34;8123&#34;&gt;</span>
+m<span style="color:#f92672">[</span><span style="color:#ae81ff">0</span><span style="color:#f92672">]</span> <span style="color:#75715e"># &#34;(456) 193-8123&#34;</span>
+m<span style="color:#f92672">[</span><span style="color:#ae81ff">1</span><span style="color:#f92672">]</span> <span style="color:#75715e"># &#34;456&#34;</span>
+m<span style="color:#f92672">[</span><span style="color:#ae81ff">2</span><span style="color:#f92672">]</span> <span style="color:#75715e"># &#34;193&#34;</span>
+m<span style="color:#f92672">[</span><span style="color:#ae81ff">3</span><span style="color:#f92672">]</span> <span style="color:#75715e"># &#34;8123&#34;</span>
+
+<span style="color:#f92672">&gt;&gt;</span> <span style="color:#e6db74">/((a)((b)c))/</span><span style="color:#f92672">.</span>match(<span style="color:#e6db74">&#34;abc&#34;</span>)
+<span style="color:#f92672">=&gt;</span> <span style="color:#75715e">#&lt;MatchData &#34;abc&#34; 1:&#34;abc&#34; 2:&#34;a&#34; 3:&#34;bc&#34; 4:&#34;b&#34;&gt;</span>
+</code></pre></div><h2 id="file-and-io">File and IO</h2>
+<p>The <code>IO</code> class handles all input and output streams either by itself or via its descendant classes, particularly <code>File</code>.</p>
+<ul>
+<li><code>STDERR</code>, <code>STDIN</code> and <code>STDOUT</code> are automatically set when the program starts</li>
+<li>if an <code>IO</code> object is open for writing, it responds to <code>puts</code></li>
+<li>whatever <code>puts</code> is given will be written to that <code>IO</code> object&rsquo;s output stream</li>
+<li><code>IO</code> objects are enumerable</li>
+<li>three global variables exist <code>$stdin</code>, <code>$stdout</code> and <code>$stderr</code>, can be reassigned</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#66d9ef">STDIN</span><span style="color:#f92672">.</span>select {<span style="color:#f92672">|</span>line<span style="color:#f92672">|</span> line <span style="color:#f92672">=~</span> <span style="color:#e6db74">/\A[A-Z]/</span> }
+<span style="color:#66d9ef">We</span><span style="color:#e6db74">&#39;re only interested in
+</span><span style="color:#e6db74">lines that begin with
+</span><span style="color:#e6db74">Uppercase letters
+</span><span style="color:#e6db74">=&gt; [&#34;We&#39;</span>re only interested <span style="color:#66d9ef">in</span>\n<span style="color:#e6db74">&#34;, &#34;</span><span style="color:#66d9ef">Uppercase</span> letters\n<span style="color:#e6db74">&#34;]
+</span><span style="color:#e6db74">
+</span><span style="color:#e6db74">record = File.open(&#34;</span><span style="color:#f92672">/</span>tmp<span style="color:#f92672">/</span>record<span style="color:#e6db74">&#34;, &#34;</span>w<span style="color:#e6db74">&#34;)
+</span><span style="color:#e6db74">old_stdout = $stdout
+</span><span style="color:#e6db74">$stdout = record
+</span><span style="color:#e6db74">$stderr = $stdout
+</span><span style="color:#e6db74">puts &#34;</span>Z record<span style="color:#e6db74">&#34; # written to /tmp/record
+</span><span style="color:#e6db74">z = 10 / 0 # written to /tmp/record
+</span></code></pre></div>
 </main>
 
 <footer>

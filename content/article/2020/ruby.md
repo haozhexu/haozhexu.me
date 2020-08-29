@@ -21,11 +21,13 @@ This is the notes I've taken while reading the book "The Well-Grounded Rubyist",
 [Built-in basics](#built-in-basics)  
 [Strings, symbols and other scalar objects](#strings-symbols-and-other-scalar-objects)  
 [Collection and container objects](#collection-and-container-objects)  
-[Enumerable and Enumerator](#enumerable-and-enumerator)
+[Enumerable and Enumerator](#enumerable-and-enumerator)  
+[File and IO][#file-and-io]  
+[Regular Expression][#regular-expression]
 
 ## Basics
 
-### Basic operations:
+### Basic operations
 
 - arithmetic: `+, -, *, /`, mixing integers and floating-point numbers would proce floating-point result.
 - assignment: `x = 3`, `text = "Hi"`
@@ -2372,4 +2374,153 @@ e.each {|string, name| string << "#{name}..." }
 ```ruby
 e = cameras.map
 e.each {|camera| camera.capitalize}
+```
+
+## Regular Expression
+
+- Regular expressio in Ruby are objects of `Regexp` class
+- its purposes is to specify character patterns determined to match (or not match) strings
+- a number of Ruby built-in methods take regular expressions as regular expressions
+  - `scan`, `substitude`, `split`
+
+Examples of patterns:
+
+- the letter `a` followed by a digit
+- any uppercase letter followed by at least one lowercase letter
+- three digits followed by a hyphen and four digits
+- the beginning of a line followed by one or more whitespaces
+- a specific character at the end of a string
+
+Regular expression are instances of `Regexp` class, which has literal constructor `//` and `%r{}`:
+
+```ruby
+>> //.class
+=> Regexp
+
+>> %r{}.class
+=> Regexp
+```
+
+Any pattern matching operation involves a regexp and a string. The simplest way to find out whether there's a match between a pattern and a string is with the `match` method or its sibling `match?`. Ruby also features a pattern-matching operator `=~`:
+
+```ruby
+"A quick brown fox jumps over a lazy dog.".match?(/fox/)
+/fox/.match?("A quick brown fox jumps over a lazy dog.")
+
+puts "Match!" if /Hello/ =~ "Hello world!"
+puts "Match!" if "Hello world!" =~ /Hello/
+```
+
+- `match?` returns a boolean whereas `match` returns a `MatchData` or `nil`
+- `=~` returns the numerical index of the character in the string where the match starts
+
+| symbol | meaning |
+|-|-|
+| `//`, `%r{}` | instance of `Regexp` class |
+| `=~` | determines if a match exists |
+| `.` | matches any character except `\n` |
+| `\` | escape character, treat next character as literal |
+| `[]` | surrounds a character class, matches either character between `[` and `]` |
+| `^` | 1. negates a character or character class, matches anything _except_ what follows `^` |
+| `^` | 2. matches the expression at the start of a line |
+| `\d` | matches any digit |
+| `\D` | matches anything except a digit |
+| `\w` | matches any digit, alphabets or underscore |
+| `\W` | matches anything except a digit, alphabets or underscore |
+| `\s` | matches any whitespace characters (space, tab, newline) |
+| `\S` | matches anything except a white space character |
+| `{}` | matches a character or character class a specific number of times |
+| `$` | matches the expression at the end of a line |
+| `+` | matches one or more occurrences of the character or character class |
+| `*` | matches zero or more occurrences of the character or character class |
+
+A regexp includes three possible components:
+
+1. literal characters
+2. the dot wildcard (.), matches any character except `\n`
+3. character class
+
+- any literal character in a regexp matches itself in the string
+  - e.g. `/b/` matches any string containing letter `b`
+- some non-alphanumeric characters have special meanings and need to be _escaped_ to match
+  - e.g. `/\?/`
+- using `%r{}` syntax doesn't need to escape `/`
+
+The dot widecard character matches _any character_ at some point in the pattern, except of a newline.
+
+```ruby
+>> /.ization/.match?("internationalization")
+=> true
+```
+
+- a _character class_ is an explicit list of characters placed inside square brackets
+- also can insert a _range_ of characters
+- _negating_ a character class using caret (^) at the beginning of the class
+
+```ruby
+regex = %r{[ps]lot}
+regex.match?("slot") # true
+regex.match?("alot") # false
+
+/[a-z]/
+/[A-Fa-f0-9]/
+
+%r{[^A-Fa-f0-9]} # not hex number
+```
+
+### MatchData
+
+Use parentheses to specify _captures_ in regexp construction.
+
+e.g. to extract book name from the following line:
+
+```ruby
+line = 'the old man and the sea, Hemingway, Mr., writer'
+regex = /([A-Za-z\s]+),[A-Za-z\s]+,[\s]?(Mrs?\.)/
+m = regex.match(line)
+m[0] # "the old man and the sea, Hemingway, Mr."
+```
+
+- the question mark after `s` means _match zero or one `s`_
+- the result is a `MatchData` object with access to the submatches
+- Ruby populates global variables based on numbers
+- `$1` contains the substring matched by the subpattern inside the _first set of parentheses from the left_ in the regexp
+- `$2` contains the substring matched by the _second_ subpattern, and so forth
+
+```ruby
+line = "My phone number is (456) 193-8123."
+regex = /\((\d{3})\)\s+(\d{3})-(\d{4})/
+m = regex.match(line) # #<MatchData "(456) 193-8123" 1:"456" 2:"193" 3:"8123">
+m[0] # "(456) 193-8123"
+m[1] # "456"
+m[2] # "193"
+m[3] # "8123"
+
+>> /((a)((b)c))/.match("abc")
+=> #<MatchData "abc" 1:"abc" 2:"a" 3:"bc" 4:"b">
+```
+
+## File and IO
+
+The `IO` class handles all input and output streams either by itself or via its descendant classes, particularly `File`.
+
+- `STDERR`, `STDIN` and `STDOUT` are automatically set when the program starts
+- if an `IO` object is open for writing, it responds to `puts`
+- whatever `puts` is given will be written to that `IO` object's output stream
+- `IO` objects are enumerable
+- three global variables exist `$stdin`, `$stdout` and `$stderr`, can be reassigned
+
+```ruby
+STDIN.select {|line| line =~ /\A[A-Z]/ }
+We're only interested in
+lines that begin with
+Uppercase letters
+=> ["We're only interested in\n", "Uppercase letters\n"]
+
+record = File.open("/tmp/record", "w")
+old_stdout = $stdout
+$stdout = record
+$stderr = $stdout
+puts "Z record" # written to /tmp/record
+z = 10 / 0 # written to /tmp/record
 ```

@@ -22,8 +22,8 @@ This is the notes I've taken while reading the book "The Well-Grounded Rubyist",
 [Strings, symbols and other scalar objects](#strings-symbols-and-other-scalar-objects)  
 [Collection and container objects](#collection-and-container-objects)  
 [Enumerable and Enumerator](#enumerable-and-enumerator)  
-[File and IO][#file-and-io]  
-[Regular Expression][#regular-expression]
+[Regular Expression](#regular-expression)  
+[File and IO](#file-and-io)
 
 ## Basics
 

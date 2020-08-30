@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>A Brief Summary of Networking in iOS | Haozhe XU</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/about/">About</a></li>
+      
+      <li><a href="/apps/">Apps</a></li>
+      
+      <li><a href="/poems/">Poem / 诗词</a></li>
+      
+      <li><a href="/article">Article</a></li>
+      
+      <li><a href="/categories/">Categories</a></li>
+      
+      <li><a href="/tags/">Tags</a></li>
+      
+      <li><a href="/cn/">简体中文</a></li>
+      
+    </ul>
+    <hr/>
+    </nav>
+
+<div class="article-meta">
+<h1><span class="title">A Brief Summary of Networking in iOS</span></h1>
+
+<h2 class="date">2020/08/29</h2>
+</div>
+
+<main>
+<h1 id="a-brief-summary-of-networking-in-ios">A Brief Summary of Networking in iOS</h1>
+<p>I was reading materials regarding iOS networking and taking notes while reading, this article is a summary of all the materials I&rsquo;ve read so far. It&rsquo;s not a complete summary of networking or iOS, so you should not rely purely on this article to learn from scratch; However, having said this, you may find this article useful if you are already familiar with iOS and/or networking.</p>
+<p><a href="#basics">Basics</a><br>
+<a href="#security">Security</a><br>
+<a href="#networking-in-ios">Networking in iOS</a></p>
+<h2 id="basics">Basics</h2>
+<p>I found it helpful to first get familiar with some networking fundamentals, imagine you are reading this article in a browser on your Linux machine, the whole networking implementation can be described by Open System Interconnection (OSI), developed by the International Organization for Standardization, which consists of 7 layers listed below.</p>
+<p>(Is it a coincident that OSI is developed by ISO, where the 7 layers might be more understandable if one reads it in reverse order?)</p>
+<ol>
+<li><strong>Physical</strong>: the hardware that transmits raw bit stream, e.g. Ethernet, RJ45, cables</li>
+<li><strong>Data Link</strong>: at this layer, data packets are encoded into and decoded from bits, the layer manages and handles errors in the physical layer including flow control and frame synchronization. The data link layer has two sub layers:
+<ul>
+<li>Media Access Control (MAC): controls how a device on the network gains data access and permission for transmitting.</li>
+<li>Logical Link Control (LLC): frame synchronization, flow control and error handling</li>
+</ul>
+</li>
+<li><strong>Network</strong>: this layer provides switching and routing to determine which physical path the data will take, it breaks segments of data from the transport layer into smaller units, called packets for sending, and resembles these packets on receiving device.</li>
+<li><strong>Transport</strong>: this layer is responsible for data transmission between two devices by breaking data from <em>session layer</em> into smaller units called segments; Its job includes end-to-end error recovery which involves requesting for retransmission if data received is not complete, also determines an optimal speed of transmission based on connection quality of the two ends.</li>
+<li><strong>Session</strong>: this layer creates, manages and terminates connections between applications, the time between when the communication opens and closes, is known as <em>session</em>. The layer ensures session stays open for all data to be transmitted then closes the session.</li>
+<li><strong>Presentation</strong>: as the name suggests, this layer makes data presentable for <em>application</em> layer as well as translating data to network format for <em>session</em> layer.</li>
+<li><strong>Application</strong>: this layer provides protocols for client applications that are visible to the user, e.g. web browser, email clients. Protocols include HTTP for web browsing as well as SMTP for email.</li>
+</ol>
+<p>After OSI, there&rsquo;s the TCP/IP model which is sometimes considered as a simplified version of OSI model:</p>
+<ol>
+<li><strong>Network Access</strong>: also called the Link or Network Interface layer, combines layer 1 and 2 in OSI model</li>
+<li><strong>Internet</strong>: similar to OSI model layer 3</li>
+<li><strong>Transport</strong>: similar to OSI model layer 4</li>
+<li><strong>Application</strong>: also called the Process layer, combines OSI model&rsquo;s layer 5, 6 and 7</li>
+</ol>
+<p>Several common terminologies that are familiar to front-end (or even back-end) developers, if you feel unfamiliar, get yourself familiar:</p>
+<ul>
+<li>Client/Server: two ends in network communication activity, the end that provides resource or server is called server, the other end that <em>requesting</em> data or service, is called client.</li>
+<li>HTTP(HyperText Transfer Protocol): <em>application layer</em> protocol, it defines a set of request method (or verbs) to indicate action required to be performed:
+<ul>
+<li><em>GET</em>: retrieve data</li>
+<li><em>POST</em>: sending data to server, <em>traditionally</em> used for creating a new location</li>
+<li><em>PUT</em>: updates data at a specific location</li>
+<li><em>DELETE</em>: deletes data at a specific location</li>
+<li><em>HEAD</em>: similar to GET but only requests the headers, used when meta-data is needed</li>
+</ul>
+</li>
+<li>REST (Representational State Transfer): usually used with HTTP (or HTTPS) for web APIs, more details in the next section</li>
+<li>JSON: stands for JavaScript Object Notation, a lightweight format for data representation</li>
+</ul>
+<p>HTTP communication consists of text messages between a client and a server, the client can be a browser, or an app in the context of iOS development. Both request and response should have header fields and some request methods also have message body. Among all the request headers, there are a few that are commonly used:</p>
+<ul>
+<li><strong>status code</strong>: in response header determines the status of the request, there are predefined status codes like 200 means success and 404 means not found, do your own research to find out more</li>
+<li><strong>content type</strong>: specifies the type of media in the HTTP message, commonly used are:
+<ul>
+<li>text: <code>application/json</code>, <code>application/x-www-form-urlencoded</code> and <code>text/html</code></li>
+<li>binary: <code>application/pdf</code>, <code>image/png</code>, <code>image/jpeg</code>, <code>image/gif</code> and <code>multipart/formdata</code></li>
+</ul>
+</li>
+</ul>
+<p>While many servers are using HTTP/1.1, there&rsquo;s HTTP/2 with quite a few of advantages, do your own research to find out more.</p>
+<h2 id="security">Security</h2>
+<p>Security is a big topic, here I only summarise the thing I&rsquo;ve encoutnered so far which are related to iOS.</p>
+<h3 id="ssl">SSL</h3>
+<p>SSL stands for Secure Socket Layer, it&rsquo;s a protocol for creating an encrypted connection between client and server. The steps taken for client to establish connection to server are sometimes referred to as <em>SSL handshake</em>.</p>
+<ol>
+<li>client connects to server and request certificate</li>
+<li>upon receiving server certificate including a public key, client checks if it&rsquo;s valid</li>
+<li>if the certificate is valid, client creates a symmetric key and encrypt it with received public key, sends it to server</li>
+<li>server then receives client&rsquo;s symmetric key, encrypted with the public key in step 2, decrypt it using corresponding private key, then sends acknowledgement to client</li>
+<li>client receives ACK then start the session</li>
+</ol>
+<h3 id="tls">TLS</h3>
+<p>SSL is now deprecated and replaced by TLS, TLS stands for Transport Layer Security.</p>
+<ul>
+<li>SSL version 1 was never released</li>
+<li>SSL version 2 has many flaws</li>
+<li>SSL version 3 rewrite version 2 with limited improvements</li>
+<li>TLS version 1 improves SSL version 3</li>
+<li>TLS version 1.1 has minor changes over version 1</li>
+<li>TLS version 1.2 has significant changes</li>
+<li>TLS version 1.3 refined the whole process</li>
+</ul>
+<p>TSL connection consists of three phases:</p>
+<ol>
+<li>client connects to server, providing supported TLS versions along with the cipher suite it can use; Server responds back with specified cipher suite and one or more certificates; Client validates the certificates from server, also verifies if server is authentic.</li>
+<li>client generates a pre-master secret key, encrypts it with server&rsquo;s public key, upon receiving the encrypted public key, server decrypts it with its private key. Both server and client generate the master secret key and session keys based on the pre-master secret key.</li>
+<li>the master secret key is then used to decrypt and encrypt the information that server and client exchange.</li>
+</ol>
+<h3 id="digital-certificate">Digital Certificate</h3>
+<p>A digital certificate is a data file that contains a public key and other information, such like subject, issuer, valid from/to; The standard for the structure of certificate is X.509.</p>
+<p>Depends on encoding method, X.509 certificates can have different formats:</p>
+<ul>
+<li><strong>Privacy Enhanced Mail (PEM)</strong>: a base-64 encoding with extension of <code>.pem</code></li>
+<li><strong>Distinguished Encoding Rule (DER)</strong>: a binary encoding with extensions of <code>.cer</code>, <code>.der</code> and <code>.crt</code></li>
+<li><strong>Public Key Cryptography Standards (PKCS)</strong>: used to exchange public and private objects in a single file, with extensions of <code>.p12</code>, <code>.pfx</code>, <code>.p7b</code> and <code>.p7c</code></li>
+</ul>
+<h3 id="certificates-chain">Certificates Chain</h3>
+<p>For an SSL certificate to be trusted, the connecting device (e.g. iOS app) checks if the certificate is issued by a CA that&rsquo;s included in the device&rsquo;s trusted store, if not, continue to check if the certificate of the issuing CA is issued by a trusted CA, until a trusted CA is found. The list of certificates, from root certificate to end user certificate, is called <strong>certificate chain</strong>.</p>
+<p>Click on the padlock next to browser&rsquo;s URL field, if the certificates are valid, you probably can see the chain of certificates.</p>
+<h3 id="certificate-pinning">Certificate Pinning</h3>
+<p>The purpose of certificate pinning is to prevent man-in-the-middle attach, where someone captures tranffic between two ends and injects its own self-signed certificate in the middle. It&rsquo;s done by comparing server certificates with pinned certificates or public keys bundled in the app, and only establish connection if they match.</p>
+<p>There are two types of certificate pinning:</p>
+<ol>
+<li>Pin the certificate: server certificate is bundled in the app</li>
+<li>Pin the public key: the public key of server certificate is hardcoded in the app</li>
+</ol>
+<h2 id="networking-in-ios">Networking in iOS</h2>
+<p>In consumer apps one common use case of networking is to communicate with a server, in iOS, this can be done by <code>URLSession</code>. The list below is an overview of how <code>URLSession</code> API works:</p>
+<ol>
+<li>use a <code>URLSessionConfiguration</code> to create an instance of <code>USLSession</code>
+<ul>
+<li><code>URLSessionConfiguration</code> lets you configure things like timeout, caching, etc</li>
+</ul>
+</li>
+<li>use <code>URLSession</code> to create <code>URLSessionTask</code> to transfer data between app and server
+<ul>
+<li>one <code>URLSession</code> can create multiple <code>URLSessionTask</code> if their configuration is the same</li>
+<li>for different configurations or delegate, multiple <code>URLSession</code> can be used</li>
+<li>a completion closure can be specified to handle server respose, or</li>
+<li>a delegate can be specified to handle response, monitor progress and handle authentication challenge</li>
+</ul>
+</li>
+<li><code>URLSession.shared</code> is a singleton for simple request without configuration and delegate
+<ul>
+<li>thus <code>URLSessionTask</code> has to have a completion closure if you care about the response</li>
+</ul>
+</li>
+</ol>
+<h3 id="urlsessionconfiguration">URLSessionConfiguration</h3>
+<p><code>URLSessionConfiguration</code> can be created by using one of the predefined class variables, each returns an instance of <code>URLSessionConfiguration</code> with default configuration predefined for that class variable, and can be further customized.</p>
+<ul>
+<li><code>default</code>: disk persistence for cache, credentials stored in keychain</li>
+<li><code>ephemeral</code>: like <code>default</code> but doesn&rsquo;t store cookies, credentials or cache data to disk</li>
+<li><code>background(withIdentifier:)</code>: transfer data while app is in background
+<ul>
+<li>upon backgrounding the app it handover data transfer to system which handles it in a differnet process</li>
+<li><code>identifier</code> is used for reconstructing the session when relaunching the app</li>
+</ul>
+</li>
+</ul>
+<p>Note, changing configurations must be done before creating the <code>URLSession</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">let</span> configuration = URLSessionConfiguration.<span style="color:#66d9ef">default</span>
+configuration.allowsCellularAccess = <span style="color:#66d9ef">true</span> <span style="color:#75715e">// this works</span>
+<span style="color:#66d9ef">let</span> session = URLSession(configuration: configuration)
+configuration.allowsCellularAccess = <span style="color:#66d9ef">false</span> <span style="color:#75715e">// this won&#39;t work</span>
+</code></pre></div><p>For more details you should consult Apple&rsquo;s documentation of these classes, below are a few commonly used properties:</p>
+<ul>
+<li><code>allowsCellularAccess</code>: whether cellular access is allowed, consider disabling this for large data download or consult user if they intend to use cellular when WIFI isn&rsquo;t available</li>
+<li><code>waitsForConnectivity</code>: new in iOS 11, for non-background session, setting this to true allows the system to check for connection and retry, in case when network connectivity is lost</li>
+<li><code>multipathServiceType</code>: specifies the Multipath TCP connection policy for transmitting data over Wi-Fi and cellular interfaces, this is useful when mobile devices move in and out of range of WIFI, switching to cellular network and back again.
+<ul>
+<li>apps that use Multipath TCP need to have <em>multipath capability</em></li>
+<li>also the server need to be MPTCP-capable</li>
+</ul>
+</li>
+</ul>
+<h3 id="urlsessiontask">URLSessionTask</h3>
+<p>Create tasks by calling task creation method on a <code>URLSession</code> instance, there are three concrete classes of URLSession tasks:</p>
+<ul>
+<li><code>URLSessionDataTask</code>: response returned in memory, not supported in background session</li>
+<li><code>URLSessionUploadTask</code>: requires a request body</li>
+<li><code>URLSessionDownloadTask</code>: response saved in a file, and returns the location of the file</li>
+</ul>
+<p>There are four ways to create a <code>URLSessionDataTask</code>, choose one that best suits your need. Providing <code>url</code> defaults to <em>GET</em> request.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">dataTask</span>(with url: URL) -&gt; URLSessionDataTask
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">dataTask</span>(with: URL, completionHandler: (Data?, URLResponse?, Error?) -&gt; Void) -&gt; URLSessionDataTask
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">dataTask</span>(with: URLRequest) -&gt; URLSessionDataTask
+<span style="color:#66d9ef">func</span> <span style="color:#a6e22e">dataTask</span>(with: URLRequest, completionHandler: (Data?, URLResponse?, Error?) -&gt; Void) -&gt; URLSessionDataTask
+</code></pre></div><p>While tasks created by <code>URLSession</code> inherits the configuration from <code>NSURLSessionConfiguration</code>, <code>URLRequest</code> can overwrite some of the configurations.</p>
+<ul>
+<li><code>URLRequest</code> can be used to override HTTP method, headers and body</li>
+<li><code>URLRequest</code> can be used to override configurations such like <code>timeoutInterval</code> and <code>cachePolicy</code></li>
+</ul>
+<p><strong>note:</strong> <code>URLRequest</code> can only override configurations if configurations from <code>NSURLSessionConfiguration</code> are less restrictive, for example, if <code>NSURLSessionConfiguration</code> allows celluar access (ie. <code>allowsCellularAccess = true</code>), <code>URLRequest</code> can disable it, but if <code>allowsCellularAccess</code> is <code>false</code> in <code>NSURLSessionConfiguration</code>, <code>URLRequest</code> cannot allow it.</p>
+<h3 id="certificate-pinning-implementation">Certificate Pinning Implementation</h3>
+<p>In response to an authentication request from server, <code>NSURLSession</code> asks its delegate to handle the challenge by calling delegate method <code>didReceiveChallenge:completionHandler:delegate</code>. Note, there&rsquo;s also the task-level delegates defined by <code>NSURLSessionTaskDelegate</code>, <code>NSURLSessionDataDelegate</code>, and <code>NSURLSessionDownloadDelegate</code>, for task specific events.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-swift" data-lang="swift"><span style="color:#66d9ef">func</span> <span style="color:#a6e22e">urlSession</span>(<span style="color:#66d9ef">_</span> session: URLSession, 
+     didReceive challenge: URLAuthenticationChallenge, 
+        completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -&gt; Void) {
+    <span style="color:#66d9ef">guard</span> <span style="color:#66d9ef">let</span> serverTrust = challenge.protectionSpace.serverTrust <span style="color:#66d9ef">else</span> {
+        completionHandler(URLSession.AuthChallengeDisposition.cancelAuthenticationChallenge, <span style="color:#66d9ef">nil</span>)
+        <span style="color:#66d9ef">return</span>
+    }
+
+    <span style="color:#66d9ef">var</span> secResult = SecTrustResultType.invalid
+    <span style="color:#66d9ef">let</span> status = SecTrustEvaluate(serverTrust, &amp;secResult)
+
+    <span style="color:#66d9ef">if</span> (errSecSuccess == status) {
+        <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> serverCertificate = SecTrustGetCertificateAtIndex(serverTrust, <span style="color:#ae81ff">0</span>) {
+            <span style="color:#66d9ef">let</span> serverCertificateData = SecCertificateCopyData(serverCertificate)
+            <span style="color:#66d9ef">let</span> data = CFDataGetBytePtr(serverCertificateData);
+            <span style="color:#66d9ef">let</span> size = CFDataGetLength(serverCertificateData);
+            <span style="color:#66d9ef">let</span> serverCert = NSData(bytes: data, length: size)
+            <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> file = Bundle.main.path(forResource: <span style="color:#e6db74">&#34;certfile&#34;</span>, ofType: <span style="color:#e6db74">&#34;cer&#34;</span>) {
+                <span style="color:#66d9ef">if</span> <span style="color:#66d9ef">let</span> bundledCert = NSData(contentsOfFile: file) {
+                    <span style="color:#66d9ef">if</span> serverCert.isEqual(to: bundledCert <span style="color:#66d9ef">as</span> Data) {
+                        completionHandler(.useCredential, URLCredential(trust: serverTrust))
+                        <span style="color:#66d9ef">return</span>
+                    }
+                }
+            }
+        }
+    }
+    completionHandler(.CancelAuthenticationChallenge, <span style="color:#66d9ef">nil</span>)
+}
+</code></pre></div><p>References:</p>
+<p><a href="https://developer.apple.com/documentation/foundation/url_loading_system">URL Loading System</a><br>
+<a href="https://developer.apple.com/documentation/foundation/urlsessionconfiguration/improving_network_reliability_using_multipath_tcp">Improving Network Reliability Using Multipath TCP</a><br>
+<a href="https://en.wikipedia.org/wiki/Transport_Layer_Security">Transport Layer Security</a><br>
+<a href="https://support.dnsimple.com/articles/what-is-ssl-certificate-chain/">What is the SSL Certificate Chain?</a></p>
+
+</main>
+
+<footer>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5504633517481956"
+     data-ad-slot="4142928173"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+
+<div id="disqus_thread"></div>
+<script>
+
+
+var disqus_config = function () {
+this.page.url = "https:\/\/www.haozhexu.me\/article\/2020\/networking\/";  
+this.page.identifier = "https:\/\/www.haozhexu.me\/article\/2020\/networking\/"; 
+};
+(function() { 
+var d = document, s = d.createElement('script');
+s.src = 'https://haozhexu.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+<hr/>
+© <a href="https://www.haozhexu.me">Haozhe XU</a> 2017
+
+</footer>
+</body>
+</html>

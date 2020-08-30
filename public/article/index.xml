@@ -5,10 +5,19 @@
     <link>https://www.haozhexu.me/article/</link>
     <description>Recent content in Articles on Haozhe XU</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 21 Jul 2020 14:00:00 +1100</lastBuildDate>
+    <lastBuildDate>Sat, 29 Aug 2020 17:10:00 +1100</lastBuildDate>
     
 	<atom:link href="https://www.haozhexu.me/article/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>A Brief Summary of Networking in iOS</title>
+      <link>https://www.haozhexu.me/article/2020/networking/</link>
+      <pubDate>Sat, 29 Aug 2020 17:10:00 +1100</pubDate>
+      
+      <guid>https://www.haozhexu.me/article/2020/networking/</guid>
+      <description>A Brief Summary of Networking in iOS I was reading materials regarding iOS networking and taking notes while reading, this article is a summary of all the materials I&amp;rsquo;ve read so far. It&amp;rsquo;s not a complete summary of networking or iOS, so you should not rely purely on this article to learn from scratch; However, having said this, you may find this article useful if you are already familiar with iOS and/or networking.</description>
+    </item>
     
     <item>
       <title>JavaScript Notes</title>
@@ -52,8 +61,8 @@ Built-in basics
 Strings, symbols and other scalar objects
 Collection and container objects
 Enumerable and Enumerator
-[File and IO][#file-and-io]
-[Regular Expression][#regular-expression]</description>
+Regular Expression
+File and IO</description>
     </item>
     
     <item>

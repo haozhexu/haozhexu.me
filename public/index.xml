@@ -11,6 +11,18 @@
     
     
     <item>
+      <title>Swift Study Notes</title>
+      <link>https://www.haozhexu.me/article/2020/swiftnotes/</link>
+      <pubDate>Sun, 06 Sep 2020 13:30:00 +1100</pubDate>
+      
+      <guid>https://www.haozhexu.me/article/2020/swiftnotes/</guid>
+      <description>Swift Study Notes The source of this file is available on Github where you can find the XCode playground file.
+The generated markdown is currently used as a Hugo generated content hosted on my website haozhexu.me for better readability.
+This is the playground I used during learning Swift, I mainly read The Swift Programming Language from Apple, took notes and wrote code as I read.
+Soon I realised the notes could be organized in a way so that a human readable markdown could be generated with some tweaks, and I can even use Hugo to generate an HTML from it and host it somewhere.</description>
+    </item>
+    
+    <item>
       <title>A Brief Summary of Networking in iOS</title>
       <link>https://www.haozhexu.me/article/2020/networking/</link>
       <pubDate>Sat, 29 Aug 2020 17:10:00 +1100</pubDate>

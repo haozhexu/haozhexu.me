@@ -2524,3 +2524,168 @@ $stderr = $stdout
 puts "Z record" # written to /tmp/record
 z = 10 / 0 # written to /tmp/record
 ```
+
+### Keyboard input
+
+- `getc` returns one character, need explicit input stream 
+- `gets` returns a single line of input
+
+```ruby
+line = gets
+c = STDIN.getc
+```
+
+### File operations
+
+The built-in class `File` is a subclass of `IO`.
+
+To open and close a file:
+
+```ruby
+file = File.new("file.txt")
+file.close
+```
+
+- exception will be raised if the file doesn't exist
+
+#### Line-based file reading
+
+- both `gets` and `readline` reads one line from the file
+- reading beyond the end of file, `gets` returns `nil` whereas `readline` raises a fatal error
+- `rewind` moves file access pointer back to the beginning
+- `getc` reads a character, `getbyte` reads a byte
+
+Since `File` is enumerable, you can read each line by:
+
+```ruby
+file.each {|line| puts "Line: #{line}" }
+```
+
+`File` has class methods for reading files:
+
+```ruby
+content = File.read("text.txt")
+lines = File.readlines("text.txt")
+```
+
+#### File position seeking
+
+```ruby
+file.rewind // 0
+file.pos // 0
+file.gets // "first line\n"
+file.pos // 11
+
+file.seek(10, IO::SEEK_SSET) // seek to specific byte
+file.seek(3, IO::SEEK_CUR) // seek 3 bytes from current position
+file.seek(-10, IO::SEEK_END) // 10 bytes from end of the file
+```
+
+#### Writing to files
+
+Write mode is indicated by the second argument when opening the file:
+
+- `w`: existing file content is overwritten
+- `a`: changes written to the file are appended
+- both mode would create a new file if it doesn't already exist
+
+```ruby
+file = File.new("test.txt", "w")
+file.puts "This is the first line."
+file.close
+```
+
+Using class method to open a file has advantage that you don't need to explicitly close it:
+
+```ruby
+File.open("book.txt") do |f|
+  while line = f.gets
+    puts "Line: #{line}"
+  end
+end
+```
+
+Since `File` is also `Enumerable`, the above code can simply be:
+
+```ruby
+File.open("book.txt") do |f|
+  f.each do |line|
+    puts "Line: #{line}"
+  end
+end
+```
+
+### IO Query
+
+- `File::Stat` returns the same information as C library call `stat(2)`
+- `FileTest` offers methods for getting status information about files
+- `File` also has some query methods
+
+```ruby
+FileTest.exist?("file.txt")
+FileTest.empty?("file.txt")
+FileTest.directory?("/usr/me/Books")
+FileTest.file?("file.txt")
+FileTest.symlink?("mockdata.json")
+FileTest.readable?("/usr/root")
+FileTest.writable?("/usr/root/file.txt")
+FileTest.executable?("/scripts/shell.sh")
+FileTest.size("file.txt")
+FileTest.zero?("file.txt")
+```
+
+### Working with directories
+
+`Dir` is like `File` but targeting directories.
+
+```ruby
+d = Dir.new("/usr/me/Books")
+d.entries
+Dir.entries("/usr/me/Books")
+# both above returns entries listed under directory /usr/me/Books
+
+entries.delete_if { |entry| entry =~ /^\./ } # delete entries from array if starting with dot
+entries.map! { |entry| File.join(d.path, entry) }
+entries.delete_if { |entry| !File.file?(entry) } # delete if not regular file
+```
+
+__Directory globbing__: Get an array containing all ePub books:
+
+```ruby
+Dir["/usr/me/Books/*.ePub"]
+```
+
+The `glob` method lets you specify more details for globbing behaviour. Below does a case-insensitive glob including hidden dot files in the results:
+
+```ruby
+Dir.glob("/usr/me/Books/*MarkTwain*.mobi", File::FNM_CASEFOLD | File::DOTMATCH)
+```
+
+Create a new directory:
+
+```ruby
+Dir.mkdir("ebooks")
+```
+
+Check if a directory is empty:
+
+```ruby
+Dir.empty?("ebooks")
+```
+
+Change context to a directory:
+
+```ruby
+Dir.chdir("ebooks") do
+  File.open("newbook.txt", "w") do |f|
+    f.puts "a new line in a new file"
+  end
+end
+```
+
+Remove a directory:
+
+```ruby
+Dir.rmdir("ebooks")
+```
+

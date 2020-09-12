@@ -90,9 +90,9 @@ In simple words, if we can figure out what are the climatic influences that have
 
 The ancient way to live a healthy life is to strive for a balance between those influences in human body via food and daily activities. Many of the terminologies mentioned so far may sound like superstition, but they actually exist in our everyday life that we may not be aware of. You may have heard that ginger are warm in nature (which corresponds to the "heat" influence mentioned before), it's good for people who have excessive "cold" in body; If you have ever ate at Asian restaurants, braised fish or pork dishes usually have not only ginger, but also star-anise (aniseed) in it, that's because fish and pork have the nature of "cold", especially fish who live in water thus also carry the influence of "dampness", both of these can be balanced by a combination of ginger and aniseed where ginger is warm and aniseed as an _aromatic plant_ can get rid of the dampness; Cinnamon is widely used in different types of food and drinks, also carries the "warm" influence, western medicine science found its value in treating digestive insufficiency, a study suggested that therapeutic concentrations of cinnamon can be used to treat age-related inflammation, particularly in the joints[1]; Western medical providers are increasingly using this spice to treat high blood glucose[2], the ancient explanation is that its "warm" factor balances the "cold" in human's digesting system.
 
-You may wonder, isn't this all about Chinese medicine? Not exactly, we are not talking about Western or Chinese medicine, we are focusing on a broder categorisation of natural influences for the sake of study Covid-19. For instance, the "cold" influence isn't a speicifc term of either Chinese medicine or western medicine, it's a physical attribute of the world we are living in. From a physical point of view, "cold" makes fluids more viscous, so cold is considered to be the main cause of poor or obstructed circulation. Reflecting to human, people with cardiovascular diseases have a high chance of feeling uncomfortable in winter. Since many diseases are related to "cold", this factor was highly regarded in ancient times. People with excessive "cold" show pale complexion, cold hands and feet, chills and fear of cold, as well as body weakness; while those with excessive "heat" may manifest themselves as dry eyes, dry mouth, constipation, tinnitus, etc.
+You may wonder, isn't this all about Chinese medicine? Not exactly, we are not talking about Western or Chinese medicine, but rather focusing on a broader categorisation of natural influences for the sake of studying Covid-19. For instance, the "cold" influence isn't a speicifc term of either Chinese medicine or western medicine, it's a physical attribute of the world we are living in. From a physical point of view, "cold" makes fluids more viscous, so cold is considered to be the main cause of poor or obstructed circulation. Reflecting on human, people with cardiovascular diseases have a high chance of feeling uncomfortable in winter. Since many diseases are related to "cold", this factor was highly regarded in ancient times. People with excessive "cold" show pale complexion, cold hands and feet, chills and fear of cold, as well as body weakness; while those with excessive "heat" may manifest themselves as dry eyes, dry mouth, constipation, tinnitus, etc.
 
-People often say "you are what you eat", if we want to balance the influences in our body via food, how do we know what food has which kind of influence? For plants, during its life time, if it need relatively more water and less sunlight, it's likely to be towards "cold"; On the other hand, if a plant can grow well with little water but requires lots of sunlight, its characteristic will likely to be "warm". Of course, for a particular plant, different parts may have different weights of influences, for instance, cinnamon usually refers to the dried bark of Cinnamomom Cassia, whose characteristic may be different from the leaves of the tree.
+People often say "you are what you eat", if we want to balance the influences in our body via food, how do we know what food has which kind of influence? For plants, during its life time, if it need relatively more water and less sunlight, it's likely to be towards "cold"; On the other hand, if a plant can grow well with little water but requires lots of sunlight, its characteristic will likely to be "warm". For a particular plant, different parts may have different weights of influences, for instance, cinnamon usually refers to the dried bark of Cinnamomom Cassia, whose characteristic may be different from the leaves of the tree.
 
 The influences carried by animals are determined by their _activeness_, and for obvious reason, animals in water usually carry the influence of dampness. Beef is relatively more warm than pork, lamb is wamer than beef, birds are even warmer. The same animal can carry different influence based on their activity, for example, wild chickens (ie. pheasant) are much more warmer than captive chickens.
 
@@ -102,11 +102,23 @@ With the theory of all above, now let's look at a few deseases in history and wh
 
 SARS-CoV, a virus that was first identified in late 2002 / early 2003, belongs to the same coronavirus family as COVID-19 (ie. SARS-CoV-2), the table below shows the time when they first started and the climatic influence based on sexagenary cycle:
 
-| Desease | Georgian            | Sexagenary Cycle      | Element | Influence      |
-|---------|---------------------|-----------------------|---------|----------------|
-| SARS    | Nov 2002 - Feb 2003 | 壬午 - 癸未            | Fire    | Cold, Moisture |
-| COVID_19| Late 2019           | 己亥 - 庚子            | 
+| Disease 	| Georgian 	| Sexagenary Year Span 	| Y.W.I | Start P.I. 	| Start S.I. 	| Next P.I. 	| Next S.I 	|
+|-	|-	|-	|-	|-	|-	|-	|- |
+| SARS 	| Nov 2002 - Feb 2003 	| 壬午 - 癸未 	| Wood/Fire   | 太阳寒水 Water/Cold 	| 阳明燥金 Metal/Dryness 	| 厥阴风木 Wood/Wind 	| 太阴湿土 Earth/Dampness 	|
+| Covid-19 	| Late 2019 - Now 	| 己亥 - 庚子 	| Earth/Metal | 太阳寒水 Water/Cold 	| 厥阴风木 Wood/Wind 	| 厥阴风木 Wood/Wind 	| 少阴君火/阳明燥金 Fire/Metal/Dryness 	|
+
+Y.W.I - Year Wise Influence
+P.I. - Primary Influence
+S.I. - Secondary Influence
+
 (don't worry if you don't understand the years in Sexagenary Cycle - you can consider them as symbols representing different years in a different calendar)
+
+We can ignore Primary Influence, for the sake of this article, we can consider them as our regular seasons, so Water/Cold and Wood/Wind are simply winter and spring. Note, this is based on Northern Hemisphere. What we are interested in are the secondary influences. Based on the climatic influences we can make conclusions below, and keep in mind, these conclusions could be made even before the time, since the rule of climatic influences is "baked in" the sexagenary cycle:
+
+- the Heavenly Stem of 2003 is fire, according to the mutual overcoming pattern of Five Elements, fire overcomes metal, and metal maps to lung, the manifestation is that the virus directly attacks lung.
+- the end of 2019 has primary influence of water/cold, that is, winter; But the secondary influence at the same time was fire/heat, which translates to a warm winter, it created a supportive environment for virus.
+- 
+
 
 1. https://pubs.rsc.org/en/content/articlelanding/2015/fo/c4fo00680a/
 2. https://www.hindawi.com/journals/jdr/2015/913651/

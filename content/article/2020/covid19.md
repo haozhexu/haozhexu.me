@@ -31,7 +31,7 @@ Let's have a look at how we measure time in the modern age:
 
 The idea of "time" isn't unfamiliar to us if we look at the description above, however, not many people (including Chinese nowadays) know that ancient Chinese had a time system which was used as a guidence for human activities, from weather prediction to individual's wellbeing, from agriculture to the change of regime. The foundation of this system is the Five Elements Theory and the Stems and Branches Cycle, these two concepts are the keys to study the virus in the ancient way.
 
-## Five Elements Theory
+## Methodology
 
 The system of Five Elements consists of five conceptual scheme: Fire, Water, Wood, Metal and Earth, they are the fundamental elements of the material world that ancient Chinese believed, similar to the elemental periodic table we learnt in school.
 
@@ -107,17 +107,22 @@ SARS-CoV, a virus that was first identified in late 2002 / early 2003, belongs t
 | SARS 	| Nov 2002 - Feb 2003 	| 壬午 - 癸未 	| Wood/Fire   | 太阳寒水 Water/Cold 	| 阳明燥金 Metal/Dryness 	| 厥阴风木 Wood/Wind 	| 太阴湿土 Earth/Dampness 	|
 | Covid-19 	| Late 2019 - Now 	| 己亥 - 庚子 	| Earth/Metal | 太阳寒水 Water/Cold 	| 厥阴风木 Wood/Wind 	| 厥阴风木 Wood/Wind 	| 少阴君火/阳明燥金 Fire/Metal/Dryness 	|
 
+
 Y.W.I - Year Wise Influence
 P.I. - Primary Influence
 S.I. - Secondary Influence
 
 (don't worry if you don't understand the years in Sexagenary Cycle - you can consider them as symbols representing different years in a different calendar)
 
-We can ignore Primary Influence, for the sake of this article, we can consider them as our regular seasons, so Water/Cold and Wood/Wind are simply winter and spring. Note, this is based on Northern Hemisphere. What we are interested in are the secondary influences. Based on the climatic influences we can make conclusions below, and keep in mind, these conclusions could be made even before the time, since the rule of climatic influences is "baked in" the sexagenary cycle:
+Based on the table above, we can summarise as below:
 
-- the Heavenly Stem of 2003 is fire, according to the mutual overcoming pattern of Five Elements, fire overcomes metal, and metal maps to lung, the manifestation is that the virus directly attacks lung.
-- the end of 2019 has primary influence of water/cold, that is, winter; But the secondary influence at the same time was fire/heat, which translates to a warm winter, it created a supportive environment for virus.
-- 
+- the Heavenly Stem of 2003 has elemental influence of fire, based on the mutual overcoming pattern of Five Elements, fire overcomes metal, and metal corresponding to lung, the manifestation is that the virus directly attacks lung.
+- the end of 2019 has primary influence of water/cold, which is, unsurprisingly, winter; But the secondary influence at the same time was fire/heat, which rendered a warm winter, it created a supportive environment for virus.
+- the element of 2019 is earth but not enough, since earth overcomes water, not enough earth could cause excessive dampness
+
+We don't need to dive into more details, and the climatic influences in above table is only applicable for Northern Atmosphere around East Asia; However, there are enough evidence that SARS-CoV-2 carries climatic influences of dampness and cold/hot.
+
+
 
 
 1. https://pubs.rsc.org/en/content/articlelanding/2015/fo/c4fo00680a/

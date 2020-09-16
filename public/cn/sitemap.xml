@@ -3,13 +3,23 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://www.haozhexu.me/cn/book/</loc>
-    <lastmod>2020-06-14T22:30:12+11:00</lastmod>
+    <loc>https://www.haozhexu.me/cn/article/</loc>
+    <lastmod>2020-09-16T17:03:36+11:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/article/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/article/"
+                />
   </url>
   
   <url>
     <loc>https://www.haozhexu.me/cn/categories/</loc>
-    <lastmod>2020-06-14T22:30:12+11:00</lastmod>
+    <lastmod>2020-09-16T17:03:36+11:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -24,7 +34,7 @@
   
   <url>
     <loc>https://www.haozhexu.me/cn/tags/</loc>
-    <lastmod>2020-06-14T22:30:12+11:00</lastmod>
+    <lastmod>2020-09-16T17:03:36+11:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -38,17 +48,57 @@
   </url>
   
   <url>
+    <loc>https://www.haozhexu.me/cn/tags/%E4%B8%AD%E5%8C%BB/</loc>
+    <lastmod>2020-09-16T17:03:36+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/cn/article/2020/covid19/</loc>
+    <lastmod>2020-09-16T17:03:36+11:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/article/2020/covid19/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/article/2020/covid19/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/cn/categories/%E6%9D%82%E6%96%87/</loc>
+    <lastmod>2020-09-16T17:03:36+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/cn/tags/%E7%8E%84%E5%AD%A6/</loc>
+    <lastmod>2020-09-16T17:03:36+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/cn/tags/%E7%97%85%E6%AF%92/</loc>
+    <lastmod>2020-09-16T17:03:36+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/cn/tags/%E7%A7%91%E5%AD%A6/</loc>
+    <lastmod>2020-09-16T17:03:36+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/cn/book/</loc>
+    <lastmod>2020-06-14T22:30:12+11:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://www.haozhexu.me/cn/categories/%E5%B0%8F%E8%AF%B4/</loc>
     <lastmod>2020-06-14T22:30:12+11:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.haozhexu.me/cn/book/karma/karma12/</loc>
-    <lastmod>2020-06-14T22:30:12+11:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.haozhexu.me/cn/tags/%E7%8E%84%E5%AD%A6/</loc>
     <lastmod>2020-06-14T22:30:12+11:00</lastmod>
   </url>
   
@@ -113,32 +163,12 @@
   </url>
   
   <url>
-    <loc>https://www.haozhexu.me/cn/article/</loc>
-    <lastmod>2019-09-15T15:39:00+11:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.haozhexu.me/article/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://www.haozhexu.me/cn/article/"
-                />
-  </url>
-  
-  <url>
     <loc>https://www.haozhexu.me/cn/tags/%E5%BD%A9%E7%A5%A8%E9%A2%84%E6%B5%8B/</loc>
     <lastmod>2019-09-15T15:39:00+11:00</lastmod>
   </url>
   
   <url>
     <loc>https://www.haozhexu.me/cn/tags/%E6%95%B0%E5%AD%A6/</loc>
-    <lastmod>2019-09-15T15:39:00+11:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.haozhexu.me/cn/categories/%E6%9D%82%E6%96%87/</loc>
     <lastmod>2019-09-15T15:39:00+11:00</lastmod>
   </url>
   
@@ -369,11 +399,6 @@
   
   <url>
     <loc>https://www.haozhexu.me/cn/article/pseudo_science/chapter3/</loc>
-    <lastmod>2018-07-30T21:05:36+11:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.haozhexu.me/cn/tags/%E7%A7%91%E5%AD%A6/</loc>
     <lastmod>2018-07-30T21:05:36+11:00</lastmod>
   </url>
   

@@ -13,7 +13,7 @@ tags:
   - fiveelements
   - sexagenary
 ---
-_(**Disclaimer**: I'm not the right person to give any medical advice, see a doctor instead. This article largely based on theories that are not proven by modern science, so please read it as a fiction if you want, do not draw any conclusion from it, or do anything based on this article.)_
+_(**Disclaimer**: I'm not the right person to give any medical advice, see a doctor instead. This article is largely based on theories that are not proven by modern science, so please read it as a fiction if you want, do not draw any conclusion from it, and do not do anything based on this article.)_
 
 > The greatest enemy of knowledge is not ignorance; it is the illusion of knowledge.  
 > -- Stephen Hawking

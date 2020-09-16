@@ -118,6 +118,7 @@ From the above table we can conclude:
 - the heavenly stem of 2003 has the elemental influence of fire, which has an overcoming effect on metal; Since metal corresponds to lung, theoretically during that period of time lungs would be specifically vulnerable to external intrusion, which corresponds to the fact that lungs were widely believed to be the target organ of SARS[6].
 - the end of 2019 has the primary influence of water/cold, which is, unsurprisingly, winter; But the secondary influence at the same time was _heat_, which translates to a warm winter, it created a supportive environment for virus growth.
 - soon after 2020 begins, the climatic influence became "less fire" (-fire), and the virus would carry less _heat_ and more _cold_.
+- the change of heat/cold over time to adopt season change, along with its highly infectious nature suggests it may not have a natural origin.
 
 We don't need to dive into more details, and the climatic influences in the above table are only applicable for Northern Atmosphere around East Asia; however, there is enough evidence that SARS-CoV-2 carries climatic influences of dampness and cold/hot, the term "cold/hot" implies the influences the virus carries changed over time, from _heat_ to _cold_, and now it's probably back to _heat_ again due to summer and autumn. I'm not sure if this kind of transformation corresponds to the mutation of the virus that scientists have found[3]. Next, let's look at some viruses that carry similar types of influences.
 

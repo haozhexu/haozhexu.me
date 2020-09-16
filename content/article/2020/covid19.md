@@ -13,9 +13,7 @@ tags:
   - fiveelements
   - sexagenary
 ---
-_(**Disclaimers**: I'm not the right person to give any medical advice, see a doctor instead; You don't need to believe what I said, but please verify if you want to help. Thank you!)_
-
-_(**Note**: If you can't wait to know the conclusion, you can skip to The Possible Cure section, however, I strongly recomment you read through the full article so that you won't feel lost when reading The Possible Cure)_
+_(**Disclaimers**: I'm not the right person to give any medical advice, see a doctor instead. This article largely based on theories that are not proven by modern science, so please do not draw any conclusion from it.)_
 
 > The greatest enemy of knowledge is not ignorance; it is the illusion of knowledge.  
 > -- Stephen Hawking

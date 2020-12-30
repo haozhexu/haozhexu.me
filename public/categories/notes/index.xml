@@ -5,11 +5,7 @@
     <link>https://www.haozhexu.me/categories/notes/</link>
     <description>Recent content in Notes on Haozhe XU</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 06 Sep 2020 13:30:00 +1100</lastBuildDate>
-    
-	<atom:link href="https://www.haozhexu.me/categories/notes/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 06 Sep 2020 13:30:00 +1100</lastBuildDate><atom:link href="https://www.haozhexu.me/categories/notes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Swift Study Notes</title>
       <link>https://www.haozhexu.me/article/2020/swiftnotes/</link>

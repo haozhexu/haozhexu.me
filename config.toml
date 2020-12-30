@@ -28,8 +28,8 @@ footnotereturnlinkcontents = "↩"
     url = "/about/"
     weight = 2
 [[Languages.en.menu.main]]
-    name = "Apps"
-    url = "/apps/"
+    name = "My Works"
+    url = "/works/"
     weight = 3
 [[Languages.en.menu.main]]
     name = "Poem / 诗词"
@@ -67,8 +67,8 @@ footnotereturnlinkcontents = "↩"
     url = "/cn/about"
     weight = 2
 [[Languages.cn.menu.main]]
-    name = "App应用"
-    url = "/cn/apps"
+    name = "我的作品"
+    url = "/cn/works"
     weight = 3
 [[Languages.cn.menu.main]]
     name = "诗词"

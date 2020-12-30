@@ -5,6 +5,13 @@ draft: false
 comments: false
 ---
 
+# My Works
+
+- [Apps](#apps)
+- [Published Books](#published-books)
+
+## Apps
+
 Below are my apps currently on AppStore:
 
 ### Social Tagman
@@ -42,3 +49,31 @@ Mimics the classic Unix fortune piped to a cowsay output.
 A match-3 style game where you need to match dropping clubs of blocks.
 
 [<img src="/images/download_on_appstore.svg" style="max-width:15%;min-width:40px;" alt="Download on AppStore" />](https://itunes.apple.com/us/app/retro-blocks/id917655100?mt=8)
+
+## Published Books
+
+With only the price of a cup of coffee or milk tea (large cup + pearl), you can support a person who is trying to be a writer.
+
+### 塵世因緣錄 (traditional Chinese)
+
+Amazon US:
+
+https://www.amazon.com/dp/B08R5MSK42
+
+Amazon AU:
+
+https://www.amazon.com.au/dp/B08R5MSK42
+
+Other countries please search on Amazon: "塵世因緣錄"
+
+### 騷客集: 半人工智能詩詞集 (traditional Chinese)
+
+Amazon US:
+
+https://www.amazon.com/dp/B08KTWMRNW
+
+Amazon AU:
+
+https://www.amazon.com.au/dp/B08KTWMRNW
+
+Other countries please search on Amazon: "騷客集"

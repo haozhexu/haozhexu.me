@@ -17,7 +17,7 @@
       
       <li><a href="/about/">About</a></li>
       
-      <li><a href="/apps/">Apps</a></li>
+      <li><a href="/works/">My Works</a></li>
       
       <li><a href="/poems/">Poem / 诗词</a></li>
       
@@ -489,8 +489,8 @@ obj<span style="color:#f92672">.</span>ruby_version
 <ul>
 <li>does the object&rsquo;s class have such method?</li>
 <li>does the object&rsquo;s class mixin any modules that have such method?</li>
-<li>does the object&rsquo;s class&rsquo; superclass define such method?</li>
-<li>does the object&rsquo;s class&rsquo; superclass mixin any module that define such method?</li>
+<li>does the object&rsquo;s class' superclass define such method?</li>
+<li>does the object&rsquo;s class' superclass mixin any module that define such method?</li>
 <li>if not found, a special method <code>method_missing</code> is called</li>
 <li>if method-lookup path includes two or more same-named method, the first one encountered is executed</li>
 <li>if a class mixes in two or more modules with duplicated methods, the one in most recently mixed-in module is used</li>
@@ -660,7 +660,7 @@ puts <span style="color:#e6db74">&#34;There are </span><span style="color:#e6db7
 <li><code>def manufacture_year=(years)</code></li>
 </ul>
 </li>
-<li><code>protected</code> methods can be called on object <code>x</code> as long as the default object (<code>self</code>) is an instance of the same class as <code>x</code> or an ancestor or descendant class of <code>x</code>'s class</li>
+<li><code>protected</code> methods can be called on object <code>x</code> as long as the default object (<code>self</code>) is an instance of the same class as <code>x</code> or an ancestor or descendant class of <code>x</code>&rsquo;s class</li>
 <li>subclasses inherit the method-access rules of their superclasses</li>
 <li>top-level method is stored as a private instance method of <code>Object</code> class</li>
 <li>top-level methods must be called in bareword style due to <code>private</code> forbidding explicit receiver</li>
@@ -1189,7 +1189,7 @@ puts (<span style="color:#f92672">not</span> saturation) <span style="color:#757
 <li>every object has a Boolean value of either <code>true</code> or <code>false</code></li>
 <li><code>true</code> and <code>false</code> are both objects</li>
 </ul>
-<p>Some expressions&rsquo; values:</p>
+<p>Some expressions' values:</p>
 <ul>
 <li><code>class MyClass; end</code> evaluates to <code>nil</code></li>
 <li><code>class MyClass; 1; end</code> evaluates to <code>1</code></li>
@@ -1209,7 +1209,7 @@ puts (<span style="color:#f92672">not</span> saturation) <span style="color:#757
 </li>
 <li><code>nil.to_s</code> is empty string</li>
 <li>the integer representation of <code>nil</code> is 0</li>
-<li><code>nil</code>'s object ID is 8</li>
+<li><code>nil</code>&rsquo;s object ID is 8</li>
 </ul>
 <h3 id="objects-comparison">Objects comparison</h3>
 <ul>
@@ -1219,7 +1219,7 @@ puts (<span style="color:#f92672">not</span> saturation) <span style="color:#757
 <ul>
 <li><code>String</code> compares if the value of strings are identical</li>
 <li><code>Numeric</code> (a super class of <code>Integer</code> and <code>Float</code>) redefines <code>==</code> for comparing number values with type conversion</li>
-<li><code>Numeric</code>'s <code>eql?</code> doesn&rsquo;t do type conversion</li>
+<li><code>Numeric</code>&rsquo;s <code>eql?</code> doesn&rsquo;t do type conversion</li>
 </ul>
 </li>
 </ul>
@@ -1607,7 +1607,7 @@ t<span style="color:#f92672">.</span>strftime(<span style="color:#e6db74">&#34;%
 </li>
 <li><code>Date</code> and date/time objects interpret + and - as day-wise operations</li>
 <li>use <code>&lt;&lt;</code> and <code>&gt;&gt;</code> for month-wise conversions</li>
-<li>a whole family of <code>next_</code>_unit_ and <code>prev_</code>_unit_ methods let you move back and forth by days, months or years</li>
+<li>a whole family of <code>next_</code><em>unit</em> and <code>prev_</code><em>unit</em> methods let you move back and forth by days, months or years</li>
 </ul>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">dt <span style="color:#f92672">=</span> <span style="color:#66d9ef">DateTime</span><span style="color:#f92672">.</span>now <span style="color:#75715e"># 2020-08-14T07:01:01+10:00</span>
 puts dt <span style="color:#f92672">+</span> <span style="color:#ae81ff">10</span> <span style="color:#75715e"># add 10 days: 2020-08-24T07:01:01+10:00</span>

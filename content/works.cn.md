@@ -14,6 +14,12 @@ comments: false
 
 下面是苹果商店（AppStore）上我个人做的App:
 
+### 墨卡
+
+为街头而生。墨卡是一款专为街头摄影而设计的拍照App。
+
+[<img src="/images/download_on_appstore.svg" style="max-width:15%;min-width:40px;" alt="苹果App商店下载" />](https://apps.apple.com/app/moca/id1546559171)
+
 ### 社会人标签
 
 是否厌倦了每次分享图片时重复输入各种不同的#tag标签？“社会人标签”可以帮你管理、分类各种标签，一键复制你选择的标签到剪贴板。

@@ -3,6 +3,86 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://www.haozhexu.me/article/</loc>
+    <lastmod>2021-01-01T06:23:00+11:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/article/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/article/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/article/2021/moca/</loc>
+    <lastmod>2021-01-01T06:23:00+11:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/article/2021/moca/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/article/2021/moca/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/categories/</loc>
+    <lastmod>2021-01-01T06:23:00+11:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/tags/moca/</loc>
+    <lastmod>2021-01-01T06:23:00+11:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/tags/moca/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/tags/moca/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/categories/photography/</loc>
+    <lastmod>2021-01-01T06:23:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.haozhexu.me/tags/</loc>
+    <lastmod>2021-01-01T06:23:00+11:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="cn"
+                href="https://www.haozhexu.me/cn/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://www.haozhexu.me/tags/"
+                />
+  </url>
+  
+  <url>
     <loc>https://www.haozhexu.me/article/2020/covid19/</loc>
     <lastmod>2020-09-16T17:03:36+11:00</lastmod>
     <xhtml:link
@@ -20,36 +100,6 @@
   <url>
     <loc>https://www.haozhexu.me/categories/article/</loc>
     <lastmod>2020-09-16T17:03:36+11:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.haozhexu.me/article/</loc>
-    <lastmod>2020-09-16T17:03:36+11:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://www.haozhexu.me/cn/article/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.haozhexu.me/article/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://www.haozhexu.me/categories/</loc>
-    <lastmod>2020-09-16T17:03:36+11:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://www.haozhexu.me/cn/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.haozhexu.me/categories/"
-                />
   </url>
   
   <url>
@@ -80,21 +130,6 @@
   <url>
     <loc>https://www.haozhexu.me/tags/sexagenary/</loc>
     <lastmod>2020-09-16T17:03:36+11:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.haozhexu.me/tags/</loc>
-    <lastmod>2020-09-16T17:03:36+11:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="cn"
-                href="https://www.haozhexu.me/cn/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://www.haozhexu.me/tags/"
-                />
   </url>
   
   <url>
@@ -244,11 +279,6 @@
   
   <url>
     <loc>https://www.haozhexu.me/tags/fujifilm/</loc>
-    <lastmod>2019-01-16T21:09:00+11:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://www.haozhexu.me/categories/photography/</loc>
     <lastmod>2019-01-16T21:09:00+11:00</lastmod>
   </url>
   

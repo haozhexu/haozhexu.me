@@ -5,7 +5,16 @@
     <link>https://www.haozhexu.me/categories/</link>
     <description>Recent content in Categories on Haozhe XU</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 16 Sep 2020 17:03:36 +1100</lastBuildDate><atom:link href="https://www.haozhexu.me/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 01 Jan 2021 06:23:00 +1100</lastBuildDate><atom:link href="https://www.haozhexu.me/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Photography</title>
+      <link>https://www.haozhexu.me/categories/photography/</link>
+      <pubDate>Fri, 01 Jan 2021 06:23:00 +1100</pubDate>
+      
+      <guid>https://www.haozhexu.me/categories/photography/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Article</title>
       <link>https://www.haozhexu.me/categories/article/</link>
@@ -21,15 +30,6 @@
       <pubDate>Sun, 06 Sep 2020 13:30:00 +1100</pubDate>
       
       <guid>https://www.haozhexu.me/categories/notes/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Photography</title>
-      <link>https://www.haozhexu.me/categories/photography/</link>
-      <pubDate>Wed, 16 Jan 2019 21:09:00 +1100</pubDate>
-      
-      <guid>https://www.haozhexu.me/categories/photography/</guid>
       <description></description>
     </item>
     

@@ -11,7 +11,7 @@ tags:
 
 # Born for Street: Design Story of Moca
 
-Since 2014 when I first started photography with a proper camera, so far I've used a range of cameras and lenses, each camera has its pros and cons for street photography, obvious it's difficult to design a modern camera that suits everyone's need, but still, there's always something missing for me no matter what gear I use, so I came up with the idea of making a camera app for street photography.
+Since 2014 when I first started photography with a proper camera, so far I've used a range of cameras and lenses, each camera has its pros and cons for street photography, obviously it's difficult to design a modern camera that suits everyone's need, but still, there's always something missing for me no matter what gear I use, so I came up with the idea of making a camera app for street photography.
 
 Compared to dedicated cameras, smartphone cameras have two major advantages:
 

@@ -16,12 +16,12 @@ Since 2014 when I first started photography with a proper camera, so far I've us
 Compared to dedicated cameras, smartphone cameras have two major advantages:
 
 1. Smartphones are more socially acceptable. We can pick the best camera for street photography, the one that's light, quiet, and small enough to not look like a professional photographer, but nonetheless, when you hold the camera and try to get close to people, they still recognize that as a camera and interpret that as you would take a photo of them using that camera for some purposes.
-2. You are more likely to take a phone with you rather than a camera. By using your phone as your main camera for street photography, you carry less weight and more often. I read from somewhere that a photographer said "always take a camera with you", this is true even if you don't take your camera as long as you have a phone with you and the phone has a camera on it.
+2. You are more likely to take a phone with you rather than a camera. By using your phone as your main camera for street photography, you carry less weight and more often. I read from somewhere that a photographer said "always wear a camera", this is true even if you don't take your camera as long as you have a phone with you and the phone has a camera on it.
 
 On the other hand, the list of disadvantages of phone cameras is rather long:
 
-1. **Control**: the lack of physical controls on smartphones means they can never offer the same level of user experience as a proper camera.
-2. **Function**: the lack of dedicated photography functionalities on smartphones means they have less shooting envelop compared to a dedicated camera.
+1. **Control**: the lack of physical controls on smartphones means they can never offer the same level of user experience as a dedicated camera.
+2. **Function**: the lack of photography functionalities on smartphones means they have less shooting envelop compared to a dedicated camera.
 3. **Low Light**: phone cameras still struggle to keep up with proper cameras at night, or in any low light situation.
 4. **Lenses**: lenses are fixed, even if there are multiple lenses on certain mobile devices.
 5. **Battery**: phone batteries are improving over time, but still not good for long time photography use.
@@ -34,19 +34,19 @@ Before going to the details, let me first explain its name. I'm currently locate
 
 ## Control
 
-The most important button for a camera is probably the shutter button, which is even the only button on certain old cameras. Smartphones have limited physical buttons, the home button, volume adjustment buttons, and the button to switch the phone on and off. Most user activities happen on the display with virtual controls. Some devices let you use volume buttons to take photo, the problem with this is the volume buttons are not calibrated as a proper shutter button, and people like to have protection case for their phones which either cover the volume buttons or expose the volume buttons but make them less protruding, in either case, the volume buttons become less easy to press and pressing them can easily introduce a shake which makes the photo blurred.
+Now it comes to the details. The most important button for a camera is probably the shutter button, which is even the only button on certain old cameras. Smartphones have limited physical buttons, the home button, volume adjustment buttons, and the button to switch the phone on and off. Most user activities happen on the display with virtual controls. Some devices let you use volume buttons to take photo, the problem with this is the volume buttons are not calibrated as a proper shutter button, and people like to have protection case for their phones which either cover the volume buttons or expose the volume buttons but make them less protruding, in either case, the volume buttons become less easy to press and pressing them can easily introduce a shake which makes the photo blurred.
 
 I've tried several camera apps on my phone and a common problem with them is that no matter where they place the shutter button, you do have to tap on that button to take photos, being a virtual button, you have no way to feel but have to look at the display to make sure you tap on the right spot, even if you get used to the app and remember where the button is, you still don't get a physical feeling of the button which means there's still the risk of missing a shot. Moca gets around this by making the whole screen tappable as a shutter button, this way you don't have to look at the screen for shutter button; Actually, some street photographers prefer taking photos without looking at the viewfinder, you can do this now with Moca.
 
 ![Fullscreen Shutter][fullscreen-shutter]
 
-The next important thing for photography is to focus on the subject, modern cameras have the ability to focus automatically, and some cameras even have artificial intelligence to anticipate what you may want to focus on, legacy cameras without AF provide alternatives like focus ring and distance scale, which allows you to do zone focus. iPhones do have good enough autofocus, combined with relatively small sensors, there's a large depth of field, which means you don't need to worry about missing focus. However, the speed of AF may not be ideal sometimes, and you may still wish to do some MF, say, for closeups, and even for street photography you may want to zone focus and forget about AF, this way it doesn't take time to AF, which can be crucial for capturing the decisive moment.
+The next important thing for photography is to focus on the subject, modern cameras have the ability to focus automatically, and some cameras even have artificial intelligence to anticipate what you may want to focus on, legacy cameras without AF provide alternatives like focus ring and distance scale, which allows you to focus by zone. iPhones do have good enough AF, combined with small sensors, there's a large depth of field, which means you don't need to worry about missing focus. However, the speed of AF may not be ideal sometimes, and you may still wish to do some MF, say, for closeups, and even for street photography you may want to zone focus and forget about AF, this way it doesn't take time to AF, which can be crucial for capturing the decisive moment.
 
 And you still want some kind of nostalgia.
 
 ![Control Panel][control-panel]
 
-Moca provides a control that mimics legacy lens with the focus ring and focus tab, combined with AF. TF (Tap Focus) can be useful when you want to focus on a specific object where AF may not always focus on the desired subject.
+Moca provides a control that mimics legacy lens with the focus ring and focus tab, combined with AF. TF (Tap Focus) can be useful when you want to focus on a specific object where AF may not always focus on that object.
 
 ## Function
 
@@ -64,19 +64,19 @@ We've seen camera that have a hidden screen, and camera that doesn't even have a
 
 ![Settings 2][settings-2]
 
-Another thing worth mentioning is that Moca utilizes iPhone's powerful gesture control for different functions, for example, long press on a point in live view will adjust exposure based on that point, the feature can be disabled; You can also assign a function to horizontal swipe gesture; You can also turn on the pinch gesture so that you can adjust the border of live view. These feature can be disabled, and programatically, a disabled feature won't have gesture detection enabled at all for that gesture, this is done for a good reason. Technically for a disabled gesture function I can either:
+Another thing worth mentioning is that Moca utilizes iPhone's powerful gesture control for different functions, for example, long press on a point in live view will adjust exposure based on that point, the feature can be disabled; You can assign a function to horizontal swipe gesture; You can also turn on the pinch gesture so that you can adjust the border of live view. These feature can be disabled, I mention this because I've seen similar behaviours on cameras that do not get it right. Technically for a disabled gesture function I can either:
 
 1. Detect the gesture but do nothing if no function is assigned, or:
 2. Do not detect the gesture at all if no function is assigned to that gesture
 
-Moca takes the second approach, the reason is always for the purpose of taking the decisive moment, detecting multiple gestures can create lag:
+Moca takes the second approach, the reason is always for the purpose of taking the decisive moment, imagine we have to detect multiple gestures:
 
-- single tap: touch and lift
+- single tap: touch and lift of finger
 - swipe: touch + swipe
 - long press: touch and stay
-- double tap: touch, lift, touch, lift
+- double tap: touch, lift, touch, lift, in a short period of time
 
-All operations above start with finger touching the screen, the system has to wait a bit and figure out what action it is, after your finger touching the screen, this creates the lag and I've seen this problem on certain cameras that I've used.
+All operations above start with finger touching the screen, the system has to wait a bit and figure out what action it is after your finger touching the screen, this creates a lag and leads to bad user experience.
 
 I've used X-E3 and X100V, both of them have touch screen functions but none of them is smooth enough, someone [reported this on DPReview](https://www.dpreview.com/forums/post/64591131) and there's a reply suggesting disabling the swipe function can make the touch function more smooth, which aligns with my theory that multiple gesture detections can make the operation laggy.
 

@@ -10,6 +10,45 @@ tags:
   - swiftui
 ---
 
+## Concept
+
+```swift
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {
+        Text("Hello, World!")
+            .padding()
+    }
+}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView()
+    }
+}
+```
+
+- by default, SwiftUI files declare two structures
+  - one conforms to `View` protocol and describes the view's content and layout
+  - the other declares a preview for that view
+- UI is constructed using __Views__ and view can be customized by __Modifiers__
+- Views can be organized in containers
+  - `VStack` and `HStack`
+  - `ZStack` organizes views one on top of another, a.k.a __Depth Stack__
+  - Stack views' initializers have last parameter defined as `@ViewBuilder`, which allows multiple views declared in a single closure
+  - maximum of 10 views are allowed in stack view, use another stack view for more
+
+```swift
+init(alignment: HorizontalAlignment = .center, spacing: CGFloat? = nil, @ViewBuilder content: () -> Content)
+```
+
+### Opaque Type
+
+- keyword `some` specifies an opaque type
+- the system doesn't need to know what exact type is returned, as long as the type conforms to `View` protocol
+- all possible return types must be of the same type
+
 ## Wrappers
 
 ### @State

@@ -32,7 +32,7 @@ footnotereturnlinkcontents = "↩"
     url = "/works/"
     weight = 3
 [[Languages.en.menu.main]]
-    name = "Poem / 诗词"
+    name = "Poem / 詩詞"
     url = "/poems/"
     weight = 4
 [[Languages.en.menu.main]]

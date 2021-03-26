@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://www.haozhexu.me/article/</loc>
     <lastmod>2021-01-01T06:23:00+11:00</lastmod>
@@ -15,9 +14,7 @@
                 hreflang="en"
                 href="https://www.haozhexu.me/article/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/article/2021/moca/</loc>
     <lastmod>2021-01-01T06:23:00+11:00</lastmod>
     <xhtml:link
@@ -30,9 +27,7 @@
                 hreflang="en"
                 href="https://www.haozhexu.me/article/2021/moca/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/categories/</loc>
     <lastmod>2021-01-01T06:23:00+11:00</lastmod>
     <xhtml:link
@@ -45,9 +40,7 @@
                 hreflang="en"
                 href="https://www.haozhexu.me/categories/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/moca/</loc>
     <lastmod>2021-01-01T06:23:00+11:00</lastmod>
     <xhtml:link
@@ -60,14 +53,10 @@
                 hreflang="en"
                 href="https://www.haozhexu.me/tags/moca/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/categories/photography/</loc>
     <lastmod>2021-01-01T06:23:00+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/</loc>
     <lastmod>2021-01-01T06:23:00+11:00</lastmod>
     <xhtml:link
@@ -80,9 +69,7 @@
                 hreflang="en"
                 href="https://www.haozhexu.me/tags/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/article/2020/covid19/</loc>
     <lastmod>2020-09-16T17:03:36+11:00</lastmod>
     <xhtml:link
@@ -95,124 +82,76 @@
                 hreflang="en"
                 href="https://www.haozhexu.me/article/2020/covid19/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/categories/article/</loc>
     <lastmod>2020-09-16T17:03:36+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/fiveelements/</loc>
     <lastmod>2020-09-16T17:03:36+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/medical/</loc>
     <lastmod>2020-09-16T17:03:36+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/metaphysics/</loc>
     <lastmod>2020-09-16T17:03:36+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/ncov/</loc>
     <lastmod>2020-09-16T17:03:36+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/science/</loc>
     <lastmod>2020-09-16T17:03:36+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/sexagenary/</loc>
     <lastmod>2020-09-16T17:03:36+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/categories/notes/</loc>
     <lastmod>2020-09-06T13:30:00+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/swift/</loc>
     <lastmod>2020-09-06T13:30:00+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/article/2020/swiftnotes/</loc>
     <lastmod>2020-09-06T13:30:00+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/article/2020/networking/</loc>
     <lastmod>2020-08-29T17:10:00+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/ios/</loc>
     <lastmod>2020-08-29T17:10:00+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/networking/</loc>
     <lastmod>2020-08-29T17:10:00+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/cheatsheet/</loc>
     <lastmod>2020-07-21T14:00:00+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/javascript/</loc>
     <lastmod>2020-07-21T14:00:00+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/article/2020/javascript/</loc>
     <lastmod>2020-07-21T14:00:00+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/html/</loc>
     <lastmod>2020-07-21T11:00:00+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/article/2020/html/</loc>
     <lastmod>2020-07-21T11:00:00+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/ruby/</loc>
     <lastmod>2020-07-19T18:00:00+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/article/2020/ruby/</loc>
     <lastmod>2020-07-19T18:00:00+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/git/</loc>
     <lastmod>2020-05-08T11:36:00+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/article/2020/gitnotes/</loc>
     <lastmod>2020-05-08T11:36:00+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/versioncontrol/</loc>
     <lastmod>2020-05-08T11:36:00+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/article/2019/lottery/</loc>
     <lastmod>2019-09-15T15:39:00+11:00</lastmod>
     <xhtml:link
@@ -225,29 +164,19 @@
                 hreflang="en"
                 href="https://www.haozhexu.me/article/2019/lottery/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/lottery/</loc>
     <lastmod>2019-09-15T15:39:00+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/mathematics/</loc>
     <lastmod>2019-09-15T15:39:00+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/numbers/</loc>
     <lastmod>2019-09-15T15:39:00+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/powerball/</loc>
     <lastmod>2019-09-15T15:39:00+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/24mm/</loc>
     <lastmod>2019-01-16T21:09:00+11:00</lastmod>
     <xhtml:link
@@ -260,9 +189,7 @@
                 hreflang="en"
                 href="https://www.haozhexu.me/tags/24mm/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/article/2019/bestfujistreetlens/</loc>
     <lastmod>2019-01-16T21:09:00+11:00</lastmod>
     <xhtml:link
@@ -275,24 +202,16 @@
                 hreflang="en"
                 href="https://www.haozhexu.me/article/2019/bestfujistreetlens/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/fujifilm/</loc>
     <lastmod>2019-01-16T21:09:00+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/photography/</loc>
     <lastmod>2019-01-16T21:09:00+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/review/</loc>
     <lastmod>2019-01-16T21:09:00+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/xpro2/</loc>
     <lastmod>2019-01-16T21:09:00+11:00</lastmod>
     <xhtml:link
@@ -305,9 +224,7 @@
                 hreflang="en"
                 href="https://www.haozhexu.me/tags/xpro2/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/article/2018/reviewleicam10p4/</loc>
     <lastmod>2018-09-15T08:00:00+11:00</lastmod>
     <xhtml:link
@@ -320,14 +237,10 @@
                 hreflang="en"
                 href="https://www.haozhexu.me/article/2018/reviewleicam10p4/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/camerareview/</loc>
     <lastmod>2018-09-15T08:00:00+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/gx9/</loc>
     <lastmod>2018-09-15T08:00:00+11:00</lastmod>
     <xhtml:link
@@ -340,14 +253,10 @@
                 hreflang="en"
                 href="https://www.haozhexu.me/tags/gx9/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/leica/</loc>
     <lastmod>2018-09-15T08:00:00+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/m10p/</loc>
     <lastmod>2018-09-15T08:00:00+11:00</lastmod>
     <xhtml:link
@@ -360,9 +269,7 @@
                 hreflang="en"
                 href="https://www.haozhexu.me/tags/m10p/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/article/2018/reviewleicam10p3/</loc>
     <lastmod>2018-09-12T08:00:00+11:00</lastmod>
     <xhtml:link
@@ -375,9 +282,7 @@
                 hreflang="en"
                 href="https://www.haozhexu.me/article/2018/reviewleicam10p3/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/article/2018/reviewleicam10p2/</loc>
     <lastmod>2018-09-04T21:00:00+11:00</lastmod>
     <xhtml:link
@@ -390,14 +295,10 @@
                 hreflang="en"
                 href="https://www.haozhexu.me/article/2018/reviewleicam10p2/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/streetphotography/</loc>
     <lastmod>2018-09-04T21:00:00+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/article/2018/reviewleicam10p1/</loc>
     <lastmod>2018-09-03T10:00:00+11:00</lastmod>
     <xhtml:link
@@ -410,9 +311,7 @@
                 hreflang="en"
                 href="https://www.haozhexu.me/article/2018/reviewleicam10p1/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/article/2018/reviewgx9/</loc>
     <lastmod>2018-08-24T10:00:00+11:00</lastmod>
     <xhtml:link
@@ -425,14 +324,10 @@
                 hreflang="en"
                 href="https://www.haozhexu.me/article/2018/reviewgx9/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/panasonic/</loc>
     <lastmod>2018-08-24T10:00:00+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/adelaide/</loc>
     <lastmod>2018-01-09T20:27:58+11:00</lastmod>
     <xhtml:link
@@ -445,24 +340,16 @@
                 hreflang="en"
                 href="https://www.haozhexu.me/tags/adelaide/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/gx85/</loc>
     <lastmod>2018-01-09T20:27:58+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/article/2018/travelsa/sapenfold/</loc>
     <lastmod>2018-01-09T20:27:58+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/m43/</loc>
     <lastmod>2018-01-09T20:27:58+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/penfold/</loc>
     <lastmod>2018-01-09T20:27:58+11:00</lastmod>
     <xhtml:link
@@ -475,29 +362,19 @@
                 hreflang="en"
                 href="https://www.haozhexu.me/tags/penfold/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/categories/travel/</loc>
     <lastmod>2018-01-09T20:27:58+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/travel/</loc>
     <lastmod>2018-01-09T20:27:58+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/23mmf2/</loc>
     <lastmod>2018-01-07T12:28:58+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/city/</loc>
     <lastmod>2018-01-07T12:28:58+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/article/2018/travelsa/city/</loc>
     <lastmod>2018-01-07T12:28:58+11:00</lastmod>
     <xhtml:link
@@ -510,14 +387,10 @@
                 hreflang="en"
                 href="https://www.haozhexu.me/article/2018/travelsa/city/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/x-pro2/</loc>
     <lastmod>2018-01-07T12:28:58+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/article/2018/travelsa/streetonisland/</loc>
     <lastmod>2018-01-07T09:26:43+11:00</lastmod>
     <xhtml:link
@@ -530,14 +403,10 @@
                 hreflang="en"
                 href="https://www.haozhexu.me/article/2018/travelsa/streetonisland/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/kangarooisland/</loc>
     <lastmod>2018-01-07T09:26:43+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/article/2018/travelsa/ontheway/</loc>
     <lastmod>2018-01-07T08:39:53+11:00</lastmod>
     <xhtml:link
@@ -550,14 +419,10 @@
                 hreflang="en"
                 href="https://www.haozhexu.me/article/2018/travelsa/ontheway/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/lighthouse/</loc>
     <lastmod>2018-01-07T08:39:53+11:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/tags/otwaylighthouse/</loc>
     <lastmod>2018-01-07T08:39:53+11:00</lastmod>
     <xhtml:link
@@ -570,9 +435,7 @@
                 hreflang="en"
                 href="https://www.haozhexu.me/tags/otwaylighthouse/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/works/</loc>
     <lastmod>2017-11-05T09:01:49+11:00</lastmod>
     <xhtml:link
@@ -585,9 +448,7 @@
                 hreflang="en"
                 href="https://www.haozhexu.me/works/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/</loc>
     <lastmod>2017-11-05T08:57:48+11:00</lastmod>
     <xhtml:link
@@ -600,9 +461,7 @@
                 hreflang="en"
                 href="https://www.haozhexu.me/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/poems/</loc>
     <lastmod>2017-11-04T08:47:12+11:00</lastmod>
     <xhtml:link
@@ -615,9 +474,7 @@
                 hreflang="en"
                 href="https://www.haozhexu.me/poems/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://www.haozhexu.me/about/</loc>
     <lastmod>2017-11-04T08:30:16+11:00</lastmod>
     <xhtml:link
@@ -631,5 +488,4 @@
                 href="https://www.haozhexu.me/about/"
                 />
   </url>
-  
 </urlset>
